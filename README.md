@@ -1,34 +1,40 @@
 # GraffiTab-iOS-SDK
 iOS SDK for easy access to the system's API.
 
-## Synopsis
+## About
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+The GraffiTab-iOS-SDK allows you to quickly integrate the GraffiTab API into your iOS application. It provides easy access to all API calls through a set of interfaces.
 
 ## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
-## Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Coming soon.
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
-
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
-
-## Tests
-
-Describe and show how to run the tests with code examples.
-
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Download the SDK zip file and extract at a comfortable location. Follow the steps below to initialize and build the framework:
+* open Terminal and navigate to the project's directory;
+* the framework uses Cocoapods so run `pod install` first;
+* open the generated `.workspace` file;
+* click on the Pods project and change its Build Settings to `Build Active Architectures Only=NO` so that it builds the framework for all architectures;
+* verify that the framework target builds correctly;
+* change the scheme to `GraffiTab_iOS_SDK-Universal;
+* build the selected scheme;
+* the output `.framework` file is located under `Output` in the project's filder;
+ 
+Once the `.framework` file is generated, you can link it to any project by adding it as a framework.
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+Copyright 2015 GraffiTab
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
