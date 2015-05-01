@@ -1,0 +1,1587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E581D7861AF3C97200FD67C8 /* GraffiTab_iOS_SDK-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E581D7891AF3C97200FD67C8 /* Build configuration list for PBXAggregateTarget "GraffiTab_iOS_SDK-Universal" */;
+			buildPhases = (
+				E581D78A1AF3C97900FD67C8 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "GraffiTab_iOS_SDK-Universal";
+			productName = "GraffiTab_iOS_SDK-Universal";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3D75A0155130B4C47027699A /* libPods-GraffiTab_iOS_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324411E180AC53B5F63B5F9 /* libPods-GraffiTab_iOS_SDK.a */; };
+		E581D76A1AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7691AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D7701AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581D7641AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework */; };
+		E581D7771AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7761AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m */; };
+		E581D7851AF3C88800FD67C8 /* GraffiTab_iOS_SDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E581D7841AF3C88800FD67C8 /* GraffiTab_iOS_SDK-Prefix.pch */; };
+		E581D78C1AF3C9E200FD67C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581D78B1AF3C9E200FD67C8 /* CoreLocation.framework */; };
+		E581D78E1AF3C9E900FD67C8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581D78D1AF3C9E900FD67C8 /* MobileCoreServices.framework */; };
+		E581D7901AF3C9F100FD67C8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581D78F1AF3C9F100FD67C8 /* SystemConfiguration.framework */; };
+		E581D8701AF3CADB00FD67C8 /* GTAPIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7931AF3CADA00FD67C8 /* GTAPIConstants.h */; };
+		E581D8711AF3CADB00FD67C8 /* GTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7941AF3CADA00FD67C8 /* GTConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8721AF3CADB00FD67C8 /* GTJSONModelConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7951AF3CADA00FD67C8 /* GTJSONModelConstants.h */; };
+		E581D8731AF3CADB00FD67C8 /* GTJSONRequestConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7961AF3CADA00FD67C8 /* GTJSONRequestConstants.h */; };
+		E581D8741AF3CADB00FD67C8 /* GTJSONResponseConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7971AF3CADA00FD67C8 /* GTJSONResponseConstants.h */; };
+		E581D8751AF3CADB00FD67C8 /* GTJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7991AF3CADA00FD67C8 /* GTJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8761AF3CADB00FD67C8 /* GTConversationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D79C1AF3CADA00FD67C8 /* GTConversationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8771AF3CADB00FD67C8 /* GTConversationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D79D1AF3CADA00FD67C8 /* GTConversationManager.m */; };
+		E581D8781AF3CADB00FD67C8 /* GTDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D79F1AF3CADA00FD67C8 /* GTDeviceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8791AF3CADB00FD67C8 /* GTDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7A01AF3CADA00FD67C8 /* GTDeviceManager.m */; };
+		E581D87A1AF3CADB00FD67C8 /* GTFeedbackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7A21AF3CADA00FD67C8 /* GTFeedbackManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D87B1AF3CADB00FD67C8 /* GTFeedbackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7A31AF3CADA00FD67C8 /* GTFeedbackManager.m */; };
+		E581D87C1AF3CADB00FD67C8 /* GTLifecycleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7A51AF3CADA00FD67C8 /* GTLifecycleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D87D1AF3CADB00FD67C8 /* GTLifecycleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7A61AF3CADA00FD67C8 /* GTLifecycleManager.m */; };
+		E581D87E1AF3CADB00FD67C8 /* GTLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7A81AF3CADA00FD67C8 /* GTLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D87F1AF3CADB00FD67C8 /* GTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7A91AF3CADA00FD67C8 /* GTLocationManager.m */; };
+		E581D8801AF3CADB00FD67C8 /* GTNotificationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7AB1AF3CADA00FD67C8 /* GTNotificationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8811AF3CADB00FD67C8 /* GTNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7AC1AF3CADA00FD67C8 /* GTNotificationManager.m */; };
+		E581D8821AF3CADB00FD67C8 /* GTSearchManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7AE1AF3CADA00FD67C8 /* GTSearchManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8831AF3CADB00FD67C8 /* GTSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7AF1AF3CADA00FD67C8 /* GTSearchManager.m */; };
+		E581D8841AF3CADB00FD67C8 /* GTStreamableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7B11AF3CADA00FD67C8 /* GTStreamableManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8851AF3CADB00FD67C8 /* GTStreamableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7B21AF3CADA00FD67C8 /* GTStreamableManager.m */; };
+		E581D8861AF3CADB00FD67C8 /* GTUserManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7B41AF3CADA00FD67C8 /* GTUserManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8871AF3CADB00FD67C8 /* GTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7B51AF3CADA00FD67C8 /* GTUserManager.m */; };
+		E581D8881AF3CADB00FD67C8 /* GTConversation.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7B81AF3CADA00FD67C8 /* GTConversation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8891AF3CADB00FD67C8 /* GTConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7B91AF3CADA00FD67C8 /* GTConversation.m */; };
+		E581D88A1AF3CADB00FD67C8 /* GTConversationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7BA1AF3CADA00FD67C8 /* GTConversationMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D88B1AF3CADB00FD67C8 /* GTConversationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7BB1AF3CADA00FD67C8 /* GTConversationMessage.m */; };
+		E581D88C1AF3CADB00FD67C8 /* GTComment.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7BC1AF3CADA00FD67C8 /* GTComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D88D1AF3CADB00FD67C8 /* GTComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7BD1AF3CADA00FD67C8 /* GTComment.m */; };
+		E581D88E1AF3CADB00FD67C8 /* GTPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7BE1AF3CADA00FD67C8 /* GTPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D88F1AF3CADB00FD67C8 /* GTPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7BF1AF3CADA00FD67C8 /* GTPerson.m */; };
+		E581D8901AF3CADB00FD67C8 /* GTUserLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7C01AF3CADA00FD67C8 /* GTUserLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8911AF3CADB00FD67C8 /* GTUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7C11AF3CADA00FD67C8 /* GTUserLocation.m */; };
+		E581D8921AF3CADB00FD67C8 /* GTNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7C31AF3CADA00FD67C8 /* GTNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8931AF3CADB00FD67C8 /* GTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7C41AF3CADA00FD67C8 /* GTNotification.m */; };
+		E581D8941AF3CADB00FD67C8 /* GTNotificationComment.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7C51AF3CADA00FD67C8 /* GTNotificationComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8951AF3CADB00FD67C8 /* GTNotificationComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7C61AF3CADA00FD67C8 /* GTNotificationComment.m */; };
+		E581D8961AF3CADB00FD67C8 /* GTNotificationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7C71AF3CADA00FD67C8 /* GTNotificationFactory.h */; };
+		E581D8971AF3CADB00FD67C8 /* GTNotificationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7C81AF3CADA00FD67C8 /* GTNotificationFactory.m */; };
+		E581D8981AF3CADB00FD67C8 /* GTNotificationFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7C91AF3CADA00FD67C8 /* GTNotificationFollow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8991AF3CADB00FD67C8 /* GTNotificationFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7CA1AF3CADA00FD67C8 /* GTNotificationFollow.m */; };
+		E581D89A1AF3CADB00FD67C8 /* GTNotificationLike.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7CB1AF3CADA00FD67C8 /* GTNotificationLike.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D89B1AF3CADB00FD67C8 /* GTNotificationLike.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7CC1AF3CADA00FD67C8 /* GTNotificationLike.m */; };
+		E581D89C1AF3CADB00FD67C8 /* GTNotificationMention.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7CD1AF3CADA00FD67C8 /* GTNotificationMention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D89D1AF3CADB00FD67C8 /* GTNotificationMention.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7CE1AF3CADA00FD67C8 /* GTNotificationMention.m */; };
+		E581D89E1AF3CADB00FD67C8 /* GTNotificationWelcome.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7CF1AF3CADA00FD67C8 /* GTNotificationWelcome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D89F1AF3CADB00FD67C8 /* GTNotificationWelcome.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7D01AF3CADA00FD67C8 /* GTNotificationWelcome.m */; };
+		E581D8A01AF3CADB00FD67C8 /* GTStreamable.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7D21AF3CADA00FD67C8 /* GTStreamable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8A11AF3CADB00FD67C8 /* GTStreamable.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7D31AF3CADA00FD67C8 /* GTStreamable.m */; };
+		E581D8A21AF3CADB00FD67C8 /* GTStreamableFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7D41AF3CADA00FD67C8 /* GTStreamableFactory.h */; };
+		E581D8A31AF3CADB00FD67C8 /* GTStreamableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7D51AF3CADA00FD67C8 /* GTStreamableFactory.m */; };
+		E581D8A41AF3CADB00FD67C8 /* GTStreamableTag.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7D61AF3CADA00FD67C8 /* GTStreamableTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8A51AF3CADB00FD67C8 /* GTStreamableTag.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7D71AF3CADA00FD67C8 /* GTStreamableTag.m */; };
+		E581D8A61AF3CADB00FD67C8 /* GTStreamableVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7D81AF3CADA00FD67C8 /* GTStreamableVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8A71AF3CADB00FD67C8 /* GTStreamableVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7D91AF3CADA00FD67C8 /* GTStreamableVideo.m */; };
+		E581D8A81AF3CADB00FD67C8 /* GTViewControllerCache.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7DD1AF3CADA00FD67C8 /* GTViewControllerCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8A91AF3CADB00FD67C8 /* GTViewControllerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7DE1AF3CADA00FD67C8 /* GTViewControllerCache.m */; };
+		E581D8AA1AF3CADB00FD67C8 /* GTImageRequestBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7DF1AF3CADA00FD67C8 /* GTImageRequestBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8AB1AF3CADB00FD67C8 /* GTImageRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E01AF3CADA00FD67C8 /* GTImageRequestBuilder.m */; };
+		E581D8AC1AF3CADB00FD67C8 /* GTRequestBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7E11AF3CADA00FD67C8 /* GTRequestBuilder.h */; };
+		E581D8AD1AF3CADB00FD67C8 /* GTRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E21AF3CADA00FD67C8 /* GTRequestBuilder.m */; };
+		E581D8AE1AF3CADB00FD67C8 /* GTResponseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7E31AF3CADA00FD67C8 /* GTResponseObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E581D8AF1AF3CADB00FD67C8 /* GTResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E41AF3CADA00FD67C8 /* GTResponseObject.m */; };
+		E581D8B01AF3CADB00FD67C8 /* GTCookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7E61AF3CADA00FD67C8 /* GTCookieManager.h */; };
+		E581D8B11AF3CADB00FD67C8 /* GTCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E71AF3CADA00FD67C8 /* GTCookieManager.m */; };
+		E581D8B21AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7E81AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.h */; };
+		E581D8B31AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E91AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.m */; };
+		E581D8B41AF3CADB00FD67C8 /* GTSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7EA1AF3CADA00FD67C8 /* GTSessionManager.h */; };
+		E581D8B51AF3CADB00FD67C8 /* GTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7EB1AF3CADA00FD67C8 /* GTSessionManager.m */; };
+		E581D8B61AF3CADB00FD67C8 /* GTSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7ED1AF3CADA00FD67C8 /* GTSettings.h */; };
+		E581D8B71AF3CADB00FD67C8 /* GTSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7EE1AF3CADA00FD67C8 /* GTSettings.m */; };
+		E581D8B81AF3CADB00FD67C8 /* GTAddConversationUsersTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7F11AF3CADA00FD67C8 /* GTAddConversationUsersTask.h */; };
+		E581D8B91AF3CADB00FD67C8 /* GTAddConversationUsersTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7F21AF3CADA00FD67C8 /* GTAddConversationUsersTask.m */; };
+		E581D8BA1AF3CADB00FD67C8 /* GTCreateConversationTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7F31AF3CADA00FD67C8 /* GTCreateConversationTask.h */; };
+		E581D8BB1AF3CADB00FD67C8 /* GTCreateConversationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7F41AF3CADA00FD67C8 /* GTCreateConversationTask.m */; };
+		E581D8BC1AF3CADB00FD67C8 /* GTEditConversationImageTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7F51AF3CADA00FD67C8 /* GTEditConversationImageTask.h */; };
+		E581D8BD1AF3CADB00FD67C8 /* GTEditConversationImageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7F61AF3CADA00FD67C8 /* GTEditConversationImageTask.m */; };
+		E581D8BE1AF3CADB00FD67C8 /* GTEditConversationNameTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7F71AF3CADA00FD67C8 /* GTEditConversationNameTask.h */; };
+		E581D8BF1AF3CADB00FD67C8 /* GTEditConversationNameTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7F81AF3CADA00FD67C8 /* GTEditConversationNameTask.m */; };
+		E581D8C01AF3CADB00FD67C8 /* GTGetConversationsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7F91AF3CADA00FD67C8 /* GTGetConversationsTask.h */; };
+		E581D8C11AF3CADB00FD67C8 /* GTGetConversationsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7FA1AF3CADA00FD67C8 /* GTGetConversationsTask.m */; };
+		E581D8C21AF3CADB00FD67C8 /* GTGetMessagesTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7FB1AF3CADA00FD67C8 /* GTGetMessagesTask.h */; };
+		E581D8C31AF3CADB00FD67C8 /* GTGetMessagesTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7FC1AF3CADA00FD67C8 /* GTGetMessagesTask.m */; };
+		E581D8C41AF3CADB00FD67C8 /* GTGetUnseenConversationsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7FD1AF3CADA00FD67C8 /* GTGetUnseenConversationsTask.h */; };
+		E581D8C51AF3CADB00FD67C8 /* GTGetUnseenConversationsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7FE1AF3CADA00FD67C8 /* GTGetUnseenConversationsTask.m */; };
+		E581D8C61AF3CADB00FD67C8 /* GTHideTypingIndicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7FF1AF3CADA00FD67C8 /* GTHideTypingIndicatorTask.h */; };
+		E581D8C71AF3CADB00FD67C8 /* GTHideTypingIndicatorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8001AF3CADA00FD67C8 /* GTHideTypingIndicatorTask.m */; };
+		E581D8C81AF3CADB00FD67C8 /* GTLeaveConversationTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8011AF3CADA00FD67C8 /* GTLeaveConversationTask.h */; };
+		E581D8C91AF3CADB00FD67C8 /* GTLeaveConversationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8021AF3CADA00FD67C8 /* GTLeaveConversationTask.m */; };
+		E581D8CA1AF3CADB00FD67C8 /* GTPostMessageTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8031AF3CADA00FD67C8 /* GTPostMessageTask.h */; };
+		E581D8CB1AF3CADB00FD67C8 /* GTPostMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8041AF3CADA00FD67C8 /* GTPostMessageTask.m */; };
+		E581D8CC1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8051AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.h */; };
+		E581D8CD1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8061AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.m */; };
+		E581D8CE1AF3CADB00FD67C8 /* GTDeleteMessagesTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8081AF3CADA00FD67C8 /* GTDeleteMessagesTask.h */; };
+		E581D8CF1AF3CADB00FD67C8 /* GTDeleteMessagesTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8091AF3CADA00FD67C8 /* GTDeleteMessagesTask.m */; };
+		E581D8D01AF3CADB00FD67C8 /* GTEditMessageTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D80A1AF3CADA00FD67C8 /* GTEditMessageTask.h */; };
+		E581D8D11AF3CADB00FD67C8 /* GTEditMessageTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D80B1AF3CADA00FD67C8 /* GTEditMessageTask.m */; };
+		E581D8D21AF3CADB00FD67C8 /* GTRegisterDeviceTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D80D1AF3CADA00FD67C8 /* GTRegisterDeviceTask.h */; };
+		E581D8D31AF3CADB00FD67C8 /* GTRegisterDeviceTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D80E1AF3CADA00FD67C8 /* GTRegisterDeviceTask.m */; };
+		E581D8D41AF3CADB00FD67C8 /* GTUnregisterDeviceTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D80F1AF3CADA00FD67C8 /* GTUnregisterDeviceTask.h */; };
+		E581D8D51AF3CADB00FD67C8 /* GTUnregisterDeviceTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8101AF3CADA00FD67C8 /* GTUnregisterDeviceTask.m */; };
+		E581D8D61AF3CADB00FD67C8 /* GTSendFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8121AF3CADA00FD67C8 /* GTSendFeedback.h */; };
+		E581D8D71AF3CADB00FD67C8 /* GTSendFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8131AF3CADA00FD67C8 /* GTSendFeedback.m */; };
+		E581D8D81AF3CADB00FD67C8 /* GTNetworkTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8141AF3CADA00FD67C8 /* GTNetworkTask.h */; };
+		E581D8D91AF3CADB00FD67C8 /* GTNetworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8151AF3CADA00FD67C8 /* GTNetworkTask.m */; };
+		E581D8DA1AF3CADB00FD67C8 /* GTCreateUserLocationTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8171AF3CADA00FD67C8 /* GTCreateUserLocationTask.h */; };
+		E581D8DB1AF3CADB00FD67C8 /* GTCreateUserLocationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8181AF3CADA00FD67C8 /* GTCreateUserLocationTask.m */; };
+		E581D8DC1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8191AF3CADA00FD67C8 /* GTDeleteUserLocationsTask.h */; };
+		E581D8DD1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D81A1AF3CADA00FD67C8 /* GTDeleteUserLocationsTask.m */; };
+		E581D8DE1AF3CADB00FD67C8 /* GTGetUserLocationsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D81B1AF3CADA00FD67C8 /* GTGetUserLocationsTask.h */; };
+		E581D8DF1AF3CADB00FD67C8 /* GTGetUserLocationsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D81C1AF3CADA00FD67C8 /* GTGetUserLocationsTask.m */; };
+		E581D8E01AF3CADB00FD67C8 /* GTGetNotificationsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D81E1AF3CADA00FD67C8 /* GTGetNotificationsTask.h */; };
+		E581D8E11AF3CADB00FD67C8 /* GTGetNotificationsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D81F1AF3CADA00FD67C8 /* GTGetNotificationsTask.m */; };
+		E581D8E21AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8201AF3CADA00FD67C8 /* GTGetUnseenNotificationsTask.h */; };
+		E581D8E31AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8211AF3CADA00FD67C8 /* GTGetUnseenNotificationsTask.m */; };
+		E581D8E41AF3CADB00FD67C8 /* GTSearchHashtag.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8231AF3CADA00FD67C8 /* GTSearchHashtag.h */; };
+		E581D8E51AF3CADB00FD67C8 /* GTSearchHashtag.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8241AF3CADA00FD67C8 /* GTSearchHashtag.m */; };
+		E581D8E61AF3CADB00FD67C8 /* GTSearchHashtags.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8251AF3CADA00FD67C8 /* GTSearchHashtags.h */; };
+		E581D8E71AF3CADB00FD67C8 /* GTSearchHashtags.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8261AF3CADA00FD67C8 /* GTSearchHashtags.m */; };
+		E581D8E81AF3CADB00FD67C8 /* GTSearchUsers.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8271AF3CADA00FD67C8 /* GTSearchUsers.h */; };
+		E581D8E91AF3CADB00FD67C8 /* GTSearchUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8281AF3CADA00FD67C8 /* GTSearchUsers.m */; };
+		E581D8EA1AF3CADB00FD67C8 /* GTDeleteCommentsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D82B1AF3CADA00FD67C8 /* GTDeleteCommentsTask.h */; };
+		E581D8EB1AF3CADB00FD67C8 /* GTDeleteCommentsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D82C1AF3CADA00FD67C8 /* GTDeleteCommentsTask.m */; };
+		E581D8EC1AF3CADB00FD67C8 /* GTEditCommentTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D82D1AF3CADA00FD67C8 /* GTEditCommentTask.h */; };
+		E581D8ED1AF3CADB00FD67C8 /* GTEditCommentTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D82E1AF3CADA00FD67C8 /* GTEditCommentTask.m */; };
+		E581D8EE1AF3CADB00FD67C8 /* GTGetCommentsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D82F1AF3CADA00FD67C8 /* GTGetCommentsTask.h */; };
+		E581D8EF1AF3CADB00FD67C8 /* GTGetCommentsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8301AF3CADA00FD67C8 /* GTGetCommentsTask.m */; };
+		E581D8F01AF3CADB00FD67C8 /* GTPostCommentTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8311AF3CADA00FD67C8 /* GTPostCommentTask.h */; };
+		E581D8F11AF3CADB00FD67C8 /* GTPostCommentTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8321AF3CADA00FD67C8 /* GTPostCommentTask.m */; };
+		E581D8F21AF3CADB00FD67C8 /* GTGetNewestItemsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8331AF3CADA00FD67C8 /* GTGetNewestItemsTask.h */; };
+		E581D8F31AF3CADB00FD67C8 /* GTGetNewestItemsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8341AF3CADA00FD67C8 /* GTGetNewestItemsTask.m */; };
+		E581D8F41AF3CADB00FD67C8 /* GTGetPopularItemsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8351AF3CADA00FD67C8 /* GTGetPopularItemsTask.h */; };
+		E581D8F51AF3CADB00FD67C8 /* GTGetPopularItemsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8361AF3CADA00FD67C8 /* GTGetPopularItemsTask.m */; };
+		E581D8F61AF3CADB00FD67C8 /* GTGetUserFavouritesTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8371AF3CADA00FD67C8 /* GTGetUserFavouritesTask.h */; };
+		E581D8F71AF3CADB00FD67C8 /* GTGetUserFavouritesTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8381AF3CADA00FD67C8 /* GTGetUserFavouritesTask.m */; };
+		E581D8F81AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8391AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.h */; };
+		E581D8F91AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D83A1AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.m */; };
+		E581D8FA1AF3CADB00FD67C8 /* GTGetUserItemsTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D83B1AF3CADA00FD67C8 /* GTGetUserItemsTask.h */; };
+		E581D8FB1AF3CADB00FD67C8 /* GTGetUserItemsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D83C1AF3CADA00FD67C8 /* GTGetUserItemsTask.m */; };
+		E581D8FC1AF3CADB00FD67C8 /* GTGetLikersTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D83E1AF3CADA00FD67C8 /* GTGetLikersTask.h */; };
+		E581D8FD1AF3CADB00FD67C8 /* GTGetLikersTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D83F1AF3CADA00FD67C8 /* GTGetLikersTask.m */; };
+		E581D8FE1AF3CADB00FD67C8 /* GTLikeItemTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8401AF3CADA00FD67C8 /* GTLikeItemTask.h */; };
+		E581D8FF1AF3CADB00FD67C8 /* GTLikeItemTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8411AF3CADA00FD67C8 /* GTLikeItemTask.m */; };
+		E581D9001AF3CADB00FD67C8 /* GTUnlikeItemTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8421AF3CADA00FD67C8 /* GTUnlikeItemTask.h */; };
+		E581D9011AF3CADB00FD67C8 /* GTUnlikeItemTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8431AF3CADA00FD67C8 /* GTUnlikeItemTask.m */; };
+		E581D9021AF3CADB00FD67C8 /* GTCreateStreamableTagTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8451AF3CADA00FD67C8 /* GTCreateStreamableTagTask.h */; };
+		E581D9031AF3CADB00FD67C8 /* GTCreateStreamableTagTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8461AF3CADA00FD67C8 /* GTCreateStreamableTagTask.m */; };
+		E581D9041AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8471AF3CADA00FD67C8 /* GTGetStreamablesForLocationTask.h */; };
+		E581D9051AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8481AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m */; };
+		E581D9061AF3CADB00FD67C8 /* GTCheckLoginStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D84A1AF3CADB00FD67C8 /* GTCheckLoginStatus.h */; };
+		E581D9071AF3CADB00FD67C8 /* GTCheckLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D84B1AF3CADB00FD67C8 /* GTCheckLoginStatus.m */; };
+		E581D9081AF3CADB00FD67C8 /* GTEditAvatarTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D84C1AF3CADB00FD67C8 /* GTEditAvatarTask.h */; };
+		E581D9091AF3CADB00FD67C8 /* GTEditAvatarTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D84D1AF3CADB00FD67C8 /* GTEditAvatarTask.m */; };
+		E581D90A1AF3CADB00FD67C8 /* GTEditCoverTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D84E1AF3CADB00FD67C8 /* GTEditCoverTask.h */; };
+		E581D90B1AF3CADB00FD67C8 /* GTEditCoverTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D84F1AF3CADB00FD67C8 /* GTEditCoverTask.m */; };
+		E581D90C1AF3CADB00FD67C8 /* GTEditPasswordTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8501AF3CADB00FD67C8 /* GTEditPasswordTask.h */; };
+		E581D90D1AF3CADB00FD67C8 /* GTEditPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8511AF3CADB00FD67C8 /* GTEditPasswordTask.m */; };
+		E581D90E1AF3CADB00FD67C8 /* GTEditProfileTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8521AF3CADB00FD67C8 /* GTEditProfileTask.h */; };
+		E581D90F1AF3CADB00FD67C8 /* GTEditProfileTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8531AF3CADB00FD67C8 /* GTEditProfileTask.m */; };
+		E581D9101AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8541AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h */; };
+		E581D9111AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8551AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m */; };
+		E581D9121AF3CADB00FD67C8 /* GTFollowTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8561AF3CADB00FD67C8 /* GTFollowTask.h */; };
+		E581D9131AF3CADB00FD67C8 /* GTFollowTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8571AF3CADB00FD67C8 /* GTFollowTask.m */; };
+		E581D9141AF3CADB00FD67C8 /* GTGetFollowersTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8581AF3CADB00FD67C8 /* GTGetFollowersTask.h */; };
+		E581D9151AF3CADB00FD67C8 /* GTGetFollowersTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8591AF3CADB00FD67C8 /* GTGetFollowersTask.m */; };
+		E581D9161AF3CADB00FD67C8 /* GTGetFollowingTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D85A1AF3CADB00FD67C8 /* GTGetFollowingTask.h */; };
+		E581D9171AF3CADB00FD67C8 /* GTGetFollowingTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D85B1AF3CADB00FD67C8 /* GTGetFollowingTask.m */; };
+		E581D9181AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D85C1AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h */; };
+		E581D9191AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D85D1AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.m */; };
+		E581D91A1AF3CADB00FD67C8 /* GTGetSocialFriends.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D85E1AF3CADB00FD67C8 /* GTGetSocialFriends.h */; };
+		E581D91B1AF3CADB00FD67C8 /* GTGetSocialFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D85F1AF3CADB00FD67C8 /* GTGetSocialFriends.m */; };
+		E581D91C1AF3CADB00FD67C8 /* GTGetUserProfileTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8601AF3CADB00FD67C8 /* GTGetUserProfileTask.h */; };
+		E581D91D1AF3CADB00FD67C8 /* GTGetUserProfileTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8611AF3CADB00FD67C8 /* GTGetUserProfileTask.m */; };
+		E581D91E1AF3CADB00FD67C8 /* GTLinkExternalIdTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8621AF3CADB00FD67C8 /* GTLinkExternalIdTask.h */; };
+		E581D91F1AF3CADB00FD67C8 /* GTLinkExternalIdTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8631AF3CADB00FD67C8 /* GTLinkExternalIdTask.m */; };
+		E581D9201AF3CADB00FD67C8 /* GTLoginTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8641AF3CADB00FD67C8 /* GTLoginTask.h */; };
+		E581D9211AF3CADB00FD67C8 /* GTLoginTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8651AF3CADB00FD67C8 /* GTLoginTask.m */; };
+		E581D9221AF3CADB00FD67C8 /* GTLogoutTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8661AF3CADB00FD67C8 /* GTLogoutTask.h */; };
+		E581D9231AF3CADB00FD67C8 /* GTLogoutTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8671AF3CADB00FD67C8 /* GTLogoutTask.m */; };
+		E581D9241AF3CADB00FD67C8 /* GTResetPasswordTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8681AF3CADB00FD67C8 /* GTResetPasswordTask.h */; };
+		E581D9251AF3CADB00FD67C8 /* GTResetPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8691AF3CADB00FD67C8 /* GTResetPasswordTask.m */; };
+		E581D9261AF3CADB00FD67C8 /* GTSignUpTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86A1AF3CADB00FD67C8 /* GTSignUpTask.h */; };
+		E581D9271AF3CADB00FD67C8 /* GTSignUpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86B1AF3CADB00FD67C8 /* GTSignUpTask.m */; };
+		E581D9281AF3CADB00FD67C8 /* GTUnfollowTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86C1AF3CADB00FD67C8 /* GTUnfollowTask.h */; };
+		E581D9291AF3CADB00FD67C8 /* GTUnfollowTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */; };
+		E581D92A1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */; };
+		E581D92B1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E581D7711AF3C83E00FD67C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E581D75B1AF3C83E00FD67C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E581D7631AF3C83E00FD67C8;
+			remoteInfo = GraffiTab_iOS_SDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		437160EDBB58CD7C654B9AE8 /* Pods-GraffiTab_iOS_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.release.xcconfig"; sourceTree = "<group>"; };
+		6324411E180AC53B5F63B5F9 /* libPods-GraffiTab_iOS_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraffiTab_iOS_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7B9CCF2511B5FEDDEB1745 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		E581D7641AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E581D7681AF3C83E00FD67C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E581D7691AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraffiTab_iOS_SDK.h; sourceTree = "<group>"; };
+		E581D76F1AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraffiTab_iOS_SDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E581D7751AF3C83E00FD67C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E581D7761AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraffiTab_iOS_SDKTests.m; sourceTree = "<group>"; };
+		E581D7841AF3C88800FD67C8 /* GraffiTab_iOS_SDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GraffiTab_iOS_SDK-Prefix.pch"; sourceTree = "<group>"; };
+		E581D78B1AF3C9E200FD67C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E581D78D1AF3C9E900FD67C8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E581D78F1AF3C9F100FD67C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E581D7931AF3CADA00FD67C8 /* GTAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAPIConstants.h; sourceTree = "<group>"; };
+		E581D7941AF3CADA00FD67C8 /* GTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTConstants.h; sourceTree = "<group>"; };
+		E581D7951AF3CADA00FD67C8 /* GTJSONModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTJSONModelConstants.h; sourceTree = "<group>"; };
+		E581D7961AF3CADA00FD67C8 /* GTJSONRequestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTJSONRequestConstants.h; sourceTree = "<group>"; };
+		E581D7971AF3CADA00FD67C8 /* GTJSONResponseConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTJSONResponseConstants.h; sourceTree = "<group>"; };
+		E581D7991AF3CADA00FD67C8 /* GTJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTJSONSerializable.h; sourceTree = "<group>"; };
+		E581D79C1AF3CADA00FD67C8 /* GTConversationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTConversationManager.h; sourceTree = "<group>"; };
+		E581D79D1AF3CADA00FD67C8 /* GTConversationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTConversationManager.m; sourceTree = "<group>"; };
+		E581D79F1AF3CADA00FD67C8 /* GTDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDeviceManager.h; sourceTree = "<group>"; };
+		E581D7A01AF3CADA00FD67C8 /* GTDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDeviceManager.m; sourceTree = "<group>"; };
+		E581D7A21AF3CADA00FD67C8 /* GTFeedbackManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFeedbackManager.h; sourceTree = "<group>"; };
+		E581D7A31AF3CADA00FD67C8 /* GTFeedbackManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFeedbackManager.m; sourceTree = "<group>"; };
+		E581D7A51AF3CADA00FD67C8 /* GTLifecycleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLifecycleManager.h; sourceTree = "<group>"; };
+		E581D7A61AF3CADA00FD67C8 /* GTLifecycleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLifecycleManager.m; sourceTree = "<group>"; };
+		E581D7A81AF3CADA00FD67C8 /* GTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLocationManager.h; sourceTree = "<group>"; };
+		E581D7A91AF3CADA00FD67C8 /* GTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLocationManager.m; sourceTree = "<group>"; };
+		E581D7AB1AF3CADA00FD67C8 /* GTNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationManager.h; sourceTree = "<group>"; };
+		E581D7AC1AF3CADA00FD67C8 /* GTNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationManager.m; sourceTree = "<group>"; };
+		E581D7AE1AF3CADA00FD67C8 /* GTSearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSearchManager.h; sourceTree = "<group>"; };
+		E581D7AF1AF3CADA00FD67C8 /* GTSearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSearchManager.m; sourceTree = "<group>"; };
+		E581D7B11AF3CADA00FD67C8 /* GTStreamableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStreamableManager.h; sourceTree = "<group>"; };
+		E581D7B21AF3CADA00FD67C8 /* GTStreamableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTStreamableManager.m; sourceTree = "<group>"; };
+		E581D7B41AF3CADA00FD67C8 /* GTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTUserManager.h; sourceTree = "<group>"; };
+		E581D7B51AF3CADA00FD67C8 /* GTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUserManager.m; sourceTree = "<group>"; };
+		E581D7B81AF3CADA00FD67C8 /* GTConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTConversation.h; sourceTree = "<group>"; };
+		E581D7B91AF3CADA00FD67C8 /* GTConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTConversation.m; sourceTree = "<group>"; };
+		E581D7BA1AF3CADA00FD67C8 /* GTConversationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTConversationMessage.h; sourceTree = "<group>"; };
+		E581D7BB1AF3CADA00FD67C8 /* GTConversationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTConversationMessage.m; sourceTree = "<group>"; };
+		E581D7BC1AF3CADA00FD67C8 /* GTComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTComment.h; sourceTree = "<group>"; };
+		E581D7BD1AF3CADA00FD67C8 /* GTComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTComment.m; sourceTree = "<group>"; };
+		E581D7BE1AF3CADA00FD67C8 /* GTPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPerson.h; sourceTree = "<group>"; };
+		E581D7BF1AF3CADA00FD67C8 /* GTPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPerson.m; sourceTree = "<group>"; };
+		E581D7C01AF3CADA00FD67C8 /* GTUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTUserLocation.h; sourceTree = "<group>"; };
+		E581D7C11AF3CADA00FD67C8 /* GTUserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUserLocation.m; sourceTree = "<group>"; };
+		E581D7C31AF3CADA00FD67C8 /* GTNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotification.h; sourceTree = "<group>"; };
+		E581D7C41AF3CADA00FD67C8 /* GTNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotification.m; sourceTree = "<group>"; };
+		E581D7C51AF3CADA00FD67C8 /* GTNotificationComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationComment.h; sourceTree = "<group>"; };
+		E581D7C61AF3CADA00FD67C8 /* GTNotificationComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationComment.m; sourceTree = "<group>"; };
+		E581D7C71AF3CADA00FD67C8 /* GTNotificationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationFactory.h; sourceTree = "<group>"; };
+		E581D7C81AF3CADA00FD67C8 /* GTNotificationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationFactory.m; sourceTree = "<group>"; };
+		E581D7C91AF3CADA00FD67C8 /* GTNotificationFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationFollow.h; sourceTree = "<group>"; };
+		E581D7CA1AF3CADA00FD67C8 /* GTNotificationFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationFollow.m; sourceTree = "<group>"; };
+		E581D7CB1AF3CADA00FD67C8 /* GTNotificationLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationLike.h; sourceTree = "<group>"; };
+		E581D7CC1AF3CADA00FD67C8 /* GTNotificationLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationLike.m; sourceTree = "<group>"; };
+		E581D7CD1AF3CADA00FD67C8 /* GTNotificationMention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationMention.h; sourceTree = "<group>"; };
+		E581D7CE1AF3CADA00FD67C8 /* GTNotificationMention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationMention.m; sourceTree = "<group>"; };
+		E581D7CF1AF3CADA00FD67C8 /* GTNotificationWelcome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNotificationWelcome.h; sourceTree = "<group>"; };
+		E581D7D01AF3CADA00FD67C8 /* GTNotificationWelcome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNotificationWelcome.m; sourceTree = "<group>"; };
+		E581D7D21AF3CADA00FD67C8 /* GTStreamable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStreamable.h; sourceTree = "<group>"; };
+		E581D7D31AF3CADA00FD67C8 /* GTStreamable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTStreamable.m; sourceTree = "<group>"; };
+		E581D7D41AF3CADA00FD67C8 /* GTStreamableFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStreamableFactory.h; sourceTree = "<group>"; };
+		E581D7D51AF3CADA00FD67C8 /* GTStreamableFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTStreamableFactory.m; sourceTree = "<group>"; };
+		E581D7D61AF3CADA00FD67C8 /* GTStreamableTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStreamableTag.h; sourceTree = "<group>"; };
+		E581D7D71AF3CADA00FD67C8 /* GTStreamableTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTStreamableTag.m; sourceTree = "<group>"; };
+		E581D7D81AF3CADA00FD67C8 /* GTStreamableVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStreamableVideo.h; sourceTree = "<group>"; };
+		E581D7D91AF3CADA00FD67C8 /* GTStreamableVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTStreamableVideo.m; sourceTree = "<group>"; };
+		E581D7DD1AF3CADA00FD67C8 /* GTViewControllerCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTViewControllerCache.h; sourceTree = "<group>"; };
+		E581D7DE1AF3CADA00FD67C8 /* GTViewControllerCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTViewControllerCache.m; sourceTree = "<group>"; };
+		E581D7DF1AF3CADA00FD67C8 /* GTImageRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTImageRequestBuilder.h; sourceTree = "<group>"; };
+		E581D7E01AF3CADA00FD67C8 /* GTImageRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTImageRequestBuilder.m; sourceTree = "<group>"; };
+		E581D7E11AF3CADA00FD67C8 /* GTRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRequestBuilder.h; sourceTree = "<group>"; };
+		E581D7E21AF3CADA00FD67C8 /* GTRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRequestBuilder.m; sourceTree = "<group>"; };
+		E581D7E31AF3CADA00FD67C8 /* GTResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTResponseObject.h; sourceTree = "<group>"; };
+		E581D7E41AF3CADA00FD67C8 /* GTResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTResponseObject.m; sourceTree = "<group>"; };
+		E581D7E61AF3CADA00FD67C8 /* GTCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCookieManager.h; sourceTree = "<group>"; };
+		E581D7E71AF3CADA00FD67C8 /* GTCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCookieManager.m; sourceTree = "<group>"; };
+		E581D7E81AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTJSONResponseSerializerWithData.h; sourceTree = "<group>"; };
+		E581D7E91AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTJSONResponseSerializerWithData.m; sourceTree = "<group>"; };
+		E581D7EA1AF3CADA00FD67C8 /* GTSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSessionManager.h; sourceTree = "<group>"; };
+		E581D7EB1AF3CADA00FD67C8 /* GTSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSessionManager.m; sourceTree = "<group>"; };
+		E581D7ED1AF3CADA00FD67C8 /* GTSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSettings.h; sourceTree = "<group>"; };
+		E581D7EE1AF3CADA00FD67C8 /* GTSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSettings.m; sourceTree = "<group>"; };
+		E581D7F11AF3CADA00FD67C8 /* GTAddConversationUsersTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAddConversationUsersTask.h; sourceTree = "<group>"; };
+		E581D7F21AF3CADA00FD67C8 /* GTAddConversationUsersTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAddConversationUsersTask.m; sourceTree = "<group>"; };
+		E581D7F31AF3CADA00FD67C8 /* GTCreateConversationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCreateConversationTask.h; sourceTree = "<group>"; };
+		E581D7F41AF3CADA00FD67C8 /* GTCreateConversationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCreateConversationTask.m; sourceTree = "<group>"; };
+		E581D7F51AF3CADA00FD67C8 /* GTEditConversationImageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditConversationImageTask.h; sourceTree = "<group>"; };
+		E581D7F61AF3CADA00FD67C8 /* GTEditConversationImageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditConversationImageTask.m; sourceTree = "<group>"; };
+		E581D7F71AF3CADA00FD67C8 /* GTEditConversationNameTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditConversationNameTask.h; sourceTree = "<group>"; };
+		E581D7F81AF3CADA00FD67C8 /* GTEditConversationNameTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditConversationNameTask.m; sourceTree = "<group>"; };
+		E581D7F91AF3CADA00FD67C8 /* GTGetConversationsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetConversationsTask.h; sourceTree = "<group>"; };
+		E581D7FA1AF3CADA00FD67C8 /* GTGetConversationsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetConversationsTask.m; sourceTree = "<group>"; };
+		E581D7FB1AF3CADA00FD67C8 /* GTGetMessagesTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetMessagesTask.h; sourceTree = "<group>"; };
+		E581D7FC1AF3CADA00FD67C8 /* GTGetMessagesTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetMessagesTask.m; sourceTree = "<group>"; };
+		E581D7FD1AF3CADA00FD67C8 /* GTGetUnseenConversationsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUnseenConversationsTask.h; sourceTree = "<group>"; };
+		E581D7FE1AF3CADA00FD67C8 /* GTGetUnseenConversationsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUnseenConversationsTask.m; sourceTree = "<group>"; };
+		E581D7FF1AF3CADA00FD67C8 /* GTHideTypingIndicatorTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTHideTypingIndicatorTask.h; sourceTree = "<group>"; };
+		E581D8001AF3CADA00FD67C8 /* GTHideTypingIndicatorTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTHideTypingIndicatorTask.m; sourceTree = "<group>"; };
+		E581D8011AF3CADA00FD67C8 /* GTLeaveConversationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLeaveConversationTask.h; sourceTree = "<group>"; };
+		E581D8021AF3CADA00FD67C8 /* GTLeaveConversationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLeaveConversationTask.m; sourceTree = "<group>"; };
+		E581D8031AF3CADA00FD67C8 /* GTPostMessageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPostMessageTask.h; sourceTree = "<group>"; };
+		E581D8041AF3CADA00FD67C8 /* GTPostMessageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPostMessageTask.m; sourceTree = "<group>"; };
+		E581D8051AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTShowTypingIndicatorTask.h; sourceTree = "<group>"; };
+		E581D8061AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTShowTypingIndicatorTask.m; sourceTree = "<group>"; };
+		E581D8081AF3CADA00FD67C8 /* GTDeleteMessagesTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDeleteMessagesTask.h; sourceTree = "<group>"; };
+		E581D8091AF3CADA00FD67C8 /* GTDeleteMessagesTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDeleteMessagesTask.m; sourceTree = "<group>"; };
+		E581D80A1AF3CADA00FD67C8 /* GTEditMessageTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditMessageTask.h; sourceTree = "<group>"; };
+		E581D80B1AF3CADA00FD67C8 /* GTEditMessageTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditMessageTask.m; sourceTree = "<group>"; };
+		E581D80D1AF3CADA00FD67C8 /* GTRegisterDeviceTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTRegisterDeviceTask.h; sourceTree = "<group>"; };
+		E581D80E1AF3CADA00FD67C8 /* GTRegisterDeviceTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTRegisterDeviceTask.m; sourceTree = "<group>"; };
+		E581D80F1AF3CADA00FD67C8 /* GTUnregisterDeviceTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTUnregisterDeviceTask.h; sourceTree = "<group>"; };
+		E581D8101AF3CADA00FD67C8 /* GTUnregisterDeviceTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUnregisterDeviceTask.m; sourceTree = "<group>"; };
+		E581D8121AF3CADA00FD67C8 /* GTSendFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSendFeedback.h; sourceTree = "<group>"; };
+		E581D8131AF3CADA00FD67C8 /* GTSendFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSendFeedback.m; sourceTree = "<group>"; };
+		E581D8141AF3CADA00FD67C8 /* GTNetworkTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTNetworkTask.h; sourceTree = "<group>"; };
+		E581D8151AF3CADA00FD67C8 /* GTNetworkTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTNetworkTask.m; sourceTree = "<group>"; };
+		E581D8171AF3CADA00FD67C8 /* GTCreateUserLocationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCreateUserLocationTask.h; sourceTree = "<group>"; };
+		E581D8181AF3CADA00FD67C8 /* GTCreateUserLocationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCreateUserLocationTask.m; sourceTree = "<group>"; };
+		E581D8191AF3CADA00FD67C8 /* GTDeleteUserLocationsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDeleteUserLocationsTask.h; sourceTree = "<group>"; };
+		E581D81A1AF3CADA00FD67C8 /* GTDeleteUserLocationsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDeleteUserLocationsTask.m; sourceTree = "<group>"; };
+		E581D81B1AF3CADA00FD67C8 /* GTGetUserLocationsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUserLocationsTask.h; sourceTree = "<group>"; };
+		E581D81C1AF3CADA00FD67C8 /* GTGetUserLocationsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUserLocationsTask.m; sourceTree = "<group>"; };
+		E581D81E1AF3CADA00FD67C8 /* GTGetNotificationsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetNotificationsTask.h; sourceTree = "<group>"; };
+		E581D81F1AF3CADA00FD67C8 /* GTGetNotificationsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetNotificationsTask.m; sourceTree = "<group>"; };
+		E581D8201AF3CADA00FD67C8 /* GTGetUnseenNotificationsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUnseenNotificationsTask.h; sourceTree = "<group>"; };
+		E581D8211AF3CADA00FD67C8 /* GTGetUnseenNotificationsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUnseenNotificationsTask.m; sourceTree = "<group>"; };
+		E581D8231AF3CADA00FD67C8 /* GTSearchHashtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSearchHashtag.h; sourceTree = "<group>"; };
+		E581D8241AF3CADA00FD67C8 /* GTSearchHashtag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSearchHashtag.m; sourceTree = "<group>"; };
+		E581D8251AF3CADA00FD67C8 /* GTSearchHashtags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSearchHashtags.h; sourceTree = "<group>"; };
+		E581D8261AF3CADA00FD67C8 /* GTSearchHashtags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSearchHashtags.m; sourceTree = "<group>"; };
+		E581D8271AF3CADA00FD67C8 /* GTSearchUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSearchUsers.h; sourceTree = "<group>"; };
+		E581D8281AF3CADA00FD67C8 /* GTSearchUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSearchUsers.m; sourceTree = "<group>"; };
+		E581D82B1AF3CADA00FD67C8 /* GTDeleteCommentsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDeleteCommentsTask.h; sourceTree = "<group>"; };
+		E581D82C1AF3CADA00FD67C8 /* GTDeleteCommentsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDeleteCommentsTask.m; sourceTree = "<group>"; };
+		E581D82D1AF3CADA00FD67C8 /* GTEditCommentTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditCommentTask.h; sourceTree = "<group>"; };
+		E581D82E1AF3CADA00FD67C8 /* GTEditCommentTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditCommentTask.m; sourceTree = "<group>"; };
+		E581D82F1AF3CADA00FD67C8 /* GTGetCommentsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetCommentsTask.h; sourceTree = "<group>"; };
+		E581D8301AF3CADA00FD67C8 /* GTGetCommentsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetCommentsTask.m; sourceTree = "<group>"; };
+		E581D8311AF3CADA00FD67C8 /* GTPostCommentTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTPostCommentTask.h; sourceTree = "<group>"; };
+		E581D8321AF3CADA00FD67C8 /* GTPostCommentTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTPostCommentTask.m; sourceTree = "<group>"; };
+		E581D8331AF3CADA00FD67C8 /* GTGetNewestItemsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetNewestItemsTask.h; sourceTree = "<group>"; };
+		E581D8341AF3CADA00FD67C8 /* GTGetNewestItemsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetNewestItemsTask.m; sourceTree = "<group>"; };
+		E581D8351AF3CADA00FD67C8 /* GTGetPopularItemsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetPopularItemsTask.h; sourceTree = "<group>"; };
+		E581D8361AF3CADA00FD67C8 /* GTGetPopularItemsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetPopularItemsTask.m; sourceTree = "<group>"; };
+		E581D8371AF3CADA00FD67C8 /* GTGetUserFavouritesTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUserFavouritesTask.h; sourceTree = "<group>"; };
+		E581D8381AF3CADA00FD67C8 /* GTGetUserFavouritesTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUserFavouritesTask.m; sourceTree = "<group>"; };
+		E581D8391AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUserHomeStreamTask.h; sourceTree = "<group>"; };
+		E581D83A1AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUserHomeStreamTask.m; sourceTree = "<group>"; };
+		E581D83B1AF3CADA00FD67C8 /* GTGetUserItemsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUserItemsTask.h; sourceTree = "<group>"; };
+		E581D83C1AF3CADA00FD67C8 /* GTGetUserItemsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUserItemsTask.m; sourceTree = "<group>"; };
+		E581D83E1AF3CADA00FD67C8 /* GTGetLikersTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetLikersTask.h; sourceTree = "<group>"; };
+		E581D83F1AF3CADA00FD67C8 /* GTGetLikersTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetLikersTask.m; sourceTree = "<group>"; };
+		E581D8401AF3CADA00FD67C8 /* GTLikeItemTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLikeItemTask.h; sourceTree = "<group>"; };
+		E581D8411AF3CADA00FD67C8 /* GTLikeItemTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLikeItemTask.m; sourceTree = "<group>"; };
+		E581D8421AF3CADA00FD67C8 /* GTUnlikeItemTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTUnlikeItemTask.h; sourceTree = "<group>"; };
+		E581D8431AF3CADA00FD67C8 /* GTUnlikeItemTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUnlikeItemTask.m; sourceTree = "<group>"; };
+		E581D8451AF3CADA00FD67C8 /* GTCreateStreamableTagTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCreateStreamableTagTask.h; sourceTree = "<group>"; };
+		E581D8461AF3CADA00FD67C8 /* GTCreateStreamableTagTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCreateStreamableTagTask.m; sourceTree = "<group>"; };
+		E581D8471AF3CADA00FD67C8 /* GTGetStreamablesForLocationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetStreamablesForLocationTask.h; sourceTree = "<group>"; };
+		E581D8481AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetStreamablesForLocationTask.m; sourceTree = "<group>"; };
+		E581D84A1AF3CADB00FD67C8 /* GTCheckLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCheckLoginStatus.h; sourceTree = "<group>"; };
+		E581D84B1AF3CADB00FD67C8 /* GTCheckLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCheckLoginStatus.m; sourceTree = "<group>"; };
+		E581D84C1AF3CADB00FD67C8 /* GTEditAvatarTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditAvatarTask.h; sourceTree = "<group>"; };
+		E581D84D1AF3CADB00FD67C8 /* GTEditAvatarTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditAvatarTask.m; sourceTree = "<group>"; };
+		E581D84E1AF3CADB00FD67C8 /* GTEditCoverTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditCoverTask.h; sourceTree = "<group>"; };
+		E581D84F1AF3CADB00FD67C8 /* GTEditCoverTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditCoverTask.m; sourceTree = "<group>"; };
+		E581D8501AF3CADB00FD67C8 /* GTEditPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditPasswordTask.h; sourceTree = "<group>"; };
+		E581D8511AF3CADB00FD67C8 /* GTEditPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditPasswordTask.m; sourceTree = "<group>"; };
+		E581D8521AF3CADB00FD67C8 /* GTEditProfileTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditProfileTask.h; sourceTree = "<group>"; };
+		E581D8531AF3CADB00FD67C8 /* GTEditProfileTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditProfileTask.m; sourceTree = "<group>"; };
+		E581D8541AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFindUserForUsernameTask.h; sourceTree = "<group>"; };
+		E581D8551AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFindUserForUsernameTask.m; sourceTree = "<group>"; };
+		E581D8561AF3CADB00FD67C8 /* GTFollowTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFollowTask.h; sourceTree = "<group>"; };
+		E581D8571AF3CADB00FD67C8 /* GTFollowTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFollowTask.m; sourceTree = "<group>"; };
+		E581D8581AF3CADB00FD67C8 /* GTGetFollowersTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetFollowersTask.h; sourceTree = "<group>"; };
+		E581D8591AF3CADB00FD67C8 /* GTGetFollowersTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetFollowersTask.m; sourceTree = "<group>"; };
+		E581D85A1AF3CADB00FD67C8 /* GTGetFollowingTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetFollowingTask.h; sourceTree = "<group>"; };
+		E581D85B1AF3CADB00FD67C8 /* GTGetFollowingTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetFollowingTask.m; sourceTree = "<group>"; };
+		E581D85C1AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetMostActiveUsersTask.h; sourceTree = "<group>"; };
+		E581D85D1AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetMostActiveUsersTask.m; sourceTree = "<group>"; };
+		E581D85E1AF3CADB00FD67C8 /* GTGetSocialFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetSocialFriends.h; sourceTree = "<group>"; };
+		E581D85F1AF3CADB00FD67C8 /* GTGetSocialFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetSocialFriends.m; sourceTree = "<group>"; };
+		E581D8601AF3CADB00FD67C8 /* GTGetUserProfileTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUserProfileTask.h; sourceTree = "<group>"; };
+		E581D8611AF3CADB00FD67C8 /* GTGetUserProfileTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUserProfileTask.m; sourceTree = "<group>"; };
+		E581D8621AF3CADB00FD67C8 /* GTLinkExternalIdTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLinkExternalIdTask.h; sourceTree = "<group>"; };
+		E581D8631AF3CADB00FD67C8 /* GTLinkExternalIdTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLinkExternalIdTask.m; sourceTree = "<group>"; };
+		E581D8641AF3CADB00FD67C8 /* GTLoginTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoginTask.h; sourceTree = "<group>"; };
+		E581D8651AF3CADB00FD67C8 /* GTLoginTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoginTask.m; sourceTree = "<group>"; };
+		E581D8661AF3CADB00FD67C8 /* GTLogoutTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLogoutTask.h; sourceTree = "<group>"; };
+		E581D8671AF3CADB00FD67C8 /* GTLogoutTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLogoutTask.m; sourceTree = "<group>"; };
+		E581D8681AF3CADB00FD67C8 /* GTResetPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTResetPasswordTask.h; sourceTree = "<group>"; };
+		E581D8691AF3CADB00FD67C8 /* GTResetPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTResetPasswordTask.m; sourceTree = "<group>"; };
+		E581D86A1AF3CADB00FD67C8 /* GTSignUpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSignUpTask.h; sourceTree = "<group>"; };
+		E581D86B1AF3CADB00FD67C8 /* GTSignUpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSignUpTask.m; sourceTree = "<group>"; };
+		E581D86C1AF3CADB00FD67C8 /* GTUnfollowTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTUnfollowTask.h; sourceTree = "<group>"; };
+		E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUnfollowTask.m; sourceTree = "<group>"; };
+		E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVerifyExternalUserTask.h; sourceTree = "<group>"; };
+		E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerifyExternalUserTask.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E581D7601AF3C83E00FD67C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E581D7901AF3C9F100FD67C8 /* SystemConfiguration.framework in Frameworks */,
+				E581D78E1AF3C9E900FD67C8 /* MobileCoreServices.framework in Frameworks */,
+				E581D78C1AF3C9E200FD67C8 /* CoreLocation.framework in Frameworks */,
+				3D75A0155130B4C47027699A /* libPods-GraffiTab_iOS_SDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E581D76C1AF3C83E00FD67C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E581D7701AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AECE3A45CC5D990CD8F89AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A7B9CCF2511B5FEDDEB1745 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */,
+				437160EDBB58CD7C654B9AE8 /* Pods-GraffiTab_iOS_SDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1F7A9F169D5E866E0F4D6FD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E581D78F1AF3C9F100FD67C8 /* SystemConfiguration.framework */,
+				E581D78D1AF3C9E900FD67C8 /* MobileCoreServices.framework */,
+				E581D78B1AF3C9E200FD67C8 /* CoreLocation.framework */,
+				6324411E180AC53B5F63B5F9 /* libPods-GraffiTab_iOS_SDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E581D75A1AF3C83E00FD67C8 = {
+			isa = PBXGroup;
+			children = (
+				E581D7661AF3C83E00FD67C8 /* GraffiTab_iOS_SDK */,
+				E581D7731AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests */,
+				E581D7651AF3C83E00FD67C8 /* Products */,
+				1AECE3A45CC5D990CD8F89AB /* Pods */,
+				1F7A9F169D5E866E0F4D6FD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E581D7651AF3C83E00FD67C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7641AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework */,
+				E581D76F1AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E581D7661AF3C83E00FD67C8 /* GraffiTab_iOS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7691AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h */,
+				E581D7911AF3CADA00FD67C8 /* Classes */,
+				E581D7671AF3C83E00FD67C8 /* Supporting Files */,
+			);
+			path = GraffiTab_iOS_SDK;
+			sourceTree = "<group>";
+		};
+		E581D7671AF3C83E00FD67C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7841AF3C88800FD67C8 /* GraffiTab_iOS_SDK-Prefix.pch */,
+				E581D7681AF3C83E00FD67C8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E581D7731AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7761AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m */,
+				E581D7741AF3C83E00FD67C8 /* Supporting Files */,
+			);
+			path = GraffiTab_iOS_SDKTests;
+			sourceTree = "<group>";
+		};
+		E581D7741AF3C83E00FD67C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7751AF3C83E00FD67C8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E581D7911AF3CADA00FD67C8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7921AF3CADA00FD67C8 /* Constants */,
+				E581D7981AF3CADA00FD67C8 /* Interfaces */,
+				E581D79A1AF3CADA00FD67C8 /* Managers */,
+				E581D7B61AF3CADA00FD67C8 /* Model */,
+				E581D7DA1AF3CADA00FD67C8 /* Network */,
+				E581D7EC1AF3CADA00FD67C8 /* Settings */,
+				E581D7EF1AF3CADA00FD67C8 /* Tasks */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E581D7921AF3CADA00FD67C8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7931AF3CADA00FD67C8 /* GTAPIConstants.h */,
+				E581D7941AF3CADA00FD67C8 /* GTConstants.h */,
+				E581D7951AF3CADA00FD67C8 /* GTJSONModelConstants.h */,
+				E581D7961AF3CADA00FD67C8 /* GTJSONRequestConstants.h */,
+				E581D7971AF3CADA00FD67C8 /* GTJSONResponseConstants.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E581D7981AF3CADA00FD67C8 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7991AF3CADA00FD67C8 /* GTJSONSerializable.h */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		E581D79A1AF3CADA00FD67C8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E581D79B1AF3CADA00FD67C8 /* Conversation */,
+				E581D79E1AF3CADA00FD67C8 /* Device */,
+				E581D7A11AF3CADA00FD67C8 /* Feedback */,
+				E581D7A41AF3CADA00FD67C8 /* Lifecycle */,
+				E581D7A71AF3CADA00FD67C8 /* Location */,
+				E581D7AA1AF3CADA00FD67C8 /* Notification */,
+				E581D7AD1AF3CADA00FD67C8 /* Search */,
+				E581D7B01AF3CADA00FD67C8 /* Streamable */,
+				E581D7B31AF3CADA00FD67C8 /* User */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E581D79B1AF3CADA00FD67C8 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				E581D79C1AF3CADA00FD67C8 /* GTConversationManager.h */,
+				E581D79D1AF3CADA00FD67C8 /* GTConversationManager.m */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		E581D79E1AF3CADA00FD67C8 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				E581D79F1AF3CADA00FD67C8 /* GTDeviceManager.h */,
+				E581D7A01AF3CADA00FD67C8 /* GTDeviceManager.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		E581D7A11AF3CADA00FD67C8 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7A21AF3CADA00FD67C8 /* GTFeedbackManager.h */,
+				E581D7A31AF3CADA00FD67C8 /* GTFeedbackManager.m */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		E581D7A41AF3CADA00FD67C8 /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7A51AF3CADA00FD67C8 /* GTLifecycleManager.h */,
+				E581D7A61AF3CADA00FD67C8 /* GTLifecycleManager.m */,
+			);
+			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		E581D7A71AF3CADA00FD67C8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7A81AF3CADA00FD67C8 /* GTLocationManager.h */,
+				E581D7A91AF3CADA00FD67C8 /* GTLocationManager.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		E581D7AA1AF3CADA00FD67C8 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7AB1AF3CADA00FD67C8 /* GTNotificationManager.h */,
+				E581D7AC1AF3CADA00FD67C8 /* GTNotificationManager.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		E581D7AD1AF3CADA00FD67C8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7AE1AF3CADA00FD67C8 /* GTSearchManager.h */,
+				E581D7AF1AF3CADA00FD67C8 /* GTSearchManager.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E581D7B01AF3CADA00FD67C8 /* Streamable */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7B11AF3CADA00FD67C8 /* GTStreamableManager.h */,
+				E581D7B21AF3CADA00FD67C8 /* GTStreamableManager.m */,
+			);
+			path = Streamable;
+			sourceTree = "<group>";
+		};
+		E581D7B31AF3CADA00FD67C8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7B41AF3CADA00FD67C8 /* GTUserManager.h */,
+				E581D7B51AF3CADA00FD67C8 /* GTUserManager.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E581D7B61AF3CADA00FD67C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7B71AF3CADA00FD67C8 /* Conversation */,
+				E581D7BC1AF3CADA00FD67C8 /* GTComment.h */,
+				E581D7BD1AF3CADA00FD67C8 /* GTComment.m */,
+				E581D7BE1AF3CADA00FD67C8 /* GTPerson.h */,
+				E581D7BF1AF3CADA00FD67C8 /* GTPerson.m */,
+				E581D7C01AF3CADA00FD67C8 /* GTUserLocation.h */,
+				E581D7C11AF3CADA00FD67C8 /* GTUserLocation.m */,
+				E581D7C21AF3CADA00FD67C8 /* Notifications */,
+				E581D7D11AF3CADA00FD67C8 /* Streamable */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E581D7B71AF3CADA00FD67C8 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7B81AF3CADA00FD67C8 /* GTConversation.h */,
+				E581D7B91AF3CADA00FD67C8 /* GTConversation.m */,
+				E581D7BA1AF3CADA00FD67C8 /* GTConversationMessage.h */,
+				E581D7BB1AF3CADA00FD67C8 /* GTConversationMessage.m */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		E581D7C21AF3CADA00FD67C8 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7C31AF3CADA00FD67C8 /* GTNotification.h */,
+				E581D7C41AF3CADA00FD67C8 /* GTNotification.m */,
+				E581D7C51AF3CADA00FD67C8 /* GTNotificationComment.h */,
+				E581D7C61AF3CADA00FD67C8 /* GTNotificationComment.m */,
+				E581D7C71AF3CADA00FD67C8 /* GTNotificationFactory.h */,
+				E581D7C81AF3CADA00FD67C8 /* GTNotificationFactory.m */,
+				E581D7C91AF3CADA00FD67C8 /* GTNotificationFollow.h */,
+				E581D7CA1AF3CADA00FD67C8 /* GTNotificationFollow.m */,
+				E581D7CB1AF3CADA00FD67C8 /* GTNotificationLike.h */,
+				E581D7CC1AF3CADA00FD67C8 /* GTNotificationLike.m */,
+				E581D7CD1AF3CADA00FD67C8 /* GTNotificationMention.h */,
+				E581D7CE1AF3CADA00FD67C8 /* GTNotificationMention.m */,
+				E581D7CF1AF3CADA00FD67C8 /* GTNotificationWelcome.h */,
+				E581D7D01AF3CADA00FD67C8 /* GTNotificationWelcome.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		E581D7D11AF3CADA00FD67C8 /* Streamable */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7D21AF3CADA00FD67C8 /* GTStreamable.h */,
+				E581D7D31AF3CADA00FD67C8 /* GTStreamable.m */,
+				E581D7D41AF3CADA00FD67C8 /* GTStreamableFactory.h */,
+				E581D7D51AF3CADA00FD67C8 /* GTStreamableFactory.m */,
+				E581D7D61AF3CADA00FD67C8 /* GTStreamableTag.h */,
+				E581D7D71AF3CADA00FD67C8 /* GTStreamableTag.m */,
+				E581D7D81AF3CADA00FD67C8 /* GTStreamableVideo.h */,
+				E581D7D91AF3CADA00FD67C8 /* GTStreamableVideo.m */,
+			);
+			path = Streamable;
+			sourceTree = "<group>";
+		};
+		E581D7DA1AF3CADA00FD67C8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7DB1AF3CADA00FD67C8 /* Cache */,
+				E581D7DF1AF3CADA00FD67C8 /* GTImageRequestBuilder.h */,
+				E581D7E01AF3CADA00FD67C8 /* GTImageRequestBuilder.m */,
+				E581D7E11AF3CADA00FD67C8 /* GTRequestBuilder.h */,
+				E581D7E21AF3CADA00FD67C8 /* GTRequestBuilder.m */,
+				E581D7E31AF3CADA00FD67C8 /* GTResponseObject.h */,
+				E581D7E41AF3CADA00FD67C8 /* GTResponseObject.m */,
+				E581D7E51AF3CADA00FD67C8 /* Session */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E581D7DB1AF3CADA00FD67C8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7DC1AF3CADA00FD67C8 /* ViewControllerCache */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		E581D7DC1AF3CADA00FD67C8 /* ViewControllerCache */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7DD1AF3CADA00FD67C8 /* GTViewControllerCache.h */,
+				E581D7DE1AF3CADA00FD67C8 /* GTViewControllerCache.m */,
+			);
+			path = ViewControllerCache;
+			sourceTree = "<group>";
+		};
+		E581D7E51AF3CADA00FD67C8 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7E61AF3CADA00FD67C8 /* GTCookieManager.h */,
+				E581D7E71AF3CADA00FD67C8 /* GTCookieManager.m */,
+				E581D7E81AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.h */,
+				E581D7E91AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.m */,
+				E581D7EA1AF3CADA00FD67C8 /* GTSessionManager.h */,
+				E581D7EB1AF3CADA00FD67C8 /* GTSessionManager.m */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		E581D7EC1AF3CADA00FD67C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7ED1AF3CADA00FD67C8 /* GTSettings.h */,
+				E581D7EE1AF3CADA00FD67C8 /* GTSettings.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E581D7EF1AF3CADA00FD67C8 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7F01AF3CADA00FD67C8 /* Conversations */,
+				E581D80C1AF3CADA00FD67C8 /* Device */,
+				E581D8111AF3CADA00FD67C8 /* Feedback */,
+				E581D8141AF3CADA00FD67C8 /* GTNetworkTask.h */,
+				E581D8151AF3CADA00FD67C8 /* GTNetworkTask.m */,
+				E581D8161AF3CADA00FD67C8 /* Location */,
+				E581D81D1AF3CADA00FD67C8 /* Notifications */,
+				E581D8221AF3CADA00FD67C8 /* Search */,
+				E581D8291AF3CADA00FD67C8 /* Streamable */,
+				E581D8491AF3CADB00FD67C8 /* UserTasks */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E581D7F01AF3CADA00FD67C8 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				E581D7F11AF3CADA00FD67C8 /* GTAddConversationUsersTask.h */,
+				E581D7F21AF3CADA00FD67C8 /* GTAddConversationUsersTask.m */,
+				E581D7F31AF3CADA00FD67C8 /* GTCreateConversationTask.h */,
+				E581D7F41AF3CADA00FD67C8 /* GTCreateConversationTask.m */,
+				E581D7F51AF3CADA00FD67C8 /* GTEditConversationImageTask.h */,
+				E581D7F61AF3CADA00FD67C8 /* GTEditConversationImageTask.m */,
+				E581D7F71AF3CADA00FD67C8 /* GTEditConversationNameTask.h */,
+				E581D7F81AF3CADA00FD67C8 /* GTEditConversationNameTask.m */,
+				E581D7F91AF3CADA00FD67C8 /* GTGetConversationsTask.h */,
+				E581D7FA1AF3CADA00FD67C8 /* GTGetConversationsTask.m */,
+				E581D7FB1AF3CADA00FD67C8 /* GTGetMessagesTask.h */,
+				E581D7FC1AF3CADA00FD67C8 /* GTGetMessagesTask.m */,
+				E581D7FD1AF3CADA00FD67C8 /* GTGetUnseenConversationsTask.h */,
+				E581D7FE1AF3CADA00FD67C8 /* GTGetUnseenConversationsTask.m */,
+				E581D7FF1AF3CADA00FD67C8 /* GTHideTypingIndicatorTask.h */,
+				E581D8001AF3CADA00FD67C8 /* GTHideTypingIndicatorTask.m */,
+				E581D8011AF3CADA00FD67C8 /* GTLeaveConversationTask.h */,
+				E581D8021AF3CADA00FD67C8 /* GTLeaveConversationTask.m */,
+				E581D8031AF3CADA00FD67C8 /* GTPostMessageTask.h */,
+				E581D8041AF3CADA00FD67C8 /* GTPostMessageTask.m */,
+				E581D8051AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.h */,
+				E581D8061AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.m */,
+				E581D8071AF3CADA00FD67C8 /* Messages */,
+			);
+			path = Conversations;
+			sourceTree = "<group>";
+		};
+		E581D8071AF3CADA00FD67C8 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				E581D8081AF3CADA00FD67C8 /* GTDeleteMessagesTask.h */,
+				E581D8091AF3CADA00FD67C8 /* GTDeleteMessagesTask.m */,
+				E581D80A1AF3CADA00FD67C8 /* GTEditMessageTask.h */,
+				E581D80B1AF3CADA00FD67C8 /* GTEditMessageTask.m */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		E581D80C1AF3CADA00FD67C8 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				E581D80D1AF3CADA00FD67C8 /* GTRegisterDeviceTask.h */,
+				E581D80E1AF3CADA00FD67C8 /* GTRegisterDeviceTask.m */,
+				E581D80F1AF3CADA00FD67C8 /* GTUnregisterDeviceTask.h */,
+				E581D8101AF3CADA00FD67C8 /* GTUnregisterDeviceTask.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		E581D8111AF3CADA00FD67C8 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				E581D8121AF3CADA00FD67C8 /* GTSendFeedback.h */,
+				E581D8131AF3CADA00FD67C8 /* GTSendFeedback.m */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		E581D8161AF3CADA00FD67C8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E581D8171AF3CADA00FD67C8 /* GTCreateUserLocationTask.h */,
+				E581D8181AF3CADA00FD67C8 /* GTCreateUserLocationTask.m */,
+				E581D8191AF3CADA00FD67C8 /* GTDeleteUserLocationsTask.h */,
+				E581D81A1AF3CADA00FD67C8 /* GTDeleteUserLocationsTask.m */,
+				E581D81B1AF3CADA00FD67C8 /* GTGetUserLocationsTask.h */,
+				E581D81C1AF3CADA00FD67C8 /* GTGetUserLocationsTask.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		E581D81D1AF3CADA00FD67C8 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				E581D81E1AF3CADA00FD67C8 /* GTGetNotificationsTask.h */,
+				E581D81F1AF3CADA00FD67C8 /* GTGetNotificationsTask.m */,
+				E581D8201AF3CADA00FD67C8 /* GTGetUnseenNotificationsTask.h */,
+				E581D8211AF3CADA00FD67C8 /* GTGetUnseenNotificationsTask.m */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		E581D8221AF3CADA00FD67C8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E581D8231AF3CADA00FD67C8 /* GTSearchHashtag.h */,
+				E581D8241AF3CADA00FD67C8 /* GTSearchHashtag.m */,
+				E581D8251AF3CADA00FD67C8 /* GTSearchHashtags.h */,
+				E581D8261AF3CADA00FD67C8 /* GTSearchHashtags.m */,
+				E581D8271AF3CADA00FD67C8 /* GTSearchUsers.h */,
+				E581D8281AF3CADA00FD67C8 /* GTSearchUsers.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E581D8291AF3CADA00FD67C8 /* Streamable */ = {
+			isa = PBXGroup;
+			children = (
+				E581D82A1AF3CADA00FD67C8 /* Comments */,
+				E581D8331AF3CADA00FD67C8 /* GTGetNewestItemsTask.h */,
+				E581D8341AF3CADA00FD67C8 /* GTGetNewestItemsTask.m */,
+				E581D8351AF3CADA00FD67C8 /* GTGetPopularItemsTask.h */,
+				E581D8361AF3CADA00FD67C8 /* GTGetPopularItemsTask.m */,
+				E581D8371AF3CADA00FD67C8 /* GTGetUserFavouritesTask.h */,
+				E581D8381AF3CADA00FD67C8 /* GTGetUserFavouritesTask.m */,
+				E581D8391AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.h */,
+				E581D83A1AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.m */,
+				E581D83B1AF3CADA00FD67C8 /* GTGetUserItemsTask.h */,
+				E581D83C1AF3CADA00FD67C8 /* GTGetUserItemsTask.m */,
+				E581D83D1AF3CADA00FD67C8 /* Likes */,
+				E581D8441AF3CADA00FD67C8 /* Tags */,
+			);
+			path = Streamable;
+			sourceTree = "<group>";
+		};
+		E581D82A1AF3CADA00FD67C8 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				E581D82B1AF3CADA00FD67C8 /* GTDeleteCommentsTask.h */,
+				E581D82C1AF3CADA00FD67C8 /* GTDeleteCommentsTask.m */,
+				E581D82D1AF3CADA00FD67C8 /* GTEditCommentTask.h */,
+				E581D82E1AF3CADA00FD67C8 /* GTEditCommentTask.m */,
+				E581D82F1AF3CADA00FD67C8 /* GTGetCommentsTask.h */,
+				E581D8301AF3CADA00FD67C8 /* GTGetCommentsTask.m */,
+				E581D8311AF3CADA00FD67C8 /* GTPostCommentTask.h */,
+				E581D8321AF3CADA00FD67C8 /* GTPostCommentTask.m */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		E581D83D1AF3CADA00FD67C8 /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				E581D83E1AF3CADA00FD67C8 /* GTGetLikersTask.h */,
+				E581D83F1AF3CADA00FD67C8 /* GTGetLikersTask.m */,
+				E581D8401AF3CADA00FD67C8 /* GTLikeItemTask.h */,
+				E581D8411AF3CADA00FD67C8 /* GTLikeItemTask.m */,
+				E581D8421AF3CADA00FD67C8 /* GTUnlikeItemTask.h */,
+				E581D8431AF3CADA00FD67C8 /* GTUnlikeItemTask.m */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
+		E581D8441AF3CADA00FD67C8 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				E581D8451AF3CADA00FD67C8 /* GTCreateStreamableTagTask.h */,
+				E581D8461AF3CADA00FD67C8 /* GTCreateStreamableTagTask.m */,
+				E581D8471AF3CADA00FD67C8 /* GTGetStreamablesForLocationTask.h */,
+				E581D8481AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		E581D8491AF3CADB00FD67C8 /* UserTasks */ = {
+			isa = PBXGroup;
+			children = (
+				E581D84A1AF3CADB00FD67C8 /* GTCheckLoginStatus.h */,
+				E581D84B1AF3CADB00FD67C8 /* GTCheckLoginStatus.m */,
+				E581D84C1AF3CADB00FD67C8 /* GTEditAvatarTask.h */,
+				E581D84D1AF3CADB00FD67C8 /* GTEditAvatarTask.m */,
+				E581D84E1AF3CADB00FD67C8 /* GTEditCoverTask.h */,
+				E581D84F1AF3CADB00FD67C8 /* GTEditCoverTask.m */,
+				E581D8501AF3CADB00FD67C8 /* GTEditPasswordTask.h */,
+				E581D8511AF3CADB00FD67C8 /* GTEditPasswordTask.m */,
+				E581D8521AF3CADB00FD67C8 /* GTEditProfileTask.h */,
+				E581D8531AF3CADB00FD67C8 /* GTEditProfileTask.m */,
+				E581D8541AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h */,
+				E581D8551AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m */,
+				E581D8561AF3CADB00FD67C8 /* GTFollowTask.h */,
+				E581D8571AF3CADB00FD67C8 /* GTFollowTask.m */,
+				E581D8581AF3CADB00FD67C8 /* GTGetFollowersTask.h */,
+				E581D8591AF3CADB00FD67C8 /* GTGetFollowersTask.m */,
+				E581D85A1AF3CADB00FD67C8 /* GTGetFollowingTask.h */,
+				E581D85B1AF3CADB00FD67C8 /* GTGetFollowingTask.m */,
+				E581D85C1AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h */,
+				E581D85D1AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.m */,
+				E581D85E1AF3CADB00FD67C8 /* GTGetSocialFriends.h */,
+				E581D85F1AF3CADB00FD67C8 /* GTGetSocialFriends.m */,
+				E581D8601AF3CADB00FD67C8 /* GTGetUserProfileTask.h */,
+				E581D8611AF3CADB00FD67C8 /* GTGetUserProfileTask.m */,
+				E581D8621AF3CADB00FD67C8 /* GTLinkExternalIdTask.h */,
+				E581D8631AF3CADB00FD67C8 /* GTLinkExternalIdTask.m */,
+				E581D8641AF3CADB00FD67C8 /* GTLoginTask.h */,
+				E581D8651AF3CADB00FD67C8 /* GTLoginTask.m */,
+				E581D8661AF3CADB00FD67C8 /* GTLogoutTask.h */,
+				E581D8671AF3CADB00FD67C8 /* GTLogoutTask.m */,
+				E581D8681AF3CADB00FD67C8 /* GTResetPasswordTask.h */,
+				E581D8691AF3CADB00FD67C8 /* GTResetPasswordTask.m */,
+				E581D86A1AF3CADB00FD67C8 /* GTSignUpTask.h */,
+				E581D86B1AF3CADB00FD67C8 /* GTSignUpTask.m */,
+				E581D86C1AF3CADB00FD67C8 /* GTUnfollowTask.h */,
+				E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */,
+				E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */,
+				E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */,
+			);
+			path = UserTasks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E581D7611AF3C83E00FD67C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E581D87E1AF3CADB00FD67C8 /* GTLocationManager.h in Headers */,
+				E581D89C1AF3CADB00FD67C8 /* GTNotificationMention.h in Headers */,
+				E581D8841AF3CADB00FD67C8 /* GTStreamableManager.h in Headers */,
+				E581D88C1AF3CADB00FD67C8 /* GTComment.h in Headers */,
+				E581D8A61AF3CADB00FD67C8 /* GTStreamableVideo.h in Headers */,
+				E581D8821AF3CADB00FD67C8 /* GTSearchManager.h in Headers */,
+				E581D8761AF3CADB00FD67C8 /* GTConversationManager.h in Headers */,
+				E581D88A1AF3CADB00FD67C8 /* GTConversationMessage.h in Headers */,
+				E581D8881AF3CADB00FD67C8 /* GTConversation.h in Headers */,
+				E581D8A81AF3CADB00FD67C8 /* GTViewControllerCache.h in Headers */,
+				E581D8861AF3CADB00FD67C8 /* GTUserManager.h in Headers */,
+				E581D89E1AF3CADB00FD67C8 /* GTNotificationWelcome.h in Headers */,
+				E581D8941AF3CADB00FD67C8 /* GTNotificationComment.h in Headers */,
+				E581D8921AF3CADB00FD67C8 /* GTNotification.h in Headers */,
+				E581D8781AF3CADB00FD67C8 /* GTDeviceManager.h in Headers */,
+				E581D8A01AF3CADB00FD67C8 /* GTStreamable.h in Headers */,
+				E581D89A1AF3CADB00FD67C8 /* GTNotificationLike.h in Headers */,
+				E581D8901AF3CADB00FD67C8 /* GTUserLocation.h in Headers */,
+				E581D87C1AF3CADB00FD67C8 /* GTLifecycleManager.h in Headers */,
+				E581D87A1AF3CADB00FD67C8 /* GTFeedbackManager.h in Headers */,
+				E581D88E1AF3CADB00FD67C8 /* GTPerson.h in Headers */,
+				E581D8751AF3CADB00FD67C8 /* GTJSONSerializable.h in Headers */,
+				E581D8801AF3CADB00FD67C8 /* GTNotificationManager.h in Headers */,
+				E581D8AA1AF3CADB00FD67C8 /* GTImageRequestBuilder.h in Headers */,
+				E581D8711AF3CADB00FD67C8 /* GTConstants.h in Headers */,
+				E581D8A41AF3CADB00FD67C8 /* GTStreamableTag.h in Headers */,
+				E581D8981AF3CADB00FD67C8 /* GTNotificationFollow.h in Headers */,
+				E581D8AE1AF3CADB00FD67C8 /* GTResponseObject.h in Headers */,
+				E581D9101AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h in Headers */,
+				E581D8B41AF3CADB00FD67C8 /* GTSessionManager.h in Headers */,
+				E581D9021AF3CADB00FD67C8 /* GTCreateStreamableTagTask.h in Headers */,
+				E581D8CC1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.h in Headers */,
+				E581D9181AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h in Headers */,
+				E581D9061AF3CADB00FD67C8 /* GTCheckLoginStatus.h in Headers */,
+				E581D8961AF3CADB00FD67C8 /* GTNotificationFactory.h in Headers */,
+				E581D76A1AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h in Headers */,
+				E581D9221AF3CADB00FD67C8 /* GTLogoutTask.h in Headers */,
+				E581D9041AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.h in Headers */,
+				E581D8BA1AF3CADB00FD67C8 /* GTCreateConversationTask.h in Headers */,
+				E581D8A21AF3CADB00FD67C8 /* GTStreamableFactory.h in Headers */,
+				E581D8B61AF3CADB00FD67C8 /* GTSettings.h in Headers */,
+				E581D8D41AF3CADB00FD67C8 /* GTUnregisterDeviceTask.h in Headers */,
+				E581D8EE1AF3CADB00FD67C8 /* GTGetCommentsTask.h in Headers */,
+				E581D8CA1AF3CADB00FD67C8 /* GTPostMessageTask.h in Headers */,
+				E581D8E61AF3CADB00FD67C8 /* GTSearchHashtags.h in Headers */,
+				E581D8BE1AF3CADB00FD67C8 /* GTEditConversationNameTask.h in Headers */,
+				E581D9281AF3CADB00FD67C8 /* GTUnfollowTask.h in Headers */,
+				E581D8731AF3CADB00FD67C8 /* GTJSONRequestConstants.h in Headers */,
+				E581D9161AF3CADB00FD67C8 /* GTGetFollowingTask.h in Headers */,
+				E581D9261AF3CADB00FD67C8 /* GTSignUpTask.h in Headers */,
+				E581D8D21AF3CADB00FD67C8 /* GTRegisterDeviceTask.h in Headers */,
+				E581D8F81AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.h in Headers */,
+				E581D8F61AF3CADB00FD67C8 /* GTGetUserFavouritesTask.h in Headers */,
+				E581D8E41AF3CADB00FD67C8 /* GTSearchHashtag.h in Headers */,
+				E581D8D61AF3CADB00FD67C8 /* GTSendFeedback.h in Headers */,
+				E581D7851AF3C88800FD67C8 /* GraffiTab_iOS_SDK-Prefix.pch in Headers */,
+				E581D8D01AF3CADB00FD67C8 /* GTEditMessageTask.h in Headers */,
+				E581D8BC1AF3CADB00FD67C8 /* GTEditConversationImageTask.h in Headers */,
+				E581D8F41AF3CADB00FD67C8 /* GTGetPopularItemsTask.h in Headers */,
+				E581D8EC1AF3CADB00FD67C8 /* GTEditCommentTask.h in Headers */,
+				E581D8E81AF3CADB00FD67C8 /* GTSearchUsers.h in Headers */,
+				E581D8AC1AF3CADB00FD67C8 /* GTRequestBuilder.h in Headers */,
+				E581D8F21AF3CADB00FD67C8 /* GTGetNewestItemsTask.h in Headers */,
+				E581D8721AF3CADB00FD67C8 /* GTJSONModelConstants.h in Headers */,
+				E581D8701AF3CADB00FD67C8 /* GTAPIConstants.h in Headers */,
+				E581D8C01AF3CADB00FD67C8 /* GTGetConversationsTask.h in Headers */,
+				E581D8DA1AF3CADB00FD67C8 /* GTCreateUserLocationTask.h in Headers */,
+				E581D8B01AF3CADB00FD67C8 /* GTCookieManager.h in Headers */,
+				E581D8C41AF3CADB00FD67C8 /* GTGetUnseenConversationsTask.h in Headers */,
+				E581D8DE1AF3CADB00FD67C8 /* GTGetUserLocationsTask.h in Headers */,
+				E581D8C21AF3CADB00FD67C8 /* GTGetMessagesTask.h in Headers */,
+				E581D90A1AF3CADB00FD67C8 /* GTEditCoverTask.h in Headers */,
+				E581D9201AF3CADB00FD67C8 /* GTLoginTask.h in Headers */,
+				E581D92A1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h in Headers */,
+				E581D8E01AF3CADB00FD67C8 /* GTGetNotificationsTask.h in Headers */,
+				E581D8741AF3CADB00FD67C8 /* GTJSONResponseConstants.h in Headers */,
+				E581D91E1AF3CADB00FD67C8 /* GTLinkExternalIdTask.h in Headers */,
+				E581D8E21AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.h in Headers */,
+				E581D8B21AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.h in Headers */,
+				E581D8DC1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.h in Headers */,
+				E581D9121AF3CADB00FD67C8 /* GTFollowTask.h in Headers */,
+				E581D9081AF3CADB00FD67C8 /* GTEditAvatarTask.h in Headers */,
+				E581D8F01AF3CADB00FD67C8 /* GTPostCommentTask.h in Headers */,
+				E581D8D81AF3CADB00FD67C8 /* GTNetworkTask.h in Headers */,
+				E581D8C81AF3CADB00FD67C8 /* GTLeaveConversationTask.h in Headers */,
+				E581D8CE1AF3CADB00FD67C8 /* GTDeleteMessagesTask.h in Headers */,
+				E581D90C1AF3CADB00FD67C8 /* GTEditPasswordTask.h in Headers */,
+				E581D8EA1AF3CADB00FD67C8 /* GTDeleteCommentsTask.h in Headers */,
+				E581D9001AF3CADB00FD67C8 /* GTUnlikeItemTask.h in Headers */,
+				E581D9241AF3CADB00FD67C8 /* GTResetPasswordTask.h in Headers */,
+				E581D90E1AF3CADB00FD67C8 /* GTEditProfileTask.h in Headers */,
+				E581D8B81AF3CADB00FD67C8 /* GTAddConversationUsersTask.h in Headers */,
+				E581D91A1AF3CADB00FD67C8 /* GTGetSocialFriends.h in Headers */,
+				E581D91C1AF3CADB00FD67C8 /* GTGetUserProfileTask.h in Headers */,
+				E581D8FE1AF3CADB00FD67C8 /* GTLikeItemTask.h in Headers */,
+				E581D8C61AF3CADB00FD67C8 /* GTHideTypingIndicatorTask.h in Headers */,
+				E581D9141AF3CADB00FD67C8 /* GTGetFollowersTask.h in Headers */,
+				E581D8FA1AF3CADB00FD67C8 /* GTGetUserItemsTask.h in Headers */,
+				E581D8FC1AF3CADB00FD67C8 /* GTGetLikersTask.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E581D7631AF3C83E00FD67C8 /* GraffiTab_iOS_SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E581D77A1AF3C83E00FD67C8 /* Build configuration list for PBXNativeTarget "GraffiTab_iOS_SDK" */;
+			buildPhases = (
+				6BB765B95CCCABC26673F8C1 /* Check Pods Manifest.lock */,
+				E581D75F1AF3C83E00FD67C8 /* Sources */,
+				E581D7601AF3C83E00FD67C8 /* Frameworks */,
+				E581D7611AF3C83E00FD67C8 /* Headers */,
+				E581D7621AF3C83E00FD67C8 /* Resources */,
+				D4826242367F3B5CCDFA4A4D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraffiTab_iOS_SDK;
+			productName = GraffiTab_iOS_SDK;
+			productReference = E581D7641AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E581D76E1AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E581D77D1AF3C83E00FD67C8 /* Build configuration list for PBXNativeTarget "GraffiTab_iOS_SDKTests" */;
+			buildPhases = (
+				E581D76B1AF3C83E00FD67C8 /* Sources */,
+				E581D76C1AF3C83E00FD67C8 /* Frameworks */,
+				E581D76D1AF3C83E00FD67C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E581D7721AF3C83E00FD67C8 /* PBXTargetDependency */,
+			);
+			name = GraffiTab_iOS_SDKTests;
+			productName = GraffiTab_iOS_SDKTests;
+			productReference = E581D76F1AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E581D75B1AF3C83E00FD67C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = GraffiTab;
+				TargetAttributes = {
+					E581D7631AF3C83E00FD67C8 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					E581D76E1AF3C83E00FD67C8 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					E581D7861AF3C97200FD67C8 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E581D75E1AF3C83E00FD67C8 /* Build configuration list for PBXProject "GraffiTab_iOS_SDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E581D75A1AF3C83E00FD67C8;
+			productRefGroup = E581D7651AF3C83E00FD67C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E581D7631AF3C83E00FD67C8 /* GraffiTab_iOS_SDK */,
+				E581D76E1AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests */,
+				E581D7861AF3C97200FD67C8 /* GraffiTab_iOS_SDK-Universal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E581D7621AF3C83E00FD67C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E581D76D1AF3C83E00FD67C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BB765B95CCCABC26673F8C1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4826242367F3B5CCDFA4A4D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E581D78A1AF3C97900FD67C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "######################\n# Options\n######################\n\nREVEAL_ARCHIVE_IN_FINDER=false\n\nFRAMEWORK_NAME=\"${PROJECT_NAME}\"\n\nSIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework\"\n\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework\"\n\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\"\n\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${FRAMEWORK_NAME}.framework\"\n\n\n######################\n# Build Frameworks\n######################\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphonesimulator -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator 2>&1\n\nxcodebuild -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} -sdk iphoneos -configuration ${CONFIGURATION} clean build CONFIGURATION_BUILD_DIR=${BUILD_DIR}/${CONFIGURATION}-iphoneos 2>&1\n\n######################\n# Create directory for universal\n######################\n\nrm -rf \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${UNIVERSAL_LIBRARY_DIR}\"\n\nmkdir \"${FRAMEWORK}\"\n\n\n######################\n# Copy files Framework\n######################\n\ncp -r \"${DEVICE_LIBRARY_PATH}/.\" \"${FRAMEWORK}\"\n\n\n######################\n# Make an universal binary\n######################\n\nlipo \"${SIMULATOR_LIBRARY_PATH}/${FRAMEWORK_NAME}\" \"${DEVICE_LIBRARY_PATH}/${FRAMEWORK_NAME}\" -create -output \"${FRAMEWORK}/${FRAMEWORK_NAME}\" | echo\n\n# For Swift framework, Swiftmodule needs to be copied in the universal framework\nif [ -d \"${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\ncp -f ${SIMULATOR_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      if [ -d \"${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" ]; then\n                                                                      cp -f ${DEVICE_LIBRARY_PATH}/Modules/${FRAMEWORK_NAME}.swiftmodule/* \"${FRAMEWORK}/Modules/${FRAMEWORK_NAME}.swiftmodule/\" | echo\n                                                                      fi\n                                                                      \n                                                                      ######################\n                                                                      # On Release, copy the result to release directory\n                                                                      ######################\n                                                                      OUTPUT_DIR=\"${PROJECT_DIR}/Output/${FRAMEWORK_NAME}-${CONFIGURATION}-iphoneuniversal/\"\n                                                                      \n                                                                      rm -rf \"$OUTPUT_DIR\"\n                                                                      mkdir -p \"$OUTPUT_DIR\"\n                                                                      \n                                                                      cp -r \"${FRAMEWORK}\" \"$OUTPUT_DIR\"\n                                                                      \n                                                                      if [ ${REVEAL_ARCHIVE_IN_FINDER} = true ]; then\n                                                                      open \"${OUTPUT_DIR}/\"\n                                                                      fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E581D75F1AF3C83E00FD67C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E581D87B1AF3CADB00FD67C8 /* GTFeedbackManager.m in Sources */,
+				E581D8971AF3CADB00FD67C8 /* GTNotificationFactory.m in Sources */,
+				E581D8BD1AF3CADB00FD67C8 /* GTEditConversationImageTask.m in Sources */,
+				E581D89D1AF3CADB00FD67C8 /* GTNotificationMention.m in Sources */,
+				E581D9271AF3CADB00FD67C8 /* GTSignUpTask.m in Sources */,
+				E581D92B1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m in Sources */,
+				E581D9251AF3CADB00FD67C8 /* GTResetPasswordTask.m in Sources */,
+				E581D8C31AF3CADB00FD67C8 /* GTGetMessagesTask.m in Sources */,
+				E581D8E51AF3CADB00FD67C8 /* GTSearchHashtag.m in Sources */,
+				E581D88B1AF3CADB00FD67C8 /* GTConversationMessage.m in Sources */,
+				E581D8DD1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.m in Sources */,
+				E581D8871AF3CADB00FD67C8 /* GTUserManager.m in Sources */,
+				E581D8ED1AF3CADB00FD67C8 /* GTEditCommentTask.m in Sources */,
+				E581D90D1AF3CADB00FD67C8 /* GTEditPasswordTask.m in Sources */,
+				E581D8CB1AF3CADB00FD67C8 /* GTPostMessageTask.m in Sources */,
+				E581D8931AF3CADB00FD67C8 /* GTNotification.m in Sources */,
+				E581D8D71AF3CADB00FD67C8 /* GTSendFeedback.m in Sources */,
+				E581D91B1AF3CADB00FD67C8 /* GTGetSocialFriends.m in Sources */,
+				E581D8CD1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.m in Sources */,
+				E581D8DF1AF3CADB00FD67C8 /* GTGetUserLocationsTask.m in Sources */,
+				E581D89B1AF3CADB00FD67C8 /* GTNotificationLike.m in Sources */,
+				E581D8F31AF3CADB00FD67C8 /* GTGetNewestItemsTask.m in Sources */,
+				E581D8B51AF3CADB00FD67C8 /* GTSessionManager.m in Sources */,
+				E581D87D1AF3CADB00FD67C8 /* GTLifecycleManager.m in Sources */,
+				E581D88D1AF3CADB00FD67C8 /* GTComment.m in Sources */,
+				E581D8FD1AF3CADB00FD67C8 /* GTGetLikersTask.m in Sources */,
+				E581D90B1AF3CADB00FD67C8 /* GTEditCoverTask.m in Sources */,
+				E581D8E31AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.m in Sources */,
+				E581D8AF1AF3CADB00FD67C8 /* GTResponseObject.m in Sources */,
+				E581D8FF1AF3CADB00FD67C8 /* GTLikeItemTask.m in Sources */,
+				E581D8C71AF3CADB00FD67C8 /* GTHideTypingIndicatorTask.m in Sources */,
+				E581D8E11AF3CADB00FD67C8 /* GTGetNotificationsTask.m in Sources */,
+				E581D8791AF3CADB00FD67C8 /* GTDeviceManager.m in Sources */,
+				E581D8A91AF3CADB00FD67C8 /* GTViewControllerCache.m in Sources */,
+				E581D9091AF3CADB00FD67C8 /* GTEditAvatarTask.m in Sources */,
+				E581D8951AF3CADB00FD67C8 /* GTNotificationComment.m in Sources */,
+				E581D8A71AF3CADB00FD67C8 /* GTStreamableVideo.m in Sources */,
+				E581D8A51AF3CADB00FD67C8 /* GTStreamableTag.m in Sources */,
+				E581D90F1AF3CADB00FD67C8 /* GTEditProfileTask.m in Sources */,
+				E581D8D11AF3CADB00FD67C8 /* GTEditMessageTask.m in Sources */,
+				E581D8811AF3CADB00FD67C8 /* GTNotificationManager.m in Sources */,
+				E581D8A11AF3CADB00FD67C8 /* GTStreamable.m in Sources */,
+				E581D8AB1AF3CADB00FD67C8 /* GTImageRequestBuilder.m in Sources */,
+				E581D8991AF3CADB00FD67C8 /* GTNotificationFollow.m in Sources */,
+				E581D8CF1AF3CADB00FD67C8 /* GTDeleteMessagesTask.m in Sources */,
+				E581D9071AF3CADB00FD67C8 /* GTCheckLoginStatus.m in Sources */,
+				E581D8EB1AF3CADB00FD67C8 /* GTDeleteCommentsTask.m in Sources */,
+				E581D8EF1AF3CADB00FD67C8 /* GTGetCommentsTask.m in Sources */,
+				E581D8F51AF3CADB00FD67C8 /* GTGetPopularItemsTask.m in Sources */,
+				E581D9031AF3CADB00FD67C8 /* GTCreateStreamableTagTask.m in Sources */,
+				E581D91D1AF3CADB00FD67C8 /* GTGetUserProfileTask.m in Sources */,
+				E581D9231AF3CADB00FD67C8 /* GTLogoutTask.m in Sources */,
+				E581D9011AF3CADB00FD67C8 /* GTUnlikeItemTask.m in Sources */,
+				E581D91F1AF3CADB00FD67C8 /* GTLinkExternalIdTask.m in Sources */,
+				E581D8B71AF3CADB00FD67C8 /* GTSettings.m in Sources */,
+				E581D8771AF3CADB00FD67C8 /* GTConversationManager.m in Sources */,
+				E581D89F1AF3CADB00FD67C8 /* GTNotificationWelcome.m in Sources */,
+				E581D8B31AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.m in Sources */,
+				E581D8AD1AF3CADB00FD67C8 /* GTRequestBuilder.m in Sources */,
+				E581D8FB1AF3CADB00FD67C8 /* GTGetUserItemsTask.m in Sources */,
+				E581D8F11AF3CADB00FD67C8 /* GTPostCommentTask.m in Sources */,
+				E581D8C91AF3CADB00FD67C8 /* GTLeaveConversationTask.m in Sources */,
+				E581D9291AF3CADB00FD67C8 /* GTUnfollowTask.m in Sources */,
+				E581D9131AF3CADB00FD67C8 /* GTFollowTask.m in Sources */,
+				E581D8DB1AF3CADB00FD67C8 /* GTCreateUserLocationTask.m in Sources */,
+				E581D8E71AF3CADB00FD67C8 /* GTSearchHashtags.m in Sources */,
+				E581D9211AF3CADB00FD67C8 /* GTLoginTask.m in Sources */,
+				E581D8C51AF3CADB00FD67C8 /* GTGetUnseenConversationsTask.m in Sources */,
+				E581D87F1AF3CADB00FD67C8 /* GTLocationManager.m in Sources */,
+				E581D8D31AF3CADB00FD67C8 /* GTRegisterDeviceTask.m in Sources */,
+				E581D8891AF3CADB00FD67C8 /* GTConversation.m in Sources */,
+				E581D9191AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.m in Sources */,
+				E581D8B91AF3CADB00FD67C8 /* GTAddConversationUsersTask.m in Sources */,
+				E581D8A31AF3CADB00FD67C8 /* GTStreamableFactory.m in Sources */,
+				E581D9111AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m in Sources */,
+				E581D8BF1AF3CADB00FD67C8 /* GTEditConversationNameTask.m in Sources */,
+				E581D8911AF3CADB00FD67C8 /* GTUserLocation.m in Sources */,
+				E581D8F71AF3CADB00FD67C8 /* GTGetUserFavouritesTask.m in Sources */,
+				E581D8D91AF3CADB00FD67C8 /* GTNetworkTask.m in Sources */,
+				E581D8D51AF3CADB00FD67C8 /* GTUnregisterDeviceTask.m in Sources */,
+				E581D8B11AF3CADB00FD67C8 /* GTCookieManager.m in Sources */,
+				E581D8851AF3CADB00FD67C8 /* GTStreamableManager.m in Sources */,
+				E581D88F1AF3CADB00FD67C8 /* GTPerson.m in Sources */,
+				E581D8C11AF3CADB00FD67C8 /* GTGetConversationsTask.m in Sources */,
+				E581D9151AF3CADB00FD67C8 /* GTGetFollowersTask.m in Sources */,
+				E581D8831AF3CADB00FD67C8 /* GTSearchManager.m in Sources */,
+				E581D8BB1AF3CADB00FD67C8 /* GTCreateConversationTask.m in Sources */,
+				E581D8F91AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.m in Sources */,
+				E581D9171AF3CADB00FD67C8 /* GTGetFollowingTask.m in Sources */,
+				E581D8E91AF3CADB00FD67C8 /* GTSearchUsers.m in Sources */,
+				E581D9051AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E581D76B1AF3C83E00FD67C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E581D7771AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E581D7721AF3C83E00FD67C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E581D7631AF3C83E00FD67C8 /* GraffiTab_iOS_SDK */;
+			targetProxy = E581D7711AF3C83E00FD67C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E581D7781AF3C83E00FD67C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E581D7791AF3C83E00FD67C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E581D77B1AF3C83E00FD67C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A7B9CCF2511B5FEDDEB1745 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GraffiTab_iOS_SDK/GraffiTab_iOS_SDK-Prefix.pch";
+				INFOPLIST_FILE = GraffiTab_iOS_SDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		E581D77C1AF3C83E00FD67C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 437160EDBB58CD7C654B9AE8 /* Pods-GraffiTab_iOS_SDK.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GraffiTab_iOS_SDK/GraffiTab_iOS_SDK-Prefix.pch";
+				INFOPLIST_FILE = GraffiTab_iOS_SDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		E581D77E1AF3C83E00FD67C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GraffiTab_iOS_SDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E581D77F1AF3C83E00FD67C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GraffiTab_iOS_SDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E581D7871AF3C97200FD67C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E581D7881AF3C97200FD67C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E581D75E1AF3C83E00FD67C8 /* Build configuration list for PBXProject "GraffiTab_iOS_SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E581D7781AF3C83E00FD67C8 /* Debug */,
+				E581D7791AF3C83E00FD67C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E581D77A1AF3C83E00FD67C8 /* Build configuration list for PBXNativeTarget "GraffiTab_iOS_SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E581D77B1AF3C83E00FD67C8 /* Debug */,
+				E581D77C1AF3C83E00FD67C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E581D77D1AF3C83E00FD67C8 /* Build configuration list for PBXNativeTarget "GraffiTab_iOS_SDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E581D77E1AF3C83E00FD67C8 /* Debug */,
+				E581D77F1AF3C83E00FD67C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E581D7891AF3C97200FD67C8 /* Build configuration list for PBXAggregateTarget "GraffiTab_iOS_SDK-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E581D7871AF3C97200FD67C8 /* Debug */,
+				E581D7881AF3C97200FD67C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E581D75B1AF3C83E00FD67C8 /* Project object */;
+}

@@ -1,0 +1,63 @@
+//
+//  GraffiTab_iOS_SDK-Prefix.pch
+//  GraffiTab_iOS_SDK
+//
+//  Created by Georgi Christov on 01/05/2015.
+//  Copyright (c) 2015 GraffiTab. All rights reserved.
+//
+
+#ifndef GraffiTab_iOS_SDK_GraffiTab_iOS_SDK_Prefix_pch
+#define GraffiTab_iOS_SDK_GraffiTab_iOS_SDK_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+    // Import frameworks.
+    #import <Foundation/Foundation.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import <AFNetworking/AFNetworking.h>
+
+    // Import constants.
+    #import "GTConstants.h"
+    #import "GTAPIConstants.h"
+    #import "GTJSONRequestConstants.h"
+    #import "GTJSONResponseConstants.h"
+    #import "GTJSONModelConstants.h"
+
+    // Import interfaces.
+    #import "GTJSONSerializable.h"
+
+    // Import utilities and settings.
+    #import "GTSettings.h"
+
+    // Import networking classes.
+    #import "GTSessionManager.h"
+    #import "GTRequestBuilder.h"
+    #import "GTResponseObject.h"
+    #import "GTCookieManager.h"
+
+    // Import model classes.
+    #import "GTPerson.h"
+    #import "GTConversationMessage.h"
+    #import "GTConversation.h"
+    #import "GTComment.h"
+    #import "GTStreamable.h"
+    #import "GTStreamableTag.h"
+    #import "GTStreamableVideo.h"
+    #import "GTNotification.h"
+    #import "GTNotificationWelcome.h"
+    #import "GTNotificationMention.h"
+    #import "GTNotificationLike.h"
+    #import "GTNotificationFollow.h"
+    #import "GTNotificationComment.h"
+    #import "GTUserLocation.h"
+
+    // Import facetories.
+    #import "GTNotificationFactory.h"
+    #import "GTStreamableFactory.h"
+#endif
+
+#endif
