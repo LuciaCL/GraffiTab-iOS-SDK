@@ -17,7 +17,7 @@ Download the SDK zip file and extract at a comfortable location. Follow the step
 * open the generated `.workspace` file;
 * click on the Pods project and change its Build Settings to `Build Active Architectures Only=NO` so that it builds the framework for all architectures;
 * verify that the framework target builds correctly;
-* change the scheme to `GraffiTab_iOS_SDK-Universal;
+* change the scheme to `GraffiTab_iOS_SDK-Universal`;
 * build the selected scheme;
 * the output `.framework` file is located under `Output` in the project's filder;
  
