@@ -17,6 +17,8 @@ FOUNDATION_EXPORT const unsigned char GraffiTab_iOS_SDKVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <GraffiTab_iOS_SDK/PublicHeader.h>
 
 #import <CoreLocation/CoreLocation.h>
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 #import <GraffiTab_iOS_SDK/GTConstants.h>
 #import <GraffiTab_iOS_SDK/GTJSONSerializable.h>
