@@ -786,13 +786,13 @@
 				E581D7F01AF3CADA00FD67C8 /* Conversations */,
 				E581D80C1AF3CADA00FD67C8 /* Device */,
 				E581D8111AF3CADA00FD67C8 /* Feedback */,
-				E581D8141AF3CADA00FD67C8 /* GTNetworkTask.h */,
-				E581D8151AF3CADA00FD67C8 /* GTNetworkTask.m */,
 				E581D8161AF3CADA00FD67C8 /* Location */,
 				E581D81D1AF3CADA00FD67C8 /* Notifications */,
 				E581D8221AF3CADA00FD67C8 /* Search */,
 				E581D8291AF3CADA00FD67C8 /* Streamable */,
 				E581D8491AF3CADB00FD67C8 /* UserTasks */,
+				E581D8141AF3CADA00FD67C8 /* GTNetworkTask.h */,
+				E581D8151AF3CADA00FD67C8 /* GTNetworkTask.m */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -1580,6 +1580,7 @@
 				E581D7881AF3C97200FD67C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
