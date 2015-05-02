@@ -46,6 +46,7 @@
 + (NSString *)buildGetGraffiti:(long)graffitiId;
 + (NSString *)buildGetFullGraffiti:(long)graffitiId;
 + (NSString *)buildCreateTag;
++ (NSString *)buildEditTag;
 + (NSString *)buildGetUserItems;
 + (NSString *)buildGetFavouriteUserItems;
 + (NSString *)buildGetNewestItems;
@@ -55,6 +56,10 @@
 + (NSString *)buildLikeItem;
 + (NSString *)buildUnlikeItem;
 + (NSString *)buildGetLikers;
++ (NSString *)buildFlagItem;
++ (NSString *)buildMakeItemPublic;
++ (NSString *)buildMakeItemPrivate;
++ (NSString *)buildDeleteStreamable;
 
 + (NSString *)buildCreateConversation;
 + (NSString *)buildLeaveConversation;

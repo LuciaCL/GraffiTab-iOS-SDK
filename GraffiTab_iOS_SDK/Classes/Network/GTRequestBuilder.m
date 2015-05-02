@@ -148,6 +148,10 @@
     return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_TAG_CREATE];
 }
 
++ (NSString *)buildEditTag {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_TAG_EDIT];
+}
+
 + (NSString *)buildGetUserItems {
     return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_USER_STREAM];
 }
@@ -182,6 +186,22 @@
 
 + (NSString *)buildGetLikers {
     return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_LIKES_GET];
+}
+
++ (NSString *)buildFlagItem {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_FLAG];
+}
+
++ (NSString *)buildMakeItemPublic {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_MAKE_PUBLIC];
+}
+
++ (NSString *)buildMakeItemPrivate {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_MAKE_PRIVATE];
+}
+
++ (NSString *)buildDeleteStreamable {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_DELETE];
 }
 
 #pragma mark - Conversations

@@ -217,6 +217,16 @@
 		E581D9291AF3CADB00FD67C8 /* GTUnfollowTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */; };
 		E581D92A1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */; };
 		E581D92B1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */; };
+		E581D9421AF5649E00FD67C8 /* GTFlagTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9401AF5649E00FD67C8 /* GTFlagTask.h */; };
+		E581D9431AF5649E00FD67C8 /* GTFlagTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9411AF5649E00FD67C8 /* GTFlagTask.m */; };
+		E581D9461AF5690E00FD67C8 /* GTMakePublicTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9441AF5690E00FD67C8 /* GTMakePublicTask.h */; };
+		E581D9471AF5690E00FD67C8 /* GTMakePublicTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9451AF5690E00FD67C8 /* GTMakePublicTask.m */; };
+		E581D94A1AF5698100FD67C8 /* GTMakePrivateTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9481AF5698100FD67C8 /* GTMakePrivateTask.h */; };
+		E581D94B1AF5698100FD67C8 /* GTMakePrivateTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9491AF5698100FD67C8 /* GTMakePrivateTask.m */; };
+		E581D94E1AF56BFD00FD67C8 /* GTDeleteItemTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D94C1AF56BFD00FD67C8 /* GTDeleteItemTask.h */; };
+		E581D94F1AF56BFD00FD67C8 /* GTDeleteItemTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D94D1AF56BFD00FD67C8 /* GTDeleteItemTask.m */; };
+		E581D9521AF57BB700FD67C8 /* GTEditStreamableTagTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9501AF57BB700FD67C8 /* GTEditStreamableTagTask.h */; };
+		E581D9531AF57BB700FD67C8 /* GTEditStreamableTagTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9511AF57BB700FD67C8 /* GTEditStreamableTagTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -431,6 +441,16 @@
 		E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUnfollowTask.m; sourceTree = "<group>"; };
 		E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVerifyExternalUserTask.h; sourceTree = "<group>"; };
 		E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerifyExternalUserTask.m; sourceTree = "<group>"; };
+		E581D9401AF5649E00FD67C8 /* GTFlagTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFlagTask.h; sourceTree = "<group>"; };
+		E581D9411AF5649E00FD67C8 /* GTFlagTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFlagTask.m; sourceTree = "<group>"; };
+		E581D9441AF5690E00FD67C8 /* GTMakePublicTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMakePublicTask.h; sourceTree = "<group>"; };
+		E581D9451AF5690E00FD67C8 /* GTMakePublicTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMakePublicTask.m; sourceTree = "<group>"; };
+		E581D9481AF5698100FD67C8 /* GTMakePrivateTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMakePrivateTask.h; sourceTree = "<group>"; };
+		E581D9491AF5698100FD67C8 /* GTMakePrivateTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMakePrivateTask.m; sourceTree = "<group>"; };
+		E581D94C1AF56BFD00FD67C8 /* GTDeleteItemTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTDeleteItemTask.h; sourceTree = "<group>"; };
+		E581D94D1AF56BFD00FD67C8 /* GTDeleteItemTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDeleteItemTask.m; sourceTree = "<group>"; };
+		E581D9501AF57BB700FD67C8 /* GTEditStreamableTagTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditStreamableTagTask.h; sourceTree = "<group>"; };
+		E581D9511AF57BB700FD67C8 /* GTEditStreamableTagTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditStreamableTagTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -899,6 +919,8 @@
 			isa = PBXGroup;
 			children = (
 				E581D82A1AF3CADA00FD67C8 /* Comments */,
+				E581D83D1AF3CADA00FD67C8 /* Likes */,
+				E581D8441AF3CADA00FD67C8 /* Tags */,
 				E581D8331AF3CADA00FD67C8 /* GTGetNewestItemsTask.h */,
 				E581D8341AF3CADA00FD67C8 /* GTGetNewestItemsTask.m */,
 				E581D8351AF3CADA00FD67C8 /* GTGetPopularItemsTask.h */,
@@ -909,8 +931,14 @@
 				E581D83A1AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.m */,
 				E581D83B1AF3CADA00FD67C8 /* GTGetUserItemsTask.h */,
 				E581D83C1AF3CADA00FD67C8 /* GTGetUserItemsTask.m */,
-				E581D83D1AF3CADA00FD67C8 /* Likes */,
-				E581D8441AF3CADA00FD67C8 /* Tags */,
+				E581D9401AF5649E00FD67C8 /* GTFlagTask.h */,
+				E581D9411AF5649E00FD67C8 /* GTFlagTask.m */,
+				E581D9441AF5690E00FD67C8 /* GTMakePublicTask.h */,
+				E581D9451AF5690E00FD67C8 /* GTMakePublicTask.m */,
+				E581D9481AF5698100FD67C8 /* GTMakePrivateTask.h */,
+				E581D9491AF5698100FD67C8 /* GTMakePrivateTask.m */,
+				E581D94C1AF56BFD00FD67C8 /* GTDeleteItemTask.h */,
+				E581D94D1AF56BFD00FD67C8 /* GTDeleteItemTask.m */,
 			);
 			path = Streamable;
 			sourceTree = "<group>";
@@ -948,6 +976,8 @@
 			children = (
 				E581D8451AF3CADA00FD67C8 /* GTCreateStreamableTagTask.h */,
 				E581D8461AF3CADA00FD67C8 /* GTCreateStreamableTagTask.m */,
+				E581D9501AF57BB700FD67C8 /* GTEditStreamableTagTask.h */,
+				E581D9511AF57BB700FD67C8 /* GTEditStreamableTagTask.m */,
 				E581D8471AF3CADA00FD67C8 /* GTGetStreamablesForLocationTask.h */,
 				E581D8481AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m */,
 			);
@@ -1009,9 +1039,11 @@
 				E581D87E1AF3CADB00FD67C8 /* GTLocationManager.h in Headers */,
 				E581D89C1AF3CADB00FD67C8 /* GTNotificationMention.h in Headers */,
 				E581D8841AF3CADB00FD67C8 /* GTStreamableManager.h in Headers */,
+				E581D9461AF5690E00FD67C8 /* GTMakePublicTask.h in Headers */,
 				E581D88C1AF3CADB00FD67C8 /* GTComment.h in Headers */,
 				E581D8A61AF3CADB00FD67C8 /* GTStreamableVideo.h in Headers */,
 				E581D8821AF3CADB00FD67C8 /* GTSearchManager.h in Headers */,
+				E581D9521AF57BB700FD67C8 /* GTEditStreamableTagTask.h in Headers */,
 				E581D8761AF3CADB00FD67C8 /* GTConversationManager.h in Headers */,
 				E581D88A1AF3CADB00FD67C8 /* GTConversationMessage.h in Headers */,
 				E581D8881AF3CADB00FD67C8 /* GTConversation.h in Headers */,
@@ -1037,6 +1069,7 @@
 				E581D9101AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h in Headers */,
 				E581D8B41AF3CADB00FD67C8 /* GTSessionManager.h in Headers */,
 				E581D9021AF3CADB00FD67C8 /* GTCreateStreamableTagTask.h in Headers */,
+				E581D94E1AF56BFD00FD67C8 /* GTDeleteItemTask.h in Headers */,
 				E581D8CC1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.h in Headers */,
 				E581D9181AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h in Headers */,
 				E581D9061AF3CADB00FD67C8 /* GTCheckLoginStatus.h in Headers */,
@@ -1055,6 +1088,7 @@
 				E581D9281AF3CADB00FD67C8 /* GTUnfollowTask.h in Headers */,
 				E581D8731AF3CADB00FD67C8 /* GTJSONRequestConstants.h in Headers */,
 				E581D9161AF3CADB00FD67C8 /* GTGetFollowingTask.h in Headers */,
+				E581D94A1AF5698100FD67C8 /* GTMakePrivateTask.h in Headers */,
 				E581D9261AF3CADB00FD67C8 /* GTSignUpTask.h in Headers */,
 				E581D8D21AF3CADB00FD67C8 /* GTRegisterDeviceTask.h in Headers */,
 				E581D8F81AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.h in Headers */,
@@ -1104,6 +1138,7 @@
 				E581D8C61AF3CADB00FD67C8 /* GTHideTypingIndicatorTask.h in Headers */,
 				E581D9141AF3CADB00FD67C8 /* GTGetFollowersTask.h in Headers */,
 				E581D8FA1AF3CADB00FD67C8 /* GTGetUserItemsTask.h in Headers */,
+				E581D9421AF5649E00FD67C8 /* GTFlagTask.h in Headers */,
 				E581D8FC1AF3CADB00FD67C8 /* GTGetLikersTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1155,6 +1190,7 @@
 		E581D75B1AF3C83E00FD67C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GT;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = GraffiTab;
 				TargetAttributes = {
@@ -1270,6 +1306,7 @@
 				E581D8871AF3CADB00FD67C8 /* GTUserManager.m in Sources */,
 				E581D8ED1AF3CADB00FD67C8 /* GTEditCommentTask.m in Sources */,
 				E581D90D1AF3CADB00FD67C8 /* GTEditPasswordTask.m in Sources */,
+				E581D9471AF5690E00FD67C8 /* GTMakePublicTask.m in Sources */,
 				E581D8CB1AF3CADB00FD67C8 /* GTPostMessageTask.m in Sources */,
 				E581D8931AF3CADB00FD67C8 /* GTNotification.m in Sources */,
 				E581D8D71AF3CADB00FD67C8 /* GTSendFeedback.m in Sources */,
@@ -1277,8 +1314,10 @@
 				E581D8CD1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.m in Sources */,
 				E581D8DF1AF3CADB00FD67C8 /* GTGetUserLocationsTask.m in Sources */,
 				E581D89B1AF3CADB00FD67C8 /* GTNotificationLike.m in Sources */,
+				E581D94F1AF56BFD00FD67C8 /* GTDeleteItemTask.m in Sources */,
 				E581D8F31AF3CADB00FD67C8 /* GTGetNewestItemsTask.m in Sources */,
 				E581D8B51AF3CADB00FD67C8 /* GTSessionManager.m in Sources */,
+				E581D9431AF5649E00FD67C8 /* GTFlagTask.m in Sources */,
 				E581D87D1AF3CADB00FD67C8 /* GTLifecycleManager.m in Sources */,
 				E581D88D1AF3CADB00FD67C8 /* GTComment.m in Sources */,
 				E581D8FD1AF3CADB00FD67C8 /* GTGetLikersTask.m in Sources */,
@@ -1319,7 +1358,9 @@
 				E581D8F11AF3CADB00FD67C8 /* GTPostCommentTask.m in Sources */,
 				E581D8C91AF3CADB00FD67C8 /* GTLeaveConversationTask.m in Sources */,
 				E581D9291AF3CADB00FD67C8 /* GTUnfollowTask.m in Sources */,
+				E581D94B1AF5698100FD67C8 /* GTMakePrivateTask.m in Sources */,
 				E581D9131AF3CADB00FD67C8 /* GTFollowTask.m in Sources */,
+				E581D9531AF57BB700FD67C8 /* GTEditStreamableTagTask.m in Sources */,
 				E581D8DB1AF3CADB00FD67C8 /* GTCreateUserLocationTask.m in Sources */,
 				E581D8E71AF3CADB00FD67C8 /* GTSearchHashtags.m in Sources */,
 				E581D9211AF3CADB00FD67C8 /* GTLoginTask.m in Sources */,

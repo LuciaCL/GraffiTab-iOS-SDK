@@ -21,6 +21,11 @@
 #import "GTUnlikeItemTask.h"
 #import "GTCreateStreamableTagTask.h"
 #import "GTGetStreamablesForLocationTask.h"
+#import "GTFlagTask.h"
+#import "GTMakePrivateTask.h"
+#import "GTMakePublicTask.h"
+#import "GTDeleteItemTask.h"
+#import "GTEditStreamableTagTask.h"
 
 @implementation GTStreamableManager
 
@@ -52,6 +57,26 @@
     GTGetUserItemsTask *task = [GTGetUserItemsTask new];
     task.isStart = useCache;
     [task getItemsWithUserId:userId start:start numberOfItems:count successBlock:successBlock cacheBlock:cacheBlock failureBlock:failureBlock];
+}
+
++ (void)flagItemWithId:(long)itemId successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+    GTFlagTask *task = [GTFlagTask new];
+    [task flagItemWithId:itemId successBlock:successBlock failureBlock:failureBlock];
+}
+
++ (void)makeItemPublicWithId:(long)itemId successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+    GTMakePublicTask *task = [GTMakePublicTask new];
+    [task makeItemPublicWithId:itemId successBlock:successBlock failureBlock:failureBlock];
+}
+
++ (void)makeItemPrivateWithId:(long)itemId successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+    GTMakePrivateTask *task = [GTMakePrivateTask new];
+    [task makeItemPrivateWithId:itemId successBlock:successBlock failureBlock:failureBlock];
+}
+
++ (void)deleteItemsWithIds:(NSMutableArray *)ids successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+    GTDeleteItemTask *task = [GTDeleteItemTask new];
+    [task deleteItemsWithIds:ids successBlock:successBlock failureBlock:failureBlock];
 }
 
 #pragma mark - Comments
@@ -100,6 +125,11 @@
 + (void)createTagWithImage:(UIImage *)image location:(CLLocation *)location successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     GTCreateStreamableTagTask *task = [GTCreateStreamableTagTask new];
     [task createTagWithImage:image location:location successBlock:successBlock failureBlock:failureBlock];
+}
+
++ (void)editTagWithId:(long)itemId image:(UIImage *)image location:(CLLocation *)location successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+    GTEditStreamableTagTask *task = [GTEditStreamableTagTask new];
+    [task editTagWithId:itemId image:image location:location successBlock:successBlock failureBlock:failureBlock];
 }
 
 + (void)getForLocationWithNECoordinate:(CLLocationCoordinate2D)neCoordinate SWCoordinate:(CLLocationCoordinate2D)swCoordinate start:(int)start numberOfItems:(int)count useCache:(BOOL)useCache successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
