@@ -750,13 +750,13 @@
 			isa = PBXGroup;
 			children = (
 				E581D7DB1AF3CADA00FD67C8 /* Cache */,
+				E581D7E51AF3CADA00FD67C8 /* Session */,
 				E581D7DF1AF3CADA00FD67C8 /* GTImageRequestBuilder.h */,
 				E581D7E01AF3CADA00FD67C8 /* GTImageRequestBuilder.m */,
 				E581D7E11AF3CADA00FD67C8 /* GTRequestBuilder.h */,
 				E581D7E21AF3CADA00FD67C8 /* GTRequestBuilder.m */,
 				E581D7E31AF3CADA00FD67C8 /* GTResponseObject.h */,
 				E581D7E41AF3CADA00FD67C8 /* GTResponseObject.m */,
-				E581D7E51AF3CADA00FD67C8 /* Session */,
 			);
 			path = Network;
 			sourceTree = "<group>";
