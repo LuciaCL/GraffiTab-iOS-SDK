@@ -9,8 +9,8 @@
 #ifndef TheBestOfBulgaria_iOS_APIConstants_h
 #define TheBestOfBulgaria_iOS_APIConstants_h
 
-#define API_APP_URL @"http://localhost:8080/TriaServerTomcat"
-//#define API_APP_URL @"http://172.18.34.26:8080/TriaServerTomcat"
+//#define API_APP_URL @"http://localhost:8080/TriaServerTomcat"
+#define API_APP_URL @"http://192.168.0.8:8080/TriaServerTomcat"
 //#define API_APP_URL @"http://graffitab.com"
 #define API_APP_API_URL @"api/rest"
 
