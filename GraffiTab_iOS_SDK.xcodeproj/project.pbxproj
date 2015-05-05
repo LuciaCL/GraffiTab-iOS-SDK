@@ -225,6 +225,8 @@
 		E581D9821AF8D2F900FD67C8 /* GTSignUpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D96C1AF8D2F900FD67C8 /* GTSignUpTask.m */; };
 		E581D9831AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D96D1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h */; };
 		E581D9841AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */; };
+		E581D98B1AF8FBE500FD67C8 /* GTGetPrivateItems.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9891AF8FBE500FD67C8 /* GTGetPrivateItems.h */; };
+		E581D98C1AF8FBE500FD67C8 /* GTGetPrivateItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D98A1AF8FBE500FD67C8 /* GTGetPrivateItems.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,6 +449,8 @@
 		E581D96C1AF8D2F900FD67C8 /* GTSignUpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSignUpTask.m; sourceTree = "<group>"; };
 		E581D96D1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVerifyExternalUserTask.h; sourceTree = "<group>"; };
 		E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerifyExternalUserTask.m; sourceTree = "<group>"; };
+		E581D9891AF8FBE500FD67C8 /* GTGetPrivateItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetPrivateItems.h; sourceTree = "<group>"; };
+		E581D98A1AF8FBE500FD67C8 /* GTGetPrivateItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetPrivateItems.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -923,6 +927,8 @@
 				E581D8381AF3CADA00FD67C8 /* GTGetUserFavouritesTask.m */,
 				E581D8391AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.h */,
 				E581D83A1AF3CADA00FD67C8 /* GTGetUserHomeStreamTask.m */,
+				E581D9891AF8FBE500FD67C8 /* GTGetPrivateItems.h */,
+				E581D98A1AF8FBE500FD67C8 /* GTGetPrivateItems.m */,
 				E581D83B1AF3CADA00FD67C8 /* GTGetUserItemsTask.h */,
 				E581D83C1AF3CADA00FD67C8 /* GTGetUserItemsTask.m */,
 				E581D9401AF5649E00FD67C8 /* GTFlagTask.h */,
@@ -1079,6 +1085,7 @@
 				E581D8711AF3CADB00FD67C8 /* GTConstants.h in Headers */,
 				E581D96F1AF8D2F900FD67C8 /* GTEditAvatarTask.h in Headers */,
 				E581D8A41AF3CADB00FD67C8 /* GTStreamableTag.h in Headers */,
+				E581D98B1AF8FBE500FD67C8 /* GTGetPrivateItems.h in Headers */,
 				E581D8981AF3CADB00FD67C8 /* GTNotificationFollow.h in Headers */,
 				E581D8AE1AF3CADB00FD67C8 /* GTResponseObject.h in Headers */,
 				E581D9101AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h in Headers */,
@@ -1307,6 +1314,7 @@
 				E581D8BD1AF3CADB00FD67C8 /* GTEditConversationImageTask.m in Sources */,
 				E581D89D1AF3CADB00FD67C8 /* GTNotificationMention.m in Sources */,
 				E581D8C31AF3CADB00FD67C8 /* GTGetMessagesTask.m in Sources */,
+				E581D98C1AF8FBE500FD67C8 /* GTGetPrivateItems.m in Sources */,
 				E581D8E51AF3CADB00FD67C8 /* GTSearchHashtag.m in Sources */,
 				E581D88B1AF3CADB00FD67C8 /* GTConversationMessage.m in Sources */,
 				E581D8DD1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.m in Sources */,

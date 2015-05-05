@@ -164,6 +164,10 @@
     return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_LATEST];
 }
 
++ (NSString *)buildGetPrivateItems {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_GET_PRIVATE];
+}
+
 + (NSString *)buildGetItemsForLocation {
     return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_STREAMABLE_TAG_GET_FOR_LOCATION];
 }

@@ -26,6 +26,7 @@
 #import "GTMakePublicTask.h"
 #import "GTDeleteItemTask.h"
 #import "GTEditStreamableTagTask.h"
+#import "GTGetPrivateItems.h"
 
 @implementation GTStreamableManager
 
@@ -77,6 +78,12 @@
 + (void)deleteItemsWithIds:(NSMutableArray *)ids successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     GTDeleteItemTask *task = [GTDeleteItemTask new];
     [task deleteItemsWithIds:ids successBlock:successBlock failureBlock:failureBlock];
+}
+
++ (void)getPrivateItemsWithStart:(int)start numberOfItems:(int)count useCache:(BOOL)useCache successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+    GTGetPrivateItems *task = [GTGetPrivateItems new];
+    task.isStart = useCache;
+    [task getPrivateItemsWithStart:start numberOfItems:count successBlock:successBlock cacheBlock:cacheBlock failureBlock:failureBlock];
 }
 
 #pragma mark - Comments

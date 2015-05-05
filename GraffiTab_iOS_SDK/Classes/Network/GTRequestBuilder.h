@@ -50,6 +50,7 @@
 + (NSString *)buildGetUserItems;
 + (NSString *)buildGetFavouriteUserItems;
 + (NSString *)buildGetNewestItems;
++ (NSString *)buildGetPrivateItems;
 + (NSString *)buildGetItemsForLocation;
 + (NSString *)buildGetUserHomeStreamItems;
 + (NSString *)buildGetPopularItems;
