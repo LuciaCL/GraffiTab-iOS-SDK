@@ -30,27 +30,14 @@
             
             [self parseJsonSuccess:responseJson];
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            [self processError:error];
+            NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+            NSInteger statuscode = response.statusCode;
+            
+            [self parseJsonError:statuscode];
         }];
     } failureBlock:^(GTResponseObject *response) {
-        NSLog(@"Failed to unregister token");
-        
-        [self processError:nil];
+        [self parseJsonError:500];
     }];
-}
-
-- (void)processError:(NSError *)error {
-    if (error.userInfo[JSONResponseSerializerWithDataKey]) {
-        NSData *data = error.userInfo[JSONResponseSerializerWithDataKey];
-        
-        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                             options:kNilOptions
-                                                               error:&error];
-        
-        [self parseJsonError:json];
-    }
-    else
-        [self parseJsonError:nil];
 }
 
 @end

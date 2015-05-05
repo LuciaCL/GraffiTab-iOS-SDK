@@ -1,21 +1,21 @@
 //
-//  EditCoverTask.m
+//  EditAvatarTask.m
 //  GraffiTab-iOS
 //
-//  Created by Georgi Christov on 15/04/2015.
-//  Copyright (c) 2015 GraffiTab. All rights reserved.
+//  Created by Georgi Christov on 27/11/2014.
+//  Copyright (c) 2014 GraffiTab. All rights reserved.
 //
 
-#import "GTEditCoverTask.h"
+#import "GTEditAvatarTask.h"
 
-@implementation GTEditCoverTask
+@implementation GTEditAvatarTask
 
-- (void)editCoverWithNewImage:(UIImage *)image successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+- (void)editAvatarWithNewImage:(UIImage *)image successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     self.sBlock = successBlock;
     self.fBlock = failureBlock;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *string = [GTRequestBuilder buildEditCover];
+        NSString *string = [GTRequestBuilder buildEditAvatar];
         
         NSString *encodedString;
         if (image) {
@@ -36,17 +36,10 @@
                 
                 [self parseJsonSuccess:responseJson];
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                if (error.userInfo[JSONResponseSerializerWithDataKey]) {
-                    NSData *data = error.userInfo[JSONResponseSerializerWithDataKey];
-                    
-                    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                                         options:kNilOptions
-                                                                           error:&error];
-                    
-                    [self parseJsonError:json];
-                }
-                else
-                    [self parseJsonError:nil];
+                NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+                NSInteger statuscode = response.statusCode;
+                
+                [self parseJsonError:statuscode];
             }];
         });
     });

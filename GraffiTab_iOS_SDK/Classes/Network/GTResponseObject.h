@@ -12,7 +12,6 @@
 
 @property (nonatomic, assign) Result result;
 @property (nonatomic, assign) Reason reason;
-@property (nonatomic, copy) NSString *message;
 @property (nonatomic, strong) id object;
 
 @end

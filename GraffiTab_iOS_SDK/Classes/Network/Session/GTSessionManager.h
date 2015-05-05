@@ -7,7 +7,6 @@
 //
 
 #import "AFHTTPSessionManager.h"
-#import "GTJSONResponseSerializerWithData.h"
 
 @interface GTSessionManager : AFHTTPSessionManager
 

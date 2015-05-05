@@ -36,23 +36,26 @@
     [self finishCachedRequestWithResponse:response];
 }
 
-- (void)parseJsonError:(NSDictionary *)json {
+- (void)parseJsonError:(NSInteger)statusCode {
     GTResponseObject *response = [GTResponseObject new];
     response.result = ERROR;
     
-    @try {
-        if (!json) {
-            response.reason = NETWORK;
-            response.message = @"Network error. Please check your connection and try again.";
-        }
-        else {
-            response.reason = Reason(json[JSON_RESP_GENERIC_ERROR_TYPE]);
-            response.message = json[JSON_RESP_GENERIC_ERROR_MESSAGE];
-        }
-    }
-    @catch (NSException *exception) {
-        response.reason = NETWORK;
-        response.message = @"Network error. Please check your connection and try again.";
+    switch (statusCode) {
+        case 500:
+            response.reason = SERVER_ERROR;
+            break;
+        case 401:
+            response.reason = AUTHORIZATION_NEEDED;
+            break;
+        case 404:
+            response.reason = NOT_FOUND;
+            break;
+        case 409:
+            response.reason = ALREADY_EXISTS;
+            break;
+        default:
+            response.reason = OTHER;
+            break;
     }
 
     [self finishRequestWithResponse:response];
@@ -70,7 +73,7 @@
     if (response.result == SUCCESS)
         self.sBlock(response);
     else {
-        NSLog(@"ERROR (%@) MESSAGE - %@", REASON_LIST[response.reason], response.message);
+        NSLog(@"ERROR (%u)", response.reason);
         
         self.fBlock(response);
     }

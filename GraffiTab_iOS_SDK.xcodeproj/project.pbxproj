@@ -95,8 +95,6 @@
 		E581D8AF1AF3CADB00FD67C8 /* GTResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E41AF3CADA00FD67C8 /* GTResponseObject.m */; };
 		E581D8B01AF3CADB00FD67C8 /* GTCookieManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7E61AF3CADA00FD67C8 /* GTCookieManager.h */; };
 		E581D8B11AF3CADB00FD67C8 /* GTCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E71AF3CADA00FD67C8 /* GTCookieManager.m */; };
-		E581D8B21AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7E81AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.h */; };
-		E581D8B31AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7E91AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.m */; };
 		E581D8B41AF3CADB00FD67C8 /* GTSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7EA1AF3CADA00FD67C8 /* GTSessionManager.h */; };
 		E581D8B51AF3CADB00FD67C8 /* GTSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7EB1AF3CADA00FD67C8 /* GTSessionManager.m */; };
 		E581D8B61AF3CADB00FD67C8 /* GTSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7ED1AF3CADA00FD67C8 /* GTSettings.h */; };
@@ -179,16 +177,6 @@
 		E581D9031AF3CADB00FD67C8 /* GTCreateStreamableTagTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8461AF3CADA00FD67C8 /* GTCreateStreamableTagTask.m */; };
 		E581D9041AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8471AF3CADA00FD67C8 /* GTGetStreamablesForLocationTask.h */; };
 		E581D9051AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8481AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m */; };
-		E581D9061AF3CADB00FD67C8 /* GTCheckLoginStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D84A1AF3CADB00FD67C8 /* GTCheckLoginStatus.h */; };
-		E581D9071AF3CADB00FD67C8 /* GTCheckLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D84B1AF3CADB00FD67C8 /* GTCheckLoginStatus.m */; };
-		E581D9081AF3CADB00FD67C8 /* GTEditAvatarTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D84C1AF3CADB00FD67C8 /* GTEditAvatarTask.h */; };
-		E581D9091AF3CADB00FD67C8 /* GTEditAvatarTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D84D1AF3CADB00FD67C8 /* GTEditAvatarTask.m */; };
-		E581D90A1AF3CADB00FD67C8 /* GTEditCoverTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D84E1AF3CADB00FD67C8 /* GTEditCoverTask.h */; };
-		E581D90B1AF3CADB00FD67C8 /* GTEditCoverTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D84F1AF3CADB00FD67C8 /* GTEditCoverTask.m */; };
-		E581D90C1AF3CADB00FD67C8 /* GTEditPasswordTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8501AF3CADB00FD67C8 /* GTEditPasswordTask.h */; };
-		E581D90D1AF3CADB00FD67C8 /* GTEditPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8511AF3CADB00FD67C8 /* GTEditPasswordTask.m */; };
-		E581D90E1AF3CADB00FD67C8 /* GTEditProfileTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8521AF3CADB00FD67C8 /* GTEditProfileTask.h */; };
-		E581D90F1AF3CADB00FD67C8 /* GTEditProfileTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8531AF3CADB00FD67C8 /* GTEditProfileTask.m */; };
 		E581D9101AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8541AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h */; };
 		E581D9111AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8551AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m */; };
 		E581D9121AF3CADB00FD67C8 /* GTFollowTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8561AF3CADB00FD67C8 /* GTFollowTask.h */; };
@@ -203,20 +191,8 @@
 		E581D91B1AF3CADB00FD67C8 /* GTGetSocialFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D85F1AF3CADB00FD67C8 /* GTGetSocialFriends.m */; };
 		E581D91C1AF3CADB00FD67C8 /* GTGetUserProfileTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8601AF3CADB00FD67C8 /* GTGetUserProfileTask.h */; };
 		E581D91D1AF3CADB00FD67C8 /* GTGetUserProfileTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8611AF3CADB00FD67C8 /* GTGetUserProfileTask.m */; };
-		E581D91E1AF3CADB00FD67C8 /* GTLinkExternalIdTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8621AF3CADB00FD67C8 /* GTLinkExternalIdTask.h */; };
-		E581D91F1AF3CADB00FD67C8 /* GTLinkExternalIdTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8631AF3CADB00FD67C8 /* GTLinkExternalIdTask.m */; };
-		E581D9201AF3CADB00FD67C8 /* GTLoginTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8641AF3CADB00FD67C8 /* GTLoginTask.h */; };
-		E581D9211AF3CADB00FD67C8 /* GTLoginTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8651AF3CADB00FD67C8 /* GTLoginTask.m */; };
-		E581D9221AF3CADB00FD67C8 /* GTLogoutTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8661AF3CADB00FD67C8 /* GTLogoutTask.h */; };
-		E581D9231AF3CADB00FD67C8 /* GTLogoutTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8671AF3CADB00FD67C8 /* GTLogoutTask.m */; };
-		E581D9241AF3CADB00FD67C8 /* GTResetPasswordTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D8681AF3CADB00FD67C8 /* GTResetPasswordTask.h */; };
-		E581D9251AF3CADB00FD67C8 /* GTResetPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D8691AF3CADB00FD67C8 /* GTResetPasswordTask.m */; };
-		E581D9261AF3CADB00FD67C8 /* GTSignUpTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86A1AF3CADB00FD67C8 /* GTSignUpTask.h */; };
-		E581D9271AF3CADB00FD67C8 /* GTSignUpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86B1AF3CADB00FD67C8 /* GTSignUpTask.m */; };
 		E581D9281AF3CADB00FD67C8 /* GTUnfollowTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86C1AF3CADB00FD67C8 /* GTUnfollowTask.h */; };
 		E581D9291AF3CADB00FD67C8 /* GTUnfollowTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */; };
-		E581D92A1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */; };
-		E581D92B1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */; };
 		E581D9421AF5649E00FD67C8 /* GTFlagTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9401AF5649E00FD67C8 /* GTFlagTask.h */; };
 		E581D9431AF5649E00FD67C8 /* GTFlagTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9411AF5649E00FD67C8 /* GTFlagTask.m */; };
 		E581D9461AF5690E00FD67C8 /* GTMakePublicTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9441AF5690E00FD67C8 /* GTMakePublicTask.h */; };
@@ -227,6 +203,28 @@
 		E581D94F1AF56BFD00FD67C8 /* GTDeleteItemTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D94D1AF56BFD00FD67C8 /* GTDeleteItemTask.m */; };
 		E581D9521AF57BB700FD67C8 /* GTEditStreamableTagTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9501AF57BB700FD67C8 /* GTEditStreamableTagTask.h */; };
 		E581D9531AF57BB700FD67C8 /* GTEditStreamableTagTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9511AF57BB700FD67C8 /* GTEditStreamableTagTask.m */; };
+		E581D96F1AF8D2F900FD67C8 /* GTEditAvatarTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9581AF8D2F900FD67C8 /* GTEditAvatarTask.h */; };
+		E581D9701AF8D2F900FD67C8 /* GTEditAvatarTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9591AF8D2F900FD67C8 /* GTEditAvatarTask.m */; };
+		E581D9711AF8D2F900FD67C8 /* GTEditCoverTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D95A1AF8D2F900FD67C8 /* GTEditCoverTask.h */; };
+		E581D9721AF8D2F900FD67C8 /* GTEditCoverTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D95B1AF8D2F900FD67C8 /* GTEditCoverTask.m */; };
+		E581D9731AF8D2F900FD67C8 /* GTEditPasswordTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D95C1AF8D2F900FD67C8 /* GTEditPasswordTask.h */; };
+		E581D9741AF8D2F900FD67C8 /* GTEditPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D95D1AF8D2F900FD67C8 /* GTEditPasswordTask.m */; };
+		E581D9751AF8D2F900FD67C8 /* GTEditProfileTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D95E1AF8D2F900FD67C8 /* GTEditProfileTask.h */; };
+		E581D9761AF8D2F900FD67C8 /* GTEditProfileTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D95F1AF8D2F900FD67C8 /* GTEditProfileTask.m */; };
+		E581D9771AF8D2F900FD67C8 /* GTCheckLoginStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9611AF8D2F900FD67C8 /* GTCheckLoginStatus.h */; };
+		E581D9781AF8D2F900FD67C8 /* GTCheckLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9621AF8D2F900FD67C8 /* GTCheckLoginStatus.m */; };
+		E581D9791AF8D2F900FD67C8 /* GTLinkExternalIdTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9631AF8D2F900FD67C8 /* GTLinkExternalIdTask.h */; };
+		E581D97A1AF8D2F900FD67C8 /* GTLinkExternalIdTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9641AF8D2F900FD67C8 /* GTLinkExternalIdTask.m */; };
+		E581D97B1AF8D2F900FD67C8 /* GTLoginTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9651AF8D2F900FD67C8 /* GTLoginTask.h */; };
+		E581D97C1AF8D2F900FD67C8 /* GTLoginTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9661AF8D2F900FD67C8 /* GTLoginTask.m */; };
+		E581D97D1AF8D2F900FD67C8 /* GTLogoutTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9671AF8D2F900FD67C8 /* GTLogoutTask.h */; };
+		E581D97E1AF8D2F900FD67C8 /* GTLogoutTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D9681AF8D2F900FD67C8 /* GTLogoutTask.m */; };
+		E581D97F1AF8D2F900FD67C8 /* GTResetPasswordTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9691AF8D2F900FD67C8 /* GTResetPasswordTask.h */; };
+		E581D9801AF8D2F900FD67C8 /* GTResetPasswordTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D96A1AF8D2F900FD67C8 /* GTResetPasswordTask.m */; };
+		E581D9811AF8D2F900FD67C8 /* GTSignUpTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D96B1AF8D2F900FD67C8 /* GTSignUpTask.h */; };
+		E581D9821AF8D2F900FD67C8 /* GTSignUpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D96C1AF8D2F900FD67C8 /* GTSignUpTask.m */; };
+		E581D9831AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D96D1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h */; };
+		E581D9841AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -319,8 +317,6 @@
 		E581D7E41AF3CADA00FD67C8 /* GTResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTResponseObject.m; sourceTree = "<group>"; };
 		E581D7E61AF3CADA00FD67C8 /* GTCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCookieManager.h; sourceTree = "<group>"; };
 		E581D7E71AF3CADA00FD67C8 /* GTCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCookieManager.m; sourceTree = "<group>"; };
-		E581D7E81AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTJSONResponseSerializerWithData.h; sourceTree = "<group>"; };
-		E581D7E91AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTJSONResponseSerializerWithData.m; sourceTree = "<group>"; };
 		E581D7EA1AF3CADA00FD67C8 /* GTSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSessionManager.h; sourceTree = "<group>"; };
 		E581D7EB1AF3CADA00FD67C8 /* GTSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSessionManager.m; sourceTree = "<group>"; };
 		E581D7ED1AF3CADA00FD67C8 /* GTSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSettings.h; sourceTree = "<group>"; };
@@ -403,16 +399,6 @@
 		E581D8461AF3CADA00FD67C8 /* GTCreateStreamableTagTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCreateStreamableTagTask.m; sourceTree = "<group>"; };
 		E581D8471AF3CADA00FD67C8 /* GTGetStreamablesForLocationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetStreamablesForLocationTask.h; sourceTree = "<group>"; };
 		E581D8481AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetStreamablesForLocationTask.m; sourceTree = "<group>"; };
-		E581D84A1AF3CADB00FD67C8 /* GTCheckLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCheckLoginStatus.h; sourceTree = "<group>"; };
-		E581D84B1AF3CADB00FD67C8 /* GTCheckLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCheckLoginStatus.m; sourceTree = "<group>"; };
-		E581D84C1AF3CADB00FD67C8 /* GTEditAvatarTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditAvatarTask.h; sourceTree = "<group>"; };
-		E581D84D1AF3CADB00FD67C8 /* GTEditAvatarTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditAvatarTask.m; sourceTree = "<group>"; };
-		E581D84E1AF3CADB00FD67C8 /* GTEditCoverTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditCoverTask.h; sourceTree = "<group>"; };
-		E581D84F1AF3CADB00FD67C8 /* GTEditCoverTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditCoverTask.m; sourceTree = "<group>"; };
-		E581D8501AF3CADB00FD67C8 /* GTEditPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditPasswordTask.h; sourceTree = "<group>"; };
-		E581D8511AF3CADB00FD67C8 /* GTEditPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditPasswordTask.m; sourceTree = "<group>"; };
-		E581D8521AF3CADB00FD67C8 /* GTEditProfileTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditProfileTask.h; sourceTree = "<group>"; };
-		E581D8531AF3CADB00FD67C8 /* GTEditProfileTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditProfileTask.m; sourceTree = "<group>"; };
 		E581D8541AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFindUserForUsernameTask.h; sourceTree = "<group>"; };
 		E581D8551AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFindUserForUsernameTask.m; sourceTree = "<group>"; };
 		E581D8561AF3CADB00FD67C8 /* GTFollowTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFollowTask.h; sourceTree = "<group>"; };
@@ -427,20 +413,8 @@
 		E581D85F1AF3CADB00FD67C8 /* GTGetSocialFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetSocialFriends.m; sourceTree = "<group>"; };
 		E581D8601AF3CADB00FD67C8 /* GTGetUserProfileTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetUserProfileTask.h; sourceTree = "<group>"; };
 		E581D8611AF3CADB00FD67C8 /* GTGetUserProfileTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetUserProfileTask.m; sourceTree = "<group>"; };
-		E581D8621AF3CADB00FD67C8 /* GTLinkExternalIdTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLinkExternalIdTask.h; sourceTree = "<group>"; };
-		E581D8631AF3CADB00FD67C8 /* GTLinkExternalIdTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLinkExternalIdTask.m; sourceTree = "<group>"; };
-		E581D8641AF3CADB00FD67C8 /* GTLoginTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoginTask.h; sourceTree = "<group>"; };
-		E581D8651AF3CADB00FD67C8 /* GTLoginTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoginTask.m; sourceTree = "<group>"; };
-		E581D8661AF3CADB00FD67C8 /* GTLogoutTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLogoutTask.h; sourceTree = "<group>"; };
-		E581D8671AF3CADB00FD67C8 /* GTLogoutTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLogoutTask.m; sourceTree = "<group>"; };
-		E581D8681AF3CADB00FD67C8 /* GTResetPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTResetPasswordTask.h; sourceTree = "<group>"; };
-		E581D8691AF3CADB00FD67C8 /* GTResetPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTResetPasswordTask.m; sourceTree = "<group>"; };
-		E581D86A1AF3CADB00FD67C8 /* GTSignUpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSignUpTask.h; sourceTree = "<group>"; };
-		E581D86B1AF3CADB00FD67C8 /* GTSignUpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSignUpTask.m; sourceTree = "<group>"; };
 		E581D86C1AF3CADB00FD67C8 /* GTUnfollowTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTUnfollowTask.h; sourceTree = "<group>"; };
 		E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTUnfollowTask.m; sourceTree = "<group>"; };
-		E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVerifyExternalUserTask.h; sourceTree = "<group>"; };
-		E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerifyExternalUserTask.m; sourceTree = "<group>"; };
 		E581D9401AF5649E00FD67C8 /* GTFlagTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTFlagTask.h; sourceTree = "<group>"; };
 		E581D9411AF5649E00FD67C8 /* GTFlagTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTFlagTask.m; sourceTree = "<group>"; };
 		E581D9441AF5690E00FD67C8 /* GTMakePublicTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMakePublicTask.h; sourceTree = "<group>"; };
@@ -451,6 +425,28 @@
 		E581D94D1AF56BFD00FD67C8 /* GTDeleteItemTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTDeleteItemTask.m; sourceTree = "<group>"; };
 		E581D9501AF57BB700FD67C8 /* GTEditStreamableTagTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditStreamableTagTask.h; sourceTree = "<group>"; };
 		E581D9511AF57BB700FD67C8 /* GTEditStreamableTagTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditStreamableTagTask.m; sourceTree = "<group>"; };
+		E581D9581AF8D2F900FD67C8 /* GTEditAvatarTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditAvatarTask.h; sourceTree = "<group>"; };
+		E581D9591AF8D2F900FD67C8 /* GTEditAvatarTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditAvatarTask.m; sourceTree = "<group>"; };
+		E581D95A1AF8D2F900FD67C8 /* GTEditCoverTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditCoverTask.h; sourceTree = "<group>"; };
+		E581D95B1AF8D2F900FD67C8 /* GTEditCoverTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditCoverTask.m; sourceTree = "<group>"; };
+		E581D95C1AF8D2F900FD67C8 /* GTEditPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditPasswordTask.h; sourceTree = "<group>"; };
+		E581D95D1AF8D2F900FD67C8 /* GTEditPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditPasswordTask.m; sourceTree = "<group>"; };
+		E581D95E1AF8D2F900FD67C8 /* GTEditProfileTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTEditProfileTask.h; sourceTree = "<group>"; };
+		E581D95F1AF8D2F900FD67C8 /* GTEditProfileTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTEditProfileTask.m; sourceTree = "<group>"; };
+		E581D9611AF8D2F900FD67C8 /* GTCheckLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTCheckLoginStatus.h; sourceTree = "<group>"; };
+		E581D9621AF8D2F900FD67C8 /* GTCheckLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTCheckLoginStatus.m; sourceTree = "<group>"; };
+		E581D9631AF8D2F900FD67C8 /* GTLinkExternalIdTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLinkExternalIdTask.h; sourceTree = "<group>"; };
+		E581D9641AF8D2F900FD67C8 /* GTLinkExternalIdTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLinkExternalIdTask.m; sourceTree = "<group>"; };
+		E581D9651AF8D2F900FD67C8 /* GTLoginTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLoginTask.h; sourceTree = "<group>"; };
+		E581D9661AF8D2F900FD67C8 /* GTLoginTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLoginTask.m; sourceTree = "<group>"; };
+		E581D9671AF8D2F900FD67C8 /* GTLogoutTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTLogoutTask.h; sourceTree = "<group>"; };
+		E581D9681AF8D2F900FD67C8 /* GTLogoutTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLogoutTask.m; sourceTree = "<group>"; };
+		E581D9691AF8D2F900FD67C8 /* GTResetPasswordTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTResetPasswordTask.h; sourceTree = "<group>"; };
+		E581D96A1AF8D2F900FD67C8 /* GTResetPasswordTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTResetPasswordTask.m; sourceTree = "<group>"; };
+		E581D96B1AF8D2F900FD67C8 /* GTSignUpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTSignUpTask.h; sourceTree = "<group>"; };
+		E581D96C1AF8D2F900FD67C8 /* GTSignUpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTSignUpTask.m; sourceTree = "<group>"; };
+		E581D96D1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTVerifyExternalUserTask.h; sourceTree = "<group>"; };
+		E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerifyExternalUserTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -783,8 +779,6 @@
 			children = (
 				E581D7E61AF3CADA00FD67C8 /* GTCookieManager.h */,
 				E581D7E71AF3CADA00FD67C8 /* GTCookieManager.m */,
-				E581D7E81AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.h */,
-				E581D7E91AF3CADA00FD67C8 /* GTJSONResponseSerializerWithData.m */,
 				E581D7EA1AF3CADA00FD67C8 /* GTSessionManager.h */,
 				E581D7EB1AF3CADA00FD67C8 /* GTSessionManager.m */,
 			);
@@ -820,6 +814,7 @@
 		E581D7F01AF3CADA00FD67C8 /* Conversations */ = {
 			isa = PBXGroup;
 			children = (
+				E581D8071AF3CADA00FD67C8 /* Messages */,
 				E581D7F11AF3CADA00FD67C8 /* GTAddConversationUsersTask.h */,
 				E581D7F21AF3CADA00FD67C8 /* GTAddConversationUsersTask.m */,
 				E581D7F31AF3CADA00FD67C8 /* GTCreateConversationTask.h */,
@@ -842,7 +837,6 @@
 				E581D8041AF3CADA00FD67C8 /* GTPostMessageTask.m */,
 				E581D8051AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.h */,
 				E581D8061AF3CADA00FD67C8 /* GTShowTypingIndicatorTask.m */,
-				E581D8071AF3CADA00FD67C8 /* Messages */,
 			);
 			path = Conversations;
 			sourceTree = "<group>";
@@ -987,16 +981,8 @@
 		E581D8491AF3CADB00FD67C8 /* UserTasks */ = {
 			isa = PBXGroup;
 			children = (
-				E581D84A1AF3CADB00FD67C8 /* GTCheckLoginStatus.h */,
-				E581D84B1AF3CADB00FD67C8 /* GTCheckLoginStatus.m */,
-				E581D84C1AF3CADB00FD67C8 /* GTEditAvatarTask.h */,
-				E581D84D1AF3CADB00FD67C8 /* GTEditAvatarTask.m */,
-				E581D84E1AF3CADB00FD67C8 /* GTEditCoverTask.h */,
-				E581D84F1AF3CADB00FD67C8 /* GTEditCoverTask.m */,
-				E581D8501AF3CADB00FD67C8 /* GTEditPasswordTask.h */,
-				E581D8511AF3CADB00FD67C8 /* GTEditPasswordTask.m */,
-				E581D8521AF3CADB00FD67C8 /* GTEditProfileTask.h */,
-				E581D8531AF3CADB00FD67C8 /* GTEditProfileTask.m */,
+				E581D9571AF8D2F900FD67C8 /* Edit */,
+				E581D9601AF8D2F900FD67C8 /* Login */,
 				E581D8541AF3CADB00FD67C8 /* GTFindUserForUsernameTask.h */,
 				E581D8551AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m */,
 				E581D8561AF3CADB00FD67C8 /* GTFollowTask.h */,
@@ -1011,22 +997,46 @@
 				E581D85F1AF3CADB00FD67C8 /* GTGetSocialFriends.m */,
 				E581D8601AF3CADB00FD67C8 /* GTGetUserProfileTask.h */,
 				E581D8611AF3CADB00FD67C8 /* GTGetUserProfileTask.m */,
-				E581D8621AF3CADB00FD67C8 /* GTLinkExternalIdTask.h */,
-				E581D8631AF3CADB00FD67C8 /* GTLinkExternalIdTask.m */,
-				E581D8641AF3CADB00FD67C8 /* GTLoginTask.h */,
-				E581D8651AF3CADB00FD67C8 /* GTLoginTask.m */,
-				E581D8661AF3CADB00FD67C8 /* GTLogoutTask.h */,
-				E581D8671AF3CADB00FD67C8 /* GTLogoutTask.m */,
-				E581D8681AF3CADB00FD67C8 /* GTResetPasswordTask.h */,
-				E581D8691AF3CADB00FD67C8 /* GTResetPasswordTask.m */,
-				E581D86A1AF3CADB00FD67C8 /* GTSignUpTask.h */,
-				E581D86B1AF3CADB00FD67C8 /* GTSignUpTask.m */,
 				E581D86C1AF3CADB00FD67C8 /* GTUnfollowTask.h */,
 				E581D86D1AF3CADB00FD67C8 /* GTUnfollowTask.m */,
-				E581D86E1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h */,
-				E581D86F1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m */,
 			);
 			path = UserTasks;
+			sourceTree = "<group>";
+		};
+		E581D9571AF8D2F900FD67C8 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				E581D9581AF8D2F900FD67C8 /* GTEditAvatarTask.h */,
+				E581D9591AF8D2F900FD67C8 /* GTEditAvatarTask.m */,
+				E581D95A1AF8D2F900FD67C8 /* GTEditCoverTask.h */,
+				E581D95B1AF8D2F900FD67C8 /* GTEditCoverTask.m */,
+				E581D95C1AF8D2F900FD67C8 /* GTEditPasswordTask.h */,
+				E581D95D1AF8D2F900FD67C8 /* GTEditPasswordTask.m */,
+				E581D95E1AF8D2F900FD67C8 /* GTEditProfileTask.h */,
+				E581D95F1AF8D2F900FD67C8 /* GTEditProfileTask.m */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		E581D9601AF8D2F900FD67C8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E581D9611AF8D2F900FD67C8 /* GTCheckLoginStatus.h */,
+				E581D9621AF8D2F900FD67C8 /* GTCheckLoginStatus.m */,
+				E581D9631AF8D2F900FD67C8 /* GTLinkExternalIdTask.h */,
+				E581D9641AF8D2F900FD67C8 /* GTLinkExternalIdTask.m */,
+				E581D9651AF8D2F900FD67C8 /* GTLoginTask.h */,
+				E581D9661AF8D2F900FD67C8 /* GTLoginTask.m */,
+				E581D9671AF8D2F900FD67C8 /* GTLogoutTask.h */,
+				E581D9681AF8D2F900FD67C8 /* GTLogoutTask.m */,
+				E581D9691AF8D2F900FD67C8 /* GTResetPasswordTask.h */,
+				E581D96A1AF8D2F900FD67C8 /* GTResetPasswordTask.m */,
+				E581D96B1AF8D2F900FD67C8 /* GTSignUpTask.h */,
+				E581D96C1AF8D2F900FD67C8 /* GTSignUpTask.m */,
+				E581D96D1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h */,
+				E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1036,6 +1046,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E581D9711AF8D2F900FD67C8 /* GTEditCoverTask.h in Headers */,
 				E581D87E1AF3CADB00FD67C8 /* GTLocationManager.h in Headers */,
 				E581D89C1AF3CADB00FD67C8 /* GTNotificationMention.h in Headers */,
 				E581D8841AF3CADB00FD67C8 /* GTStreamableManager.h in Headers */,
@@ -1057,12 +1068,16 @@
 				E581D89A1AF3CADB00FD67C8 /* GTNotificationLike.h in Headers */,
 				E581D8901AF3CADB00FD67C8 /* GTUserLocation.h in Headers */,
 				E581D87C1AF3CADB00FD67C8 /* GTLifecycleManager.h in Headers */,
+				E581D9771AF8D2F900FD67C8 /* GTCheckLoginStatus.h in Headers */,
 				E581D87A1AF3CADB00FD67C8 /* GTFeedbackManager.h in Headers */,
+				E581D9731AF8D2F900FD67C8 /* GTEditPasswordTask.h in Headers */,
 				E581D88E1AF3CADB00FD67C8 /* GTPerson.h in Headers */,
+				E581D9791AF8D2F900FD67C8 /* GTLinkExternalIdTask.h in Headers */,
 				E581D8751AF3CADB00FD67C8 /* GTJSONSerializable.h in Headers */,
 				E581D8801AF3CADB00FD67C8 /* GTNotificationManager.h in Headers */,
 				E581D8AA1AF3CADB00FD67C8 /* GTImageRequestBuilder.h in Headers */,
 				E581D8711AF3CADB00FD67C8 /* GTConstants.h in Headers */,
+				E581D96F1AF8D2F900FD67C8 /* GTEditAvatarTask.h in Headers */,
 				E581D8A41AF3CADB00FD67C8 /* GTStreamableTag.h in Headers */,
 				E581D8981AF3CADB00FD67C8 /* GTNotificationFollow.h in Headers */,
 				E581D8AE1AF3CADB00FD67C8 /* GTResponseObject.h in Headers */,
@@ -1072,24 +1087,24 @@
 				E581D94E1AF56BFD00FD67C8 /* GTDeleteItemTask.h in Headers */,
 				E581D8CC1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.h in Headers */,
 				E581D9181AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.h in Headers */,
-				E581D9061AF3CADB00FD67C8 /* GTCheckLoginStatus.h in Headers */,
 				E581D8961AF3CADB00FD67C8 /* GTNotificationFactory.h in Headers */,
 				E581D76A1AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h in Headers */,
-				E581D9221AF3CADB00FD67C8 /* GTLogoutTask.h in Headers */,
 				E581D9041AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.h in Headers */,
 				E581D8BA1AF3CADB00FD67C8 /* GTCreateConversationTask.h in Headers */,
+				E581D97F1AF8D2F900FD67C8 /* GTResetPasswordTask.h in Headers */,
 				E581D8A21AF3CADB00FD67C8 /* GTStreamableFactory.h in Headers */,
 				E581D8B61AF3CADB00FD67C8 /* GTSettings.h in Headers */,
 				E581D8D41AF3CADB00FD67C8 /* GTUnregisterDeviceTask.h in Headers */,
 				E581D8EE1AF3CADB00FD67C8 /* GTGetCommentsTask.h in Headers */,
 				E581D8CA1AF3CADB00FD67C8 /* GTPostMessageTask.h in Headers */,
+				E581D9831AF8D2F900FD67C8 /* GTVerifyExternalUserTask.h in Headers */,
 				E581D8E61AF3CADB00FD67C8 /* GTSearchHashtags.h in Headers */,
 				E581D8BE1AF3CADB00FD67C8 /* GTEditConversationNameTask.h in Headers */,
 				E581D9281AF3CADB00FD67C8 /* GTUnfollowTask.h in Headers */,
 				E581D8731AF3CADB00FD67C8 /* GTJSONRequestConstants.h in Headers */,
 				E581D9161AF3CADB00FD67C8 /* GTGetFollowingTask.h in Headers */,
 				E581D94A1AF5698100FD67C8 /* GTMakePrivateTask.h in Headers */,
-				E581D9261AF3CADB00FD67C8 /* GTSignUpTask.h in Headers */,
+				E581D97D1AF8D2F900FD67C8 /* GTLogoutTask.h in Headers */,
 				E581D8D21AF3CADB00FD67C8 /* GTRegisterDeviceTask.h in Headers */,
 				E581D8F81AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.h in Headers */,
 				E581D8F61AF3CADB00FD67C8 /* GTGetUserFavouritesTask.h in Headers */,
@@ -1109,28 +1124,22 @@
 				E581D8DA1AF3CADB00FD67C8 /* GTCreateUserLocationTask.h in Headers */,
 				E581D8B01AF3CADB00FD67C8 /* GTCookieManager.h in Headers */,
 				E581D8C41AF3CADB00FD67C8 /* GTGetUnseenConversationsTask.h in Headers */,
+				E581D97B1AF8D2F900FD67C8 /* GTLoginTask.h in Headers */,
 				E581D8DE1AF3CADB00FD67C8 /* GTGetUserLocationsTask.h in Headers */,
 				E581D8C21AF3CADB00FD67C8 /* GTGetMessagesTask.h in Headers */,
-				E581D90A1AF3CADB00FD67C8 /* GTEditCoverTask.h in Headers */,
-				E581D9201AF3CADB00FD67C8 /* GTLoginTask.h in Headers */,
-				E581D92A1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.h in Headers */,
 				E581D8E01AF3CADB00FD67C8 /* GTGetNotificationsTask.h in Headers */,
 				E581D8741AF3CADB00FD67C8 /* GTJSONResponseConstants.h in Headers */,
-				E581D91E1AF3CADB00FD67C8 /* GTLinkExternalIdTask.h in Headers */,
 				E581D8E21AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.h in Headers */,
-				E581D8B21AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.h in Headers */,
+				E581D9751AF8D2F900FD67C8 /* GTEditProfileTask.h in Headers */,
+				E581D9811AF8D2F900FD67C8 /* GTSignUpTask.h in Headers */,
 				E581D8DC1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.h in Headers */,
 				E581D9121AF3CADB00FD67C8 /* GTFollowTask.h in Headers */,
-				E581D9081AF3CADB00FD67C8 /* GTEditAvatarTask.h in Headers */,
 				E581D8F01AF3CADB00FD67C8 /* GTPostCommentTask.h in Headers */,
 				E581D8D81AF3CADB00FD67C8 /* GTNetworkTask.h in Headers */,
 				E581D8C81AF3CADB00FD67C8 /* GTLeaveConversationTask.h in Headers */,
 				E581D8CE1AF3CADB00FD67C8 /* GTDeleteMessagesTask.h in Headers */,
-				E581D90C1AF3CADB00FD67C8 /* GTEditPasswordTask.h in Headers */,
 				E581D8EA1AF3CADB00FD67C8 /* GTDeleteCommentsTask.h in Headers */,
 				E581D9001AF3CADB00FD67C8 /* GTUnlikeItemTask.h in Headers */,
-				E581D9241AF3CADB00FD67C8 /* GTResetPasswordTask.h in Headers */,
-				E581D90E1AF3CADB00FD67C8 /* GTEditProfileTask.h in Headers */,
 				E581D8B81AF3CADB00FD67C8 /* GTAddConversationUsersTask.h in Headers */,
 				E581D91A1AF3CADB00FD67C8 /* GTGetSocialFriends.h in Headers */,
 				E581D91C1AF3CADB00FD67C8 /* GTGetUserProfileTask.h in Headers */,
@@ -1293,19 +1302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E581D87B1AF3CADB00FD67C8 /* GTFeedbackManager.m in Sources */,
+				E581D9821AF8D2F900FD67C8 /* GTSignUpTask.m in Sources */,
 				E581D8971AF3CADB00FD67C8 /* GTNotificationFactory.m in Sources */,
 				E581D8BD1AF3CADB00FD67C8 /* GTEditConversationImageTask.m in Sources */,
 				E581D89D1AF3CADB00FD67C8 /* GTNotificationMention.m in Sources */,
-				E581D9271AF3CADB00FD67C8 /* GTSignUpTask.m in Sources */,
-				E581D92B1AF3CADB00FD67C8 /* GTVerifyExternalUserTask.m in Sources */,
-				E581D9251AF3CADB00FD67C8 /* GTResetPasswordTask.m in Sources */,
 				E581D8C31AF3CADB00FD67C8 /* GTGetMessagesTask.m in Sources */,
 				E581D8E51AF3CADB00FD67C8 /* GTSearchHashtag.m in Sources */,
 				E581D88B1AF3CADB00FD67C8 /* GTConversationMessage.m in Sources */,
 				E581D8DD1AF3CADB00FD67C8 /* GTDeleteUserLocationsTask.m in Sources */,
 				E581D8871AF3CADB00FD67C8 /* GTUserManager.m in Sources */,
+				E581D97E1AF8D2F900FD67C8 /* GTLogoutTask.m in Sources */,
 				E581D8ED1AF3CADB00FD67C8 /* GTEditCommentTask.m in Sources */,
-				E581D90D1AF3CADB00FD67C8 /* GTEditPasswordTask.m in Sources */,
 				E581D9471AF5690E00FD67C8 /* GTMakePublicTask.m in Sources */,
 				E581D8CB1AF3CADB00FD67C8 /* GTPostMessageTask.m in Sources */,
 				E581D8931AF3CADB00FD67C8 /* GTNotification.m in Sources */,
@@ -1314,14 +1321,15 @@
 				E581D8CD1AF3CADB00FD67C8 /* GTShowTypingIndicatorTask.m in Sources */,
 				E581D8DF1AF3CADB00FD67C8 /* GTGetUserLocationsTask.m in Sources */,
 				E581D89B1AF3CADB00FD67C8 /* GTNotificationLike.m in Sources */,
+				E581D9701AF8D2F900FD67C8 /* GTEditAvatarTask.m in Sources */,
 				E581D94F1AF56BFD00FD67C8 /* GTDeleteItemTask.m in Sources */,
 				E581D8F31AF3CADB00FD67C8 /* GTGetNewestItemsTask.m in Sources */,
 				E581D8B51AF3CADB00FD67C8 /* GTSessionManager.m in Sources */,
 				E581D9431AF5649E00FD67C8 /* GTFlagTask.m in Sources */,
 				E581D87D1AF3CADB00FD67C8 /* GTLifecycleManager.m in Sources */,
 				E581D88D1AF3CADB00FD67C8 /* GTComment.m in Sources */,
+				E581D97C1AF8D2F900FD67C8 /* GTLoginTask.m in Sources */,
 				E581D8FD1AF3CADB00FD67C8 /* GTGetLikersTask.m in Sources */,
-				E581D90B1AF3CADB00FD67C8 /* GTEditCoverTask.m in Sources */,
 				E581D8E31AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.m in Sources */,
 				E581D8AF1AF3CADB00FD67C8 /* GTResponseObject.m in Sources */,
 				E581D8FF1AF3CADB00FD67C8 /* GTLikeItemTask.m in Sources */,
@@ -1329,30 +1337,26 @@
 				E581D8E11AF3CADB00FD67C8 /* GTGetNotificationsTask.m in Sources */,
 				E581D8791AF3CADB00FD67C8 /* GTDeviceManager.m in Sources */,
 				E581D8A91AF3CADB00FD67C8 /* GTViewControllerCache.m in Sources */,
-				E581D9091AF3CADB00FD67C8 /* GTEditAvatarTask.m in Sources */,
 				E581D8951AF3CADB00FD67C8 /* GTNotificationComment.m in Sources */,
 				E581D8A71AF3CADB00FD67C8 /* GTStreamableVideo.m in Sources */,
 				E581D8A51AF3CADB00FD67C8 /* GTStreamableTag.m in Sources */,
-				E581D90F1AF3CADB00FD67C8 /* GTEditProfileTask.m in Sources */,
+				E581D9781AF8D2F900FD67C8 /* GTCheckLoginStatus.m in Sources */,
 				E581D8D11AF3CADB00FD67C8 /* GTEditMessageTask.m in Sources */,
 				E581D8811AF3CADB00FD67C8 /* GTNotificationManager.m in Sources */,
 				E581D8A11AF3CADB00FD67C8 /* GTStreamable.m in Sources */,
 				E581D8AB1AF3CADB00FD67C8 /* GTImageRequestBuilder.m in Sources */,
 				E581D8991AF3CADB00FD67C8 /* GTNotificationFollow.m in Sources */,
 				E581D8CF1AF3CADB00FD67C8 /* GTDeleteMessagesTask.m in Sources */,
-				E581D9071AF3CADB00FD67C8 /* GTCheckLoginStatus.m in Sources */,
 				E581D8EB1AF3CADB00FD67C8 /* GTDeleteCommentsTask.m in Sources */,
 				E581D8EF1AF3CADB00FD67C8 /* GTGetCommentsTask.m in Sources */,
 				E581D8F51AF3CADB00FD67C8 /* GTGetPopularItemsTask.m in Sources */,
 				E581D9031AF3CADB00FD67C8 /* GTCreateStreamableTagTask.m in Sources */,
+				E581D9801AF8D2F900FD67C8 /* GTResetPasswordTask.m in Sources */,
 				E581D91D1AF3CADB00FD67C8 /* GTGetUserProfileTask.m in Sources */,
-				E581D9231AF3CADB00FD67C8 /* GTLogoutTask.m in Sources */,
 				E581D9011AF3CADB00FD67C8 /* GTUnlikeItemTask.m in Sources */,
-				E581D91F1AF3CADB00FD67C8 /* GTLinkExternalIdTask.m in Sources */,
 				E581D8B71AF3CADB00FD67C8 /* GTSettings.m in Sources */,
 				E581D8771AF3CADB00FD67C8 /* GTConversationManager.m in Sources */,
 				E581D89F1AF3CADB00FD67C8 /* GTNotificationWelcome.m in Sources */,
-				E581D8B31AF3CADB00FD67C8 /* GTJSONResponseSerializerWithData.m in Sources */,
 				E581D8AD1AF3CADB00FD67C8 /* GTRequestBuilder.m in Sources */,
 				E581D8FB1AF3CADB00FD67C8 /* GTGetUserItemsTask.m in Sources */,
 				E581D8F11AF3CADB00FD67C8 /* GTPostCommentTask.m in Sources */,
@@ -1363,21 +1367,24 @@
 				E581D9531AF57BB700FD67C8 /* GTEditStreamableTagTask.m in Sources */,
 				E581D8DB1AF3CADB00FD67C8 /* GTCreateUserLocationTask.m in Sources */,
 				E581D8E71AF3CADB00FD67C8 /* GTSearchHashtags.m in Sources */,
-				E581D9211AF3CADB00FD67C8 /* GTLoginTask.m in Sources */,
 				E581D8C51AF3CADB00FD67C8 /* GTGetUnseenConversationsTask.m in Sources */,
 				E581D87F1AF3CADB00FD67C8 /* GTLocationManager.m in Sources */,
 				E581D8D31AF3CADB00FD67C8 /* GTRegisterDeviceTask.m in Sources */,
 				E581D8891AF3CADB00FD67C8 /* GTConversation.m in Sources */,
 				E581D9191AF3CADB00FD67C8 /* GTGetMostActiveUsersTask.m in Sources */,
 				E581D8B91AF3CADB00FD67C8 /* GTAddConversationUsersTask.m in Sources */,
+				E581D9761AF8D2F900FD67C8 /* GTEditProfileTask.m in Sources */,
 				E581D8A31AF3CADB00FD67C8 /* GTStreamableFactory.m in Sources */,
 				E581D9111AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m in Sources */,
 				E581D8BF1AF3CADB00FD67C8 /* GTEditConversationNameTask.m in Sources */,
+				E581D9741AF8D2F900FD67C8 /* GTEditPasswordTask.m in Sources */,
 				E581D8911AF3CADB00FD67C8 /* GTUserLocation.m in Sources */,
+				E581D9721AF8D2F900FD67C8 /* GTEditCoverTask.m in Sources */,
 				E581D8F71AF3CADB00FD67C8 /* GTGetUserFavouritesTask.m in Sources */,
 				E581D8D91AF3CADB00FD67C8 /* GTNetworkTask.m in Sources */,
 				E581D8D51AF3CADB00FD67C8 /* GTUnregisterDeviceTask.m in Sources */,
 				E581D8B11AF3CADB00FD67C8 /* GTCookieManager.m in Sources */,
+				E581D97A1AF8D2F900FD67C8 /* GTLinkExternalIdTask.m in Sources */,
 				E581D8851AF3CADB00FD67C8 /* GTStreamableManager.m in Sources */,
 				E581D88F1AF3CADB00FD67C8 /* GTPerson.m in Sources */,
 				E581D8C11AF3CADB00FD67C8 /* GTGetConversationsTask.m in Sources */,
@@ -1385,6 +1392,7 @@
 				E581D8831AF3CADB00FD67C8 /* GTSearchManager.m in Sources */,
 				E581D8BB1AF3CADB00FD67C8 /* GTCreateConversationTask.m in Sources */,
 				E581D8F91AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.m in Sources */,
+				E581D9841AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m in Sources */,
 				E581D9171AF3CADB00FD67C8 /* GTGetFollowingTask.m in Sources */,
 				E581D8E91AF3CADB00FD67C8 /* GTSearchUsers.m in Sources */,
 				E581D9051AF3CADB00FD67C8 /* GTGetStreamablesForLocationTask.m in Sources */,

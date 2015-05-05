@@ -28,9 +28,6 @@
 #define JSON_RESP_USER_USER @"user"
 
 // Generic.
-#define JSON_RESP_GENERIC_RESULT @"result"
-#define JSON_RESP_GENERIC_ERROR_TYPE @"type"
-#define JSON_RESP_GENERIC_ERROR_MESSAGE @"message"
 #define JSON_RESP_GENERIC_ITEMS @"items"
 #define JSON_RESP_GENERIC_COUNT @"count"
 

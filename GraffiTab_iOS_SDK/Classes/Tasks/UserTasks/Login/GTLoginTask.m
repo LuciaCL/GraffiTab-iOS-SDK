@@ -1,30 +1,24 @@
 //
-//  EditProfileTask.m
+//  LoginTask.m
 //  GraffiTab-iOS
 //
-//  Created by Georgi Christov on 17/04/2015.
-//  Copyright (c) 2015 GraffiTab. All rights reserved.
+//  Created by Georgi Christov on 26/11/2014.
+//  Copyright (c) 2014 GraffiTab. All rights reserved.
 //
 
-#import "GTEditProfileTask.h"
+#import "GTLoginTask.h"
 
-@implementation GTEditProfileTask
+@implementation GTLoginTask
 
-- (void)editProfileWithFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email about:(NSString *)about website:(NSString *)website successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     self.sBlock = successBlock;
     self.fBlock = failureBlock;
     
-    NSString *string = [GTRequestBuilder buildEditProfile];
+    NSString *string = [GTRequestBuilder buildLogin];
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{JSON_REQ_USER_FIRST_NAME:firstName,
-                                                                                  JSON_REQ_USER_LAST_NAME:lastName,
-                                                                                  JSON_REQ_GENERIC_EMAIL:email}];
-    
-    if (about && about.length > 0)
-        params[JSON_REQ_USER_ABOUT] = about;
-    if (website && website.length > 0)
-        params[JSON_REQ_USER_WEBSITE] = website;
-    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{JSON_REQ_USER_USERNAME:username,
+                                                                                  JSON_REQ_USER_PASSWORD:password}];
+
     // Setup and fire off request.
     NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
     NSDictionary *sheaders = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
@@ -45,17 +39,10 @@
         
         [self parseJsonSuccess:responseJson];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (error.userInfo[JSONResponseSerializerWithDataKey]) {
-            NSData *data = error.userInfo[JSONResponseSerializerWithDataKey];
-            
-            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:kNilOptions
-                                                                   error:&error];
-            
-            [self parseJsonError:json];
-        }
-        else
-            [self parseJsonError:nil];
+        NSHTTPURLResponse *response = operation.response;
+        NSInteger statuscode = response.statusCode;
+        
+        [self parseJsonError:statuscode];
     }];
     
     [operation start];

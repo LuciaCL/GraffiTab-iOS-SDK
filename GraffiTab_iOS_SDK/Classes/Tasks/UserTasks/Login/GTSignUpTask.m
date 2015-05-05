@@ -1,24 +1,31 @@
 //
-//  LoginTask.m
+//  SignUpTask.m
 //  GraffiTab-iOS
 //
 //  Created by Georgi Christov on 26/11/2014.
 //  Copyright (c) 2014 GraffiTab. All rights reserved.
 //
 
-#import "GTLoginTask.h"
+#import "GTSignUpTask.h"
 
-@implementation GTLoginTask
+@implementation GTSignUpTask
 
-- (void)loginWithUsername:(NSString *)username password:(NSString *)password successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+- (void)signupWithUsername:(NSString *)username password:(NSString *)password email:(NSString *)email firstName:(NSString *)firstName lastName:(NSString *)lastName externalId:(NSString *)externalId successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     self.sBlock = successBlock;
     self.fBlock = failureBlock;
     
-    NSString *string = [GTRequestBuilder buildLogin];
+    NSString *string = [GTRequestBuilder buildSignUp];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{JSON_REQ_USER_USERNAME:username,
-                                                                                  JSON_REQ_USER_PASSWORD:password}];
-
+                                                                                  JSON_REQ_GENERIC_EMAIL:email,
+                                                                                  JSON_REQ_USER_FIRST_NAME:firstName,
+                                                                                  JSON_REQ_USER_LAST_NAME:lastName}];
+    
+    if (externalId)
+        params[JSON_REQ_USER_EXTERNAL_ID] = externalId;
+    if (password)
+        params[JSON_REQ_USER_PASSWORD] = password;
+    
     // Setup and fire off request.
     NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
     NSDictionary *sheaders = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
@@ -39,17 +46,10 @@
         
         [self parseJsonSuccess:responseJson];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (error.userInfo[JSONResponseSerializerWithDataKey]) {
-            NSData *data = error.userInfo[JSONResponseSerializerWithDataKey];
-            
-            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:kNilOptions
-                                                                   error:&error];
-            
-            [self parseJsonError:json];
-        }
-        else
-            [self parseJsonError:nil];
+        NSHTTPURLResponse *response = operation.response;
+        NSInteger statuscode = response.statusCode;
+        
+        [self parseJsonError:statuscode];
     }];
     
     [operation start];

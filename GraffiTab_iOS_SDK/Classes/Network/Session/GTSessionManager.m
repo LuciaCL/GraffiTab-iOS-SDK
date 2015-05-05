@@ -18,7 +18,7 @@ static GTSessionManager *manager;
         dispatch_once(&pred, ^{
             manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:API_APP_URL]];
             
-            manager.responseSerializer = [GTJSONResponseSerializerWithData serializer];
+            manager.responseSerializer = [AFJSONResponseSerializer serializer];
             manager.requestSerializer = [AFJSONRequestSerializer new];
         });
     }

@@ -16,7 +16,7 @@
 
 - (void)parseJsonSuccess:(NSDictionary *)json;
 - (void)parseJsonCacheSuccess:(NSDictionary *)json;
-- (void)parseJsonError:(NSDictionary *)json;
+- (void)parseJsonError:(NSInteger)statusCode;
 - (id)parseJsonSuccessObject:(NSDictionary *)json;
 
 @end

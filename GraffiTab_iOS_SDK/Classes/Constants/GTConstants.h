@@ -14,20 +14,12 @@ typedef enum {
 } Result;
 
 typedef enum {
-    ALREADY_EXISTS,
-    DATABASE_ERROR,
-    INCORRECT_CREDENTIALS,
+    SERVER_ERROR,
     AUTHORIZATION_NEEDED,
     NOT_FOUND,
-    NETWORK,
+    ALREADY_EXISTS,
     OTHER
 } Reason;
-
-#define RESULT_LIST @[@"SUCCESS", @"ERROR"]
-#define REASON_LIST @[@"ALREADY_EXISTS", @"DATABASE_ERROR", @"INCORRECT_CREDENTIALS", @"AUTHORIZATION_NEEDED", @"NOT_FOUND", @"OTHER"]
-
-#define Result(str) (Result)[RESULT_LIST indexOfObject:str]
-#define Reason(str) (Reason)[REASON_LIST indexOfObject:str]
 
 #define KEY_LOGGED_IN_USER @"KEY_LOGGED_IN_USER"
 #define KEY_TOKEN @"KEY_TOKEN"

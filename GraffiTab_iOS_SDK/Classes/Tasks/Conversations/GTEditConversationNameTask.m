@@ -39,17 +39,10 @@
         
         [self parseJsonSuccess:responseJson];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (error.userInfo[JSONResponseSerializerWithDataKey]) {
-            NSData *data = error.userInfo[JSONResponseSerializerWithDataKey];
-            
-            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:kNilOptions
-                                                                   error:&error];
-            
-            [self parseJsonError:json];
-        }
-        else
-            [self parseJsonError:nil];
+        NSHTTPURLResponse *response = operation.response;
+        NSInteger statuscode = response.statusCode;
+        
+        [self parseJsonError:statuscode];
     }];
     
     [operation start];

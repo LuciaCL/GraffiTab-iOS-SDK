@@ -21,17 +21,10 @@
         
         [self parseJsonSuccess:responseJson];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (error.userInfo[JSONResponseSerializerWithDataKey]) {
-            NSData *data = error.userInfo[JSONResponseSerializerWithDataKey];
-            
-            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:kNilOptions
-                                                                   error:&error];
-            
-            [self parseJsonError:json];
-        }
-        else
-            [self parseJsonError:nil];
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSInteger statuscode = response.statusCode;
+        
+        [self parseJsonError:statuscode];
     }];
 }
 
