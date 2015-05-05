@@ -38,6 +38,7 @@
     #import "GTRequestBuilder.h"
     #import "GTResponseObject.h"
     #import "GTCookieManager.h"
+    #import "GTLifecycleManager.h"
 
     // Import model classes.
     #import "GTPerson.h"

@@ -33,6 +33,10 @@
 - (id)parseJsonSuccessObject:(NSDictionary *)json {
     GTPerson *p = [[GTPerson alloc] initFromJson:json[JSON_RESP_USER_USER]];
     
+    GTLifecycleManager.user.followeesCount--;
+    if (GTLifecycleManager.user.followeesCount <= 0)
+        GTLifecycleManager.user.followeesCount = 0;
+    
     return p;
 }
 
