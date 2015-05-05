@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3D75A0155130B4C47027699A /* libPods-GraffiTab_iOS_SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324411E180AC53B5F63B5F9 /* libPods-GraffiTab_iOS_SDK.a */; };
+		45947091079812A97DEA8F86 /* Pods_GraffiTab_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279B0C2F55102584A5086165 /* Pods_GraffiTab_iOS_SDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E581D76A1AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D7691AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E581D7701AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E581D7641AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework */; };
 		E581D7771AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D7761AF3C83E00FD67C8 /* GraffiTab_iOS_SDKTests.m */; };
@@ -240,8 +240,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		279B0C2F55102584A5086165 /* Pods_GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		437160EDBB58CD7C654B9AE8 /* Pods-GraffiTab_iOS_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.release.xcconfig"; sourceTree = "<group>"; };
-		6324411E180AC53B5F63B5F9 /* libPods-GraffiTab_iOS_SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GraffiTab_iOS_SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A7B9CCF2511B5FEDDEB1745 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		E581D7641AF3C83E00FD67C8 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E581D7681AF3C83E00FD67C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -461,7 +461,7 @@
 				E581D7901AF3C9F100FD67C8 /* SystemConfiguration.framework in Frameworks */,
 				E581D78E1AF3C9E900FD67C8 /* MobileCoreServices.framework in Frameworks */,
 				E581D78C1AF3C9E200FD67C8 /* CoreLocation.framework in Frameworks */,
-				3D75A0155130B4C47027699A /* libPods-GraffiTab_iOS_SDK.a in Frameworks */,
+				45947091079812A97DEA8F86 /* Pods_GraffiTab_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +491,7 @@
 				E581D78F1AF3C9F100FD67C8 /* SystemConfiguration.framework */,
 				E581D78D1AF3C9E900FD67C8 /* MobileCoreServices.framework */,
 				E581D78B1AF3C9E200FD67C8 /* CoreLocation.framework */,
-				6324411E180AC53B5F63B5F9 /* libPods-GraffiTab_iOS_SDK.a */,
+				279B0C2F55102584A5086165 /* Pods_GraffiTab_iOS_SDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1172,6 +1172,7 @@
 				E581D7611AF3C83E00FD67C8 /* Headers */,
 				E581D7621AF3C83E00FD67C8 /* Resources */,
 				D4826242367F3B5CCDFA4A4D /* Copy Pods Resources */,
+				74736125CCAF496C91EBE972 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1271,6 +1272,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74736125CCAF496C91EBE972 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4826242367F3B5CCDFA4A4D /* Copy Pods Resources */ = {

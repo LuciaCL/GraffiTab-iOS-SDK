@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GraffiTab. All rights reserved.
 //
 
-#import "AFHTTPSessionManager.h"
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @interface GTSessionManager : AFHTTPSessionManager
 
