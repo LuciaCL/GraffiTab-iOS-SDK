@@ -78,7 +78,7 @@
     if (response.result == SUCCESS)
         self.sBlock(response);
     else {
-        NSLog(@"ERROR (%u)", response.reason);
+        NSLog(@"ERROR (%u) MESSAGE (%@)", response.reason, response.message);
         
         self.fBlock(response);
     }
