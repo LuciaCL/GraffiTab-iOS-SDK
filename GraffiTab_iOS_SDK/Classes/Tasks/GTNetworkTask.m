@@ -43,18 +43,23 @@
     switch (statusCode) {
         case 500:
             response.reason = SERVER_ERROR;
+            response.message = @"Oups, seems like something went wrong on our server. Please contact support to report this issue.";
             break;
         case 401:
             response.reason = AUTHORIZATION_NEEDED;
+            response.message = @"You need to be logged in to make this request.";
             break;
         case 404:
             response.reason = NOT_FOUND;
+            response.message = @"This item was not found.";
             break;
         case 409:
             response.reason = ALREADY_EXISTS;
+            response.message = @"This item already exists.";
             break;
         default:
             response.reason = OTHER;
+            response.message = @"We could not process your request right now. Please check your connection and try ahain or contact Support to report this issue.";
             break;
     }
 
