@@ -13,8 +13,8 @@
 @property (nonatomic, assign) long locationId;
 @property (nonatomic, strong) GTPerson *user;
 @property (nonatomic, copy) NSString *address;
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
+@property (nonatomic, assign) CLLocationDegrees latitude;
+@property (nonatomic, assign) CLLocationDegrees longitude;
 
 - (id)initFromJson:(NSDictionary *)json;
 
