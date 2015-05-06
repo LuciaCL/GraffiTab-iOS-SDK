@@ -10,19 +10,16 @@
 
 @implementation GTGetUserLocationsTask
 
-- (void)getLocationsWithStart:(int)start numberOfItems:(int)count successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+- (void)getLocationsWithSuccessBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     self.sBlock = successBlock;
     self.fBlock = failureBlock;
     self.cBlock = cacheBlock;
     
     NSString *string = [GTRequestBuilder buildGetUserLocations];
     
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{JSON_REQ_GENERIC_OFFSET:@(start),
-                                                                                  JSON_REQ_GENERIC_NUM_ITEMS:@(count)}];
-    
     // Define web request.
     void (^simpleBlock)(void) = ^{
-        [self executePostWithUrl:string parameters:params cachePolicy:NSURLRequestReloadIgnoringLocalCacheData success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self executePostWithUrl:string parameters:nil cachePolicy:NSURLRequestReloadIgnoringLocalCacheData success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSDictionary *responseJson = responseObject;
             
             [self parseJsonSuccess:responseJson];
@@ -35,7 +32,7 @@
     };
     
     if (self.isStart) {
-        [self executePostWithUrl:string parameters:params cachePolicy:NSURLRequestReturnCacheDataDontLoad success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self executePostWithUrl:string parameters:nil cachePolicy:NSURLRequestReturnCacheDataDontLoad success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSDictionary *responseJson = responseObject;
             
             [self parseJsonCacheSuccess:responseJson];

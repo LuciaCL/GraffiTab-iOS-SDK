@@ -23,10 +23,10 @@
     [task deleteLocations:locationIds successBlock:successBlock failureBlock:failureBlock];
 }
 
-+ (void)getLocationsWithStart:(int)start numberOfItems:(int)count useCache:(BOOL)useCache successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
++ (void)getLocationsWithCache:(BOOL)useCache successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     GTGetUserLocationsTask *task = [GTGetUserLocationsTask new];
     task .isStart = useCache;
-    [task getLocationsWithStart:start numberOfItems:count successBlock:successBlock cacheBlock:cacheBlock failureBlock:failureBlock];
+    [task getLocationsWithSuccessBlock:successBlock cacheBlock:cacheBlock failureBlock:failureBlock];
 }
 
 @end

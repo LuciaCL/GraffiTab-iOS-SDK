@@ -18,6 +18,7 @@ typedef enum {
     AUTHORIZATION_NEEDED,
     NOT_FOUND,
     ALREADY_EXISTS,
+    FORBIDDEN,
     OTHER
 } Reason;
 

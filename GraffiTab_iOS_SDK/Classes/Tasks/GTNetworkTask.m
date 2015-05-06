@@ -73,6 +73,10 @@
             response.reason = AUTHORIZATION_NEEDED;
             response.message = @"You need to be logged in to make this request.";
             break;
+        case 403:
+            response.reason = FORBIDDEN;
+            response.message = @"The request is forbidden.";
+            break;
         case 404:
             response.reason = NOT_FOUND;
             response.message = @"This item was not found.";

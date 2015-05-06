@@ -12,6 +12,6 @@
 
 @property (nonatomic, assign) BOOL isStart;
 
-- (void)getLocationsWithStart:(int)start numberOfItems:(int)count successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock;
+- (void)getLocationsWithSuccessBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock;
 
 @end
