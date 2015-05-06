@@ -22,14 +22,12 @@
     
     // Define web request.
     void (^simpleBlock)(void) = ^{
-        GTSessionManager.manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
-        
-        [GTSessionManager.manager POST:string parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self executePostWithUrl:string parameters:params cachePolicy:NSURLRequestReloadIgnoringLocalCacheData success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSDictionary *responseJson = responseObject;
             
             [self parseJsonSuccess:responseJson];
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSHTTPURLResponse *response = operation.response;
             NSInteger statuscode = response.statusCode;
             
             [self parseJsonError:statuscode];
@@ -37,16 +35,14 @@
     };
     
     if (self.isStart) {
-        GTSessionManager.manager.requestSerializer.cachePolicy = NSURLRequestReturnCacheDataDontLoad;
-        
-        [GTSessionManager.manager POST:string parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self executePostWithUrl:string parameters:params cachePolicy:NSURLRequestReturnCacheDataDontLoad success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSDictionary *responseJson = responseObject;
             
             [self parseJsonCacheSuccess:responseJson];
             
             // Load second request.
             simpleBlock();
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             simpleBlock();
         }];
     }

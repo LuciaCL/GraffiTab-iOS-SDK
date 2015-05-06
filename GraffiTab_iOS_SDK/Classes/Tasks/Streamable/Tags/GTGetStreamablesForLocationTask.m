@@ -10,10 +10,9 @@
 
 @implementation GTGetStreamablesForLocationTask
 
-- (void)getForLocationWithNECoordinate:(CLLocationCoordinate2D)neCoordinate SWCoordinate:(CLLocationCoordinate2D)swCoordinate start:(int)start numberOfItems:(int)count successBlock:(void (^)(GTResponseObject *))successBlock cacheBlock:(void (^)(GTResponseObject *))cacheBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
+- (void)getForLocationWithNECoordinate:(CLLocationCoordinate2D)neCoordinate SWCoordinate:(CLLocationCoordinate2D)swCoordinate start:(int)start numberOfItems:(int)count successBlock:(void (^)(GTResponseObject *))successBlock failureBlock:(void (^)(GTResponseObject *))failureBlock {
     self.sBlock = successBlock;
     self.fBlock = failureBlock;
-    self.cBlock = cacheBlock;
     
     NSString *string = [GTRequestBuilder buildGetItemsForLocation];
     
@@ -40,22 +39,7 @@
         }];
     };
     
-    if (self.isStart) {
-        GTSessionManager.manager.requestSerializer.cachePolicy = NSURLRequestReturnCacheDataDontLoad;
-        
-        [GTSessionManager.manager POST:string parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-            NSDictionary *responseJson = responseObject;
-            
-            [self parseJsonCacheSuccess:responseJson];
-            
-            // Load second request.
-            simpleBlock();
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            simpleBlock();
-        }];
-    }
-    else
-        simpleBlock();
+    simpleBlock();
 }
 
 - (id)parseJsonSuccessObject:(NSDictionary *)json {

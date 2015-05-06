@@ -20,6 +20,30 @@
     return self;
 }
 
+#pragma mark - Request execution
+
+- (void)executePostWithUrl:(NSString *)url parameters:(NSDictionary *)parameters cachePolicy:(NSURLRequestCachePolicy)cachePolicy success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
+    NSDictionary *sheaders = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+    
+    NSString *charset = (NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:cachePolicy timeoutInterval:60.f];
+    
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"application/json; charset=%@", charset] forHTTPHeaderField:@"Content-Type"];
+    [request setAllHTTPHeaderFields:sheaders];
+    NSURLRequest *r = [[AFJSONRequestSerializer serializer] requestBySerializingRequest:request withParameters:parameters error:nil];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:r];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
+    
+    [operation start];
+}
+
+#pragma mark - Response parsing
+
 - (void)parseJsonSuccess:(NSDictionary *)json {
     GTResponseObject *response = [GTResponseObject new];
     response.result = SUCCESS;

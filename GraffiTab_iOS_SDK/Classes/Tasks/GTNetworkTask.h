@@ -14,6 +14,8 @@
 @property (nonatomic, strong) void (^cBlock)(GTResponseObject *);
 @property (nonatomic, strong) void (^fBlock)(GTResponseObject *error);
 
+- (void)executePostWithUrl:(NSString *)url parameters:(NSDictionary *)parameters cachePolicy:(NSURLRequestCachePolicy)cachePolicy success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
 - (void)parseJsonSuccess:(NSDictionary *)json;
 - (void)parseJsonCacheSuccess:(NSDictionary *)json;
 - (void)parseJsonError:(NSInteger)statusCode;
