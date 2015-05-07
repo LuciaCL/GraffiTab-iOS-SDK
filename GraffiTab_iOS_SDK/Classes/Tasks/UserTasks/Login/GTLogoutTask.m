@@ -25,6 +25,8 @@
         // After the token has been succesfully unregistered, logout the user.
         NSString *string = [GTRequestBuilder buildLogout];
         
+        GTSessionManager.manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+        
         [GTSessionManager.manager GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
             NSDictionary *responseJson = responseObject;
             
