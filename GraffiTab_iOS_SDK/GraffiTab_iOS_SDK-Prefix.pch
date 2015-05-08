@@ -55,10 +55,17 @@
     #import "GTNotificationFollow.h"
     #import "GTNotificationComment.h"
     #import "GTUserLocation.h"
+    #import "GTActivity.h"
+    #import "GTActivityComment.h"
+    #import "GTActivityCreateStreamable.h"
+    #import "GTActivityFollow.h"
+    #import "GTActivityLike.h"
+    #import "GTActivityContainer.h"
 
     // Import facetories.
     #import "GTNotificationFactory.h"
     #import "GTStreamableFactory.h"
+    #import "GTActivityFactory.h"
 #endif
 
 #endif

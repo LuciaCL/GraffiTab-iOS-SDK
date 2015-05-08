@@ -37,6 +37,12 @@ FOUNDATION_EXPORT const unsigned char GraffiTab_iOS_SDKVersionString[];
 #import <GraffiTab_iOS_SDK/GTNotificationFollow.h>
 #import <GraffiTab_iOS_SDK/GTNotificationComment.h>
 #import <GraffiTab_iOS_SDK/GTUserLocation.h>
+#import <GraffiTab_iOS_SDK/GTActivity.h>
+#import <GraffiTab_iOS_SDK/GTActivityComment.h>
+#import <GraffiTab_iOS_SDK/GTActivityCreateStreamable.h>
+#import <GraffiTab_iOS_SDK/GTActivityFollow.h>
+#import <GraffiTab_iOS_SDK/GTActivityLike.h>
+#import <GraffiTab_iOS_SDK/GTActivityContainer.h>
 
 #import <GraffiTab_iOS_SDK/GTConversationManager.h>
 #import <GraffiTab_iOS_SDK/GTDeviceManager.h>
@@ -48,3 +54,4 @@ FOUNDATION_EXPORT const unsigned char GraffiTab_iOS_SDKVersionString[];
 #import <GraffiTab_iOS_SDK/GTUserManager.h>
 #import <GraffiTab_iOS_SDK/GTLifecycleManager.h>
 #import <GraffiTab_iOS_SDK/GTImageRequestBuilder.h>
+#import <GraffiTab_iOS_SDK/GTActivityManager.h>

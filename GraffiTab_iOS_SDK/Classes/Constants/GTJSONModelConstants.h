@@ -98,4 +98,33 @@
 // Fields for StreamableVideo
 #define JSON_STREAMABLE_VIDEO_VIDEOID @"videoId"
 
+// Fields for Activity
+#define JSON_ACTIVITY_ID @"id"
+#define JSON_ACTIVITY_USER @"user"
+#define JSON_ACTIVITY_DATE @"date"
+#define JSON_ACTIVITY_TYPE @"type"
+
+// Fields for ActivityComment
+#define JSON_ACTIVITY_COMMENT_COMMENTER @"commenter"
+#define JSON_ACTIVITY_COMMENT_ITEM @"item"
+#define JSON_ACTIVITY_COMMENT_COMMENT @"comment"
+
+// Fields for ActivityCreateStreamable
+#define JSON_ACTIVITY_CREATE_STREAMABLE_CREATOR @"creator"
+#define JSON_ACTIVITY_CREATE_STREAMABLE_ITEM @"item"
+
+// Fields for ActivityFollow
+#define JSON_ACTIVITY_FOLLOW_FOLLOWED_USER @"followedUser"
+#define JSON_ACTIVITY_FOLLOW_FOLLOWER @"follower"
+
+// Fields for ActivityLike
+#define JSON_ACTIVITY_LIKE_ITEM @"item"
+#define JSON_ACTIVITY_LIKE_LIKER @"liker"
+
+// Fields for ActivityContainer
+#define JSON_ACTIVITY_CONTAINER_ACTIVITY_USER @"activityUser"
+#define JSON_ACTIVITY_CONTAINER_DATE @"date"
+#define JSON_ACTIVITY_CONTAINER_TYPE @"type"
+#define JSON_ACTIVITY_CONTAINER_ACTIVITIES @"activities"
+
 #endif

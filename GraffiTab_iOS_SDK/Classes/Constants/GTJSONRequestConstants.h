@@ -69,6 +69,9 @@
 #define JSON_REQ_COMMENT_IDS @"commentIds"
 #define JSON_REQ_COMMENT_ID @"commentId"
 
+// Activity.
+#define JSON_REQ_ACTIVITY_GROUP_ITEMS_COUNT @"groupItemsCount"
+
 // Generic.
 #define JSON_REQ_GENERIC_QUERY @"query"
 #define JSON_REQ_GENERIC_OFFSET @"offset"

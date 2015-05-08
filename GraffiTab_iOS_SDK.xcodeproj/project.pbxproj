@@ -227,6 +227,24 @@
 		E581D9841AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */; };
 		E581D98B1AF8FBE500FD67C8 /* GTGetPrivateItems.h in Headers */ = {isa = PBXBuildFile; fileRef = E581D9891AF8FBE500FD67C8 /* GTGetPrivateItems.h */; };
 		E581D98C1AF8FBE500FD67C8 /* GTGetPrivateItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E581D98A1AF8FBE500FD67C8 /* GTGetPrivateItems.m */; };
+		E5E1FE431AFCB86B00FD3B18 /* GTActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE411AFCB86B00FD3B18 /* GTActivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE441AFCB86B00FD3B18 /* GTActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE421AFCB86B00FD3B18 /* GTActivity.m */; };
+		E5E1FE471AFCBCB400FD3B18 /* GTActivityComment.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE451AFCBCB400FD3B18 /* GTActivityComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE481AFCBCB400FD3B18 /* GTActivityComment.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE461AFCBCB400FD3B18 /* GTActivityComment.m */; };
+		E5E1FE4B1AFCBD0000FD3B18 /* GTActivityCreateStreamable.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE491AFCBD0000FD3B18 /* GTActivityCreateStreamable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE4C1AFCBD0000FD3B18 /* GTActivityCreateStreamable.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE4A1AFCBD0000FD3B18 /* GTActivityCreateStreamable.m */; };
+		E5E1FE4F1AFCBD4C00FD3B18 /* GTActivityFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE4D1AFCBD4C00FD3B18 /* GTActivityFollow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE501AFCBD4C00FD3B18 /* GTActivityFollow.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE4E1AFCBD4C00FD3B18 /* GTActivityFollow.m */; };
+		E5E1FE531AFCBDB200FD3B18 /* GTActivityLike.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE511AFCBDB200FD3B18 /* GTActivityLike.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE541AFCBDB200FD3B18 /* GTActivityLike.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE521AFCBDB200FD3B18 /* GTActivityLike.m */; };
+		E5E1FE571AFCBE3200FD3B18 /* GTActivityContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE551AFCBE3200FD3B18 /* GTActivityContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE581AFCBE3200FD3B18 /* GTActivityContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE561AFCBE3200FD3B18 /* GTActivityContainer.m */; };
+		E5E1FE5C1AFCC0DF00FD3B18 /* GTGetActivityTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE5A1AFCC0DF00FD3B18 /* GTGetActivityTask.h */; };
+		E5E1FE5D1AFCC0DF00FD3B18 /* GTGetActivityTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE5B1AFCC0DF00FD3B18 /* GTGetActivityTask.m */; };
+		E5E1FE601AFCC19B00FD3B18 /* GTActivityFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE5E1AFCC19B00FD3B18 /* GTActivityFactory.h */; };
+		E5E1FE611AFCC19B00FD3B18 /* GTActivityFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE5F1AFCC19B00FD3B18 /* GTActivityFactory.m */; };
+		E5E1FE651AFCC2CE00FD3B18 /* GTActivityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E1FE631AFCC2CE00FD3B18 /* GTActivityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E1FE661AFCC2CE00FD3B18 /* GTActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FE641AFCC2CE00FD3B18 /* GTActivityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -451,6 +469,24 @@
 		E581D96E1AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTVerifyExternalUserTask.m; sourceTree = "<group>"; };
 		E581D9891AF8FBE500FD67C8 /* GTGetPrivateItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetPrivateItems.h; sourceTree = "<group>"; };
 		E581D98A1AF8FBE500FD67C8 /* GTGetPrivateItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetPrivateItems.m; sourceTree = "<group>"; };
+		E5E1FE411AFCB86B00FD3B18 /* GTActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivity.h; sourceTree = "<group>"; };
+		E5E1FE421AFCB86B00FD3B18 /* GTActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivity.m; sourceTree = "<group>"; };
+		E5E1FE451AFCBCB400FD3B18 /* GTActivityComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityComment.h; sourceTree = "<group>"; };
+		E5E1FE461AFCBCB400FD3B18 /* GTActivityComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityComment.m; sourceTree = "<group>"; };
+		E5E1FE491AFCBD0000FD3B18 /* GTActivityCreateStreamable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityCreateStreamable.h; sourceTree = "<group>"; };
+		E5E1FE4A1AFCBD0000FD3B18 /* GTActivityCreateStreamable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityCreateStreamable.m; sourceTree = "<group>"; };
+		E5E1FE4D1AFCBD4C00FD3B18 /* GTActivityFollow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityFollow.h; sourceTree = "<group>"; };
+		E5E1FE4E1AFCBD4C00FD3B18 /* GTActivityFollow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityFollow.m; sourceTree = "<group>"; };
+		E5E1FE511AFCBDB200FD3B18 /* GTActivityLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityLike.h; sourceTree = "<group>"; };
+		E5E1FE521AFCBDB200FD3B18 /* GTActivityLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityLike.m; sourceTree = "<group>"; };
+		E5E1FE551AFCBE3200FD3B18 /* GTActivityContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityContainer.h; sourceTree = "<group>"; };
+		E5E1FE561AFCBE3200FD3B18 /* GTActivityContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityContainer.m; sourceTree = "<group>"; };
+		E5E1FE5A1AFCC0DF00FD3B18 /* GTGetActivityTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTGetActivityTask.h; sourceTree = "<group>"; };
+		E5E1FE5B1AFCC0DF00FD3B18 /* GTGetActivityTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTGetActivityTask.m; sourceTree = "<group>"; };
+		E5E1FE5E1AFCC19B00FD3B18 /* GTActivityFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityFactory.h; sourceTree = "<group>"; };
+		E5E1FE5F1AFCC19B00FD3B18 /* GTActivityFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityFactory.m; sourceTree = "<group>"; };
+		E5E1FE631AFCC2CE00FD3B18 /* GTActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTActivityManager.h; sourceTree = "<group>"; };
+		E5E1FE641AFCC2CE00FD3B18 /* GTActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTActivityManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -589,6 +625,7 @@
 		E581D79A1AF3CADA00FD67C8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E5E1FE621AFCC2C000FD3B18 /* Activity */,
 				E581D79B1AF3CADA00FD67C8 /* Conversation */,
 				E581D79E1AF3CADA00FD67C8 /* Device */,
 				E581D7A11AF3CADA00FD67C8 /* Feedback */,
@@ -686,15 +723,16 @@
 		E581D7B61AF3CADA00FD67C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E5E1FE3F1AFCB84A00FD3B18 /* Activity */,
 				E581D7B71AF3CADA00FD67C8 /* Conversation */,
+				E581D7C21AF3CADA00FD67C8 /* Notifications */,
+				E581D7D11AF3CADA00FD67C8 /* Streamable */,
 				E581D7BC1AF3CADA00FD67C8 /* GTComment.h */,
 				E581D7BD1AF3CADA00FD67C8 /* GTComment.m */,
 				E581D7BE1AF3CADA00FD67C8 /* GTPerson.h */,
 				E581D7BF1AF3CADA00FD67C8 /* GTPerson.m */,
 				E581D7C01AF3CADA00FD67C8 /* GTUserLocation.h */,
 				E581D7C11AF3CADA00FD67C8 /* GTUserLocation.m */,
-				E581D7C21AF3CADA00FD67C8 /* Notifications */,
-				E581D7D11AF3CADA00FD67C8 /* Streamable */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -801,6 +839,7 @@
 		E581D7EF1AF3CADA00FD67C8 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				E5E1FE591AFCC0C900FD3B18 /* Activity */,
 				E581D7F01AF3CADA00FD67C8 /* Conversations */,
 				E581D80C1AF3CADA00FD67C8 /* Device */,
 				E581D8111AF3CADA00FD67C8 /* Feedback */,
@@ -1045,6 +1084,53 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		E5E1FE3F1AFCB84A00FD3B18 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1FE401AFCB84A00FD3B18 /* Container */,
+				E5E1FE411AFCB86B00FD3B18 /* GTActivity.h */,
+				E5E1FE421AFCB86B00FD3B18 /* GTActivity.m */,
+				E5E1FE451AFCBCB400FD3B18 /* GTActivityComment.h */,
+				E5E1FE461AFCBCB400FD3B18 /* GTActivityComment.m */,
+				E5E1FE491AFCBD0000FD3B18 /* GTActivityCreateStreamable.h */,
+				E5E1FE4A1AFCBD0000FD3B18 /* GTActivityCreateStreamable.m */,
+				E5E1FE4D1AFCBD4C00FD3B18 /* GTActivityFollow.h */,
+				E5E1FE4E1AFCBD4C00FD3B18 /* GTActivityFollow.m */,
+				E5E1FE511AFCBDB200FD3B18 /* GTActivityLike.h */,
+				E5E1FE521AFCBDB200FD3B18 /* GTActivityLike.m */,
+				E5E1FE5E1AFCC19B00FD3B18 /* GTActivityFactory.h */,
+				E5E1FE5F1AFCC19B00FD3B18 /* GTActivityFactory.m */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		E5E1FE401AFCB84A00FD3B18 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1FE551AFCBE3200FD3B18 /* GTActivityContainer.h */,
+				E5E1FE561AFCBE3200FD3B18 /* GTActivityContainer.m */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		E5E1FE591AFCC0C900FD3B18 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1FE5A1AFCC0DF00FD3B18 /* GTGetActivityTask.h */,
+				E5E1FE5B1AFCC0DF00FD3B18 /* GTGetActivityTask.m */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		E5E1FE621AFCC2C000FD3B18 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				E5E1FE631AFCC2CE00FD3B18 /* GTActivityManager.h */,
+				E5E1FE641AFCC2CE00FD3B18 /* GTActivityManager.m */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1052,6 +1138,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5E1FE651AFCC2CE00FD3B18 /* GTActivityManager.h in Headers */,
+				E5E1FE431AFCB86B00FD3B18 /* GTActivity.h in Headers */,
+				E5E1FE571AFCBE3200FD3B18 /* GTActivityContainer.h in Headers */,
+				E5E1FE4B1AFCBD0000FD3B18 /* GTActivityCreateStreamable.h in Headers */,
+				E5E1FE4F1AFCBD4C00FD3B18 /* GTActivityFollow.h in Headers */,
+				E5E1FE471AFCBCB400FD3B18 /* GTActivityComment.h in Headers */,
+				E5E1FE531AFCBDB200FD3B18 /* GTActivityLike.h in Headers */,
 				E581D9711AF8D2F900FD67C8 /* GTEditCoverTask.h in Headers */,
 				E581D87E1AF3CADB00FD67C8 /* GTLocationManager.h in Headers */,
 				E581D89C1AF3CADB00FD67C8 /* GTNotificationMention.h in Headers */,
@@ -1071,6 +1164,7 @@
 				E581D8921AF3CADB00FD67C8 /* GTNotification.h in Headers */,
 				E581D8781AF3CADB00FD67C8 /* GTDeviceManager.h in Headers */,
 				E581D8A01AF3CADB00FD67C8 /* GTStreamable.h in Headers */,
+				E5E1FE601AFCC19B00FD3B18 /* GTActivityFactory.h in Headers */,
 				E581D89A1AF3CADB00FD67C8 /* GTNotificationLike.h in Headers */,
 				E581D8901AF3CADB00FD67C8 /* GTUserLocation.h in Headers */,
 				E581D87C1AF3CADB00FD67C8 /* GTLifecycleManager.h in Headers */,
@@ -1135,6 +1229,7 @@
 				E581D8DE1AF3CADB00FD67C8 /* GTGetUserLocationsTask.h in Headers */,
 				E581D8C21AF3CADB00FD67C8 /* GTGetMessagesTask.h in Headers */,
 				E581D8E01AF3CADB00FD67C8 /* GTGetNotificationsTask.h in Headers */,
+				E5E1FE5C1AFCC0DF00FD3B18 /* GTGetActivityTask.h in Headers */,
 				E581D8741AF3CADB00FD67C8 /* GTJSONResponseConstants.h in Headers */,
 				E581D8E21AF3CADB00FD67C8 /* GTGetUnseenNotificationsTask.h in Headers */,
 				E581D9751AF8D2F900FD67C8 /* GTEditProfileTask.h in Headers */,
@@ -1358,6 +1453,7 @@
 				E581D8AF1AF3CADB00FD67C8 /* GTResponseObject.m in Sources */,
 				E581D8FF1AF3CADB00FD67C8 /* GTLikeItemTask.m in Sources */,
 				E581D8C71AF3CADB00FD67C8 /* GTHideTypingIndicatorTask.m in Sources */,
+				E5E1FE661AFCC2CE00FD3B18 /* GTActivityManager.m in Sources */,
 				E581D8E11AF3CADB00FD67C8 /* GTGetNotificationsTask.m in Sources */,
 				E581D8791AF3CADB00FD67C8 /* GTDeviceManager.m in Sources */,
 				E581D8A91AF3CADB00FD67C8 /* GTViewControllerCache.m in Sources */,
@@ -1376,13 +1472,18 @@
 				E581D8F51AF3CADB00FD67C8 /* GTGetPopularItemsTask.m in Sources */,
 				E581D9031AF3CADB00FD67C8 /* GTCreateStreamableTagTask.m in Sources */,
 				E581D9801AF8D2F900FD67C8 /* GTResetPasswordTask.m in Sources */,
+				E5E1FE4C1AFCBD0000FD3B18 /* GTActivityCreateStreamable.m in Sources */,
 				E581D91D1AF3CADB00FD67C8 /* GTGetUserProfileTask.m in Sources */,
+				E5E1FE611AFCC19B00FD3B18 /* GTActivityFactory.m in Sources */,
 				E581D9011AF3CADB00FD67C8 /* GTUnlikeItemTask.m in Sources */,
 				E581D8B71AF3CADB00FD67C8 /* GTSettings.m in Sources */,
 				E581D8771AF3CADB00FD67C8 /* GTConversationManager.m in Sources */,
+				E5E1FE541AFCBDB200FD3B18 /* GTActivityLike.m in Sources */,
 				E581D89F1AF3CADB00FD67C8 /* GTNotificationWelcome.m in Sources */,
+				E5E1FE581AFCBE3200FD3B18 /* GTActivityContainer.m in Sources */,
 				E581D8AD1AF3CADB00FD67C8 /* GTRequestBuilder.m in Sources */,
 				E581D8FB1AF3CADB00FD67C8 /* GTGetUserItemsTask.m in Sources */,
+				E5E1FE501AFCBD4C00FD3B18 /* GTActivityFollow.m in Sources */,
 				E581D8F11AF3CADB00FD67C8 /* GTPostCommentTask.m in Sources */,
 				E581D8C91AF3CADB00FD67C8 /* GTLeaveConversationTask.m in Sources */,
 				E581D9291AF3CADB00FD67C8 /* GTUnfollowTask.m in Sources */,
@@ -1401,6 +1502,7 @@
 				E581D8A31AF3CADB00FD67C8 /* GTStreamableFactory.m in Sources */,
 				E581D9111AF3CADB00FD67C8 /* GTFindUserForUsernameTask.m in Sources */,
 				E581D8BF1AF3CADB00FD67C8 /* GTEditConversationNameTask.m in Sources */,
+				E5E1FE481AFCBCB400FD3B18 /* GTActivityComment.m in Sources */,
 				E581D9741AF8D2F900FD67C8 /* GTEditPasswordTask.m in Sources */,
 				E581D8911AF3CADB00FD67C8 /* GTUserLocation.m in Sources */,
 				E581D9721AF8D2F900FD67C8 /* GTEditCoverTask.m in Sources */,
@@ -1415,7 +1517,9 @@
 				E581D9151AF3CADB00FD67C8 /* GTGetFollowersTask.m in Sources */,
 				E581D8831AF3CADB00FD67C8 /* GTSearchManager.m in Sources */,
 				E581D8BB1AF3CADB00FD67C8 /* GTCreateConversationTask.m in Sources */,
+				E5E1FE5D1AFCC0DF00FD3B18 /* GTGetActivityTask.m in Sources */,
 				E581D8F91AF3CADB00FD67C8 /* GTGetUserHomeStreamTask.m in Sources */,
+				E5E1FE441AFCB86B00FD3B18 /* GTActivity.m in Sources */,
 				E581D9841AF8D2F900FD67C8 /* GTVerifyExternalUserTask.m in Sources */,
 				E581D9171AF3CADB00FD67C8 /* GTGetFollowingTask.m in Sources */,
 				E581D8E91AF3CADB00FD67C8 /* GTSearchUsers.m in Sources */,

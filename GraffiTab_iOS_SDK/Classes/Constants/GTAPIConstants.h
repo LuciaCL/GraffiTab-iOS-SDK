@@ -96,7 +96,9 @@
 #define API_MESSAGE_EDIT                          @"/message/edit"
 #define API_MESSAGE_DELETE                        @"/message/delete"
 
-#define API_NOTIFICATION_GET_NOTIFICATIONS        @"/notification/getNotifications"
+#define API_NOTIFICATION_GET                      @"/notification/get"
 #define API_NOTIFICATION_GET_UNSEEN_COUNT         @"/notification/getUnseenCount"
+
+#define API_ACTIVITY_GET                          @"/activity/get"
 
 #endif

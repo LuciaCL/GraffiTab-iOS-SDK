@@ -43,6 +43,8 @@
 + (NSString *)buildGetNotifications;
 + (NSString *)buildGetUnseenNotifications;
 
++ (NSString *)buildGetActivity;
+
 + (NSString *)buildGetGraffiti:(long)graffitiId;
 + (NSString *)buildGetFullGraffiti:(long)graffitiId;
 + (NSString *)buildCreateTag;

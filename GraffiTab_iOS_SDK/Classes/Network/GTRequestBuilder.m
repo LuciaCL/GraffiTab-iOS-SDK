@@ -127,11 +127,17 @@
 #pragma mark - Notifications
 
 + (NSString *)buildGetNotifications {
-    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_NOTIFICATION_GET_NOTIFICATIONS];
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_NOTIFICATION_GET];
 }
 
 + (NSString *)buildGetUnseenNotifications {
     return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_NOTIFICATION_GET_UNSEEN_COUNT];
+}
+
+#pragma mark - Activity
+
++ (NSString *)buildGetActivity {
+    return [NSString stringWithFormat:@"%@/%@%@", API_APP_URL, API_APP_API_URL, API_ACTIVITY_GET];
 }
 
 #pragma mark - Streamables
