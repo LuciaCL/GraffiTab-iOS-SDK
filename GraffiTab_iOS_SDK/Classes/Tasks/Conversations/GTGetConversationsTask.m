@@ -60,7 +60,13 @@
         [items addObject:p];
     }
     
-    return items;
+    NSArray *sortedArray = [items sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        NSDate *first = ((GTConversation *)a).lastMessage.date;
+        NSDate *second = ((GTConversation *)b).lastMessage.date;
+        return [second compare:first];
+    }];
+    
+    return sortedArray;
 }
 
 @end
