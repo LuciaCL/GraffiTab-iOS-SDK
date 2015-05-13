@@ -25,6 +25,8 @@ typedef enum {
 @property (nonatomic, assign) StreamableType type;
 @property (nonatomic, assign) BOOL isPrivate;
 @property (nonatomic, assign) BOOL isFlagged;
+@property (nonatomic, assign) int width;
+@property (nonatomic, assign) int height;
 @property (nonatomic, assign) int likesCount;
 @property (nonatomic, assign) int commentsCount;
 @property (nonatomic, assign) BOOL isLiked;

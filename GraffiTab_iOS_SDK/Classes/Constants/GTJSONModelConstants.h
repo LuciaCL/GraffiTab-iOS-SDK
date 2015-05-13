@@ -86,6 +86,8 @@
 #define JSON_STREAMABLE_TYPE @"type"
 #define JSON_STREAMABLE_ISPRIVATE @"isPrivate"
 #define JSON_STREAMABLE_ISFLAGGED @"isFlagged"
+#define JSON_STREAMABLE_WIDTH @"width"
+#define JSON_STREAMABLE_HEIGHT @"height"
 #define JSON_STREAMABLE_LIKES_COUNT @"likesCount"
 #define JSON_STREAMABLE_COMMENTS_COUNT @"commentsCount"
 #define JSON_STREAMABLE_ISLIKED @"isLiked"

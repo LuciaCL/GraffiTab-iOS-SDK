@@ -20,6 +20,8 @@
         self.type = StreamableType(json[JSON_STREAMABLE_TYPE]);
         self.isPrivate = [json[JSON_STREAMABLE_ISPRIVATE] boolValue];
         self.isFlagged = [json[JSON_STREAMABLE_ISFLAGGED] boolValue];
+        self.width = [json[JSON_STREAMABLE_WIDTH] intValue];
+        self.height = [json[JSON_STREAMABLE_HEIGHT] intValue];
         self.likesCount = [json[JSON_STREAMABLE_LIKES_COUNT] intValue];
         self.commentsCount = [json[JSON_STREAMABLE_COMMENTS_COUNT] intValue];
         self.isLiked = [json[JSON_STREAMABLE_ISLIKED] boolValue];
@@ -37,6 +39,8 @@
     json[JSON_STREAMABLE_TYPE] = STREAMABLE_TYPE_LIST[self.type];
     json[JSON_STREAMABLE_ISPRIVATE] = @(self.isPrivate);
     json[JSON_STREAMABLE_ISFLAGGED] = @(self.isFlagged);
+    json[JSON_STREAMABLE_WIDTH] = @(self.width);
+    json[JSON_STREAMABLE_HEIGHT] = @(self.height);
     json[JSON_STREAMABLE_LIKES_COUNT] = @(self.likesCount);
     json[JSON_STREAMABLE_COMMENTS_COUNT] = @(self.commentsCount);
     json[JSON_STREAMABLE_ISLIKED] = @(self.isLiked);
