@@ -19,7 +19,6 @@
         self.username = json[JSON_PERSON_USERNAME];
         self.firstname = json[JSON_PERSON_FIRSTNAME];
         self.lastname = json[JSON_PERSON_LASTNAME];
-        self.username = json[JSON_PERSON_USERNAME];
         self.email = json[JSON_PERSON_EMAIL];
         self.website = json[JSON_PERSON_WEBSITE];
         self.about = json[JSON_PERSON_ABOUT];
