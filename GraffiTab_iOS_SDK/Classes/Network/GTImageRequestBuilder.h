@@ -21,7 +21,7 @@
 + (NSString *)buildGetGraffiti:(long)graffitiId;
 + (NSString *)buildGetFullGraffiti:(long)graffitiId;
 
-#pragma mark - Conversatino images
+#pragma mark - Conversation images
 
 + (NSString *)buildGetConversationImage:(long)imageId;
 
