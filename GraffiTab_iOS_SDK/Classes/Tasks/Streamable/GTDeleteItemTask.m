@@ -30,10 +30,4 @@
     }];
 }
 
-- (id)parseJsonSuccessObject:(NSDictionary *)json {
-    GTStreamable *p = [GTStreamableFactory createStreamableFromJson:json[JSON_RESP_STREAMABLE_STREAMABLE]];
-    
-    return p;
-}
-
 @end
