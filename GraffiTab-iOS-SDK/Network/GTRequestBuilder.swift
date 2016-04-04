@@ -10,5 +10,9 @@ import UIKit
 
 class GTRequestBuilder: NSObject {
 
+    // MARK: - User
     
+    class func buildLoginUrl() -> String {
+        return GTApiUserConstants.Login
+    }
 }

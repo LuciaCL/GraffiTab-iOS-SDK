@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class GTNetworkTask: NSObject {
 
@@ -14,6 +15,21 @@ class GTNetworkTask: NSObject {
     var cBlock: ((response: GTResponseObject) -> Void)!
     var fBlock: ((response: GTResponseObject) -> Void)!
     var useCache: Bool?
+    
+    // MARK: - Requests
+    
+    func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
+        // Setup custom headers.
+//        var sHeaders = [String : String]()
+//
+//        if (APISettings.sharedInstance.token != nil) {
+//            sHeaders["X-AUTH-Token"] = APISettings.sharedInstance.token!
+//        }
+        
+        return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
+            .validate()
+            .responseJSON(completionHandler: completionHandler)
+    }
     
     // MARK: - Response parsing
     

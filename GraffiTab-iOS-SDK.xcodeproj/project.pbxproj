@@ -21,6 +21,8 @@
 		E5DFDBBC1CB2A91C00BB3D27 /* GTApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */; };
 		E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */; };
 		E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */; };
+		E5DFDBC61CB2BE7800BB3D27 /* GTLoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBC51CB2BE7800BB3D27 /* GTLoginTask.swift */; };
+		E5DFDBC81CB2BE8E00BB3D27 /* GTUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTApiConstants.swift; sourceTree = "<group>"; };
 		E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUser.swift; sourceTree = "<group>"; };
 		E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAsset.swift; sourceTree = "<group>"; };
+		E5DFDBC51CB2BE7800BB3D27 /* GTLoginTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLoginTask.swift; sourceTree = "<group>"; };
+		E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			children = (
 				E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */,
 				E5DFDBA01CB2A4CF00BB3D27 /* GTLifecycleManager.swift */,
+				E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 		E5DFDBAB1CB2A4CF00BB3D27 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				E5DFDBC11CB2BCC900BB3D27 /* User */,
 				E5DFDBAC1CB2A4CF00BB3D27 /* GTNetworkTask.swift */,
 			);
 			path = Tasks;
@@ -174,6 +180,22 @@
 				E5DFDBAE1CB2A4CF00BB3D27 /* GTUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E5DFDBC11CB2BCC900BB3D27 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBC41CB2BE7800BB3D27 /* Login */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E5DFDBC41CB2BE7800BB3D27 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBC51CB2BE7800BB3D27 /* GTLoginTask.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +313,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DFDBB51CB2A4CF00BB3D27 /* GTCacheManager.swift in Sources */,
+				E5DFDBC81CB2BE8E00BB3D27 /* GTUserManager.swift in Sources */,
 				E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */,
 				E5DFDBBC1CB2A91C00BB3D27 /* GTApiConstants.swift in Sources */,
+				E5DFDBC61CB2BE7800BB3D27 /* GTLoginTask.swift in Sources */,
 				E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */,
 				E5DFDBB71CB2A4CF00BB3D27 /* GTResponseObject.swift in Sources */,
 				E5DFDBBA1CB2A4CF00BB3D27 /* GTUtils.swift in Sources */,
