@@ -45,15 +45,15 @@ public class GTSettings: NSObject {
         }
     }
     
-    func logout() {
+    public func logout() {
         user = nil
     }
     
-    func isLoggedIn() -> Bool {
+    public func isLoggedIn() -> Bool {
         return user != nil
     }
     
-    private func getStringPreference(key: String) -> String? {
+    func getStringPreference(key: String) -> String? {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if (defaults.objectForKey(key) != nil) {
@@ -64,13 +64,13 @@ public class GTSettings: NSObject {
         }
     }
     
-    private func setStringPreference(value: String, key: String) {
+    func setStringPreference(value: String, key: String) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(value, forKey: key)
         defaults.synchronize()
     }
     
-    private func removePreferenceForKey(key: String) {
+    func removePreferenceForKey(key: String) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey(key)
         defaults.synchronize()
