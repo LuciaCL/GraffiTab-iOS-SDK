@@ -16,4 +16,10 @@ public class GTUserManager: NSObject {
         
         return task.login(username, password: password, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getMe(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetMeTask()
+        
+        return task.getMe(successBlock, failureBlock: failureBlock)
+    }
 }

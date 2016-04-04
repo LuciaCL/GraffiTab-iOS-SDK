@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0C73954E564BF6D32692AB9 /* Pods_GraffiTab_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AE7CCDE905772CF22D3706 /* Pods_GraffiTab_iOS_SDK.framework */; };
+		E5B851FC1CB2EB4B00B24F84 /* GTGetMeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B851FB1CB2EB4B00B24F84 /* GTGetMeTask.swift */; };
 		E5DFDB941CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */; };
 		E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */; };
@@ -29,6 +30,7 @@
 		39AE7CCDE905772CF22D3706 /* Pods_GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B4B9EB572F11F188A32B91 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		CFF93A12448AB18B3A9BBE8D /* Pods-GraffiTab_iOS_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.release.xcconfig"; sourceTree = "<group>"; };
+		E5B851FB1CB2EB4B00B24F84 /* GTGetMeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetMeTask.swift; sourceTree = "<group>"; };
 		E5DFDB901CB2A28C00BB3D27 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraffiTab-iOS-SDK.h"; sourceTree = "<group>"; };
 		E5DFDB951CB2A28C00BB3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 				39AE7CCDE905772CF22D3706 /* Pods_GraffiTab_iOS_SDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5B851FA1CB2EB3700B24F84 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E5B851FB1CB2EB4B00B24F84 /* GTGetMeTask.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		E5DFDB861CB2A28C00BB3D27 = {
@@ -185,6 +195,7 @@
 		E5DFDBC11CB2BCC900BB3D27 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				E5B851FA1CB2EB3700B24F84 /* Profile */,
 				E5DFDBC41CB2BE7800BB3D27 /* Login */,
 			);
 			path = User;
@@ -321,6 +332,7 @@
 				E5DFDBB71CB2A4CF00BB3D27 /* GTResponseObject.swift in Sources */,
 				E5DFDBBA1CB2A4CF00BB3D27 /* GTUtils.swift in Sources */,
 				E5DFDBB61CB2A4CF00BB3D27 /* GTRequestBuilder.swift in Sources */,
+				E5B851FC1CB2EB4B00B24F84 /* GTGetMeTask.swift in Sources */,
 				E5DFDBB21CB2A4CF00BB3D27 /* GTLifecycleManager.swift in Sources */,
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
 				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,

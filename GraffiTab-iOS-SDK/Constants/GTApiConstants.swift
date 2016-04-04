@@ -17,8 +17,8 @@ struct GTApiUserConstants {
     static let ExternalProviders = Users + "/externalproviders"
     
     // Login.
-    static let Login = GTApiDomainConstants.AppUrl + "login"
-    static let LoginWithExternalProvider = GTApiDomainConstants.AppUrl + "externalproviders/login"
+    static let Login = GTApiDomainConstants.ApiUrl + "login"
+    static let LoginWithExternalProvider = GTApiDomainConstants.ApiUrl + "externalproviders/login"
     static let Logout = GTApiDomainConstants.ApiUrl + "/logout"
     static let ResetPassword = GTApiDomainConstants.ApiUrl + "/resetpassword"
     

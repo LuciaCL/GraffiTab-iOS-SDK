@@ -1,5 +1,5 @@
 //
-//  GTLoginTask.swift
+//  GTGetMeTask.swift
 //  GraffiTab-iOS-SDK
 //
 //  Created by Georgi Christov on 04/04/2016.
@@ -11,17 +11,15 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class GTLoginTask: GTNetworkTask {
-
-    func login(username: String, password: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+class GTGetMeTask: GTNetworkTask {
+    
+    func getMe(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
         
-        let url = GTRequestBuilder.buildLoginUrl()
+        let url = GTRequestBuilder.buildGetMeUrl()
         
-        let params = ["username":username, "password":password]
-        
-        return request(.POST, URLString: url, parameters: params, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+        return request(.GET, URLString: url, parameters: nil, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
             if (response.result.isFailure) {
                 if (response.response == nil) {
                     self.parseJSONError(1)
@@ -43,8 +41,6 @@ class GTLoginTask: GTNetworkTask {
         let user = Mapper<GTUser>().map(JSON)
         
         GTSettings.sharedInstance.user = user
-        
-        GTCookieManager.saveCookies()
         
         return user!;
     }
