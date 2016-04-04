@@ -30,6 +30,9 @@ public class GTUser: Mappable {
     }
     
     public func mapping(map: Map) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = GTDateConstants.InputFormat
+        
         id <- map["id"]
         guid <- map["guid"]
         username <- map["username"]
@@ -37,8 +40,8 @@ public class GTUser: Mappable {
         lastName <- map["lastName"]
         email <- map["email"]
         followedByCurrentUser <- map["followedByCurrentUser"]
-        createdOn = GTUtils.dateFromString(map["createdOn"].value(), format: GTDateConstants.InputFormat)
-        updatedOn = GTUtils.dateFromString(map["updatedOn"].value(), format: GTDateConstants.InputFormat)
+        createdOn <- (map["createdOn"], DateFormatterTransform(dateFormatter: dateFormatter))
+        updatedOn <- (map["updatedOn"], DateFormatterTransform(dateFormatter: dateFormatter))
         about <- map["about"]
         website <- map["website"]
         avatar <- map["avatar"]

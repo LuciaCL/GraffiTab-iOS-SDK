@@ -19,5 +19,5 @@ struct GTCookieConstants {
 }
 
 struct GTDateConstants {
-    static let InputFormat = "E, dd MMM yyyy HH:mm:ss Z"
+    static let InputFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
 }
