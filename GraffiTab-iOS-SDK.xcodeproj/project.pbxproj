@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		B0C73954E564BF6D32692AB9 /* Pods_GraffiTab_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AE7CCDE905772CF22D3706 /* Pods_GraffiTab_iOS_SDK.framework */; };
 		E5DFDB941CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */; };
+		E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */; };
+		E5DFDBB21CB2A4CF00BB3D27 /* GTLifecycleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBA01CB2A4CF00BB3D27 /* GTLifecycleManager.swift */; };
+		E5DFDBB51CB2A4CF00BB3D27 /* GTCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBA61CB2A4CF00BB3D27 /* GTCacheManager.swift */; };
+		E5DFDBB61CB2A4CF00BB3D27 /* GTRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBA71CB2A4CF00BB3D27 /* GTRequestBuilder.swift */; };
+		E5DFDBB71CB2A4CF00BB3D27 /* GTResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBA81CB2A4CF00BB3D27 /* GTResponseObject.swift */; };
+		E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBAA1CB2A4CF00BB3D27 /* GTSettings.swift */; };
+		E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBAC1CB2A4CF00BB3D27 /* GTNetworkTask.swift */; };
+		E5DFDBBA1CB2A4CF00BB3D27 /* GTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBAE1CB2A4CF00BB3D27 /* GTUtils.swift */; };
+		E5DFDBBC1CB2A91C00BB3D27 /* GTApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */; };
+		E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */; };
+		E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +30,18 @@
 		E5DFDB901CB2A28C00BB3D27 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraffiTab-iOS-SDK.h"; sourceTree = "<group>"; };
 		E5DFDB951CB2A28C00BB3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTConstants.swift; sourceTree = "<group>"; };
+		E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCookieManager.swift; sourceTree = "<group>"; };
+		E5DFDBA01CB2A4CF00BB3D27 /* GTLifecycleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLifecycleManager.swift; sourceTree = "<group>"; };
+		E5DFDBA61CB2A4CF00BB3D27 /* GTCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCacheManager.swift; sourceTree = "<group>"; };
+		E5DFDBA71CB2A4CF00BB3D27 /* GTRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTRequestBuilder.swift; sourceTree = "<group>"; };
+		E5DFDBA81CB2A4CF00BB3D27 /* GTResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTResponseObject.swift; sourceTree = "<group>"; };
+		E5DFDBAA1CB2A4CF00BB3D27 /* GTSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSettings.swift; sourceTree = "<group>"; };
+		E5DFDBAC1CB2A4CF00BB3D27 /* GTNetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTNetworkTask.swift; sourceTree = "<group>"; };
+		E5DFDBAE1CB2A4CF00BB3D27 /* GTUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUtils.swift; sourceTree = "<group>"; };
+		E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTApiConstants.swift; sourceTree = "<group>"; };
+		E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUser.swift; sourceTree = "<group>"; };
+		E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAsset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +94,86 @@
 		E5DFDB921CB2A28C00BB3D27 /* GraffiTab-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				E5DFDB9B1CB2A4CF00BB3D27 /* Constants */,
+				E5DFDB9D1CB2A4CF00BB3D27 /* Managers */,
+				E5DFDBA31CB2A4CF00BB3D27 /* Model */,
+				E5DFDBA41CB2A4CF00BB3D27 /* Network */,
+				E5DFDBA91CB2A4CF00BB3D27 /* Settings */,
+				E5DFDBAB1CB2A4CF00BB3D27 /* Tasks */,
+				E5DFDBAD1CB2A4CF00BB3D27 /* Utils */,
 				E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */,
 				E5DFDB951CB2A28C00BB3D27 /* Info.plist */,
 			);
 			path = "GraffiTab-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		E5DFDB9B1CB2A4CF00BB3D27 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */,
+				E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E5DFDB9D1CB2A4CF00BB3D27 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */,
+				E5DFDBA01CB2A4CF00BB3D27 /* GTLifecycleManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E5DFDBA31CB2A4CF00BB3D27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */,
+				E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5DFDBA41CB2A4CF00BB3D27 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBA51CB2A4CF00BB3D27 /* Cache */,
+				E5DFDBA71CB2A4CF00BB3D27 /* GTRequestBuilder.swift */,
+				E5DFDBA81CB2A4CF00BB3D27 /* GTResponseObject.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E5DFDBA51CB2A4CF00BB3D27 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBA61CB2A4CF00BB3D27 /* GTCacheManager.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		E5DFDBA91CB2A4CF00BB3D27 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBAA1CB2A4CF00BB3D27 /* GTSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E5DFDBAB1CB2A4CF00BB3D27 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBAC1CB2A4CF00BB3D27 /* GTNetworkTask.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		E5DFDBAD1CB2A4CF00BB3D27 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E5DFDBAE1CB2A4CF00BB3D27 /* GTUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +216,7 @@
 		E5DFDB871CB2A28C00BB3D27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GT;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = GraffiTab;
 				TargetAttributes = {
@@ -189,6 +290,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DFDBB51CB2A4CF00BB3D27 /* GTCacheManager.swift in Sources */,
+				E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */,
+				E5DFDBBC1CB2A91C00BB3D27 /* GTApiConstants.swift in Sources */,
+				E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */,
+				E5DFDBB71CB2A4CF00BB3D27 /* GTResponseObject.swift in Sources */,
+				E5DFDBBA1CB2A4CF00BB3D27 /* GTUtils.swift in Sources */,
+				E5DFDBB61CB2A4CF00BB3D27 /* GTRequestBuilder.swift in Sources */,
+				E5DFDBB21CB2A4CF00BB3D27 /* GTLifecycleManager.swift in Sources */,
+				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
+				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,
+				E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */,
+				E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
