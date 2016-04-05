@@ -8,36 +8,31 @@
 
 import UIKit
 
-public enum GTResult : CustomStringConvertible {
+public enum GTResult {
     case Success
     case Error
-    
-    public var description : String {
-        switch self {
-            case .Success: return "Success"
-            case .Error: return "Error"
-        }
-    }
 }
 
 public enum GTReason : Int, CustomStringConvertible {
-    case ServerError = 500
+    case Other               = 1
+    case BadRequest          = 400
     case AuthorizationNeeded = 401
-    case NotFound = 404
-    case AlreadyExists = 409
-    case Forbidden = 403
-    case BadRequest = 400
-    case Other = 1
+    case Forbidden           = 403
+    case NotFound            = 404
+    case NotAcceptable       = 406
+    case AlreadyExists       = 409
+    case ServerError         = 500
     
     public var description : String {
         switch self {
-            case .ServerError: return "ServerError"
-            case .AuthorizationNeeded: return "AuthorizationNeeded"
-            case .NotFound: return "NotFound"
-            case .AlreadyExists: return "AlreadyExists"
-            case .Forbidden: return "Forbidden"
-            case .BadRequest: return "BadRequest"
-            case .Other: return "Other"
+            case .BadRequest:          return "Bad request."
+            case .AuthorizationNeeded: return "You need to be logged in to make this request."
+            case .Forbidden:           return "The request is forbidden."
+            case .NotFound:            return "This item was not found."
+            case .NotAcceptable:       return "This action is not allowed."
+            case .AlreadyExists:       return "This item already exists."
+            case .ServerError:         return "Oups, seems like something went wrong on our server. Please contact support to report this issue."
+            case .Other:               return "We could not process your request right now. Please check your connection and try again or contact Support to report this issue."
         }
     }
 }

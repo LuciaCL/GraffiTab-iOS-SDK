@@ -16,6 +16,14 @@ class GTRequestBuilder: NSObject {
         return GTApiUserConstants.Login
     }
     
+    class func buildLoginWithExternalProviderUrl() -> String {
+        return GTApiUserConstants.LoginWithExternalProvider
+    }
+    
+    class func buildRegisterWithExternalProviderUrl() -> String {
+        return GTApiUserConstants.ExternalProviders
+    }
+    
     class func buildGetMeUrl() -> String {
         return GTMeConstants.Me
     }

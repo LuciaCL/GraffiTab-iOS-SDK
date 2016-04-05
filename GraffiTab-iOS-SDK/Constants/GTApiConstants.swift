@@ -6,9 +6,20 @@
 //  Copyright © 2016 GraffiTab. All rights reserved.
 //
 
+public enum GTExternalProviderType: String {
+    case FACEBOOK
+    case TWITTER
+    case GOOGLE
+}
+
+struct GTDateConstants {
+    static let InputFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
+}
+
 struct GTApiDomainConstants {
-    static let AppUrl = "http://dev.graffitab.com/"
-    static let ApiUrl = AppUrl + "api/"
+//    static let AppUrl = "http://dev.graffitab.com"
+    static let AppUrl = "http://localhost:8091"
+    static let ApiUrl = AppUrl + "/api"
 }
 
 struct GTApiUserConstants {
@@ -17,8 +28,8 @@ struct GTApiUserConstants {
     static let ExternalProviders = Users + "/externalproviders"
     
     // Login.
-    static let Login = GTApiDomainConstants.ApiUrl + "login"
-    static let LoginWithExternalProvider = GTApiDomainConstants.ApiUrl + "externalproviders/login"
+    static let Login = GTApiDomainConstants.ApiUrl + "/login"
+    static let LoginWithExternalProvider = GTApiDomainConstants.ApiUrl + "/externalproviders/login"
     static let Logout = GTApiDomainConstants.ApiUrl + "/logout"
     static let ResetPassword = GTApiDomainConstants.ApiUrl + "/resetpassword"
     

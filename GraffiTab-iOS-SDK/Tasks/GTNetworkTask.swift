@@ -19,16 +19,15 @@ class GTNetworkTask: NSObject {
     // MARK: - Requests
     
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
-        // Setup custom headers.
-//        var sHeaders = [String : String]()
-//
-//        if (APISettings.sharedInstance.token != nil) {
-//            sHeaders["X-AUTH-Token"] = APISettings.sharedInstance.token!
-//        }
+        print("DEBUG: Sending request \(method) - \(URLString)")
+        print("DEBUG: Parameters - \(parameters)")
         
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
             .validate()
-            .responseJSON(completionHandler: completionHandler)
+            .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+                print("DEBUG: Received response - \(response)")
+                completionHandler(response)
+            })
     }
     
     // MARK: - Response parsing
@@ -52,37 +51,14 @@ class GTNetworkTask: NSObject {
     func parseJSONError(statusCode: Int) {
         let response = GTResponseObject()
         response.result = GTResult.Error
-
-        switch (statusCode) {
-        case 500:
-            response.reason = GTReason.ServerError;
-            response.message = "Oups, seems like something went wrong on our server. Please contact support to report this issue.";
-            break;
-        case 401:
-            response.reason = GTReason.AuthorizationNeeded;
-            response.message = "You need to be logged in to make this request.";
-            break;
-        case 403:
-            response.reason = GTReason.Forbidden;
-            response.message = "The request is forbidden.";
-            break;
-        case 404:
-            response.reason = GTReason.NotFound;
-            response.message = "This item was not found.";
-            break;
-        case 409:
-            response.reason = GTReason.AlreadyExists;
-            response.message = "This item already exists.";
-            break;
-        case 400:
-            response.reason = GTReason.BadRequest;
-            response.message = "Bad request.";
-            break;
-        default:
-            response.reason = GTReason.Other;
-            response.message = "We could not process your request right now. Please check your connection and try again or contact Support to report this issue.";
-            break;
+        
+        if let reason = GTReason(rawValue: statusCode) {
+            response.reason = reason
         }
+        else {
+            response.reason = .Other
+        }
+        response.message = response.reason.description
         
         finishRequestWithResponse(response)
     }
@@ -98,7 +74,6 @@ class GTNetworkTask: NSObject {
             }
         }
         else {
-            print("ERROR (" + response.reason.description + ") MESSAGE (" + response.message + ")")
             if (fBlock != nil) {
                 fBlock(response: response)
             }

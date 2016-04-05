@@ -17,7 +17,3 @@ struct GTPreferencesConstants {
 struct GTCookieConstants {
     static let CookiesKey = "cookies"
 }
-
-struct GTDateConstants {
-    static let InputFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
-}
