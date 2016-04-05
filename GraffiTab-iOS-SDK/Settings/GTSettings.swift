@@ -14,7 +14,7 @@ public class GTSettings: NSObject {
     public static let sharedInstance = GTSettings()
     
     var tmpUser: GTUser?
-    var user: GTUser? {
+    public var user: GTUser? {
         get {
             return tmpUser
         }
