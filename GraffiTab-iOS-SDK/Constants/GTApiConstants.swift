@@ -108,8 +108,10 @@ struct GTMeConstants {
     static let Likes = Me + "/liked"
     
     // Social.
-    static let FilterSocialFriends = Me + "/social%@/friends"
+    static let Social = Me + "/social%@"
+    static let FilterSocialFriends = Social + "/friends"
     static let SocialFriends = String(format: FilterSocialFriends, "")
+    static let ImportAvatar = Social + "/avatar"
 }
 
 struct GTStreamableConstants {

@@ -24,6 +24,10 @@ class GTRequestBuilder: NSObject {
         return GTApiUserConstants.ExternalProviders
     }
     
+    class func buildImportExternalProviderAvatarUrl(type: GTExternalProviderType) -> String {
+        return String(format: GTMeConstants.ImportAvatar, "/" + type.rawValue)
+    }
+    
     class func buildGetMeUrl() -> String {
         return GTMeConstants.Me
     }
