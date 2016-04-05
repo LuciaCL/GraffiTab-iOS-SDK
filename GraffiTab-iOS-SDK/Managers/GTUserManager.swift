@@ -31,6 +31,11 @@ public class GTUserManager: NSObject {
         return task.importAvatar(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func linkDevice(token: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTLinkDeviceTask()
+        return task.linkDevice(token, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getMe(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetMeTask()
         

@@ -28,6 +28,10 @@ class GTRequestBuilder: NSObject {
         return String(format: GTMeConstants.ImportAvatar, "/" + type.rawValue)
     }
     
+    class func buildDeviceUrl() -> String {
+        return GTMeConstants.Devices
+    }
+    
     class func buildGetMeUrl() -> String {
         return GTMeConstants.Me
     }
