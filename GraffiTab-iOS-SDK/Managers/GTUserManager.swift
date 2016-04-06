@@ -21,6 +21,11 @@ public class GTUserManager: NSObject {
         return task.login(externalProviderType, externalId: externalId, accessToken: accessToken, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func resetPassword(email: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTResetPasswordTask()
+        return task.resetPassword(email, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func register(externalProviderType: GTExternalProviderType, externalId: String, accessToken: String, email: String, firstName: String, lastName: String, username: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTRegisterWithExternalProviderTask()
         return task.register(externalProviderType, externalId: externalId, accessToken: accessToken, email: email, firstName: firstName, lastName: lastName, username: username, successBlock: successBlock, failureBlock: failureBlock)

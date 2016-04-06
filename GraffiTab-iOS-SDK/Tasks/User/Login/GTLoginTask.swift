@@ -31,7 +31,6 @@ class GTLoginTask: GTNetworkTask {
                 }
             }
             else {
-                // At this point login was successful and the cookies are saved, so load the user.
                 let resp = response.result.value
                 
                 self.parseJSONSuccess(resp!)

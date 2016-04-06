@@ -20,6 +20,10 @@ class GTRequestBuilder: NSObject {
         return GTApiUserConstants.LoginWithExternalProvider
     }
     
+    class func buildResetPasswordUrl() -> String {
+        return GTApiUserConstants.ResetPassword
+    }
+    
     class func buildRegisterWithExternalProviderUrl() -> String {
         return GTApiUserConstants.ExternalProviders
     }

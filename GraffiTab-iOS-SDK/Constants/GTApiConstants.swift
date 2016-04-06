@@ -17,8 +17,10 @@ struct GTDateConstants {
 }
 
 struct GTApiDomainConstants {
-    static let AppUrl = "http://dev.graffitab.com"
+//    static let AppUrl = "http://dev.graffitab.com"
 //    static let AppUrl = "http://localhost:8091"
+//    static let AppUrl = "http://192.168.0.3:8091"
+    static let AppUrl = "http://172.18.33.98:8091"
     static let ApiUrl = AppUrl + "/api"
 }
 
@@ -31,7 +33,7 @@ struct GTApiUserConstants {
     static let Login = GTApiDomainConstants.ApiUrl + "/login"
     static let LoginWithExternalProvider = GTApiDomainConstants.ApiUrl + "/externalproviders/login"
     static let Logout = GTApiDomainConstants.ApiUrl + "/logout"
-    static let ResetPassword = GTApiDomainConstants.ApiUrl + "/resetpassword"
+    static let ResetPassword = Users + "/resetpassword"
     
     // Profile.
     static let Profile = Users + "/%d"
