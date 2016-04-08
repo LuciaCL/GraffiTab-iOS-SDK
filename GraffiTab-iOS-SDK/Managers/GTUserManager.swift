@@ -35,20 +35,4 @@ public class GTUserManager: NSObject {
         let task = GTRegisterTask()
         return task.register(firstName, lastName: lastName, email: email, username: username, password: password, successBlock: successBlock, failureBlock: failureBlock)
     }
-    
-    public class func importAvatar(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
-        let task = GTImportExternalProviderAvatarTask()
-        return task.importAvatar(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
-    }
-    
-    public class func linkDevice(token: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
-        let task = GTLinkDeviceTask()
-        return task.linkDevice(token, successBlock: successBlock, failureBlock: failureBlock)
-    }
-    
-    public class func getMe(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
-        let task = GTGetMeTask()
-        
-        return task.getMe(successBlock, failureBlock: failureBlock)
-    }
 }

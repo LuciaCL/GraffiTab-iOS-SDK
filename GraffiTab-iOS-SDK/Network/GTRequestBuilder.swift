@@ -43,4 +43,18 @@ class GTRequestBuilder: NSObject {
     class func buildGetMeUrl() -> String {
         return GTMeConstants.Me
     }
+    
+    class func buildGetFeedUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTMeConstants.Feed, offset, limit)
+    }
+    
+    // MARK: - Streamable
+    
+    class func buildGetPopularUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTStreamableConstants.Popular, offset, limit)
+    }
+    
+    class func buildGetNewestUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTStreamableConstants.Newest, offset, limit)
+    }
 }

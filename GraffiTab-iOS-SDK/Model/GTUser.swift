@@ -48,7 +48,11 @@ public class GTUser: Mappable {
         cover <- map["cover"]
     }
     
-    func getFullName() -> String {
+    public func getFullName() -> String {
         return firstName! + " " + lastName!
+    }
+    
+    public func getMentionUsername() -> String {
+        return String(format: "@%@", username!)
     }
 }
