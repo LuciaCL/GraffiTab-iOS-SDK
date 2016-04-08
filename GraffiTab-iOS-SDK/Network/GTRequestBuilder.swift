@@ -57,4 +57,8 @@ class GTRequestBuilder: NSObject {
     class func buildGetNewestUrl(offset: Int, limit: Int) -> String {
         return String(format: "%@?offset=%li&limit=%li", GTStreamableConstants.Newest, offset, limit)
     }
+    
+    class func buildSearchForLocationUrl(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double) -> String {
+        return String(format: GTStreamableConstants.SearchLocation, neLatitude, neLongitude, swLatitude, swLongitude)
+    }
 }

@@ -141,7 +141,7 @@ struct GTStreamableConstants {
     
     // Search.
     static let Search = Streamables + "/search"
-    static let SearchLocation = Search + "/location?neLatitude=%d&neLongitude=%d&swLatitude=%d&swLongitude=%d"
+    static let SearchLocation = Search + "/location?neLatitude=%f&neLongitude=%f&swLatitude=%f&swLongitude=%f"
     static let SearchHashtag = Search + "/hashtag?query=%@"
     static let SearchHashtags = Search + "/hashtags?query=%@"
 }

@@ -20,4 +20,9 @@ public class GTStreamableManager: NSObject {
         let task = GTGetNewestTask()
         return task.getNewest(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func searchForLocation(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTSearchStreamablesForLocationTask()
+        return task.searchForLocation(neLatitude, neLongitude: neLongitude, swLatitude: swLatitude, swLongitude: swLongitude, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

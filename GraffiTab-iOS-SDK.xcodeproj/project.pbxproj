@@ -23,6 +23,7 @@
 		E51006741CB7E8A300AC66A5 /* GTGetPopularTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006731CB7E8A300AC66A5 /* GTGetPopularTask.swift */; };
 		E51006761CB7E94A00AC66A5 /* GTStreamableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006751CB7E94A00AC66A5 /* GTStreamableManager.swift */; };
 		E510067C1CB7F0AC00AC66A5 /* GTGetNewestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510067B1CB7F0AC00AC66A5 /* GTGetNewestTask.swift */; };
+		E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006891CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift */; };
 		E5DFDB941CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */; };
 		E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */; };
@@ -58,6 +59,7 @@
 		E51006731CB7E8A300AC66A5 /* GTGetPopularTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetPopularTask.swift; sourceTree = "<group>"; };
 		E51006751CB7E94A00AC66A5 /* GTStreamableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTStreamableManager.swift; sourceTree = "<group>"; };
 		E510067B1CB7F0AC00AC66A5 /* GTGetNewestTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetNewestTask.swift; sourceTree = "<group>"; };
+		E51006891CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSearchStreamablesForLocationTask.swift; sourceTree = "<group>"; };
 		E5DFDB901CB2A28C00BB3D27 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraffiTab-iOS-SDK.h"; sourceTree = "<group>"; };
 		E5DFDB951CB2A28C00BB3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 		E510060E1CB710B700AC66A5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				E51006891CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				E5DFDBB21CB2A4CF00BB3D27 /* GTLifecycleManager.swift in Sources */,
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
 				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,
+				E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */,
 				E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */,
 				E51006741CB7E8A300AC66A5 /* GTGetPopularTask.swift in Sources */,
 				E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */,
