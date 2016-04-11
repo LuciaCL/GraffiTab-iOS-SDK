@@ -30,4 +30,9 @@ public class GTMeManager: NSObject {
         let task = GTGetFeedTask()
         return task.getFeed(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getNotifications(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetNotificationsTask()
+        return task.getNotifications(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

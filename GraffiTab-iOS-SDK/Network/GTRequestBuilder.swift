@@ -32,6 +32,8 @@ class GTRequestBuilder: NSObject {
         return GTApiUserConstants.Users
     }
     
+    // MARK: - Me
+    
     class func buildImportExternalProviderAvatarUrl(type: GTExternalProviderType) -> String {
         return String(format: GTMeConstants.ImportAvatar, "/" + type.rawValue)
     }
@@ -46,6 +48,10 @@ class GTRequestBuilder: NSObject {
     
     class func buildGetFeedUrl(offset: Int, limit: Int) -> String {
         return String(format: "%@?offset=%li&limit=%li", GTMeConstants.Feed, offset, limit)
+    }
+    
+    class func buildGetNotificationsUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTMeConstants.Notifications, offset, limit)
     }
     
     // MARK: - Streamable
