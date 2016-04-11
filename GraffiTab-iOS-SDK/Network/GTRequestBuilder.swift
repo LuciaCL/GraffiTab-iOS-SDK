@@ -54,6 +54,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", GTMeConstants.Notifications, offset, limit)
     }
     
+    class func buildGetFollowersActivityUrl(numberOfItemsInGroup: Int, offset: Int, limit: Int) -> String {
+        return String(format: "%@?numberOfItemsInGroup=%li&offset=%li&limit=%li", GTMeConstants.FollowersActivity, numberOfItemsInGroup, offset, limit)
+    }
+    
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {
