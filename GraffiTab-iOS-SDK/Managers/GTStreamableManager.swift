@@ -25,4 +25,9 @@ public class GTStreamableManager: NSObject {
         let task = GTSearchStreamablesForLocationTask()
         return task.searchForLocation(neLatitude, neLongitude: neLongitude, swLatitude: swLatitude, swLongitude: swLongitude, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func searchForHashtag(query: String = "", offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTSearchStreamablesForHashtagTask()
+        return task.search(query, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

@@ -6,20 +6,20 @@
 //  Copyright © 2016 GraffiTab. All rights reserved.
 //
 
-public enum GTExternalProviderType: String {
+public enum GTApiExternalProviderType: String {
     case FACEBOOK
     case TWITTER
     case GOOGLE
 }
 
-struct GTDateConstants {
+struct GTApiDateConstants {
     static let InputFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
 }
 
 struct GTApiDomainConstants {
 //    static let AppUrl = "http://dev.graffitab.com"
-//    static let AppUrl = "http://localhost:8091"
-    static let AppUrl = "http://192.168.0.3:8091"
+    static let AppUrl = "http://localhost:8091"
+//    static let AppUrl = "http://192.168.0.3:8091"
 //    static let AppUrl = "http://172.18.33.98:8091"
     static let ApiUrl = AppUrl + "/api"
 }
@@ -58,7 +58,7 @@ struct GTApiUserConstants {
     static let Search = Users + "/search?query=%@"
 }
 
-struct GTMeConstants {
+struct GTApiMeConstants {
     // Global.
     static let Me = GTApiUserConstants.Users + "/me"
     
@@ -116,7 +116,7 @@ struct GTMeConstants {
     static let ImportAvatar = Social + "/avatar"
 }
 
-struct GTStreamableConstants {
+struct GTApiStreamableConstants {
     // Global.
     static let Streamables = GTApiDomainConstants.ApiUrl + "/streamables"
     
@@ -146,7 +146,7 @@ struct GTStreamableConstants {
     static let SearchHashtags = Search + "/hashtags?query=%@"
 }
 
-struct GTFeedbackConstants {
+struct GTApiFeedbackConstants {
     // Global.
     static let Feedback = GTApiDomainConstants.ApiUrl + "/feedback"
 }

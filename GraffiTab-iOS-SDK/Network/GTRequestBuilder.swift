@@ -32,43 +32,55 @@ class GTRequestBuilder: NSObject {
         return GTApiUserConstants.Users
     }
     
+    class func buildSearchUsersUrl(query: String, offset: Int, limit: Int) -> String {
+        return String(format: "%@&offset=%li&limit=%li", String(format: GTApiUserConstants.Search, query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!), offset, limit)
+    }
+    
+    class func buildGetMostActiveUsersUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTApiUserConstants.MostActive, offset, limit)
+    }
+    
     // MARK: - Me
     
-    class func buildImportExternalProviderAvatarUrl(type: GTExternalProviderType) -> String {
-        return String(format: GTMeConstants.ImportAvatar, "/" + type.rawValue)
+    class func buildImportExternalProviderAvatarUrl(type: GTApiExternalProviderType) -> String {
+        return String(format: GTApiMeConstants.ImportAvatar, "/" + type.rawValue)
     }
     
     class func buildDeviceUrl() -> String {
-        return GTMeConstants.Devices
+        return GTApiMeConstants.Devices
     }
     
     class func buildGetMeUrl() -> String {
-        return GTMeConstants.Me
+        return GTApiMeConstants.Me
     }
     
     class func buildGetFeedUrl(offset: Int, limit: Int) -> String {
-        return String(format: "%@?offset=%li&limit=%li", GTMeConstants.Feed, offset, limit)
+        return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.Feed, offset, limit)
     }
     
     class func buildGetNotificationsUrl(offset: Int, limit: Int) -> String {
-        return String(format: "%@?offset=%li&limit=%li", GTMeConstants.Notifications, offset, limit)
+        return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.Notifications, offset, limit)
     }
     
     class func buildGetFollowersActivityUrl(numberOfItemsInGroup: Int, offset: Int, limit: Int) -> String {
-        return String(format: "%@?numberOfItemsInGroup=%li&offset=%li&limit=%li", GTMeConstants.FollowersActivity, numberOfItemsInGroup, offset, limit)
+        return String(format: "%@?numberOfItemsInGroup=%li&offset=%li&limit=%li", GTApiMeConstants.FollowersActivity, numberOfItemsInGroup, offset, limit)
     }
     
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {
-        return String(format: "%@?offset=%li&limit=%li", GTStreamableConstants.Popular, offset, limit)
+        return String(format: "%@?offset=%li&limit=%li", GTApiStreamableConstants.Popular, offset, limit)
     }
     
     class func buildGetNewestUrl(offset: Int, limit: Int) -> String {
-        return String(format: "%@?offset=%li&limit=%li", GTStreamableConstants.Newest, offset, limit)
+        return String(format: "%@?offset=%li&limit=%li", GTApiStreamableConstants.Newest, offset, limit)
     }
     
-    class func buildSearchForLocationUrl(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double) -> String {
-        return String(format: GTStreamableConstants.SearchLocation, neLatitude, neLongitude, swLatitude, swLongitude)
+    class func buildSearchStreamablesForLocationUrl(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double) -> String {
+        return String(format: GTApiStreamableConstants.SearchLocation, neLatitude, neLongitude, swLatitude, swLongitude)
+    }
+    
+    class func buildSearchStreamablesForHashtagUrl(query: String, offset: Int, limit: Int) -> String {
+        return String(format: "%@&offset=%li&limit=%li", String(format: GTApiStreamableConstants.SearchHashtag, query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!), offset, limit)
     }
 }

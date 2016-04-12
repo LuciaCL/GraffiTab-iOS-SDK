@@ -11,7 +11,7 @@ import Alamofire
 
 public class GTMeManager: NSObject {
 
-    public class func importAvatar(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func importAvatar(externalProviderType: GTApiExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTImportExternalProviderAvatarTask()
         return task.importAvatar(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
     }

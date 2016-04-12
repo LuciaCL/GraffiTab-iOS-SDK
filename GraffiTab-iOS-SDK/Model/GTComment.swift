@@ -24,7 +24,7 @@ public class GTComment: Mappable {
     
     public func mapping(map: Map) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTDateConstants.InputFormat
+        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
         
         id <- map["id"]
         streamable <- map["streamable"]

@@ -31,7 +31,7 @@ public class GTUser: Mappable {
     
     public func mapping(map: Map) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTDateConstants.InputFormat
+        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
         
         id <- map["id"]
         guid <- map["guid"]

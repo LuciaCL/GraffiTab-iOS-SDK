@@ -36,7 +36,7 @@ public class GTActivity: Mappable {
     
     public func mapping(map: Map) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTDateConstants.InputFormat
+        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
         
         date <- (map["date"], DateFormatterTransform(dateFormatter: dateFormatter))
         type <- map["type"]
