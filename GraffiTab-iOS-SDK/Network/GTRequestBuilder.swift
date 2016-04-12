@@ -91,4 +91,10 @@ class GTRequestBuilder: NSObject {
     class func buildSearchStreamablesForHashtagUrl(query: String, offset: Int, limit: Int) -> String {
         return String(format: "%@&offset=%li&limit=%li", String(format: GTApiStreamableConstants.SearchHashtag, query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!), offset, limit)
     }
+    
+    // MARK: - Feedback
+    
+    class func buildFeedbackUrl() -> String {
+        return GTApiFeedbackConstants.Feedback
+    }
 }
