@@ -16,6 +16,10 @@ class GTRequestBuilder: NSObject {
         return GTApiUserConstants.Login
     }
     
+    class func buildLogoutUrl() -> String {
+        return GTApiUserConstants.Logout
+    }
+    
     class func buildLoginWithExternalProviderUrl() -> String {
         return GTApiUserConstants.LoginWithExternalProvider
     }

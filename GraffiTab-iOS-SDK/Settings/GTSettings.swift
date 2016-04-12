@@ -47,6 +47,10 @@ public class GTSettings: NSObject {
     
     public func logout() {
         user = nil
+        
+        NSURLCache.sharedURLCache().removeAllCachedResponses()
+        
+        clearCookies()
     }
     
     public func isLoggedIn() -> Bool {
@@ -74,5 +78,13 @@ public class GTSettings: NSObject {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey(key)
         defaults.synchronize()
+    }
+    
+    func clearCookies() {
+        for cookie in NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies! {
+            NSHTTPCookieStorage.sharedHTTPCookieStorage().deleteCookie(cookie)
+        }
+        
+        GTCookieManager.saveCookies()
     }
 }
