@@ -36,6 +36,11 @@ public class GTMeManager: NSObject {
         return task.getNotifications(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func getUnseenNotificationsCount(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUnseenNotificationsCountTask()
+        return task.getCount(successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getFollowersActivity(numberOfItemsInGroup: Int = GTConstants.NumberOfItemsInGroup, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetFollowersActivityTask()
         return task.getFollowersActivity(numberOfItemsInGroup, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)

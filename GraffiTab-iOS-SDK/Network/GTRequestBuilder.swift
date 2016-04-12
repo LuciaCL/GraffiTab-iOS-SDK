@@ -62,6 +62,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.Notifications, offset, limit)
     }
     
+    class func buildGetUnseenNotificationsCountUrl() -> String {
+        return GTApiMeConstants.UnreadNotificationsCount
+    }
+    
     class func buildGetFollowersActivityUrl(numberOfItemsInGroup: Int, offset: Int, limit: Int) -> String {
         return String(format: "%@?numberOfItemsInGroup=%li&offset=%li&limit=%li", GTApiMeConstants.FollowersActivity, numberOfItemsInGroup, offset, limit)
     }
