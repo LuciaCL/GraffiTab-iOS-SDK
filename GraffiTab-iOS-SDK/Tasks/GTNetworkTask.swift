@@ -30,6 +30,17 @@ class GTNetworkTask: NSObject {
             })
     }
     
+    func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
+        print("DEBUG: Sending request \(method) - \(URLString)")
+        
+        Alamofire.upload(method, URLString, headers: headers, data: data)
+            .validate()
+            .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+                print("DEBUG: Received response - \(response)")
+                completionHandler(response)
+            })
+    }
+    
     // MARK: - Response parsing
     
     func parseJSONSuccess(JSON: AnyObject) {

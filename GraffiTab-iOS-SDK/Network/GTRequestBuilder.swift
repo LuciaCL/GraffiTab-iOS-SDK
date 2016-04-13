@@ -78,6 +78,14 @@ class GTRequestBuilder: NSObject {
         return GTApiMeConstants.ChangePassword
     }
     
+    class func buildAvatarUrl() -> String {
+        return GTApiMeConstants.Avatar
+    }
+    
+    class func buildCoverUrl() -> String {
+        return GTApiMeConstants.Cover
+    }
+    
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {

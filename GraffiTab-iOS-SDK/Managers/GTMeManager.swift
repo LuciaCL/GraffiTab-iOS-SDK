@@ -50,4 +50,29 @@ public class GTMeManager: NSObject {
         let task = GTEditPasswordTask()
         return task.editPassword(password, newPassword: newPassword, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func editAvatar(image: UIImage, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTEditAvatarTask()
+        task.edit(image, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func deleteAvatar(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTDeleteAvatarTask()
+        return task.delete(successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func editCover(image: UIImage, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTEditCoverTask()
+        task.edit(image, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func deleteCover(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTDeleteCoverTask()
+        return task.delete(successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func editProfile(firstName: String, lastName: String, email: String, about: String?, website: String?, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTEditProfileTask()
+        task.edit(firstName, lastName: lastName, email: email, about: about, website: website, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }
