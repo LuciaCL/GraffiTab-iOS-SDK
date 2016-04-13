@@ -74,6 +74,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?numberOfItemsInGroup=%li&offset=%li&limit=%li", GTApiMeConstants.FollowersActivity, numberOfItemsInGroup, offset, limit)
     }
     
+    class func buildEditPasswordUrl() -> String {
+        return GTApiMeConstants.ChangePassword
+    }
+    
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {

@@ -45,4 +45,9 @@ public class GTMeManager: NSObject {
         let task = GTGetFollowersActivityTask()
         return task.getFollowersActivity(numberOfItemsInGroup, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func editPassword(password: String, newPassword: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTEditPasswordTask()
+        return task.editPassword(password, newPassword: newPassword, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

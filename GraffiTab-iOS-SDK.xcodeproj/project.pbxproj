@@ -37,6 +37,7 @@
 		E51007171CBD5DB200AC66A5 /* GTLogoutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007161CBD5DB200AC66A5 /* GTLogoutTask.swift */; };
 		E510071C1CBDB79300AC66A5 /* GTSendFeedbackTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510071B1CBDB79300AC66A5 /* GTSendFeedbackTask.swift */; };
 		E510071E1CBDB84C00AC66A5 /* GTFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510071D1CBDB84C00AC66A5 /* GTFeedbackManager.swift */; };
+		E51007241CBE461E00AC66A5 /* GTEditPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007231CBE461E00AC66A5 /* GTEditPasswordTask.swift */; };
 		E5DFDB941CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */; };
 		E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */; };
@@ -86,6 +87,7 @@
 		E51007161CBD5DB200AC66A5 /* GTLogoutTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLogoutTask.swift; sourceTree = "<group>"; };
 		E510071B1CBDB79300AC66A5 /* GTSendFeedbackTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSendFeedbackTask.swift; sourceTree = "<group>"; };
 		E510071D1CBDB84C00AC66A5 /* GTFeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFeedbackManager.swift; sourceTree = "<group>"; };
+		E51007231CBE461E00AC66A5 /* GTEditPasswordTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditPasswordTask.swift; sourceTree = "<group>"; };
 		E5DFDB901CB2A28C00BB3D27 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraffiTab-iOS-SDK.h"; sourceTree = "<group>"; };
 		E5DFDB951CB2A28C00BB3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				E51005FC1CB710B700AC66A5 /* GTImportExternalProviderAvatarTask.swift */,
+				E51007231CBE461E00AC66A5 /* GTEditPasswordTask.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				E510067C1CB7F0AC00AC66A5 /* GTGetNewestTask.swift in Sources */,
 				E51006241CB710B700AC66A5 /* GTRegisterTask.swift in Sources */,
 				E5DFDBBA1CB2A4CF00BB3D27 /* GTUtils.swift in Sources */,
+				E51007241CBE461E00AC66A5 /* GTEditPasswordTask.swift in Sources */,
 				E5DFDBB61CB2A4CF00BB3D27 /* GTRequestBuilder.swift in Sources */,
 				E51006471CB726F200AC66A5 /* GTGetMeTask.swift in Sources */,
 				E510071E1CBDB84C00AC66A5 /* GTFeedbackManager.swift in Sources */,
