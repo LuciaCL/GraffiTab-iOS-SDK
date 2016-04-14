@@ -50,4 +50,9 @@ public class GTUserManager: NSObject {
         let task = GTGetMostActiveUsersTask()
         return task.getMostActive(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getUserStreamables(userId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUserStreamablesTask()
+        return task.getStreamables(userId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

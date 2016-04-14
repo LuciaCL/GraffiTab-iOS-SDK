@@ -44,6 +44,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", GTApiUserConstants.MostActive, offset, limit)
     }
     
+    class func buildGetUserStreamablesUrl(userId: Int, offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", String(format: GTApiUserConstants.Streamables, userId), offset, limit)
+    }
+    
     // MARK: - Me
     
     class func buildImportExternalProviderAvatarUrl(type: GTApiExternalProviderType) -> String {
