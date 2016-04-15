@@ -15,6 +15,10 @@ public class GTAsset: Mappable {
     public var link: String?
     public var thumbnail: String?
     public var type: String?
+    public var width: Int?
+    public var height: Int?
+    public var thumbnailWidth: Int?
+    public var thumbnailHeight: Int?
     
     required public init?(_ map: Map) {
         
@@ -25,5 +29,9 @@ public class GTAsset: Mappable {
         link <- map["link"]
         thumbnail <- map["thumbnail"]
         type <- map["type"]
+        width <- map["width"]
+        height <- map["height"]
+        thumbnailWidth <- map["thumbnailWidth"]
+        thumbnailHeight <- map["thumbnailHeight"]
     }
 }
