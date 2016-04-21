@@ -17,13 +17,16 @@ public class GTUser: Mappable {
     public var firstName: String?
     public var lastName: String?
     public var email: String?
-    public var followedByCurrentUser: Bool?
     public var createdOn: NSDate?
     public var updatedOn: NSDate?
     public var about: String?
     public var website: String?
     public var avatar: GTAsset?
     public var cover: GTAsset?
+    public var followedByCurrentUser: Bool?
+    public var followersCount: Int?
+    public var followingCount: Int?
+    public var streamablesCount: Int?
     
     required public init?(_ map: Map) {
         
@@ -39,13 +42,16 @@ public class GTUser: Mappable {
         firstName <- map["firstName"]
         lastName <- map["lastName"]
         email <- map["email"]
-        followedByCurrentUser <- map["followedByCurrentUser"]
         createdOn <- (map["createdOn"], DateFormatterTransform(dateFormatter: dateFormatter))
         updatedOn <- (map["updatedOn"], DateFormatterTransform(dateFormatter: dateFormatter))
         about <- map["about"]
         website <- map["website"]
         avatar <- map["avatar"]
         cover <- map["cover"]
+        followedByCurrentUser <- map["followedByCurrentUser"]
+        followersCount <- map["followersCount"]
+        followingCount <- map["followingCount"]
+        streamablesCount <- map["streamablesCount"]
     }
     
     public func getFullName() -> String {

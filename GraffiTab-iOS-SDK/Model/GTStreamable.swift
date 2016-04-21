@@ -28,6 +28,7 @@ public class GTStreamable: Mappable {
     public var roll: Double?
     public var yaw: Double?
     public var pitch: Double?
+    public var likedByCurrentUser: Bool?
     public var likersCount: Int?
     public var commentsCount: Int?
     
@@ -52,6 +53,7 @@ public class GTStreamable: Mappable {
         roll <- map["roll"]
         yaw <- map["yaw"]
         pitch <- map["pitch"]
+        likedByCurrentUser <- map["likedByCurrentUser"]
         likersCount <- map["likersCount"]
         commentsCount <- map["commentsCount"]
     }
