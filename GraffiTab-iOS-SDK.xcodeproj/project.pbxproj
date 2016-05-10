@@ -44,6 +44,8 @@
 		E51007341CBE7EE500AC66A5 /* GTEditCoverTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007331CBE7EE500AC66A5 /* GTEditCoverTask.swift */; };
 		E51007361CBE82A700AC66A5 /* GTEditProfileTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007351CBE82A700AC66A5 /* GTEditProfileTask.swift */; };
 		E558A89E1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */; };
+		E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */; };
+		E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */; };
 		E5DFDB941CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */; };
 		E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */; };
@@ -100,6 +102,8 @@
 		E51007331CBE7EE500AC66A5 /* GTEditCoverTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditCoverTask.swift; sourceTree = "<group>"; };
 		E51007351CBE82A700AC66A5 /* GTEditProfileTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditProfileTask.swift; sourceTree = "<group>"; };
 		E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserStreamablesTask.swift; sourceTree = "<group>"; };
+		E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetLikersTask.swift; sourceTree = "<group>"; };
+		E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetCommentsTask.swift; sourceTree = "<group>"; };
 		E5DFDB901CB2A28C00BB3D27 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraffiTab-iOS-SDK.h"; sourceTree = "<group>"; };
 		E5DFDB951CB2A28C00BB3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 		E51006081CB710B700AC66A5 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 		E510060B1CB710B700AC66A5 /* Likes */ = {
 			isa = PBXGroup;
 			children = (
+				E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */,
 			);
 			path = Likes;
 			sourceTree = "<group>";
@@ -693,6 +699,7 @@
 				E510071E1CBDB84C00AC66A5 /* GTFeedbackManager.swift in Sources */,
 				E51006291CB713EB00AC66A5 /* GTListItemsResult.swift in Sources */,
 				E510062D1CB719E800AC66A5 /* GTMeManager.swift in Sources */,
+				E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */,
 				E510062B1CB7173700AC66A5 /* GTStreamable.swift in Sources */,
 				E51007051CBD1FC300AC66A5 /* GTGetMostActiveUsersTask.swift in Sources */,
 				E51006B41CBBFE3B00AC66A5 /* GTGetFollowersActivityTask.swift in Sources */,
@@ -700,6 +707,7 @@
 				E51007321CBE714E00AC66A5 /* GTEditAvatarTask.swift in Sources */,
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
 				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,
+				E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */,
 				E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */,
 				E510069A1CBBAB6F00AC66A5 /* GTComment.swift in Sources */,
 				E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */,

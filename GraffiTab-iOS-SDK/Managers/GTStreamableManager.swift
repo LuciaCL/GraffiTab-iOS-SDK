@@ -30,4 +30,14 @@ public class GTStreamableManager: NSObject {
         let task = GTSearchStreamablesForHashtagTask()
         return task.search(query, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getLikers(streamableId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetLikersTask()
+        return task.getLikers(streamableId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func getComments(streamableId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetCommentsTask()
+        return task.getComments(streamableId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }
