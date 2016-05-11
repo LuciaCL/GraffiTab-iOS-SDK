@@ -48,6 +48,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", String(format: GTApiUserConstants.Streamables, userId), offset, limit)
     }
     
+    class func buildFollowersUrl(userId: Int) -> String {
+        return String(format: GTApiUserConstants.Followers, userId)
+    }
+    
     // MARK: - Me
     
     class func buildImportExternalProviderAvatarUrl(type: GTApiExternalProviderType) -> String {
@@ -114,6 +118,10 @@ class GTRequestBuilder: NSObject {
     
     class func buildGetLikersUrl(streamableId: Int, offset: Int, limit: Int) -> String {
         return String(format: "%@?offset=%li&limit=%li", String(format: GTApiStreamableConstants.Likes, streamableId), offset, limit)
+    }
+    
+    class func buildLikesUrl(streamableId: Int) -> String {
+        return String(format: GTApiStreamableConstants.Likes, streamableId)
     }
     
     class func buildGetCommentsUrl(streamableId: Int, offset: Int, limit: Int) -> String {

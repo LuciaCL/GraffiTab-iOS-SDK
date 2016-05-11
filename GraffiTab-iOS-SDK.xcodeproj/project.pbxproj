@@ -50,6 +50,10 @@
 		E5DAA88A1CE35EB4000CB2F4 /* GTDeleteCommentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA8891CE35EB4000CB2F4 /* GTDeleteCommentTask.swift */; };
 		E5DAA88C1CE35F73000CB2F4 /* GTEditCommentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA88B1CE35F73000CB2F4 /* GTEditCommentTask.swift */; };
 		E5DAA88E1CE3772D000CB2F4 /* GTSearchHashtagsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA88D1CE3772D000CB2F4 /* GTSearchHashtagsTask.swift */; };
+		E5DAA8A21CE39AB1000CB2F4 /* GTLikeStreamableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA8A11CE39AB1000CB2F4 /* GTLikeStreamableTask.swift */; };
+		E5DAA8A41CE39B5D000CB2F4 /* GTUnlikeStreamableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA8A31CE39B5D000CB2F4 /* GTUnlikeStreamableTask.swift */; };
+		E5DAA8A61CE3A29E000CB2F4 /* GTFollowTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA8A51CE3A29E000CB2F4 /* GTFollowTask.swift */; };
+		E5DAA8A81CE3A334000CB2F4 /* GTUnfollowTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA8A71CE3A334000CB2F4 /* GTUnfollowTask.swift */; };
 		E5DFDB941CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9C1CB2A4CF00BB3D27 /* GTConstants.swift */; };
 		E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */; };
@@ -112,6 +116,10 @@
 		E5DAA8891CE35EB4000CB2F4 /* GTDeleteCommentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDeleteCommentTask.swift; sourceTree = "<group>"; };
 		E5DAA88B1CE35F73000CB2F4 /* GTEditCommentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditCommentTask.swift; sourceTree = "<group>"; };
 		E5DAA88D1CE3772D000CB2F4 /* GTSearchHashtagsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSearchHashtagsTask.swift; sourceTree = "<group>"; };
+		E5DAA8A11CE39AB1000CB2F4 /* GTLikeStreamableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLikeStreamableTask.swift; sourceTree = "<group>"; };
+		E5DAA8A31CE39B5D000CB2F4 /* GTUnlikeStreamableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUnlikeStreamableTask.swift; sourceTree = "<group>"; };
+		E5DAA8A51CE3A29E000CB2F4 /* GTFollowTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFollowTask.swift; sourceTree = "<group>"; };
+		E5DAA8A71CE3A334000CB2F4 /* GTUnfollowTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUnfollowTask.swift; sourceTree = "<group>"; };
 		E5DFDB901CB2A28C00BB3D27 /* GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFDB931CB2A28C00BB3D27 /* GraffiTab-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GraffiTab-iOS-SDK.h"; sourceTree = "<group>"; };
 		E5DFDB951CB2A28C00BB3D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -334,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */,
+				E5DAA8A11CE39AB1000CB2F4 /* GTLikeStreamableTask.swift */,
+				E5DAA8A31CE39B5D000CB2F4 /* GTUnlikeStreamableTask.swift */,
 			);
 			path = Likes;
 			sourceTree = "<group>";
@@ -382,6 +392,8 @@
 		E51006101CB710B700AC66A5 /* Followers */ = {
 			isa = PBXGroup;
 			children = (
+				E5DAA8A51CE3A29E000CB2F4 /* GTFollowTask.swift */,
+				E5DAA8A71CE3A334000CB2F4 /* GTUnfollowTask.swift */,
 			);
 			path = Followers;
 			sourceTree = "<group>";
@@ -700,6 +712,7 @@
 				E51006B01CBBFC8600AC66A5 /* GTActivityContainer.swift in Sources */,
 				E5DFDBAF1CB2A4CF00BB3D27 /* GTConstants.swift in Sources */,
 				E5DFDBB71CB2A4CF00BB3D27 /* GTResponseObject.swift in Sources */,
+				E5DAA8A41CE39B5D000CB2F4 /* GTUnlikeStreamableTask.swift in Sources */,
 				E510071C1CBDB79300AC66A5 /* GTSendFeedbackTask.swift in Sources */,
 				E51007341CBE7EE500AC66A5 /* GTEditCoverTask.swift in Sources */,
 				E51006251CB710B700AC66A5 /* GTRegisterWithExternalProviderTask.swift in Sources */,
@@ -707,6 +720,7 @@
 				E510067C1CB7F0AC00AC66A5 /* GTGetNewestTask.swift in Sources */,
 				E51006241CB710B700AC66A5 /* GTRegisterTask.swift in Sources */,
 				E5DFDBBA1CB2A4CF00BB3D27 /* GTUtils.swift in Sources */,
+				E5DAA8A21CE39AB1000CB2F4 /* GTLikeStreamableTask.swift in Sources */,
 				E510072E1CBE6C0C00AC66A5 /* GTDeleteAvatarTask.swift in Sources */,
 				E51007241CBE461E00AC66A5 /* GTEditPasswordTask.swift in Sources */,
 				E5DAA88A1CE35EB4000CB2F4 /* GTDeleteCommentTask.swift in Sources */,
@@ -719,6 +733,7 @@
 				E510062B1CB7173700AC66A5 /* GTStreamable.swift in Sources */,
 				E51007051CBD1FC300AC66A5 /* GTGetMostActiveUsersTask.swift in Sources */,
 				E51006B41CBBFE3B00AC66A5 /* GTGetFollowersActivityTask.swift in Sources */,
+				E5DAA8A61CE3A29E000CB2F4 /* GTFollowTask.swift in Sources */,
 				E5DFDBB21CB2A4CF00BB3D27 /* GTLifecycleManager.swift in Sources */,
 				E51007321CBE714E00AC66A5 /* GTEditAvatarTask.swift in Sources */,
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
@@ -736,6 +751,7 @@
 				E51006EC1CBD156C00AC66A5 /* GTSearchUsersTask.swift in Sources */,
 				E558A89E1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift in Sources */,
 				E51007301CBE6CA700AC66A5 /* GTDeleteCoverTask.swift in Sources */,
+				E5DAA8A81CE3A334000CB2F4 /* GTUnfollowTask.swift in Sources */,
 				E51006211CB710B700AC66A5 /* GTLoginWithExternalProviderTask.swift in Sources */,
 				E510061E1CB710B700AC66A5 /* GTLinkDeviceTask.swift in Sources */,
 			);

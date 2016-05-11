@@ -55,4 +55,14 @@ public class GTUserManager: NSObject {
         let task = GTGetUserStreamablesTask()
         return task.getStreamables(userId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func follow(userId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTFollowTask()
+        return task.follow(userId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func unfollow(userId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTUnfollowTask()
+        return task.unfollow(userId, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }
