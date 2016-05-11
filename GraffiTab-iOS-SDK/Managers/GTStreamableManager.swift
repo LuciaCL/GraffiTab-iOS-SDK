@@ -40,4 +40,19 @@ public class GTStreamableManager: NSObject {
         let task = GTGetCommentsTask()
         return task.getComments(streamableId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func postComment(streamableId: Int, text: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTPostCommentTask()
+        return task.postComment(streamableId, text: text, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func deleteComment(streamableId: Int, commentId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTDeleteCommentTask()
+        return task.deleteComment(streamableId, commentId: commentId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func editComment(streamableId: Int, commentId: Int, text: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTEditCommentTask()
+        return task.editComment(streamableId, commentId: commentId, text: text, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

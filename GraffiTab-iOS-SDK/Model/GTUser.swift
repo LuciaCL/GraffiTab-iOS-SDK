@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-public class GTUser: Mappable {
+public class GTUser: NSObject, Mappable {
 
     public var id: Int?
     public var guid: String?
@@ -60,5 +60,17 @@ public class GTUser: Mappable {
     
     public func getMentionUsername() -> String {
         return String(format: "@%@", username!)
+    }
+    
+    override public func isEqual(object: AnyObject?) -> Bool {
+        if let object = object as? GTUser {
+            return id == object.id
+        } else {
+            return false
+        }
+    }
+    
+    override public var hash: Int {
+        return id!.hashValue
     }
 }

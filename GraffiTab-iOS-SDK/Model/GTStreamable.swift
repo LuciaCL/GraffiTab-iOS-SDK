@@ -13,7 +13,7 @@ public enum GTStreamableType: String {
     case GRAFFITI
 }
 
-public class GTStreamable: Mappable {
+public class GTStreamable: NSObject, Mappable {
 
     public var id: Int?
     public var user: GTUser?
@@ -56,5 +56,17 @@ public class GTStreamable: Mappable {
         likedByCurrentUser <- map["likedByCurrentUser"]
         likersCount <- map["likersCount"]
         commentsCount <- map["commentsCount"]
+    }
+    
+    override public func isEqual(object: AnyObject?) -> Bool {
+        if let object = object as? GTStreamable {
+            return id == object.id
+        } else {
+            return false
+        }
+    }
+    
+    override public var hash: Int {
+        return id!.hashValue
     }
 }

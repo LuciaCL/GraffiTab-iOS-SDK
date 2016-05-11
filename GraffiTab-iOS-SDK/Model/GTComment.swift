@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-public class GTComment: Mappable {
+public class GTComment: NSObject, Mappable {
 
     public var id: Int?
     public var streamable: GTStreamable?
@@ -32,5 +32,17 @@ public class GTComment: Mappable {
         text <- map["text"]
         createdOn <- (map["createdOn"], DateFormatterTransform(dateFormatter: dateFormatter))
         updatedOn <- (map["updatedOn"], DateFormatterTransform(dateFormatter: dateFormatter))
+    }
+    
+    override public func isEqual(object: AnyObject?) -> Bool {
+        if let object = object as? GTComment {
+            return id == object.id
+        } else {
+            return false
+        }
+    }
+    
+    override public var hash: Int {
+        return id!.hashValue
     }
 }
