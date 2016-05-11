@@ -108,6 +108,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@&offset=%li&limit=%li", String(format: GTApiStreamableConstants.SearchHashtag, query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!), offset, limit)
     }
     
+    class func buildSearchHashtagsUrl(query: String) -> String {
+        return String(format: GTApiStreamableConstants.SearchHashtags, query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!)
+    }
+    
     class func buildGetLikersUrl(streamableId: Int, offset: Int, limit: Int) -> String {
         return String(format: "%@?offset=%li&limit=%li", String(format: GTApiStreamableConstants.Likes, streamableId), offset, limit)
     }
