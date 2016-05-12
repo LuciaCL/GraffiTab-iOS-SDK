@@ -54,14 +54,6 @@ public class GTUser: NSObject, Mappable {
         streamablesCount <- map["streamablesCount"]
     }
     
-    public func getFullName() -> String {
-        return firstName! + " " + lastName!
-    }
-    
-    public func getMentionUsername() -> String {
-        return String(format: "@%@", username!)
-    }
-    
     override public func isEqual(object: AnyObject?) -> Bool {
         if let object = object as? GTUser {
             return id == object.id
