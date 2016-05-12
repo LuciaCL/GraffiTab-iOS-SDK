@@ -52,6 +52,14 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiUserConstants.Followers, userId)
     }
     
+    class func buildGetUserProfileUrl(userId: Int) -> String {
+        return String(format: GTApiUserConstants.Profile, userId)
+    }
+    
+    class func buildGetUserFullProfileUrl(userId: Int) -> String {
+        return String(format: GTApiUserConstants.FullProfile, userId)
+    }
+    
     // MARK: - Me
     
     class func buildImportExternalProviderAvatarUrl(type: GTApiExternalProviderType) -> String {
@@ -64,6 +72,10 @@ class GTRequestBuilder: NSObject {
     
     class func buildGetMeUrl() -> String {
         return GTApiMeConstants.Me
+    }
+    
+    class func buildGetMyFullProfileUrl() -> String {
+        return GTApiMeConstants.MyFullProfile
     }
     
     class func buildGetFeedUrl(offset: Int, limit: Int) -> String {

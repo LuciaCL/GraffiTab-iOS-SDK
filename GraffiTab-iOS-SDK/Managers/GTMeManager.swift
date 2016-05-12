@@ -26,6 +26,11 @@ public class GTMeManager: NSObject {
         return task.getMe(successBlock, failureBlock: failureBlock)
     }
     
+    public class func getMyFullProfile(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetMyFullProfileTask()
+        return task.getMe(successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getFeed(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetFeedTask()
         return task.getFeed(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)

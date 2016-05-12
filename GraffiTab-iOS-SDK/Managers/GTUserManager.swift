@@ -65,4 +65,14 @@ public class GTUserManager: NSObject {
         let task = GTUnfollowTask()
         return task.unfollow(userId, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getUserProfile(userId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUserProfileTask()
+        return task.getProfile(userId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func getUserFullProfile(userId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUserFullProfileTask()
+        return task.getProfile(userId, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }
