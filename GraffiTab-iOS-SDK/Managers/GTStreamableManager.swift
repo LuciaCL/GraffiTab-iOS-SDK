@@ -51,6 +51,11 @@ public class GTStreamableManager: NSObject {
         return task.unlike(streamableId, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func flag(streamableId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTFlagStreamableTask()
+        return task.flag(streamableId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getComments(streamableId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetCommentsTask()
         return task.getComments(streamableId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
