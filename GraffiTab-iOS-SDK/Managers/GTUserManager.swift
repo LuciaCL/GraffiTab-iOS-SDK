@@ -66,6 +66,16 @@ public class GTUserManager: NSObject {
         return task.unfollow(userId, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func getFollowers(userId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetFollowersTask()
+        return task.getFollowers(userId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func getFollowing(userId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetFollowingTask()
+        return task.getFollowing(userId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getUserProfile(userId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetUserProfileTask()
         return task.getProfile(userId, successBlock: successBlock, failureBlock: failureBlock)

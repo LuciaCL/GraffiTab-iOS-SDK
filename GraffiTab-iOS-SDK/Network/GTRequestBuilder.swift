@@ -52,6 +52,14 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiUserConstants.Followers, userId)
     }
     
+    class func buildGetFollowersUrl(userId: Int, offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", String(format: GTApiUserConstants.Followers, userId), offset, limit)
+    }
+    
+    class func buildGetFollowingUrl(userId: Int, offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", String(format: GTApiUserConstants.Following, userId), offset, limit)
+    }
+    
     class func buildGetUserProfileUrl(userId: Int) -> String {
         return String(format: GTApiUserConstants.Profile, userId)
     }
