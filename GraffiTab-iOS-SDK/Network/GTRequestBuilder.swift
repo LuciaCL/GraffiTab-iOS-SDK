@@ -160,6 +160,10 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiStreamableConstants.Flag, streamableId)
     }
     
+    class func buildGetStreamableUrl(streamableId: Int) -> String {
+        return String(format: GTApiStreamableConstants.Streamable, streamableId)
+    }
+    
     class func buildGetCommentsUrl(streamableId: Int, offset: Int, limit: Int) -> String {
         return String(format: "%@?offset=%li&limit=%li", String(format: GTApiStreamableConstants.Comments, streamableId), offset, limit)
     }
