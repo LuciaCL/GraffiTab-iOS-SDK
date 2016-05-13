@@ -21,6 +21,16 @@ public class GTMeManager: NSObject {
         return task.linkDevice(token, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func linkExternalProvider(externalProviderType: GTApiExternalProviderType, externalId: String, accessToken: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTLinkExternalProviderTask()
+        return task.link(externalProviderType, externalId: externalId, accessToken: accessToken, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func unlinkExternalProvider(externalProviderType: GTApiExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTUnlinkExternalProviderTask()
+        return task.unlink(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getMe(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetMeTask()
         return task.getMe(successBlock, failureBlock: failureBlock)

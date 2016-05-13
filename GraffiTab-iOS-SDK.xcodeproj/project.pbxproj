@@ -45,6 +45,8 @@
 		E51007361CBE82A700AC66A5 /* GTEditProfileTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007351CBE82A700AC66A5 /* GTEditProfileTask.swift */; };
 		E52DC73B1CE54F0E00375828 /* GTGetUserProfileByUsernameTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC73A1CE54F0E00375828 /* GTGetUserProfileByUsernameTask.swift */; };
 		E52DC73D1CE5502E00375828 /* GTGetUserFullProfileByUsernameTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC73C1CE5502E00375828 /* GTGetUserFullProfileByUsernameTask.swift */; };
+		E52DC7421CE5550A00375828 /* GTLinkExternalProviderTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC7411CE5550A00375828 /* GTLinkExternalProviderTask.swift */; };
+		E52DC7441CE555D700375828 /* GTUnlinkExternalProfiverTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC7431CE555D700375828 /* GTUnlinkExternalProfiverTask.swift */; };
 		E558A89E1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */; };
 		E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */; };
 		E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */; };
@@ -116,6 +118,8 @@
 		E51007351CBE82A700AC66A5 /* GTEditProfileTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditProfileTask.swift; sourceTree = "<group>"; };
 		E52DC73A1CE54F0E00375828 /* GTGetUserProfileByUsernameTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserProfileByUsernameTask.swift; sourceTree = "<group>"; };
 		E52DC73C1CE5502E00375828 /* GTGetUserFullProfileByUsernameTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserFullProfileByUsernameTask.swift; sourceTree = "<group>"; };
+		E52DC7411CE5550A00375828 /* GTLinkExternalProviderTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLinkExternalProviderTask.swift; sourceTree = "<group>"; };
+		E52DC7431CE555D700375828 /* GTUnlinkExternalProfiverTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUnlinkExternalProfiverTask.swift; sourceTree = "<group>"; };
 		E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserStreamablesTask.swift; sourceTree = "<group>"; };
 		E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetLikersTask.swift; sourceTree = "<group>"; };
 		E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetCommentsTask.swift; sourceTree = "<group>"; };
@@ -201,7 +205,6 @@
 				E51005FD1CB710B700AC66A5 /* External providers */,
 				E51005FE1CB710B700AC66A5 /* Feed */,
 				E51005FF1CB710B700AC66A5 /* Followers */,
-				E51006001CB710B700AC66A5 /* Likes */,
 				E51006011CB710B700AC66A5 /* Locations */,
 				E51006021CB710B700AC66A5 /* Notifications */,
 				E51006031CB710B700AC66A5 /* Private streamables */,
@@ -237,6 +240,8 @@
 		E51005FD1CB710B700AC66A5 /* External providers */ = {
 			isa = PBXGroup;
 			children = (
+				E52DC7411CE5550A00375828 /* GTLinkExternalProviderTask.swift */,
+				E52DC7431CE555D700375828 /* GTUnlinkExternalProfiverTask.swift */,
 			);
 			path = "External providers";
 			sourceTree = "<group>";
@@ -255,13 +260,6 @@
 				E51006B31CBBFE3B00AC66A5 /* GTGetFollowersActivityTask.swift */,
 			);
 			path = Followers;
-			sourceTree = "<group>";
-		};
-		E51006001CB710B700AC66A5 /* Likes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Likes;
 			sourceTree = "<group>";
 		};
 		E51006011CB710B700AC66A5 /* Locations */ = {
@@ -766,6 +764,8 @@
 				E51006981CBBAA4C00AC66A5 /* GTNotification.swift in Sources */,
 				E510070B1CBD3FD800AC66A5 /* GTGetUnseenNotificationsCountTask.swift in Sources */,
 				E51006961CBBA9BD00AC66A5 /* GTGetNotificationsTask.swift in Sources */,
+				E52DC7441CE555D700375828 /* GTUnlinkExternalProfiverTask.swift in Sources */,
+				E52DC7421CE5550A00375828 /* GTLinkExternalProviderTask.swift in Sources */,
 				E51006741CB7E8A300AC66A5 /* GTGetPopularTask.swift in Sources */,
 				E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */,
 				E51006EC1CBD156C00AC66A5 /* GTSearchUsersTask.swift in Sources */,

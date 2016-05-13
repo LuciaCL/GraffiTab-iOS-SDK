@@ -74,6 +74,10 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiMeConstants.ImportAvatar, "/" + type.rawValue)
     }
     
+    class func buildExternalProviderUrl() -> String {
+        return GTApiMeConstants.ExternalProviders
+    }
+    
     class func buildDeviceUrl() -> String {
         return GTApiMeConstants.Devices
     }
