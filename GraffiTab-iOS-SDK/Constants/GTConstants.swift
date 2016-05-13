@@ -7,7 +7,7 @@
 //
 
 public struct GTConstants {
-    public static let MaxItems = 10
+    public static let MaxItems = 15
     public static let NumberOfItemsInGroup = 5
 }
 
