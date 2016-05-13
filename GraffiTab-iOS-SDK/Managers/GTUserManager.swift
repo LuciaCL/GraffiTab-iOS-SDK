@@ -75,4 +75,14 @@ public class GTUserManager: NSObject {
         let task = GTGetUserFullProfileTask()
         return task.getProfile(userId, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getUserProfileByUsername(username: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUserProfileByUsernameTask()
+        return task.getProfile(username, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func getUserFullProfileByUsername(username: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUserFullProfileByUsernameTask()
+        return task.getProfile(username, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

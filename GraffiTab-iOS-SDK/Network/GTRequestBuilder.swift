@@ -60,6 +60,14 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiUserConstants.FullProfile, userId)
     }
     
+    class func buildGetUserProfileByUsernameUrl(username: String) -> String {
+        return String(format: GTApiUserConstants.ProfileByUsername, username)
+    }
+    
+    class func buildGetUserFullProfileByUsernameUrl(username: String) -> String {
+        return String(format: GTApiUserConstants.FullProfileByUsername, username)
+    }
+    
     // MARK: - Me
     
     class func buildImportExternalProviderAvatarUrl(type: GTApiExternalProviderType) -> String {
