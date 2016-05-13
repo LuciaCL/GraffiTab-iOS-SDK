@@ -46,6 +46,21 @@ public class GTMeManager: NSObject {
         return task.getFeed(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func getPrivateStreamables(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetPrivateStreamablesTask()
+        return task.getPrivateStreamables(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func markStreamablePublic(streamableId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTMarkStreamablePublicTask()
+        return task.makePublic(streamableId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func markStreamablePrivate(streamableId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTMarkStreamablePrivateTask()
+        return task.makePrivate(streamableId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getNotifications(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetNotificationsTask()
         return task.getNotifications(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)

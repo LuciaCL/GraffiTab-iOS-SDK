@@ -94,6 +94,14 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.Feed, offset, limit)
     }
     
+    class func buildGetPrivateStreamablesUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.Private, offset, limit)
+    }
+    
+    class func buildPrivateStreamableUrl(streamableId: Int) -> String {
+        return String(format: GTApiMeConstants.PrivateStreamable, streamableId)
+    }
+    
     class func buildGetNotificationsUrl(offset: Int, limit: Int) -> String {
         return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.Notifications, offset, limit)
     }
