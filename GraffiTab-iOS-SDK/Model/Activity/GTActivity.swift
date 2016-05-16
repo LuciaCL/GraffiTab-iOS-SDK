@@ -35,10 +35,7 @@ public class GTActivity: Mappable {
     }
     
     public func mapping(map: Map) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
-        
-        date <- (map["date"], DateFormatterTransform(dateFormatter: dateFormatter))
+        date <- (map["date"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
         type <- map["type"]
         followed <- map["followed"]
         follower <- map["follower"]

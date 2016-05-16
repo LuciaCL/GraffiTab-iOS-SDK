@@ -21,11 +21,8 @@ public class GTActivityContainer: Mappable {
     }
     
     public func mapping(map: Map) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
-        
         user <- map["user"]
-        date <- (map["date"], DateFormatterTransform(dateFormatter: dateFormatter))
+        date <- (map["date"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
         type <- map["type"]
         activities <- map["activities"]
     }

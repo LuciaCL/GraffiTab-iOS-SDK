@@ -37,13 +37,10 @@ public class GTStreamable: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
-        
         id <- map["id"]
         user <- map["user"]
-        createdOn <- (map["createdOn"], DateFormatterTransform(dateFormatter: dateFormatter))
-        updatedOn <- (map["updatedOn"], DateFormatterTransform(dateFormatter: dateFormatter))
+        createdOn <- (map["createdOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
+        updatedOn <- (map["updatedOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
         type <- map["type"]
         isPrivate <- map["isPrivate"]
         isFlagged <- map["isFlagged"]

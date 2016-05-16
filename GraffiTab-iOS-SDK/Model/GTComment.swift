@@ -23,15 +23,12 @@ public class GTComment: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
-        
         id <- map["id"]
         streamable <- map["streamable"]
         user <- map["user"]
         text <- map["text"]
-        createdOn <- (map["createdOn"], DateFormatterTransform(dateFormatter: dateFormatter))
-        updatedOn <- (map["updatedOn"], DateFormatterTransform(dateFormatter: dateFormatter))
+        createdOn <- (map["createdOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
+        updatedOn <- (map["updatedOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
     }
     
     override public func isEqual(object: AnyObject?) -> Bool {

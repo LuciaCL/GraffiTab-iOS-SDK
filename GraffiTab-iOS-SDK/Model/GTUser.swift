@@ -33,17 +33,14 @@ public class GTUser: NSObject, Mappable {
     }
     
     public func mapping(map: Map) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
-        
         id <- map["id"]
         guid <- map["guid"]
         username <- map["username"]
         firstName <- map["firstName"]
         lastName <- map["lastName"]
         email <- map["email"]
-        createdOn <- (map["createdOn"], DateFormatterTransform(dateFormatter: dateFormatter))
-        updatedOn <- (map["updatedOn"], DateFormatterTransform(dateFormatter: dateFormatter))
+        createdOn <- (map["createdOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
+        updatedOn <- (map["updatedOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
         about <- map["about"]
         website <- map["website"]
         avatar <- map["avatar"]

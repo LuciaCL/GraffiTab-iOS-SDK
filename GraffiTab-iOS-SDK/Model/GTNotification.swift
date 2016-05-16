@@ -37,11 +37,8 @@ public class GTNotification: Mappable {
     }
     
     public func mapping(map: Map) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = GTApiDateConstants.InputFormat
-        
         isRead <- map["isRead"]
-        date <- (map["date"], DateFormatterTransform(dateFormatter: dateFormatter))
+        date <- (map["date"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
         type <- map["type"]
         follower <- map["follower"]
         liker <- map["liker"]
