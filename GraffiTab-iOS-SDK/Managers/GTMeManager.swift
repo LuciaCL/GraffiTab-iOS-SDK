@@ -105,4 +105,9 @@ public class GTMeManager: NSObject {
         let task = GTEditProfileTask()
         task.edit(firstName, lastName: lastName, email: email, about: about, website: website, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func createGraffiti(image: UIImage, latitude: Double, longitude: Double, pitch: CGFloat, roll: CGFloat, yaw: CGFloat, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTCreateStreamableGraffitiTask()
+        task.create(image, pitch: pitch, roll: roll, yaw: yaw, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

@@ -138,6 +138,10 @@ class GTRequestBuilder: NSObject {
         return GTApiMeConstants.Cover
     }
     
+    class func buildStreamablesUrl() -> String {
+        return GTApiMeConstants.Graffiti
+    }
+    
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B0C73954E564BF6D32692AB9 /* Pods_GraffiTab_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AE7CCDE905772CF22D3706 /* Pods_GraffiTab_iOS_SDK.framework */; };
+		E50564DB1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50564DA1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift */; };
 		E510061E1CB710B700AC66A5 /* GTLinkDeviceTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51005FA1CB710B700AC66A5 /* GTLinkDeviceTask.swift */; };
 		E510061F1CB710B700AC66A5 /* GTImportExternalProviderAvatarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51005FC1CB710B700AC66A5 /* GTImportExternalProviderAvatarTask.swift */; };
 		E51006201CB710B700AC66A5 /* GTLoginTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006131CB710B700AC66A5 /* GTLoginTask.swift */; };
@@ -89,6 +90,7 @@
 		39AE7CCDE905772CF22D3706 /* Pods_GraffiTab_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraffiTab_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B4B9EB572F11F188A32B91 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		CFF93A12448AB18B3A9BBE8D /* Pods-GraffiTab_iOS_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraffiTab_iOS_SDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraffiTab_iOS_SDK/Pods-GraffiTab_iOS_SDK.release.xcconfig"; sourceTree = "<group>"; };
+		E50564DA1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCreateStreamableGraffitiTask.swift; sourceTree = "<group>"; };
 		E51005FA1CB710B700AC66A5 /* GTLinkDeviceTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLinkDeviceTask.swift; sourceTree = "<group>"; };
 		E51005FC1CB710B700AC66A5 /* GTImportExternalProviderAvatarTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTImportExternalProviderAvatarTask.swift; sourceTree = "<group>"; };
 		E51006131CB710B700AC66A5 /* GTLoginTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLoginTask.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		E51006061CB710B700AC66A5 /* Streamables */ = {
 			isa = PBXGroup;
 			children = (
+				E50564DA1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift */,
 			);
 			path = Streamables;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 				E51007241CBE461E00AC66A5 /* GTEditPasswordTask.swift in Sources */,
 				E5DAA88A1CE35EB4000CB2F4 /* GTDeleteCommentTask.swift in Sources */,
 				E5DFDBB61CB2A4CF00BB3D27 /* GTRequestBuilder.swift in Sources */,
+				E50564DB1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift in Sources */,
 				E51006471CB726F200AC66A5 /* GTGetMeTask.swift in Sources */,
 				E510071E1CBDB84C00AC66A5 /* GTFeedbackManager.swift in Sources */,
 				E51006291CB713EB00AC66A5 /* GTListItemsResult.swift in Sources */,

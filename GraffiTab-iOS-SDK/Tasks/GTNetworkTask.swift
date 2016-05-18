@@ -25,7 +25,7 @@ class GTNetworkTask: NSObject {
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                print("DEBUG: Received response - \(response)")
+                print("DEBUG: Received response for request \(URLString) - \(response)")
                 completionHandler(response)
             })
     }
@@ -36,9 +36,36 @@ class GTNetworkTask: NSObject {
         Alamofire.upload(method, URLString, headers: headers, data: data)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                print("DEBUG: Received response - \(response)")
+                print("DEBUG: Received response for request \(URLString) - \(response)")
                 completionHandler(response)
             })
+    }
+    
+    func uploadGraffitiRequest(method: Alamofire.Method, URLString: URLStringConvertible, graffiti: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
+        print("DEBUG: Sending request \(method) - \(URLString)")
+
+        do {
+            let jsonData = try NSJSONSerialization.dataWithJSONObject(properties!, options: NSJSONWritingOptions.PrettyPrinted)
+            
+            Alamofire.upload(method, URLString, multipartFormData: { (multipartFormData) in
+                multipartFormData.appendBodyPart(data: graffiti, name: "file", fileName: "file", mimeType: "image/png")
+                multipartFormData.appendBodyPart(data: jsonData, name: "properties", fileName: "properties", mimeType: "application/json")
+            }) { (encodingResult) in
+                switch encodingResult {
+                case .Success(let upload, _, _):
+                    upload
+                        .validate()
+                        .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+                            print("DEBUG: Received response for request \(URLString) - \(response)")
+                            completionHandler(response)
+                        })
+                case .Failure(_):
+                    assert(false, "Could not encode multipart data")
+                }
+            }
+        } catch (_) {
+            assert(false, "Invalid JSON - Could not serialize")
+        }
     }
     
     // MARK: - Response parsing
