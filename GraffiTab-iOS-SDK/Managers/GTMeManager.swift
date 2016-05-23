@@ -120,4 +120,24 @@ public class GTMeManager: NSObject {
         let task = GTEditStreamableGraffitiTask()
         task.edit(streamableId, image: image, pitch: pitch, roll: roll, yaw: yaw, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func createLocation(address: String, latitude: Double, longitude: Double, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTCreateLocationTask()
+        task.create(address, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func getLocations(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTGetLocationsTask()
+        task.getLocations(successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func deleteLocation(locationId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTDeleteLocationTask()
+        task.delete(locationId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func editLocation(locationId: Int, address: String, latitude: Double, longitude: Double, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+        let task = GTEditLocationTask()
+        task.edit(locationId, address: address, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

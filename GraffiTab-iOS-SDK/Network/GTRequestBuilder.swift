@@ -150,6 +150,14 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiMeConstants.Streamable, streamableId)
     }
     
+    class func buildLocationsUrl() -> String {
+        return GTApiMeConstants.Locations
+    }
+    
+    class func buildLocationUrl(locationId: Int) -> String {
+        return String(format: GTApiMeConstants.Location, locationId)
+    }
+    
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {
