@@ -61,6 +61,11 @@ public class GTMeManager: NSObject {
         return task.makePrivate(streamableId, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func deleteStreamable(streamableId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTDeleteStreamableTask()
+        return task.delete(streamableId, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getNotifications(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetNotificationsTask()
         return task.getNotifications(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)

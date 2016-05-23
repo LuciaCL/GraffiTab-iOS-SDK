@@ -56,6 +56,7 @@
 		E52DC7501CE55BF700375828 /* GTGetFollowersTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC74F1CE55BF700375828 /* GTGetFollowersTask.swift */; };
 		E52DC7521CE55C7400375828 /* GTGetFollowingTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC7511CE55C7400375828 /* GTGetFollowingTask.swift */; };
 		E52DC7541CE55D4400375828 /* GTGetUserLikedStreamablesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52DC7531CE55D4400375828 /* GTGetUserLikedStreamablesTask.swift */; };
+		E55452CB1CF28D590076CEC9 /* GTDeleteStreamableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55452CA1CF28D590076CEC9 /* GTDeleteStreamableTask.swift */; };
 		E558A89E1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */; };
 		E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */; };
 		E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */; };
@@ -138,6 +139,7 @@
 		E52DC74F1CE55BF700375828 /* GTGetFollowersTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetFollowersTask.swift; sourceTree = "<group>"; };
 		E52DC7511CE55C7400375828 /* GTGetFollowingTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetFollowingTask.swift; sourceTree = "<group>"; };
 		E52DC7531CE55D4400375828 /* GTGetUserLikedStreamablesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserLikedStreamablesTask.swift; sourceTree = "<group>"; };
+		E55452CA1CF28D590076CEC9 /* GTDeleteStreamableTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDeleteStreamableTask.swift; sourceTree = "<group>"; };
 		E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserStreamablesTask.swift; sourceTree = "<group>"; };
 		E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetLikersTask.swift; sourceTree = "<group>"; };
 		E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetCommentsTask.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				E50564DA1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift */,
+				E55452CA1CF28D590076CEC9 /* GTDeleteStreamableTask.swift */,
 			);
 			path = Streamables;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				E52DC7501CE55BF700375828 /* GTGetFollowersTask.swift in Sources */,
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
 				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,
+				E55452CB1CF28D590076CEC9 /* GTDeleteStreamableTask.swift in Sources */,
 				E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */,
 				E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */,
 				E510069A1CBBAB6F00AC66A5 /* GTComment.swift in Sources */,
