@@ -1,8 +1,8 @@
 //
-//  GTCreateStreamableGraffitiTask.swift
+//  GTEditStreamableGraffitiTask.swift
 //  GraffiTab-iOS-SDK
 //
-//  Created by Georgi Christov on 18/05/2016.
+//  Created by Georgi Christov on 23/05/2016.
 //  Copyright © 2016 GraffiTab. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class GTCreateStreamableGraffitiTask: GTNetworkTask {
+class GTEditStreamableGraffitiTask: GTNetworkTask {
     
-    func create(image: UIImage, pitch: CGFloat, roll: CGFloat, yaw: CGFloat, latitude: Double, longitude: Double, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+    func edit(streamableId: Int, image: UIImage, pitch: CGFloat, roll: CGFloat, yaw: CGFloat, latitude: Double, longitude: Double, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
         self.sBlock = successBlock
         self.fBlock = failureBlock
         
-        let url = GTRequestBuilder.buildStreamablesGraffitiUrl()
+        let url = GTRequestBuilder.buildStreamablesGraffitUrl(streamableId)
         
         // Process image before upload.
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
