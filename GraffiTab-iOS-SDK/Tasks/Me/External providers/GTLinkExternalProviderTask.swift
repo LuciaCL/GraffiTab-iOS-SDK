@@ -38,4 +38,10 @@ class GTLinkExternalProviderTask: GTNetworkTask {
             }
         })
     }
+    
+    override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.ExternalProviderLinked, object: nil)
+        
+        return super.parseJSONSuccessObject(JSON)
+    }
 }

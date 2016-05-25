@@ -50,6 +50,9 @@ class GTCreateStreamableGraffitiTask: GTNetworkTask {
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let streamable = Mapper<GTStreamable>().map(JSON["streamable"])
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.StreamableCreated, object: nil, userInfo: ["streamable" : streamable!])
+        
         return streamable!;
     }
 }

@@ -38,4 +38,10 @@ class GTSendFeedbackTask: GTNetworkTask {
             }
         })
     }
+    
+    override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.FeedbackSent, object: nil)
+        
+        return super.parseJSONSuccessObject(JSON)
+    }
 }

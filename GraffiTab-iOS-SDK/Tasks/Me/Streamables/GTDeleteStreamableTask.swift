@@ -13,9 +13,13 @@ import ObjectMapper
 
 class GTDeleteStreamableTask : GTNetworkTask {
     
+    var streamableId: Int?
+    
     func delete(streamableId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
+        
+        self.streamableId = streamableId
         
         let url = GTRequestBuilder.buildStreamableUrl(streamableId)
         
@@ -34,5 +38,11 @@ class GTDeleteStreamableTask : GTNetworkTask {
                 self.parseJSONSuccess(resp!)
             }
         })
+    }
+    
+    override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.StreamableChanged, object: nil, userInfo: ["streamableId" : streamableId!])
+        
+        return super.parseJSONSuccessObject(JSON)!
     }
 }

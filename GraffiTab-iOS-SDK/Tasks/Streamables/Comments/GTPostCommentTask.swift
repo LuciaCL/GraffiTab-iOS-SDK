@@ -42,6 +42,8 @@ class GTPostCommentTask : GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let item = Mapper<GTComment>().map(JSON["comment"])
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.CommentPosted, object: nil, userInfo: ["comment" : item!])
+        
         return item!
     }
 }

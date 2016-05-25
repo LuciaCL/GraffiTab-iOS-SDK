@@ -41,6 +41,8 @@ class GTDeleteCoverTask: GTNetworkTask {
         user!.cover = nil
         GTSettings.sharedInstance.user = user
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserCoverChanged, object: nil)
+        
         return user!;
     }
 }

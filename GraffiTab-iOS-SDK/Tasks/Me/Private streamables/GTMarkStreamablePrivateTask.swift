@@ -39,6 +39,8 @@ class GTMarkStreamablePrivateTask : GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let item = Mapper<GTStreamable>().map(JSON["streamable"])
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.StreamablePrivacyChanged, object: nil, userInfo: ["streamable" : item!])
+        
         return item!
     }
 }

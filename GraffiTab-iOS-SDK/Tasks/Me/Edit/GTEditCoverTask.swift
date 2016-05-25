@@ -52,6 +52,8 @@ class GTEditCoverTask: GTNetworkTask {
         user!.cover = asset
         GTSettings.sharedInstance.user = user
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserCoverChanged, object: nil)
+        
         return asset!;
     }
 }

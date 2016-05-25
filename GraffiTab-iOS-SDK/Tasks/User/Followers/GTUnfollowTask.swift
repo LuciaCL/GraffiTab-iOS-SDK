@@ -39,6 +39,8 @@ class GTUnfollowTask : GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let item = Mapper<GTUser>().map(JSON["user"])
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserFollowersChanged, object: nil, userInfo: ["user" : item!])
+        
         return item!
     }
 }

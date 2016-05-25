@@ -13,9 +13,13 @@ import ObjectMapper
 
 class GTDeleteCommentTask : GTNetworkTask {
     
+    var commentId: Int?
+    
     func deleteComment(streamableId: Int, commentId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
+        
+        self.commentId = commentId
         
         let url = GTRequestBuilder.buildEditCommentUrl(streamableId, commentId: commentId)
         
@@ -34,5 +38,11 @@ class GTDeleteCommentTask : GTNetworkTask {
                 self.parseJSONSuccess(resp!)
             }
         })
+    }
+    
+    override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.CommentChanged, object: nil, userInfo: ["commentId" : commentId!])
+        
+        return super.parseJSONSuccessObject(JSON)!
     }
 }

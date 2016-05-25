@@ -39,6 +39,8 @@ class GTUnlikeStreamableTask : GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let item = Mapper<GTStreamable>().map(JSON["streamable"])
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.StreamableLikesChanged, object: nil, userInfo: ["streamable" : item!])
+        
         return item!
     }
 }

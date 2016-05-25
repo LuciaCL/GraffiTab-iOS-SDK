@@ -52,6 +52,8 @@ class GTEditAvatarTask: GTNetworkTask {
         user!.avatar = asset
         GTSettings.sharedInstance.user = user
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil)
+        
         return asset!;
     }
 }

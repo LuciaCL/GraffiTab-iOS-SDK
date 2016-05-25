@@ -42,6 +42,8 @@ class GTEditLocationTask : GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let item = Mapper<GTLocation>().map(JSON["location"])
         
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.LocationChanged, object: nil, userInfo: ["location" : item!])
+        
         return item!
     }
 }

@@ -13,9 +13,13 @@ import ObjectMapper
 
 class GTDeleteLocationTask : GTNetworkTask {
     
+    var locationId: Int?
+    
     func delete(locationId: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
+    
+        self.locationId = locationId
         
         let url = GTRequestBuilder.buildLocationUrl(locationId)
         
@@ -34,5 +38,11 @@ class GTDeleteLocationTask : GTNetworkTask {
                 self.parseJSONSuccess(resp!)
             }
         })
+    }
+    
+    override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.LocationChanged, object: nil, userInfo: ["locationId" : locationId!])
+        
+        return super.parseJSONSuccessObject(JSON)!
     }
 }
