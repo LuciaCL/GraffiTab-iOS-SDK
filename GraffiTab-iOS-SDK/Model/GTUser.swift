@@ -51,6 +51,25 @@ public class GTUser: NSObject, Mappable {
         streamablesCount <- map["streamablesCount"]
     }
     
+    public func softCopy(other: GTUser) {
+        self.id = other.id
+        self.guid = other.guid
+        self.username = other.username
+        self.firstName = other.firstName
+        self.lastName = other.lastName
+        self.email = other.email
+        self.createdOn = other.createdOn
+        self.updatedOn = other.updatedOn
+        self.about = other.about
+        self.website = other.website
+        self.avatar?.softCopy(other.avatar!)
+        self.cover?.softCopy(other.cover!)
+        self.followedByCurrentUser = other.followedByCurrentUser
+        self.followersCount = other.followersCount
+        self.followingCount = other.followingCount
+        self.streamablesCount = other.streamablesCount
+    }
+    
     override public func isEqual(object: AnyObject?) -> Bool {
         if let object = object as? GTUser {
             return id == object.id

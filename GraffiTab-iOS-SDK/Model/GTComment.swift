@@ -31,6 +31,15 @@ public class GTComment: NSObject, Mappable {
         updatedOn <- (map["updatedOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
     }
     
+    public func softCopy(other: GTComment) {
+        self.id = other.id
+        self.streamable?.softCopy(other.streamable!)
+        self.user?.softCopy(other.user!)
+        self.text = other.text
+        self.createdOn = other.createdOn
+        self.updatedOn = other.updatedOn
+    }
+    
     override public func isEqual(object: AnyObject?) -> Bool {
         if let object = object as? GTComment {
             return id == object.id

@@ -55,6 +55,25 @@ public class GTStreamable: NSObject, Mappable {
         commentsCount <- map["commentsCount"]
     }
     
+    public func softCopy(other: GTStreamable) {
+        self.id = other.id
+        self.user?.softCopy(other.user!)
+        self.createdOn = other.createdOn
+        self.updatedOn = other.updatedOn
+        self.type = other.type
+        self.isPrivate = other.isPrivate
+        self.isFlagged = other.isFlagged
+        self.asset?.softCopy(other.asset!)
+        self.latitude = other.latitude
+        self.longitude = other.longitude
+        self.roll = other.roll
+        self.yaw = other.yaw
+        self.pitch = other.pitch
+        self.likedByCurrentUser = other.likedByCurrentUser
+        self.likersCount = other.likersCount
+        self.commentsCount = other.commentsCount
+    }
+    
     override public func isEqual(object: AnyObject?) -> Bool {
         if let object = object as? GTStreamable {
             return id == object.id

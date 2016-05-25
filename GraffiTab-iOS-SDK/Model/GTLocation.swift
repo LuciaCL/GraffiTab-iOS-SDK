@@ -31,6 +31,15 @@ public class GTLocation: NSObject, Mappable {
         updatedOn <- (map["updatedOn"], CustomDateFormatTransform(formatString: GTApiDateConstants.InputFormat))
     }
     
+    public func softCopy(other: GTLocation) {
+        self.id = other.id
+        self.address = other.address
+        self.latitude = other.latitude
+        self.longitude = other.longitude
+        self.createdOn = other.createdOn
+        self.updatedOn = other.updatedOn
+    }
+    
     override public func isEqual(object: AnyObject?) -> Bool {
         if let object = object as? GTLocation {
             return id == object.id
