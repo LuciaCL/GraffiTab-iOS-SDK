@@ -50,19 +50,4 @@ public class GTNotification: Mappable {
         mentionedStreamable <- map["mentionedStreamable"]
         mentionedComment <- map["mentionedComment"]
     }
-    
-    public func softCopy(other: GTNotification) {
-        self.isRead = other.isRead
-        self.date = other.date
-        self.type = other.type
-        self.follower?.softCopy(other.follower!)
-        self.liker?.softCopy(other.liker!)
-        self.likedStreamable?.softCopy(other.likedStreamable!)
-        self.commenter?.softCopy(other.commenter!)
-        self.commentedStreamable?.softCopy(other.commentedStreamable!)
-        self.comment?.softCopy(other.comment!)
-        self.mentioner?.softCopy(other.mentioner!)
-        self.mentionedStreamable?.softCopy(other.mentionedStreamable!)
-        self.mentionedComment?.softCopy(other.mentionedComment!)
-    }
 }

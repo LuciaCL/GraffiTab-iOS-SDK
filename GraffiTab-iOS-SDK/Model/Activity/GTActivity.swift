@@ -47,18 +47,4 @@ public class GTActivity: Mappable {
         creator <- map["creator"]
         createdStreamable <- map["createdStreamable"]
     }
-    
-    public func softCopy(other: GTActivity) {
-        self.date = other.date
-        self.type = other.type
-        self.followed?.softCopy(other.followed!)
-        self.follower?.softCopy(other.follower!)
-        self.liker?.softCopy(other.liker!)
-        self.likedStreamable?.softCopy(other.likedStreamable!)
-        self.commenter?.softCopy(other.commenter!)
-        self.commentedStreamable?.softCopy(other.commentedStreamable!)
-        self.comment?.softCopy(other.comment!)
-        self.creator?.softCopy(other.creator!)
-        self.createdStreamable?.softCopy(other.createdStreamable!)
-    }
 }

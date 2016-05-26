@@ -62,8 +62,19 @@ public class GTUser: NSObject, Mappable {
         self.updatedOn = other.updatedOn
         self.about = other.about
         self.website = other.website
-        self.avatar?.softCopy(other.avatar!)
+        if other.avatar != nil {
+            self.avatar?.softCopy(other.avatar!)
+        }
+        else {
+            self.avatar = nil
+        }
         self.cover?.softCopy(other.cover!)
+        if other.cover != nil {
+            self.cover?.softCopy(other.cover!)
+        }
+        else {
+            self.cover = nil
+        }
         self.followedByCurrentUser = other.followedByCurrentUser
         self.followersCount = other.followersCount
         self.followingCount = other.followingCount
