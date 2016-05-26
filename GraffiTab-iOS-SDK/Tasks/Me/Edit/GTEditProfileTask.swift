@@ -50,7 +50,7 @@ class GTEditProfileTask: GTNetworkTask {
         
         GTSettings.sharedInstance.user = user
         
-        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserProfileChanged, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserProfileChanged, object: nil, userInfo: ["user" : user!])
         
         return user!;
     }

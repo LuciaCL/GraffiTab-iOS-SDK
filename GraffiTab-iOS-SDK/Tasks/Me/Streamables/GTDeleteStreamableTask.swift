@@ -41,7 +41,7 @@ class GTDeleteStreamableTask : GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
-        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.StreamableChanged, object: nil, userInfo: ["streamableId" : streamableId!])
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.StreamableDeleted, object: nil, userInfo: ["streamableId" : streamableId!])
         
         return super.parseJSONSuccessObject(JSON)!
     }

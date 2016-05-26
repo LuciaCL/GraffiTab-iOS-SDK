@@ -41,7 +41,7 @@ class GTDeleteLocationTask : GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
-        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.LocationChanged, object: nil, userInfo: ["locationId" : locationId!])
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.LocationDeleted, object: nil, userInfo: ["locationId" : locationId!])
         
         return super.parseJSONSuccessObject(JSON)!
     }

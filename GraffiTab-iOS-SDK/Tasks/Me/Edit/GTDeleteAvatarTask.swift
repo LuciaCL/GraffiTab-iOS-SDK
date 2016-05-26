@@ -41,7 +41,7 @@ class GTDeleteAvatarTask: GTNetworkTask {
         user!.avatar = nil
         GTSettings.sharedInstance.user = user
         
-        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil, userInfo: ["user" : user!])
         
         return user!;
     }

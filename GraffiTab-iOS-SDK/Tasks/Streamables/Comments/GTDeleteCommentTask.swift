@@ -41,7 +41,7 @@ class GTDeleteCommentTask : GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
-        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.CommentChanged, object: nil, userInfo: ["commentId" : commentId!])
+        NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.CommentDeleted, object: nil, userInfo: ["commentId" : commentId!])
         
         return super.parseJSONSuccessObject(JSON)!
     }
