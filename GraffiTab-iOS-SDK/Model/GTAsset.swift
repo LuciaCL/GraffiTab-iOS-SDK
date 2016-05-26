@@ -34,15 +34,4 @@ public class GTAsset: Mappable {
         thumbnailWidth <- map["thumbnailWidth"]
         thumbnailHeight <- map["thumbnailHeight"]
     }
-    
-    public func softCopy(other: GTAsset) {
-        self.guid = other.guid
-        self.link = other.link
-        self.thumbnail = other.thumbnail
-        self.type = other.type
-        self.width = other.width
-        self.height = other.height
-        self.thumbnailWidth = other.thumbnailWidth
-        self.thumbnailHeight = other.thumbnailHeight
-    }
 }

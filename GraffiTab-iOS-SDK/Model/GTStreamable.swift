@@ -63,7 +63,7 @@ public class GTStreamable: NSObject, Mappable {
         self.type = other.type
         self.isPrivate = other.isPrivate
         self.isFlagged = other.isFlagged
-        self.asset?.softCopy(other.asset!)
+        self.asset = other.asset
         self.latitude = other.latitude
         self.longitude = other.longitude
         self.roll = other.roll
