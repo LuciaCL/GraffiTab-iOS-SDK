@@ -26,7 +26,7 @@ class GTEditAvatarTask: GTNetworkTask {
             let fileData = UIImageJPEGRepresentation(image, 0.5)
             
             dispatch_async( dispatch_get_main_queue(), {
-                self.uploadRequest(.PUT, URLString: url, headers: ["Content-Type": "image/jpeg"], data: fileData!, completionHandler: { (response: Response<AnyObject, NSError>) in
+                self.multipartFileUploadRequest(.POST, URLString: url, fileData: fileData!, properties: nil, completionHandler: { (response: Response<AnyObject, NSError>) in
                     if (response.result.isFailure) {
                         if (response.response == nil) {
                             self.parseJSONError(1)

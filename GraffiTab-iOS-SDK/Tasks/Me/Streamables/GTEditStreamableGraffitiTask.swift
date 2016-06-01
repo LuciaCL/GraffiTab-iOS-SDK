@@ -28,8 +28,7 @@ class GTEditStreamableGraffitiTask: GTNetworkTask {
             let graffitiParams = ["latitude":latitude, "longitude":longitude, "roll":roll, "pitch":pitch, "yaw":yaw]
             
             dispatch_async( dispatch_get_main_queue(), {
-                
-                self.uploadGraffitiRequest(.POST, URLString: url, graffiti: fileData!, properties: graffitiParams as? [String : AnyObject], completionHandler: { (response: Response<AnyObject, NSError>) in
+                self.multipartFileUploadRequest(.POST, URLString: url, fileData: fileData!, properties: graffitiParams as? [String : AnyObject], completionHandler: { (response: Response<AnyObject, NSError>) in
                     if (response.result.isFailure) {
                         if (response.response == nil) {
                             self.parseJSONError(1)

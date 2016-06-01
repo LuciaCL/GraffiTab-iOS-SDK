@@ -47,16 +47,22 @@ class GTNetworkTask: NSObject {
             })
     }
     
-    func uploadGraffitiRequest(method: Alamofire.Method, URLString: URLStringConvertible, graffiti: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
+    func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         print("DEBUG: Sending request \(method) - \(URLString)")
 
         do {
-            let jsonData = try NSJSONSerialization.dataWithJSONObject(properties!, options: NSJSONWritingOptions.PrettyPrinted)
+            var jsonData: NSData?
+            if properties != nil {
+                jsonData = try NSJSONSerialization.dataWithJSONObject(properties!, options: NSJSONWritingOptions.PrettyPrinted)
+            }
             
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             Alamofire.upload(method, URLString, multipartFormData: { (multipartFormData) in
-                multipartFormData.appendBodyPart(data: graffiti, name: "file", fileName: "file", mimeType: "image/png")
-                multipartFormData.appendBodyPart(data: jsonData, name: "properties", fileName: "properties", mimeType: "application/json")
+                multipartFormData.appendBodyPart(data: fileData, name: "file", fileName: "file", mimeType: "image/png")
+                
+                if jsonData != nil {
+                    multipartFormData.appendBodyPart(data: jsonData!, name: "properties", fileName: "properties", mimeType: "application/json")
+                }
             }) { (encodingResult) in
                 switch encodingResult {
                 case .Success(let upload, _, _):
