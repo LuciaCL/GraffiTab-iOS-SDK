@@ -43,6 +43,10 @@ public class GTSettings: NSObject {
         GTApiDomainConstants.AppUrl = domain
     }
     
+    public func appDomain() -> String {
+        return GTApiDomainConstants.AppUrl
+    }
+    
     public func logout() {
         user = nil
         
