@@ -17,10 +17,7 @@ struct GTApiDateConstants {
 }
 
 struct GTApiDomainConstants {
-//    static let AppUrl = "http://dev-graffitab.rhcloud.com"
-//    static let AppUrl = "http://localhost:8091"
-//    static let AppUrl = "http://192.168.0.3:8091"
-    static let AppUrl = "http://172.18.33.46:8091"
+    static var AppUrl = "http://dev-graffitab.rhcloud.com"
     static let ApiUrl = AppUrl + "/api"
 }
 

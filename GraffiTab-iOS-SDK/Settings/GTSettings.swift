@@ -13,16 +13,10 @@ public class GTSettings: NSObject {
 
     public static let sharedInstance = GTSettings()
     
-    var tmpUser: GTUser?
     public var user: GTUser? {
-        get {
-            return tmpUser
-        }
-        set(newUser) {
-            tmpUser = newUser
-            
-            if (tmpUser != nil) {
-                let JSONString = Mapper<GTUser>().toJSONString(tmpUser!)
+        didSet {
+            if (user != nil) {
+                let JSONString = Mapper<GTUser>().toJSONString(user!)
                 setStringPreference(JSONString!, key: GTPreferencesConstants.User)
             }
             else {
@@ -43,6 +37,10 @@ public class GTSettings: NSObject {
         if (userJson != nil) {
             user = Mapper<GTUser>().map(userJson)
         }
+    }
+    
+    public func setAppDomain(domain: String) {
+        GTApiDomainConstants.AppUrl = domain
     }
     
     public func logout() {
