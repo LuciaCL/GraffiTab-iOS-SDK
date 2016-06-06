@@ -4,6 +4,7 @@ use_frameworks!
 def common_pods
   pod 'AlamofireObjectMapper'
   pod 'AlamofireImage'
+  pod 'CocoaLumberjack/Swift'
 end
 
 target 'GraffiTab_iOS_SDK' do

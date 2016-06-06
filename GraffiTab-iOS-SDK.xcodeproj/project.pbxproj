@@ -91,6 +91,7 @@
 		E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */; };
 		E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */; };
 		E5DFDBC81CB2BE8E00BB3D27 /* GTUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */; };
+		E5E293751D05BC4900C272EE /* GTLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E293741D05BC4900C272EE /* GTLogManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +183,7 @@
 		E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUser.swift; sourceTree = "<group>"; };
 		E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAsset.swift; sourceTree = "<group>"; };
 		E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserManager.swift; sourceTree = "<group>"; };
+		E5E293741D05BC4900C272EE /* GTLogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLogManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -577,6 +579,7 @@
 				E510062C1CB719E800AC66A5 /* GTMeManager.swift */,
 				E51006751CB7E94A00AC66A5 /* GTStreamableManager.swift */,
 				E510071D1CBDB84C00AC66A5 /* GTFeedbackManager.swift */,
+				E5E293741D05BC4900C272EE /* GTLogManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
 				E55452E01CF325300076CEC9 /* GTEditLocationTask.swift in Sources */,
 				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,
+				E5E293751D05BC4900C272EE /* GTLogManager.swift in Sources */,
 				E55452CB1CF28D590076CEC9 /* GTDeleteStreamableTask.swift in Sources */,
 				E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */,
 				E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */,

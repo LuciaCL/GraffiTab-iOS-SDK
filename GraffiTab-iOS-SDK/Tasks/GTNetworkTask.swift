@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import CocoaLumberjack
 
 class GTNetworkTask: NSObject {
 
@@ -19,14 +20,18 @@ class GTNetworkTask: NSObject {
     // MARK: - Requests
     
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
-        print("DEBUG: Sending request \(method) - \(URLString)")
-        print("DEBUG: Parameters - \(parameters)")
+        if GTLogManager.loggingEnabled {
+            DDLogDebug("Sending request \(method) - \(URLString)")
+            DDLogDebug("Parameters - \(parameters)")
+        }
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                print("DEBUG: Received response for request \(URLString) - \(response)")
+                if GTLogManager.loggingEnabled {
+                    DDLogDebug("Received response for request \(URLString) - \(response)")
+                }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 completionHandler(response)
@@ -34,13 +39,17 @@ class GTNetworkTask: NSObject {
     }
     
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
-        print("DEBUG: Sending request \(method) - \(URLString)")
+        if GTLogManager.loggingEnabled {
+            DDLogDebug("Sending request \(method) - \(URLString)")
+        }
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                print("DEBUG: Received response for request \(URLString) - \(response)")
+                if GTLogManager.loggingEnabled {
+                    DDLogDebug("Received response for request \(URLString) - \(response)")
+                }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 completionHandler(response)
@@ -48,7 +57,9 @@ class GTNetworkTask: NSObject {
     }
     
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
-        print("DEBUG: Sending request \(method) - \(URLString)")
+        if GTLogManager.loggingEnabled {
+            DDLogDebug("Sending request \(method) - \(URLString)")
+        }
 
         do {
             var jsonData: NSData?
@@ -69,16 +80,20 @@ class GTNetworkTask: NSObject {
                     upload
                         .validate()
                         .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                            print("DEBUG: Received response for request \(URLString) - \(response)")
+                            if GTLogManager.loggingEnabled {
+                                DDLogDebug("Received response for request \(URLString) - \(response)")
+                            }
                             
                             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                             completionHandler(response)
                         })
                 case .Failure(_):
+                    DDLogError("Could not encode multipart data")
                     assert(false, "Could not encode multipart data")
                 }
             }
         } catch (_) {
+            DDLogError("Invalid JSON - Could not serialize")
             assert(false, "Invalid JSON - Could not serialize")
         }
     }
