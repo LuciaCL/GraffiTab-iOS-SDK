@@ -21,8 +21,8 @@ class GTNetworkTask: NSObject {
     
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
         if GTLogManager.loggingEnabled {
-            DDLogDebug("Sending request \(method) - \(URLString)")
-            DDLogDebug("Parameters - \(parameters)")
+            DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
+            DDLogDebug("[GraffiTab SDK] Parameters - \(parameters)")
         }
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
@@ -30,7 +30,7 @@ class GTNetworkTask: NSObject {
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
                 if GTLogManager.loggingEnabled {
-                    DDLogDebug("Received response for request \(URLString) - \(response)")
+                    DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
                 }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -40,7 +40,7 @@ class GTNetworkTask: NSObject {
     
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         if GTLogManager.loggingEnabled {
-            DDLogDebug("Sending request \(method) - \(URLString)")
+            DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         }
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
@@ -48,7 +48,7 @@ class GTNetworkTask: NSObject {
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
                 if GTLogManager.loggingEnabled {
-                    DDLogDebug("Received response for request \(URLString) - \(response)")
+                    DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
                 }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -58,7 +58,7 @@ class GTNetworkTask: NSObject {
     
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         if GTLogManager.loggingEnabled {
-            DDLogDebug("Sending request \(method) - \(URLString)")
+            DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         }
 
         do {
@@ -81,20 +81,20 @@ class GTNetworkTask: NSObject {
                         .validate()
                         .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
                             if GTLogManager.loggingEnabled {
-                                DDLogDebug("Received response for request \(URLString) - \(response)")
+                                DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
                             }
                             
                             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                             completionHandler(response)
                         })
                 case .Failure(_):
-                    DDLogError("Could not encode multipart data")
-                    assert(false, "Could not encode multipart data")
+                    DDLogError("[GraffiTab SDK] Could not encode multipart data")
+                    assert(false, "[GraffiTab SDK] Could not encode multipart data")
                 }
             }
         } catch (_) {
-            DDLogError("Invalid JSON - Could not serialize")
-            assert(false, "Invalid JSON - Could not serialize")
+            DDLogError("[GraffiTab SDK] Invalid JSON - Could not serialize")
+            assert(false, "[GraffiTab SDK] Invalid JSON - Could not serialize")
         }
     }
     
