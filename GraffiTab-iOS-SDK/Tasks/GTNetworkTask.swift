@@ -20,17 +20,17 @@ class GTNetworkTask: NSObject {
     // MARK: - Requests
     
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
-        if GTLogManager.loggingEnabled {
-            DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
-            DDLogDebug("[GraffiTab SDK] Parameters - \(parameters)")
-        }
+        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
+        DDLogDebug("[GraffiTab SDK] Parameters - \(parameters)")
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                if GTLogManager.loggingEnabled {
-                    DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                
+                if response.result.isFailure {
+                    DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
                 }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -39,16 +39,16 @@ class GTNetworkTask: NSObject {
     }
     
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
-        if GTLogManager.loggingEnabled {
-            DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
-        }
+        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                if GTLogManager.loggingEnabled {
-                    DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                
+                if response.result.isFailure {
+                    DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
                 }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -57,9 +57,7 @@ class GTNetworkTask: NSObject {
     }
     
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
-        if GTLogManager.loggingEnabled {
-            DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
-        }
+        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
 
         do {
             var jsonData: NSData?
@@ -80,8 +78,10 @@ class GTNetworkTask: NSObject {
                     upload
                         .validate()
                         .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                            if GTLogManager.loggingEnabled {
-                                DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                            DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                            
+                            if response.result.isFailure {
+                                DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
                             }
                             
                             UIApplication.sharedApplication().networkActivityIndicatorVisible = false

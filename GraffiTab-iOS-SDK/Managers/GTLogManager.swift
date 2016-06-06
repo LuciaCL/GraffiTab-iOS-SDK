@@ -11,24 +11,20 @@ import CocoaLumberjack
 
 public class GTLogManager: NSObject {
 
-    static var loggingEnabled: Bool = false
-    
-    public class func setupApplicationLogger(logToConsole: Bool, logToDeviceLogs: Bool, logToFile: Bool) {
+    public class func setupApplicationLogger(logToConsole: Bool, logToDeviceLogs: Bool, logToFile: Bool, level: DDLogLevel) {
         if logToConsole {
-            DDLog.addLogger(DDTTYLogger.sharedInstance()) // TTY = Xcode console
+            DDLog.addLogger(DDTTYLogger.sharedInstance(), withLevel: level) // TTY = Xcode console
         }
         
         if logToDeviceLogs {
-            DDLog.addLogger(DDASLLogger.sharedInstance()) // ASL = Apple System Logs
+            DDLog.addLogger(DDASLLogger.sharedInstance(), withLevel: level) // ASL = Apple System Logs
         }
         
         if logToFile {
             let fileLogger: DDFileLogger = DDFileLogger() // File Logger
             fileLogger.rollingFrequency = 60*60*24  // 24 hours
             fileLogger.logFileManager.maximumNumberOfLogFiles = 7
-            DDLog.addLogger(fileLogger)
+            DDLog.addLogger(fileLogger, withLevel: level)
         }
-        
-        loggingEnabled = true
     }
 }
