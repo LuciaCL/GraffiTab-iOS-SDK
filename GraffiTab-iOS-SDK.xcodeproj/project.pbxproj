@@ -64,6 +64,7 @@
 		E55452DE1CF324990076CEC9 /* GTDeleteLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55452DD1CF324990076CEC9 /* GTDeleteLocationTask.swift */; };
 		E55452E01CF325300076CEC9 /* GTEditLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55452DF1CF325300076CEC9 /* GTEditLocationTask.swift */; };
 		E558A89E1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */; };
+		E59BC2F11D119BE0009781BA /* GTExternalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */; };
 		E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */; };
 		E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */; };
 		E5A4F1351CE33665005CF12C /* GTPostCommentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A4F1341CE33665005CF12C /* GTPostCommentTask.swift */; };
@@ -154,6 +155,7 @@
 		E55452DD1CF324990076CEC9 /* GTDeleteLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDeleteLocationTask.swift; sourceTree = "<group>"; };
 		E55452DF1CF325300076CEC9 /* GTEditLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditLocationTask.swift; sourceTree = "<group>"; };
 		E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserStreamablesTask.swift; sourceTree = "<group>"; };
+		E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTExternalProvider.swift; sourceTree = "<group>"; };
 		E5A4F11B1CE20AA5005CF12C /* GTGetLikersTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetLikersTask.swift; sourceTree = "<group>"; };
 		E5A4F11D1CE2120D005CF12C /* GTGetCommentsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetCommentsTask.swift; sourceTree = "<group>"; };
 		E5A4F1341CE33665005CF12C /* GTPostCommentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTPostCommentTask.swift; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 				E51006971CBBAA4C00AC66A5 /* GTNotification.swift */,
 				E51006991CBBAB6F00AC66A5 /* GTComment.swift */,
 				E55452D71CF316C50076CEC9 /* GTLocation.swift */,
+				E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */,
 				E51007361CBE82A700AC66A5 /* GTEditProfileTask.swift in Sources */,
 				E55452D81CF316C50076CEC9 /* GTLocation.swift in Sources */,
+				E59BC2F11D119BE0009781BA /* GTExternalProvider.swift in Sources */,
 				E5DAA8B91CE4A6C5000CB2F4 /* GTGetMyFullProfileTask.swift in Sources */,
 				E51006201CB710B700AC66A5 /* GTLoginTask.swift in Sources */,
 				E52DC7541CE55D4400375828 /* GTGetUserLikedStreamablesTask.swift in Sources */,

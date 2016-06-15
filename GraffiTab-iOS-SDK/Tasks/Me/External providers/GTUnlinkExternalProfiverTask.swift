@@ -19,7 +19,7 @@ class GTUnlinkExternalProviderTask: GTNetworkTask {
         
         let url = GTRequestBuilder.buildExternalProviderUrl()
         
-        let params = ["externalProviderType":externalProviderType.rawValue]
+        let params = ["type":externalProviderType.rawValue]
         
         return request(.DELETE, URLString: url, parameters: params, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
             if (response.result.isFailure) {

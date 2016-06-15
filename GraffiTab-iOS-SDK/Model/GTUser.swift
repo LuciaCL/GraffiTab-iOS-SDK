@@ -27,6 +27,7 @@ public class GTUser: NSObject, Mappable {
     public var followersCount: Int?
     public var followingCount: Int?
     public var streamablesCount: Int?
+    public var linkedAccounts: [GTExternalProvider]?
     
     required public init?(_ map: Map) {
         
@@ -49,6 +50,7 @@ public class GTUser: NSObject, Mappable {
         followersCount <- map["followersCount"]
         followingCount <- map["followingCount"]
         streamablesCount <- map["streamablesCount"]
+        linkedAccounts <- map["linkedAccounts"]
     }
     
     public func softCopy(other: GTUser) {
@@ -68,6 +70,7 @@ public class GTUser: NSObject, Mappable {
         self.followersCount = other.followersCount
         self.followingCount = other.followingCount
         self.streamablesCount = other.streamablesCount
+        self.linkedAccounts = other.linkedAccounts
     }
     
     override public func isEqual(object: AnyObject?) -> Bool {
