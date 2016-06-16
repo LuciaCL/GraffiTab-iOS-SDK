@@ -43,4 +43,5 @@ public class GTResponseObject {
     public var reason: GTReason!
     public var message: String!
     public var object: AnyObject!
+    public var url: String!
 }

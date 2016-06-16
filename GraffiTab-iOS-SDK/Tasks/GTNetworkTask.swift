@@ -16,12 +16,15 @@ class GTNetworkTask: NSObject {
     var cBlock: ((response: GTResponseObject) -> Void)!
     var fBlock: ((response: GTResponseObject) -> Void)!
     var useCache: Bool?
+    var loadedUrl: String?
     
     // MARK: - Requests
     
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
         DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         DDLogDebug("[GraffiTab SDK] Parameters - \(parameters)")
+        
+        loadedUrl = URLString.URLString
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
@@ -41,6 +44,8 @@ class GTNetworkTask: NSObject {
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         
+        loadedUrl = URLString.URLString
+        
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
             .validate()
@@ -59,6 +64,8 @@ class GTNetworkTask: NSObject {
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
 
+        loadedUrl = URLString.URLString
+        
         do {
             var jsonData: NSData?
             if properties != nil {
@@ -104,6 +111,7 @@ class GTNetworkTask: NSObject {
         let response = GTResponseObject()
         response.result = GTResult.Success
         response.object = parseJSONSuccessObject(JSON)
+        response.url = loadedUrl
         
         finishRequestWithResponse(response)
     }
@@ -112,6 +120,7 @@ class GTNetworkTask: NSObject {
         let response = GTResponseObject()
         response.result = GTResult.Success
         response.object = parseJSONSuccessObject(JSON)
+        response.url = loadedUrl
         
         finishCachedRequestWithResponse(response)
     }
@@ -119,6 +128,7 @@ class GTNetworkTask: NSObject {
     func parseJSONError(statusCode: Int) {
         let response = GTResponseObject()
         response.result = GTResult.Error
+        response.url = loadedUrl
         
         if let reason = GTReason(rawValue: statusCode) {
             response.reason = reason
