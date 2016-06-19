@@ -18,7 +18,7 @@ public enum GTExternalProviderType: String {
 public class GTExternalProvider: NSObject, Mappable {
     
     public var userId: String?
-    public var type: Double?
+    public var type: GTExternalProviderType?
     
     required public init?(_ map: Map) {
         

@@ -39,6 +39,10 @@ class GTUnlinkExternalProviderTask: GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject? {
+        let user = Mapper<GTUser>().map(JSON["user"])
+        
+        GTSettings.sharedInstance.user = user
+        
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.ExternalProviderUnlinked, object: nil)
         
         return super.parseJSONSuccessObject(JSON)
