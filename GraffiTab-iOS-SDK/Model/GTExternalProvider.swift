@@ -11,7 +11,7 @@ import ObjectMapper
 
 public enum GTExternalProviderType: String {
     case FACEBOOK
-    case TWITTE
+    case TWITTER
     case GOOGLE
 }
 
