@@ -19,7 +19,7 @@ class GTLinkExternalProviderTask: GTNetworkTask {
         
         let url = GTRequestBuilder.buildExternalProviderUrl()
         
-        let externalProviderParams = ["userId":externalId, "token":accessToken, "type":externalProviderType.rawValue]
+        let externalProviderParams = ["userId":externalId, "accessToken":accessToken, "type":externalProviderType.rawValue]
         let params = ["externalProvider":externalProviderParams]
         
         return request(.POST, URLString: url, parameters: params, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
