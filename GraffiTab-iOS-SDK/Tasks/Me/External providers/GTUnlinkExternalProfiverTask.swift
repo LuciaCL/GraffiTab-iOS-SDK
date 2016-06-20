@@ -13,7 +13,7 @@ import ObjectMapper
 
 class GTUnlinkExternalProviderTask: GTNetworkTask {
     
-    func unlink(externalProviderType: GTApiExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    func unlink(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
         

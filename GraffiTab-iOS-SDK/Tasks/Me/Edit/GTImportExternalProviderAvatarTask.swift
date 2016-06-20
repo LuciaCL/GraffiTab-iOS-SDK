@@ -13,7 +13,7 @@ import ObjectMapper
 
 class GTImportExternalProviderAvatarTask: GTNetworkTask {
     
-    func importAvatar(externalProviderType: GTApiExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    func importAvatar(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
         

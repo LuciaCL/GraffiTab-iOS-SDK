@@ -6,12 +6,6 @@
 //  Copyright © 2016 GraffiTab. All rights reserved.
 //
 
-public enum GTApiExternalProviderType: String {
-    case FACEBOOK
-    case TWITTER
-    case GOOGLE
-}
-
 struct GTApiDateConstants {
     static let InputFormat = "EEE, dd MMM yyyy HH:mm:ss Z"
 }

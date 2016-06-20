@@ -11,7 +11,7 @@ import Alamofire
 
 public class GTMeManager: NSObject {
 
-    public class func importAvatar(externalProviderType: GTApiExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func importAvatar(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTImportExternalProviderAvatarTask()
         return task.importAvatar(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
     }
@@ -21,12 +21,12 @@ public class GTMeManager: NSObject {
         return task.linkDevice(token, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func linkExternalProvider(externalProviderType: GTApiExternalProviderType, externalId: String, accessToken: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func linkExternalProvider(externalProviderType: GTExternalProviderType, externalId: String, accessToken: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTLinkExternalProviderTask()
         return task.link(externalProviderType, externalId: externalId, accessToken: accessToken, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func unlinkExternalProvider(externalProviderType: GTApiExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func unlinkExternalProvider(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTUnlinkExternalProviderTask()
         return task.unlink(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
     }

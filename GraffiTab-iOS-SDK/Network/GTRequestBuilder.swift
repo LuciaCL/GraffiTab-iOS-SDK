@@ -82,7 +82,7 @@ class GTRequestBuilder: NSObject {
     
     // MARK: - Me
     
-    class func buildImportExternalProviderAvatarUrl(type: GTApiExternalProviderType) -> String {
+    class func buildImportExternalProviderAvatarUrl(type: GTExternalProviderType) -> String {
         return String(format: GTApiMeConstants.ImportAvatar, "/" + type.rawValue)
     }
     
