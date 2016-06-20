@@ -140,4 +140,14 @@ public class GTMeManager: NSObject {
         let task = GTEditLocationTask()
         task.edit(locationId, address: address, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
     }
+    
+    public class func getSocialFriends(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetSocialFriendsTask()
+        return task.getSocialFriends(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    public class func getSocialFriendsForNetwork(type: GTExternalProviderType, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetSocialFriendsForNetworkTask()
+        return task.getSocialFriends(type, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
 }

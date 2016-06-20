@@ -158,6 +158,14 @@ class GTRequestBuilder: NSObject {
         return String(format: GTApiMeConstants.Location, locationId)
     }
     
+    class func buildGetSocialFriendsUrl(offset: Int, limit: Int) -> String {
+        return String(format: "%@?offset=%li&limit=%li", GTApiMeConstants.SocialFriends, offset, limit)
+    }
+    
+    class func buildGetSocialFriendsForNetworkUrl(type: GTExternalProviderType, offset: Int, limit: Int) -> String {
+        return String(format: GTApiMeConstants.FilterSocialFriends, "/" + type.rawValue)
+    }
+    
     // MARK: - Streamable
     
     class func buildGetPopularUrl(offset: Int, limit: Int) -> String {
