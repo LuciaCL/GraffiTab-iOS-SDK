@@ -5,6 +5,7 @@ def common_pods
   pod 'AlamofireObjectMapper'
   pod 'AlamofireImage'
   pod 'CocoaLumberjack/Swift'
+  pod 'HanekeSwift'
 end
 
 target 'GraffiTab_iOS_SDK' do

@@ -31,23 +31,27 @@ public class GTMeManager: NSObject {
         return task.unlink(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func getMe(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getMe(cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetMeTask()
         return task.getMe(successBlock, failureBlock: failureBlock)
     }
     
-    public class func getMyFullProfile(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getMyFullProfile(cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetMyFullProfileTask()
         return task.getMe(successBlock, failureBlock: failureBlock)
     }
     
-    public class func getFeed(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getFeed(offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetFeedTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getFeed(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func getPrivateStreamables(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getPrivateStreamables(offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetPrivateStreamablesTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getPrivateStreamables(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
@@ -66,8 +70,10 @@ public class GTMeManager: NSObject {
         return task.delete(streamableId, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func getNotifications(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getNotifications(offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetNotificationsTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getNotifications(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
@@ -76,8 +82,10 @@ public class GTMeManager: NSObject {
         return task.getCount(successBlock, failureBlock: failureBlock)
     }
     
-    public class func getFollowersActivity(numberOfItemsInGroup: Int = GTConstants.NumberOfItemsInGroup, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getFollowersActivity(numberOfItemsInGroup: Int = GTConstants.NumberOfItemsInGroup, offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetFollowersActivityTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getFollowersActivity(numberOfItemsInGroup, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
@@ -126,7 +134,7 @@ public class GTMeManager: NSObject {
         task.create(address, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func getLocations(successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
+    public class func getLocations(cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
         let task = GTGetLocationsTask()
         task.getLocations(successBlock, failureBlock: failureBlock)
     }
@@ -141,13 +149,17 @@ public class GTMeManager: NSObject {
         task.edit(locationId, address: address, latitude: latitude, longitude: longitude, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func getSocialFriends(offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getSocialFriends(offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetSocialFriendsTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getSocialFriends(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func getSocialFriendsForNetwork(type: GTExternalProviderType, offset: Int = 0, limit: Int = GTConstants.MaxItems, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func getSocialFriendsForNetwork(type: GTExternalProviderType, offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetSocialFriendsForNetworkTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getSocialFriends(type, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
 }

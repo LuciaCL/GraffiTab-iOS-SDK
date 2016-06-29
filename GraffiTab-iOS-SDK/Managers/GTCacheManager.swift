@@ -2,15 +2,17 @@
 //  GTCacheManager.swift
 //  GraffiTab-iOS-SDK
 //
-//  Created by Georgi Christov on 04/04/2016.
+//  Created by Georgi Christov on 28/06/2016.
 //  Copyright © 2016 GraffiTab. All rights reserved.
 //
 
 import UIKit
+import Haneke
 
 public class GTCacheManager: NSObject {
 
-    public static let sharedInstance = GTCacheManager()
-    
-    public let cache = NSCache()
+    public func clearCache() {
+        let cache = Shared.dataCache
+        cache.removeAll()
+    }
 }

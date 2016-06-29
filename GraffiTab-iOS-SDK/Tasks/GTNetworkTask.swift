@@ -15,16 +15,29 @@ class GTNetworkTask: NSObject {
     var sBlock: ((response: GTResponseObject) -> Void)!
     var cBlock: ((response: GTResponseObject) -> Void)!
     var fBlock: ((response: GTResponseObject) -> Void)!
-    var useCache: Bool?
+    var cacheResponse: Bool = false
     var loadedUrl: String?
     
     // MARK: - Requests
     
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
+        loadedUrl = URLString.URLString
+        
+        if method == .GET && cacheResponse { // Check cache only on GET method.
+            GTCache.sharedInstance.fetchCachedDataResponse(URLString.URLString, onSuccess: { (data) in
+                do {
+                    let decoded = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+                    
+                    // At this point we have a cached response.
+                    self.parseJSONCacheSuccess(decoded)
+                } catch let error as NSError {
+                    DDLogError("[GraffiTab SDK] Error caching response for request \(URLString) - \(error)")
+                }
+            })
+        }
+        
         DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         DDLogDebug("[GraffiTab SDK] Parameters - \(parameters)")
-        
-        loadedUrl = URLString.URLString
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
@@ -35,16 +48,25 @@ class GTNetworkTask: NSObject {
                 if response.result.isFailure {
                     DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
                 }
+                else if method == .GET && self.cacheResponse { // Check cache only on GET method.
+                    do {
+                        let json = response.result.value
+                        let jsonData = try NSJSONSerialization.dataWithJSONObject(json!, options: NSJSONWritingOptions.PrettyPrinted)
+                        GTCache.sharedInstance.cacheJSONResponse(URLString.URLString, data: jsonData)
+                    } catch let error as NSError {
+                        DDLogError("[GraffiTab SDK] Error caching response for request \(URLString) - \(error)")
+                    }
+                }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 completionHandler(response)
-            })
+        })
     }
     
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
-        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
-        
         loadedUrl = URLString.URLString
+        
+        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
@@ -62,10 +84,10 @@ class GTNetworkTask: NSObject {
     }
     
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
-        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
-
         loadedUrl = URLString.URLString
         
+        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
+
         do {
             var jsonData: NSData?
             if properties != nil {
