@@ -11,7 +11,7 @@ struct GTApiDateConstants {
 }
 
 struct GTApiDomainConstants {
-    static var AppUrl = "http://dev-graffitab.rhcloud.com"
+    static var AppUrl = "http://dev.graffitab.com"
     static let ApiUrl = AppUrl + "/api"
 }
 
