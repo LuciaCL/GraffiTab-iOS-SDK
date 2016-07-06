@@ -17,7 +17,7 @@ public class GTConfig: NSObject {
     var domain: String?
     var httpsEnabled: Bool?
     
-    static let defaultConfig = GTDefaultConfig()
+    public static let defaultConfig = GTDefaultConfig()
     
     public init(domain: String, logEnabled: Bool, logLevel: DDLogLevel, httpsEnabled: Bool) {
         self.domain = domain
