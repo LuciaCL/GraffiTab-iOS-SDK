@@ -221,4 +221,10 @@ class GTRequestBuilder: NSObject {
     class func buildFeedbackUrl() -> String {
         return GTApiFeedbackConstants.Feedback
     }
+    
+    // MARK: - Asset
+    
+    class func buildAssetProgressUrl(guid: String) -> String {
+        return String(format: GTApiAssetConstants.Progress, guid)
+    }
 }

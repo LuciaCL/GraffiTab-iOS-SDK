@@ -142,3 +142,14 @@ struct GTApiFeedbackConstants {
     // Global.
     static let Feedback = GTApiDomainConstants.ApiUrl + "/feedback"
 }
+
+struct GTApiAssetConstants {
+    // Global.
+    static let Assets = GTApiDomainConstants.ApiUrl + "/assets"
+    
+    // Asset.
+    static let Asset = Assets + "/%@"
+    
+    // Progress.
+    static let Progress = Asset + "/progress"
+}

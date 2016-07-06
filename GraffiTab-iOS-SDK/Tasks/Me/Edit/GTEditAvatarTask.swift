@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class GTEditAvatarTask: GTNetworkTask {
+class GTEditAvatarTask: GTAssetNetworkTask {
     
     func edit(image: UIImage, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
         self.sBlock = successBlock
@@ -38,7 +38,10 @@ class GTEditAvatarTask: GTNetworkTask {
                     else {
                         let resp = response.result.value
                         
-                        self.parseJSONSuccess(resp!)
+                        // Wait until the asset has finished processing.
+                        self.awaitAssetProcessingComplete(resp!, completion: { (asset) in
+                            self.parseJSONSuccess(asset)
+                        })
                     }
                 })
             })
@@ -46,7 +49,13 @@ class GTEditAvatarTask: GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
-        let asset = Mapper<GTAsset>().map(JSON["asset"])
+        let asset: GTAsset
+        if JSON.isKindOfClass(GTAsset) { // The polling task returns either an asset object or the original asset JSON.
+            asset = JSON as! GTAsset
+        }
+        else {
+            asset = Mapper<GTAsset>().map(JSON["asset"])!
+        }
         
         let user = GTMeManager.sharedInstance.loggedInUser
         user!.avatar = asset
@@ -54,6 +63,6 @@ class GTEditAvatarTask: GTNetworkTask {
         
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil, userInfo: ["user" : user!])
         
-        return asset!;
+        return asset;
     }
 }

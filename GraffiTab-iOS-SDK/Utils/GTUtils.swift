@@ -20,4 +20,11 @@ public class GTUtils: NSObject {
         
         return nil
     }
+    
+    class func runWithDelay(sec: Double, block: (Void) -> Void) {
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(sec * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            block()
+        }
+    }
 }

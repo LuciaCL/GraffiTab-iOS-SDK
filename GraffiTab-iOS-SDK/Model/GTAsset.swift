@@ -9,6 +9,12 @@
 import UIKit
 import ObjectMapper
 
+public enum GTAssetState: String {
+    case RESIZING
+    case PROCESSING
+    case COMPLETED
+}
+
 public class GTAsset: Mappable {
 
     public var guid: String?
@@ -19,6 +25,7 @@ public class GTAsset: Mappable {
     public var height: Int?
     public var thumbnailWidth: Int?
     public var thumbnailHeight: Int?
+    public var state: GTAssetState?
     
     required public init?(_ map: Map) {
         
@@ -33,5 +40,6 @@ public class GTAsset: Mappable {
         height <- map["height"]
         thumbnailWidth <- map["thumbnailWidth"]
         thumbnailHeight <- map["thumbnailHeight"]
+        state <- map["state"]
     }
 }

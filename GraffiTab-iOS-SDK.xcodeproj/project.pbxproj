@@ -69,6 +69,9 @@
 		E57822DB1D2D21BD00AB383A /* GTMeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D71D2D21BD00AB383A /* GTMeManager.swift */; };
 		E57822DC1D2D21BD00AB383A /* GTStreamableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D81D2D21BD00AB383A /* GTStreamableManager.swift */; };
 		E57822DD1D2D21BD00AB383A /* GTUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D91D2D21BD00AB383A /* GTUserManager.swift */; };
+		E57822E41D2D653D00AB383A /* GTGetAssetStateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822E31D2D653D00AB383A /* GTGetAssetStateTask.swift */; };
+		E57822E61D2D669F00AB383A /* GTAssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822E51D2D669F00AB383A /* GTAssetManager.swift */; };
+		E57822E81D2D68BD00AB383A /* GTAssetNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822E71D2D68BD00AB383A /* GTAssetNetworkTask.swift */; };
 		E59BC2F11D119BE0009781BA /* GTExternalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */; };
 		E59BC3171D17F0E9009781BA /* GTUserSocialFriendsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC3161D17F0E9009781BA /* GTUserSocialFriendsContainer.swift */; };
 		E59BC3191D17F193009781BA /* GTGetSocialFriendsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC3181D17F193009781BA /* GTGetSocialFriendsTask.swift */; };
@@ -167,6 +170,9 @@
 		E57822D71D2D21BD00AB383A /* GTMeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMeManager.swift; sourceTree = "<group>"; };
 		E57822D81D2D21BD00AB383A /* GTStreamableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTStreamableManager.swift; sourceTree = "<group>"; };
 		E57822D91D2D21BD00AB383A /* GTUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserManager.swift; sourceTree = "<group>"; };
+		E57822E31D2D653D00AB383A /* GTGetAssetStateTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetAssetStateTask.swift; sourceTree = "<group>"; };
+		E57822E51D2D669F00AB383A /* GTAssetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAssetManager.swift; sourceTree = "<group>"; };
+		E57822E71D2D68BD00AB383A /* GTAssetNetworkTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAssetNetworkTask.swift; sourceTree = "<group>"; };
 		E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTExternalProvider.swift; sourceTree = "<group>"; };
 		E59BC3161D17F0E9009781BA /* GTUserSocialFriendsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserSocialFriendsContainer.swift; sourceTree = "<group>"; };
 		E59BC3181D17F193009781BA /* GTGetSocialFriendsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetSocialFriendsTask.swift; sourceTree = "<group>"; };
@@ -570,6 +576,7 @@
 				E57822D71D2D21BD00AB383A /* GTMeManager.swift */,
 				E57822D81D2D21BD00AB383A /* GTStreamableManager.swift */,
 				E57822D91D2D21BD00AB383A /* GTUserManager.swift */,
+				E57822E51D2D669F00AB383A /* GTAssetManager.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -578,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				E5A1D6C41D2973F70027E438 /* State */,
+				E57822E71D2D68BD00AB383A /* GTAssetNetworkTask.swift */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -585,6 +593,7 @@
 		E5A1D6C41D2973F70027E438 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				E57822E31D2D653D00AB383A /* GTGetAssetStateTask.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -838,6 +847,7 @@
 				E59BC2F11D119BE0009781BA /* GTExternalProvider.swift in Sources */,
 				E57822DA1D2D21BD00AB383A /* GTFeedbackManager.swift in Sources */,
 				E5DAA8B91CE4A6C5000CB2F4 /* GTGetMyFullProfileTask.swift in Sources */,
+				E57822E41D2D653D00AB383A /* GTGetAssetStateTask.swift in Sources */,
 				E51006201CB710B700AC66A5 /* GTLoginTask.swift in Sources */,
 				E52DC7541CE55D4400375828 /* GTGetUserLikedStreamablesTask.swift in Sources */,
 				E5A4F1351CE33665005CF12C /* GTPostCommentTask.swift in Sources */,
@@ -876,6 +886,7 @@
 				E5A1D65F1D22D1E70027E438 /* GTCacheManager.swift in Sources */,
 				E55452DC1CF31C5A0076CEC9 /* GTGetLocationsTask.swift in Sources */,
 				E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */,
+				E57822E61D2D669F00AB383A /* GTAssetManager.swift in Sources */,
 				E510062B1CB7173700AC66A5 /* GTStreamable.swift in Sources */,
 				E51007051CBD1FC300AC66A5 /* GTGetMostActiveUsersTask.swift in Sources */,
 				E51006B41CBBFE3B00AC66A5 /* GTGetFollowersActivityTask.swift in Sources */,
@@ -904,6 +915,7 @@
 				E52DC74A1CE5595F00375828 /* GTMarkStreamablePublicTask.swift in Sources */,
 				E52DC7441CE555D700375828 /* GTUnlinkExternalProfiverTask.swift in Sources */,
 				E52DC7421CE5550A00375828 /* GTLinkExternalProviderTask.swift in Sources */,
+				E57822E81D2D68BD00AB383A /* GTAssetNetworkTask.swift in Sources */,
 				E51006741CB7E8A300AC66A5 /* GTGetPopularTask.swift in Sources */,
 				E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */,
 				E51006EC1CBD156C00AC66A5 /* GTSearchUsersTask.swift in Sources */,
