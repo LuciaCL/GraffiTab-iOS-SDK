@@ -32,5 +32,12 @@ public class GTSDKConfig: NSObject {
         // Setup logger.
         let isLog = config.logEnabled
         GTLog.setup(isLog!, logToDeviceLogs: isLog!, logToFile: isLog!, level: config.logLevel!)
+        
+        GTLog.logInfo(GTLogConstants.Tag, message: "Set SDK configuration", forceLog: true)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Domain: \(config.domain)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Log: \(config.logEnabled)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Log level: \(config.logLevel)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "HTTPS: \(config.httpsEnabled)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "API url: \(GTApiDomainConstants.ApiUrl)", forceLog: false)
     }
 }
