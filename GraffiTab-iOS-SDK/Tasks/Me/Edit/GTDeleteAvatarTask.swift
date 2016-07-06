@@ -37,9 +37,9 @@ class GTDeleteAvatarTask: GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
-        let user = GTSettings.sharedInstance.user
+        let user = GTMeManager.sharedInstance.loggedInUser
         user!.avatar = nil
-        GTSettings.sharedInstance.user = user
+        GTMeManager.sharedInstance.loggedInUser = user
         
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil, userInfo: ["user" : user!])
         

@@ -47,3 +47,7 @@ struct GTPreferencesConstants {
 struct GTCookieConstants {
     static let CookiesKey = "cookies"
 }
+
+struct GTLogConstants {
+    static let Tag = "GraffiTab SDK"
+}

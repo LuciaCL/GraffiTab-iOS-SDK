@@ -48,9 +48,9 @@ class GTEditAvatarTask: GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let asset = Mapper<GTAsset>().map(JSON["asset"])
         
-        let user = GTSettings.sharedInstance.user
+        let user = GTMeManager.sharedInstance.loggedInUser
         user!.avatar = asset
-        GTSettings.sharedInstance.user = user
+        GTMeManager.sharedInstance.loggedInUser = user
         
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil, userInfo: ["user" : user!])
         

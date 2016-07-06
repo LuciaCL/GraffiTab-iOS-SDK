@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import CocoaLumberjack
 
 class GTNetworkTask: NSObject {
 
@@ -31,22 +30,22 @@ class GTNetworkTask: NSObject {
                     // At this point we have a cached response.
                     self.parseJSONCacheSuccess(decoded)
                 } catch let error as NSError {
-                    DDLogError("[GraffiTab SDK] Error caching response for request \(URLString) - \(error)")
+                    GTLog.logError(GTLogConstants.Tag, message: "Error fetching cached response for request \(URLString) - \(error)", forceLog: true)
                 }
             })
         }
         
-        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
-        DDLogDebug("[GraffiTab SDK] Parameters - \(parameters)")
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request \(method) - \(URLString)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Parameters - \(parameters)", forceLog: false)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                GTLog.logDebug(GTLogConstants.Tag, message: "Received response for request \(URLString) - \(response)", forceLog: false)
                 
                 if response.result.isFailure {
-                    DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
+                    GTLog.logDebug(GTLogConstants.Tag, message: "Received error response for request \(URLString) - \(response)", forceLog: false)
                 }
                 else if method == .GET && self.cacheResponse { // Check cache only on GET method.
                     do {
@@ -54,7 +53,7 @@ class GTNetworkTask: NSObject {
                         let jsonData = try NSJSONSerialization.dataWithJSONObject(json!, options: NSJSONWritingOptions.PrettyPrinted)
                         GTCache.sharedInstance.cacheJSONResponse(URLString.URLString, data: jsonData)
                     } catch let error as NSError {
-                        DDLogError("[GraffiTab SDK] Error caching response for request \(URLString) - \(error)")
+                        GTLog.logError(GTLogConstants.Tag, message: "Error caching response for request \(URLString) - \(error)", forceLog: true)
                     }
                 }
                 
@@ -66,16 +65,16 @@ class GTNetworkTask: NSObject {
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request \(method) - \(URLString)", forceLog: false)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                GTLog.logDebug(GTLogConstants.Tag, message: "Received response for request \(URLString) - \(response)", forceLog: false)
                 
                 if response.result.isFailure {
-                    DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
+                    GTLog.logDebug(GTLogConstants.Tag, message: "Received error response for request \(URLString) - \(response)", forceLog: false)
                 }
                 
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -86,7 +85,7 @@ class GTNetworkTask: NSObject {
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        DDLogDebug("[GraffiTab SDK] Sending request \(method) - \(URLString)")
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request \(method) - \(URLString)", forceLog: false)
 
         do {
             var jsonData: NSData?
@@ -107,22 +106,22 @@ class GTNetworkTask: NSObject {
                     upload
                         .validate()
                         .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                            DDLogDebug("[GraffiTab SDK] Received response for request \(URLString) - \(response)")
+                            GTLog.logDebug(GTLogConstants.Tag, message: "Received response for request \(URLString) - \(response)", forceLog: false)
                             
                             if response.result.isFailure {
-                                DDLogError("[GraffiTab SDK] Received error response for request \(URLString) - \(response)")
+                                GTLog.logDebug(GTLogConstants.Tag, message: "Received error response for request \(URLString) - \(response)", forceLog: false)
                             }
                             
                             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                             completionHandler(response)
                         })
                 case .Failure(_):
-                    DDLogError("[GraffiTab SDK] Could not encode multipart data")
+                    GTLog.logError(GTLogConstants.Tag, message: "Could not encode multipart data", forceLog: true)
                     assert(false, "[GraffiTab SDK] Could not encode multipart data")
                 }
             }
         } catch (_) {
-            DDLogError("[GraffiTab SDK] Invalid JSON - Could not serialize")
+            GTLog.logError(GTLogConstants.Tag, message: "Invalid JSON - Could not serialize", forceLog: true)
             assert(false, "[GraffiTab SDK] Invalid JSON - Could not serialize")
         }
     }

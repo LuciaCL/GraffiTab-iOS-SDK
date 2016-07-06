@@ -39,7 +39,7 @@ class GTGetMeTask: GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let user = Mapper<GTUser>().map(JSON["user"])
         
-        GTSettings.sharedInstance.user = user
+        GTMeManager.sharedInstance.loggedInUser = user
         
         return user!;
     }

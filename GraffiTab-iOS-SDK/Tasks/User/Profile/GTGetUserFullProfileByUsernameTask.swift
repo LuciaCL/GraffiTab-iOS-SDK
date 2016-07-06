@@ -39,8 +39,8 @@ class GTGetUserFullProfileByUsernameTask: GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let user = Mapper<GTUser>().map(JSON["user"])
         
-        if user?.id == GTSettings.sharedInstance.user?.id {
-            GTSettings.sharedInstance.user = user
+        if user?.id == GTMeManager.sharedInstance.loggedInUser?.id {
+            GTMeManager.sharedInstance.loggedInUser = user
         }
         
         return user!;

@@ -19,10 +19,8 @@
 		E51006271CB7116A00AC66A5 /* GTGetFeedTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006261CB7116A00AC66A5 /* GTGetFeedTask.swift */; };
 		E51006291CB713EB00AC66A5 /* GTListItemsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006281CB713EB00AC66A5 /* GTListItemsResult.swift */; };
 		E510062B1CB7173700AC66A5 /* GTStreamable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510062A1CB7173700AC66A5 /* GTStreamable.swift */; };
-		E510062D1CB719E800AC66A5 /* GTMeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510062C1CB719E800AC66A5 /* GTMeManager.swift */; };
 		E51006471CB726F200AC66A5 /* GTGetMeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006461CB726F200AC66A5 /* GTGetMeTask.swift */; };
 		E51006741CB7E8A300AC66A5 /* GTGetPopularTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006731CB7E8A300AC66A5 /* GTGetPopularTask.swift */; };
-		E51006761CB7E94A00AC66A5 /* GTStreamableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006751CB7E94A00AC66A5 /* GTStreamableManager.swift */; };
 		E510067C1CB7F0AC00AC66A5 /* GTGetNewestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510067B1CB7F0AC00AC66A5 /* GTGetNewestTask.swift */; };
 		E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006891CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift */; };
 		E51006961CBBA9BD00AC66A5 /* GTGetNotificationsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51006951CBBA9BD00AC66A5 /* GTGetNotificationsTask.swift */; };
@@ -37,7 +35,6 @@
 		E510070B1CBD3FD800AC66A5 /* GTGetUnseenNotificationsCountTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510070A1CBD3FD800AC66A5 /* GTGetUnseenNotificationsCountTask.swift */; };
 		E51007171CBD5DB200AC66A5 /* GTLogoutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007161CBD5DB200AC66A5 /* GTLogoutTask.swift */; };
 		E510071C1CBDB79300AC66A5 /* GTSendFeedbackTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510071B1CBDB79300AC66A5 /* GTSendFeedbackTask.swift */; };
-		E510071E1CBDB84C00AC66A5 /* GTFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510071D1CBDB84C00AC66A5 /* GTFeedbackManager.swift */; };
 		E51007241CBE461E00AC66A5 /* GTEditPasswordTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51007231CBE461E00AC66A5 /* GTEditPasswordTask.swift */; };
 		E510072E1CBE6C0C00AC66A5 /* GTDeleteAvatarTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510072D1CBE6C0C00AC66A5 /* GTDeleteAvatarTask.swift */; };
 		E51007301CBE6CA700AC66A5 /* GTDeleteCoverTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E510072F1CBE6CA700AC66A5 /* GTDeleteCoverTask.swift */; };
@@ -64,6 +61,14 @@
 		E55452DE1CF324990076CEC9 /* GTDeleteLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55452DD1CF324990076CEC9 /* GTDeleteLocationTask.swift */; };
 		E55452E01CF325300076CEC9 /* GTEditLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55452DF1CF325300076CEC9 /* GTEditLocationTask.swift */; };
 		E558A89E1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */; };
+		E57822CD1D2D163800AB383A /* GTConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822CC1D2D163800AB383A /* GTConfig.swift */; };
+		E57822CF1D2D188300AB383A /* GTDefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822CE1D2D188300AB383A /* GTDefaultConfig.swift */; };
+		E57822D11D2D1BCA00AB383A /* GTSDKConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D01D2D1BCA00AB383A /* GTSDKConfig.swift */; };
+		E57822D41D2D1E2A00AB383A /* GTLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D31D2D1E2A00AB383A /* GTLog.swift */; };
+		E57822DA1D2D21BD00AB383A /* GTFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D61D2D21BD00AB383A /* GTFeedbackManager.swift */; };
+		E57822DB1D2D21BD00AB383A /* GTMeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D71D2D21BD00AB383A /* GTMeManager.swift */; };
+		E57822DC1D2D21BD00AB383A /* GTStreamableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D81D2D21BD00AB383A /* GTStreamableManager.swift */; };
+		E57822DD1D2D21BD00AB383A /* GTUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57822D91D2D21BD00AB383A /* GTUserManager.swift */; };
 		E59BC2F11D119BE0009781BA /* GTExternalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */; };
 		E59BC3171D17F0E9009781BA /* GTUserSocialFriendsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC3161D17F0E9009781BA /* GTUserSocialFriendsContainer.swift */; };
 		E59BC3191D17F193009781BA /* GTGetSocialFriendsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59BC3181D17F193009781BA /* GTGetSocialFriendsTask.swift */; };
@@ -95,8 +100,6 @@
 		E5DFDBBC1CB2A91C00BB3D27 /* GTApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */; };
 		E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */; };
 		E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */; };
-		E5DFDBC81CB2BE8E00BB3D27 /* GTUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */; };
-		E5E293751D05BC4900C272EE /* GTLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E293741D05BC4900C272EE /* GTLogManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,10 +117,8 @@
 		E51006261CB7116A00AC66A5 /* GTGetFeedTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetFeedTask.swift; sourceTree = "<group>"; };
 		E51006281CB713EB00AC66A5 /* GTListItemsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTListItemsResult.swift; sourceTree = "<group>"; };
 		E510062A1CB7173700AC66A5 /* GTStreamable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTStreamable.swift; sourceTree = "<group>"; };
-		E510062C1CB719E800AC66A5 /* GTMeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMeManager.swift; sourceTree = "<group>"; };
 		E51006461CB726F200AC66A5 /* GTGetMeTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetMeTask.swift; sourceTree = "<group>"; };
 		E51006731CB7E8A300AC66A5 /* GTGetPopularTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetPopularTask.swift; sourceTree = "<group>"; };
-		E51006751CB7E94A00AC66A5 /* GTStreamableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTStreamableManager.swift; sourceTree = "<group>"; };
 		E510067B1CB7F0AC00AC66A5 /* GTGetNewestTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetNewestTask.swift; sourceTree = "<group>"; };
 		E51006891CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSearchStreamablesForLocationTask.swift; sourceTree = "<group>"; };
 		E51006951CBBA9BD00AC66A5 /* GTGetNotificationsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetNotificationsTask.swift; sourceTree = "<group>"; };
@@ -132,7 +133,6 @@
 		E510070A1CBD3FD800AC66A5 /* GTGetUnseenNotificationsCountTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUnseenNotificationsCountTask.swift; sourceTree = "<group>"; };
 		E51007161CBD5DB200AC66A5 /* GTLogoutTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLogoutTask.swift; sourceTree = "<group>"; };
 		E510071B1CBDB79300AC66A5 /* GTSendFeedbackTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSendFeedbackTask.swift; sourceTree = "<group>"; };
-		E510071D1CBDB84C00AC66A5 /* GTFeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFeedbackManager.swift; sourceTree = "<group>"; };
 		E51007231CBE461E00AC66A5 /* GTEditPasswordTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditPasswordTask.swift; sourceTree = "<group>"; };
 		E510072D1CBE6C0C00AC66A5 /* GTDeleteAvatarTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDeleteAvatarTask.swift; sourceTree = "<group>"; };
 		E510072F1CBE6CA700AC66A5 /* GTDeleteCoverTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDeleteCoverTask.swift; sourceTree = "<group>"; };
@@ -159,6 +159,14 @@
 		E55452DD1CF324990076CEC9 /* GTDeleteLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDeleteLocationTask.swift; sourceTree = "<group>"; };
 		E55452DF1CF325300076CEC9 /* GTEditLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEditLocationTask.swift; sourceTree = "<group>"; };
 		E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserStreamablesTask.swift; sourceTree = "<group>"; };
+		E57822CC1D2D163800AB383A /* GTConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTConfig.swift; sourceTree = "<group>"; };
+		E57822CE1D2D188300AB383A /* GTDefaultConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTDefaultConfig.swift; sourceTree = "<group>"; };
+		E57822D01D2D1BCA00AB383A /* GTSDKConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTSDKConfig.swift; sourceTree = "<group>"; };
+		E57822D31D2D1E2A00AB383A /* GTLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLog.swift; sourceTree = "<group>"; };
+		E57822D61D2D21BD00AB383A /* GTFeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTFeedbackManager.swift; sourceTree = "<group>"; };
+		E57822D71D2D21BD00AB383A /* GTMeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMeManager.swift; sourceTree = "<group>"; };
+		E57822D81D2D21BD00AB383A /* GTStreamableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTStreamableManager.swift; sourceTree = "<group>"; };
+		E57822D91D2D21BD00AB383A /* GTUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserManager.swift; sourceTree = "<group>"; };
 		E59BC2F01D119BE0009781BA /* GTExternalProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTExternalProvider.swift; sourceTree = "<group>"; };
 		E59BC3161D17F0E9009781BA /* GTUserSocialFriendsContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserSocialFriendsContainer.swift; sourceTree = "<group>"; };
 		E59BC3181D17F193009781BA /* GTGetSocialFriendsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetSocialFriendsTask.swift; sourceTree = "<group>"; };
@@ -192,8 +200,6 @@
 		E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTApiConstants.swift; sourceTree = "<group>"; };
 		E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUser.swift; sourceTree = "<group>"; };
 		E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAsset.swift; sourceTree = "<group>"; };
-		E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUserManager.swift; sourceTree = "<group>"; };
-		E5E293741D05BC4900C272EE /* GTLogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTLogManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -539,6 +545,50 @@
 			path = Activity;
 			sourceTree = "<group>";
 		};
+		E57822CB1D2D161B00AB383A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E57822CC1D2D163800AB383A /* GTConfig.swift */,
+				E57822CE1D2D188300AB383A /* GTDefaultConfig.swift */,
+				E57822D01D2D1BCA00AB383A /* GTSDKConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E57822D21D2D1DE700AB383A /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				E57822D31D2D1E2A00AB383A /* GTLog.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		E57822D51D2D21BD00AB383A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				E57822D61D2D21BD00AB383A /* GTFeedbackManager.swift */,
+				E57822D71D2D21BD00AB383A /* GTMeManager.swift */,
+				E57822D81D2D21BD00AB383A /* GTStreamableManager.swift */,
+				E57822D91D2D21BD00AB383A /* GTUserManager.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		E5A1D6C31D2973F70027E438 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				E5A1D6C41D2973F70027E438 /* State */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		E5A1D6C41D2973F70027E438 /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		E5DFDB861CB2A28C00BB3D27 = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +610,8 @@
 		E5DFDB921CB2A28C00BB3D27 /* GraffiTab-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				E57822D21D2D1DE700AB383A /* Log */,
+				E57822CB1D2D161B00AB383A /* Config */,
 				E5DFDB9B1CB2A4CF00BB3D27 /* Constants */,
 				E5DFDB9D1CB2A4CF00BB3D27 /* Managers */,
 				E5DFDBA31CB2A4CF00BB3D27 /* Model */,
@@ -585,13 +637,9 @@
 		E5DFDB9D1CB2A4CF00BB3D27 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E57822D51D2D21BD00AB383A /* Api */,
 				E5DFDB9E1CB2A4CF00BB3D27 /* GTCookieManager.swift */,
 				E5DFDBA01CB2A4CF00BB3D27 /* GTLifecycleManager.swift */,
-				E5DFDBC71CB2BE8E00BB3D27 /* GTUserManager.swift */,
-				E510062C1CB719E800AC66A5 /* GTMeManager.swift */,
-				E51006751CB7E94A00AC66A5 /* GTStreamableManager.swift */,
-				E510071D1CBDB84C00AC66A5 /* GTFeedbackManager.swift */,
-				E5E293741D05BC4900C272EE /* GTLogManager.swift */,
 				E5A1D65E1D22D1E70027E438 /* GTCacheManager.swift */,
 			);
 			path = Managers;
@@ -643,6 +691,7 @@
 		E5DFDBAB1CB2A4CF00BB3D27 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				E5A1D6C31D2973F70027E438 /* Asset */,
 				E51005F61CB710B700AC66A5 /* Feedback */,
 				E51005F81CB710B700AC66A5 /* Me */,
 				E51006071CB710B700AC66A5 /* Streamables */,
@@ -775,23 +824,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5DFDBB51CB2A4CF00BB3D27 /* GTCache.swift in Sources */,
-				E5DFDBC81CB2BE8E00BB3D27 /* GTUserManager.swift in Sources */,
 				E5DAA8BD1CE4A858000CB2F4 /* GTGetUserFullProfileTask.swift in Sources */,
+				E57822D41D2D1E2A00AB383A /* GTLog.swift in Sources */,
 				E51006271CB7116A00AC66A5 /* GTGetFeedTask.swift in Sources */,
 				E51006221CB710B700AC66A5 /* GTResetPasswordTask.swift in Sources */,
 				E55452DE1CF324990076CEC9 /* GTDeleteLocationTask.swift in Sources */,
-				E51006761CB7E94A00AC66A5 /* GTStreamableManager.swift in Sources */,
+				E57822CD1D2D163800AB383A /* GTConfig.swift in Sources */,
 				E55452DA1CF317420076CEC9 /* GTCreateLocationTask.swift in Sources */,
 				E51007171CBD5DB200AC66A5 /* GTLogoutTask.swift in Sources */,
 				E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */,
 				E51007361CBE82A700AC66A5 /* GTEditProfileTask.swift in Sources */,
 				E55452D81CF316C50076CEC9 /* GTLocation.swift in Sources */,
 				E59BC2F11D119BE0009781BA /* GTExternalProvider.swift in Sources */,
+				E57822DA1D2D21BD00AB383A /* GTFeedbackManager.swift in Sources */,
 				E5DAA8B91CE4A6C5000CB2F4 /* GTGetMyFullProfileTask.swift in Sources */,
 				E51006201CB710B700AC66A5 /* GTLoginTask.swift in Sources */,
 				E52DC7541CE55D4400375828 /* GTGetUserLikedStreamablesTask.swift in Sources */,
 				E5A4F1351CE33665005CF12C /* GTPostCommentTask.swift in Sources */,
 				E51006B21CBBFC9A00AC66A5 /* GTActivity.swift in Sources */,
+				E57822DB1D2D21BD00AB383A /* GTMeManager.swift in Sources */,
 				E5DAA88E1CE3772D000CB2F4 /* GTSearchHashtagsTask.swift in Sources */,
 				E5DAA88C1CE35F73000CB2F4 /* GTEditCommentTask.swift in Sources */,
 				E52DC73D1CE5502E00375828 /* GTGetUserFullProfileByUsernameTask.swift in Sources */,
@@ -812,6 +863,7 @@
 				E5DAA8A21CE39AB1000CB2F4 /* GTLikeStreamableTask.swift in Sources */,
 				E59BC3171D17F0E9009781BA /* GTUserSocialFriendsContainer.swift in Sources */,
 				E52DC73B1CE54F0E00375828 /* GTGetUserProfileByUsernameTask.swift in Sources */,
+				E57822DC1D2D21BD00AB383A /* GTStreamableManager.swift in Sources */,
 				E510072E1CBE6C0C00AC66A5 /* GTDeleteAvatarTask.swift in Sources */,
 				E51007241CBE461E00AC66A5 /* GTEditPasswordTask.swift in Sources */,
 				E55452CD1CF298DE0076CEC9 /* GTEditStreamableGraffitiTask.swift in Sources */,
@@ -820,9 +872,7 @@
 				E5DFDBB61CB2A4CF00BB3D27 /* GTRequestBuilder.swift in Sources */,
 				E50564DB1CECC1D200A42E56 /* GTCreateStreamableGraffitiTask.swift in Sources */,
 				E51006471CB726F200AC66A5 /* GTGetMeTask.swift in Sources */,
-				E510071E1CBDB84C00AC66A5 /* GTFeedbackManager.swift in Sources */,
 				E51006291CB713EB00AC66A5 /* GTListItemsResult.swift in Sources */,
-				E510062D1CB719E800AC66A5 /* GTMeManager.swift in Sources */,
 				E5A1D65F1D22D1E70027E438 /* GTCacheManager.swift in Sources */,
 				E55452DC1CF31C5A0076CEC9 /* GTGetLocationsTask.swift in Sources */,
 				E5A4F11C1CE20AA5005CF12C /* GTGetLikersTask.swift in Sources */,
@@ -830,13 +880,14 @@
 				E51007051CBD1FC300AC66A5 /* GTGetMostActiveUsersTask.swift in Sources */,
 				E51006B41CBBFE3B00AC66A5 /* GTGetFollowersActivityTask.swift in Sources */,
 				E5DAA8A61CE3A29E000CB2F4 /* GTFollowTask.swift in Sources */,
+				E57822DD1D2D21BD00AB383A /* GTUserManager.swift in Sources */,
 				E5DFDBB21CB2A4CF00BB3D27 /* GTLifecycleManager.swift in Sources */,
 				E51007321CBE714E00AC66A5 /* GTEditAvatarTask.swift in Sources */,
 				E52DC7501CE55BF700375828 /* GTGetFollowersTask.swift in Sources */,
 				E5DFDBB91CB2A4CF00BB3D27 /* GTNetworkTask.swift in Sources */,
+				E57822D11D2D1BCA00AB383A /* GTSDKConfig.swift in Sources */,
 				E55452E01CF325300076CEC9 /* GTEditLocationTask.swift in Sources */,
 				E5DFDBB81CB2A4CF00BB3D27 /* GTSettings.swift in Sources */,
-				E5E293751D05BC4900C272EE /* GTLogManager.swift in Sources */,
 				E55452CB1CF28D590076CEC9 /* GTDeleteStreamableTask.swift in Sources */,
 				E5A4F11E1CE2120D005CF12C /* GTGetCommentsTask.swift in Sources */,
 				E510068A1CB8053F00AC66A5 /* GTSearchStreamablesForLocationTask.swift in Sources */,
@@ -845,6 +896,7 @@
 				E5DFDBB01CB2A4CF00BB3D27 /* GTCookieManager.swift in Sources */,
 				E51006EE1CBD16D100AC66A5 /* GTSearchStreamablesForHashtagTask.swift in Sources */,
 				E52DC7481CE558BD00375828 /* GTMarkStreamablePrivateTask.swift in Sources */,
+				E57822CF1D2D188300AB383A /* GTDefaultConfig.swift in Sources */,
 				E51006981CBBAA4C00AC66A5 /* GTNotification.swift in Sources */,
 				E59BC31B1D17F44A009781BA /* GTGetSocialFriendsForNetworkTask.swift in Sources */,
 				E510070B1CBD3FD800AC66A5 /* GTGetUnseenNotificationsCountTask.swift in Sources */,

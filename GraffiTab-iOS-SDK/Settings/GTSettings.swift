@@ -7,59 +7,12 @@
 //
 
 import UIKit
-import ObjectMapper
 
 public class GTSettings: NSObject {
 
     public static let sharedInstance = GTSettings()
     
-    public var user: GTUser? {
-        didSet {
-            if (user != nil) {
-                let JSONString = Mapper<GTUser>().toJSONString(user!)
-                setStringPreference(JSONString!, key: GTPreferencesConstants.User)
-            }
-            else {
-                removePreferenceForKey(GTPreferencesConstants.User)
-            }
-        }
-    }
-    
-    override init() {
-        super.init()
-        
-        basicInit()
-    }
-    
-    func basicInit() {
-        let userJson = getStringPreference(GTPreferencesConstants.User)
-        
-        if (userJson != nil) {
-            user = Mapper<GTUser>().map(userJson)
-        }
-    }
-    
-    public func setAppDomain(domain: String) {
-        GTApiDomainConstants.AppUrl = domain
-    }
-    
-    public func appDomain() -> String {
-        return GTApiDomainConstants.AppUrl
-    }
-    
-    public func logout() {
-        user = nil
-        
-        NSURLCache.sharedURLCache().removeAllCachedResponses()
-        
-        clearCookies()
-    }
-    
-    public func isLoggedIn() -> Bool {
-        return user != nil
-    }
-    
-    func getStringPreference(key: String) -> String? {
+    class func getStringPreference(key: String) -> String? {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         if (defaults.objectForKey(key) != nil) {
@@ -70,23 +23,33 @@ public class GTSettings: NSObject {
         }
     }
     
-    func setStringPreference(value: String, key: String) {
+    class func setStringPreference(value: String, key: String) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(value, forKey: key)
         defaults.synchronize()
     }
     
-    func removePreferenceForKey(key: String) {
+    class func removePreferenceForKey(key: String) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey(key)
         defaults.synchronize()
     }
     
-    func clearCookies() {
+    class func clearCookies() {
         for cookie in NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies! {
             NSHTTPCookieStorage.sharedHTTPCookieStorage().deleteCookie(cookie)
         }
         
         GTCookieManager.saveCookies()
+    }
+    
+    override init() {
+        super.init()
+        
+        basicInit()
+    }
+    
+    func basicInit() {
+        
     }
 }

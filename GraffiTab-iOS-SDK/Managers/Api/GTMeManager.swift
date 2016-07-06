@@ -8,9 +8,24 @@
 
 import UIKit
 import Alamofire
+import ObjectMapper
 
 public class GTMeManager: NSObject {
 
+    public static let sharedInstance = GTMeManager()
+    
+    public var loggedInUser: GTUser? {
+        didSet {
+            if (loggedInUser != nil) {
+                let JSONString = Mapper<GTUser>().toJSONString(loggedInUser!)
+                GTSettings.setStringPreference(JSONString!, key: GTPreferencesConstants.User)
+            }
+            else {
+                GTSettings.removePreferenceForKey(GTPreferencesConstants.User)
+            }
+        }
+    }
+    
     public class func importAvatar(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTImportExternalProviderAvatarTask()
         return task.importAvatar(externalProviderType, successBlock: successBlock, failureBlock: failureBlock)
@@ -161,5 +176,31 @@ public class GTMeManager: NSObject {
         task.cacheResponse = cacheResponse!
         task.cBlock = cacheBlock
         return task.getSocialFriends(type, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
+    override init() {
+        super.init()
+        
+        basicInit()
+    }
+    
+    func basicInit() {
+        let userJson = GTSettings.getStringPreference(GTPreferencesConstants.User)
+        
+        if (userJson != nil) {
+            loggedInUser = Mapper<GTUser>().map(userJson)
+        }
+    }
+    
+    public func logout() {
+        loggedInUser = nil
+        
+        NSURLCache.sharedURLCache().removeAllCachedResponses()
+        
+        GTSettings.clearCookies()
+    }
+    
+    public func isLoggedIn() -> Bool {
+        return loggedInUser != nil
     }
 }

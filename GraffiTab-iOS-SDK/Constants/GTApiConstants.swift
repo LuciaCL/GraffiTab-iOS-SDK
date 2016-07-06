@@ -11,8 +11,9 @@ struct GTApiDateConstants {
 }
 
 struct GTApiDomainConstants {
-    static var AppUrl = "http://dev.graffitab.com"
-    static let ApiUrl = AppUrl + "/api"
+    static var DefaultAppDomain = "dev.graffitab.com"
+    static var DefaultProtocol = "http"
+    static let ApiUrl = String(format: "%@://%@/api", GTApiDomainConstants.DefaultProtocol, GTApiDomainConstants.DefaultAppDomain)
 }
 
 struct GTApiUserConstants {

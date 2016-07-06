@@ -37,7 +37,7 @@ class GTLogoutTask: GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
-        GTSettings.sharedInstance.logout()
+        GTMeManager.sharedInstance.logout()
         
         return "";
     }

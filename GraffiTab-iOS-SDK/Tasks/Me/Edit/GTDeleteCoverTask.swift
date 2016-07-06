@@ -37,9 +37,9 @@ class GTDeleteCoverTask: GTNetworkTask {
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
-        let user = GTSettings.sharedInstance.user
+        let user = GTMeManager.sharedInstance.loggedInUser
         user!.cover = nil
-        GTSettings.sharedInstance.user = user
+        GTMeManager.sharedInstance.loggedInUser = user
         
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserCoverChanged, object: nil, userInfo: ["user" : user!])
         

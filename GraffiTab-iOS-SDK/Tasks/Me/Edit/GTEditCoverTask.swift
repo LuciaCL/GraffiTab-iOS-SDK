@@ -48,9 +48,9 @@ class GTEditCoverTask: GTNetworkTask {
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
         let asset = Mapper<GTAsset>().map(JSON["asset"])
         
-        let user = GTSettings.sharedInstance.user
+        let user = GTMeManager.sharedInstance.loggedInUser
         user!.cover = asset
-        GTSettings.sharedInstance.user = user
+        GTMeManager.sharedInstance.loggedInUser = user
         
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserCoverChanged, object: nil, userInfo: ["user" : user!])
         
