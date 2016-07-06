@@ -11,11 +11,11 @@ import CocoaLumberjack
 
 public class GTConfig: NSObject {
 
-    var logEnabled: Bool?
-    var logLevel: DDLogLevel?
+    public var logEnabled: Bool?
+    public var logLevel: DDLogLevel?
     
-    var domain: String?
-    var httpsEnabled: Bool?
+    public var domain: String?
+    public var httpsEnabled: Bool?
     
     public static let defaultConfig = GTDefaultConfig()
     
