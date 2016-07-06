@@ -11,7 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
 
-class GTImportExternalProviderAvatarTask: GTNetworkTask {
+class GTImportExternalProviderAvatarTask: GTAssetNetworkTask {
     
     func importAvatar(externalProviderType: GTExternalProviderType, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
@@ -31,13 +31,22 @@ class GTImportExternalProviderAvatarTask: GTNetworkTask {
             else {
                 let resp = response.result.value
                 
-                self.parseJSONSuccess(resp!)
+                // Wait until the asset has finished processing.
+                self.awaitAssetProcessingComplete(resp!, completion: { (asset) in
+                    self.parseJSONSuccess(asset)
+                })
             }
         })
     }
     
     override func parseJSONSuccessObject(JSON: AnyObject) -> AnyObject {
-        let asset = Mapper<GTAsset>().map(JSON["asset"])
+        let asset: GTAsset
+        if JSON.isKindOfClass(GTAsset) { // The polling task returns either an asset object or the original asset JSON.
+            asset = JSON as! GTAsset
+        }
+        else {
+            asset = Mapper<GTAsset>().map(JSON["asset"])!
+        }
         
         let user = GTMeManager.sharedInstance.loggedInUser
         user!.avatar = asset
@@ -45,6 +54,6 @@ class GTImportExternalProviderAvatarTask: GTNetworkTask {
         
         NSNotificationCenter.defaultCenter().postNotificationName(GTEvents.UserAvatarChanged, object: nil, userInfo: ["user" : user!])
         
-        return asset!;
+        return asset;
     }
 }

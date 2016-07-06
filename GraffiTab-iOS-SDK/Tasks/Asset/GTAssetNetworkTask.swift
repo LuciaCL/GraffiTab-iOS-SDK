@@ -15,13 +15,13 @@ class GTAssetNetworkTask: GTNetworkTask {
         let asset = Mapper<GTAsset>().map(originalJSON["asset"])
         
         GTUtils.runWithDelay(1) {
-            GTLog.logDebug(GTLogConstants.Tag, message: "Checking asset state - \(asset?.guid)", forceLog: false)
+            GTLog.logDebug(GTLogConstants.Tag, message: "Checking asset state - \(asset?.guid!)", forceLog: false)
             
             GTAssetManager.getAssetState(asset!.guid!, successBlock: { (response) in
                 let polledAsset = response.object as! GTAsset
                 
                 if polledAsset.state == GTAssetState.COMPLETED {
-                    GTLog.logDebug(GTLogConstants.Tag, message: "Asset \(asset?.guid) finished processing", forceLog: false)
+                    GTLog.logDebug(GTLogConstants.Tag, message: "Asset \(asset?.guid!) finished processing", forceLog: false)
                     completion(asset: polledAsset)
                 }
                 else {
