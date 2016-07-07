@@ -48,11 +48,15 @@ public class GTMeManager: NSObject {
     
     public class func getMe(cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetMeTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getMe(successBlock, failureBlock: failureBlock)
     }
     
     public class func getMyFullProfile(cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetMyFullProfileTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         return task.getMe(successBlock, failureBlock: failureBlock)
     }
     
@@ -151,6 +155,8 @@ public class GTMeManager: NSObject {
     
     public class func getLocations(cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) {
         let task = GTGetLocationsTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
         task.getLocations(successBlock, failureBlock: failureBlock)
     }
     
