@@ -22,4 +22,9 @@ class GTCache: NSObject {
         let cache = Shared.dataCache
         cache.set(value: data, key: url)
     }
+    
+    func clearCache() {
+        let cache = Shared.dataCache
+        cache.removeAll()
+    }
 }

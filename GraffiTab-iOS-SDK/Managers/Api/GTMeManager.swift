@@ -201,8 +201,11 @@ public class GTMeManager: NSObject {
     public func logout() {
         loggedInUser = nil
         
+        // Clear cache.
         NSURLCache.sharedURLCache().removeAllCachedResponses()
+        GTCache.sharedInstance.clearCache()
         
+        // Clear cookies.
         GTSettings.clearCookies()
     }
     
