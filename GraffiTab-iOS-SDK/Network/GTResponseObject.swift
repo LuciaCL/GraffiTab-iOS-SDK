@@ -47,6 +47,7 @@ public enum GTReason : String {
     
     case DEVICE_ALREADY_EXISTS
     case EXTERNAL_PROVIDER_ALREADY_LINKED
+    case EXTERNAL_PROVIDER_ALREADY_LINKED_FOR_OTHER_USER
     
     case GENERAL_ERROR
     
