@@ -32,7 +32,7 @@ class GTAssetNetworkTask: GTNetworkTask {
                         self.awaitAssetProcessingComplete(originalJSON, completion: completion)
                     }
                 }) { (response) in
-                    GTLog.logError(GTLogConstants.Tag, message: "Failed to poll for asset state - \(response.message)", forceLog: true)
+                    GTLog.logError(GTLogConstants.Tag, message: "Failed to poll for asset state - \(response.error.message)", forceLog: true)
                     self.awaitAssetProcessingComplete(originalJSON, completion: completion)
                 }
                 

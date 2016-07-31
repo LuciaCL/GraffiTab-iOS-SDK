@@ -22,10 +22,10 @@ class GTGetCommentsTask: GTNetworkTask {
         return request(.GET, URLString: url, parameters: nil, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
             if (response.result.isFailure) {
                 if (response.response == nil) {
-                    self.parseJSONError(1)
+                    self.parseJSONError(nil)
                 }
                 else {
-                    self.parseJSONError((response.response?.statusCode)!)
+                    self.parseJSONError(response)
                 }
             }
             else {

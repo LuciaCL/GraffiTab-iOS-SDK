@@ -30,30 +30,24 @@ class GTNetworkTask: NSObject {
                     // At this point we have a cached response.
                     self.parseJSONCacheSuccess(decoded)
                 } catch let error as NSError {
-                    GTLog.logError(GTLogConstants.Tag, message: "Error fetching cached response for request \(URLString) - \(error)", forceLog: true)
+                    GTLog.logError(GTLogConstants.Tag, message: "Error fetching cached response for request:\nUrl: \(URLString)\nError: \(error)\n\n", forceLog: true)
                 }
             })
         }
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request \(method) - \(URLString)", forceLog: false)
-        GTLog.logDebug(GTLogConstants.Tag, message: "Parameters - \(parameters)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nParameters: \(parameters)\n\n", forceLog: false)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                GTLog.logDebug(GTLogConstants.Tag, message: "Received response for request \(URLString) - \(response)", forceLog: false)
-                
-                if response.result.isFailure {
-                    GTLog.logDebug(GTLogConstants.Tag, message: "Received error response for request \(URLString) - \(response)", forceLog: false)
-                }
-                else if method == .GET && self.cacheResponse { // Check cache only on GET method.
+                if !response.result.isFailure && method == .GET && self.cacheResponse { // Check cache only on GET method.
                     do {
                         let json = response.result.value
                         let jsonData = try NSJSONSerialization.dataWithJSONObject(json!, options: NSJSONWritingOptions.PrettyPrinted)
                         GTCache.sharedInstance.cacheJSONResponse(URLString.URLString, data: jsonData)
                     } catch let error as NSError {
-                        GTLog.logError(GTLogConstants.Tag, message: "Error caching response for request \(URLString) - \(error)", forceLog: true)
+                        GTLog.logError(GTLogConstants.Tag, message: "Error caching response for request:\nUrl: \(URLString)\nError: \(error)\n\n", forceLog: true)
                     }
                 }
                 
@@ -65,18 +59,12 @@ class GTNetworkTask: NSObject {
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request \(method) - \(URLString)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\n\n", forceLog: false)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                GTLog.logDebug(GTLogConstants.Tag, message: "Received response for request \(URLString) - \(response)", forceLog: false)
-                
-                if response.result.isFailure {
-                    GTLog.logDebug(GTLogConstants.Tag, message: "Received error response for request \(URLString) - \(response)", forceLog: false)
-                }
-                
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 completionHandler(response)
             })
@@ -85,7 +73,7 @@ class GTNetworkTask: NSObject {
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request \(method) - \(URLString)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\n\n", forceLog: false)
 
         do {
             var jsonData: NSData?
@@ -106,12 +94,6 @@ class GTNetworkTask: NSObject {
                     upload
                         .validate()
                         .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                            GTLog.logDebug(GTLogConstants.Tag, message: "Received response for request \(URLString) - \(response)", forceLog: false)
-                            
-                            if response.result.isFailure {
-                                GTLog.logDebug(GTLogConstants.Tag, message: "Received error response for request \(URLString) - \(response)", forceLog: false)
-                            }
-                            
                             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                             completionHandler(response)
                         })
@@ -130,35 +112,54 @@ class GTNetworkTask: NSObject {
     
     func parseJSONSuccess(JSON: AnyObject) {
         let response = GTResponseObject()
-        response.result = GTResult.Success
+        response.error = nil
         response.object = parseJSONSuccessObject(JSON)
         response.url = loadedUrl
         
+        GTLog.logDebug(GTLogConstants.Tag, message: "Received OK response for request:\nUrl: \(loadedUrl)\nJSON: \(JSON)\n\n", forceLog: false)
         finishRequestWithResponse(response)
     }
     
     func parseJSONCacheSuccess(JSON: AnyObject) {
         let response = GTResponseObject()
-        response.result = GTResult.Success
+        response.error = nil
         response.object = parseJSONSuccessObject(JSON)
         response.url = loadedUrl
         
         finishCachedRequestWithResponse(response)
     }
     
-    func parseJSONError(statusCode: Int) {
+    func parseJSONError(networkResponse: Response<AnyObject, NSError>?) {
         let response = GTResponseObject()
-        response.result = GTResult.Error
         response.url = loadedUrl
         
-        if let reason = GTReason(rawValue: statusCode) {
-            response.reason = reason
+        let error = GTError()
+        error.statusCode = networkResponse?.response?.statusCode
+        if let data = networkResponse!.data { // Check if there's data for the response.
+            do {
+                // Encode the data.
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary
+                if json != nil {
+                    if let reason = GTReason(rawValue: json!["resultCode"] as! String) {
+                        error.reason = reason
+                    }
+                    else {
+                        error.reason = .OTHER
+                    }
+                    error.message = json!["resultMessage"] as! String
+                }
+                else {
+                    error.reason = .OTHER
+                    error.message = ""
+                }
+            }
+            catch {
+                print("Error: \(error)")
+            }
         }
-        else {
-            response.reason = .Other
-        }
-        response.message = response.reason.description
+        response.error = error
         
+        GTLog.logDebug(GTLogConstants.Tag, message: "Received ERROR response for request:\nUrl: \(loadedUrl)\nStatus Code: \(error.statusCode)\nReason: \(error.reason)\nMessage: \(error.message)\n\n", forceLog: false)
         finishRequestWithResponse(response)
     }
     
@@ -167,7 +168,7 @@ class GTNetworkTask: NSObject {
     }
     
     func finishRequestWithResponse(response: GTResponseObject) {
-        if (response.result == GTResult.Success) {
+        if (response.error == nil) {
             if (sBlock != nil) {
                 sBlock(response: response)
             }

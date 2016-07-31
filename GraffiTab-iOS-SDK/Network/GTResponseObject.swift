@@ -8,40 +8,59 @@
 
 import UIKit
 
-public enum GTResult {
-    case Success
-    case Error
+public enum GTReason : String {
+    case OK
+    
+    case UNSUPPORTED_FILE_TYPE
+    case INVALID_TOKEN
+    case STREAM_COULD_NOT_BE_READ
+    case INVALID_ARGUMENT
+    case MISSING_ARGUMENT
+    case INVALID_JSON
+    case INVALID_FOLLOWEE
+    case EMPTY_MANDATORY_FIELD
+    case INVALID_USERNAME
+    case INVALID_EMAIL
+    case USERNAME_ALREADY_IN_USE
+    case EMAIL_ALREADY_IN_USE
+    case INVALID_ID
+    
+    case USER_NOT_LOGGED_IN
+    case USER_NOT_OWNER
+    
+    case INCORRECT_PASSWORD
+    case MAXIMUM_LOGIN_ATTEMPTS
+    case FORBIDDEN_RESOURCE
+    
+    case EXTERNAL_PROVIDER_NOT_FOUND
+    case EXTERNAL_PROVIDER_NOT_LINKED
+    case DEVICE_NOT_FOUND
+    case USER_NOT_FOUND
+    case ASSET_NOT_FOUND
+    case STREAMABLE_NOT_FOUND
+    case COMMENT_NOT_FOUND
+    case LOCATION_NOT_FOUND
+    case TOKEN_NOT_FOUND
+    
+    case TOKEN_EXPIRED
+    case USER_NOT_IN_EXPECTED_STATE
+    
+    case DEVICE_ALREADY_EXISTS
+    case EXTERNAL_PROVIDER_ALREADY_LINKED
+    
+    case GENERAL_ERROR
+    
+    case OTHER
 }
 
-public enum GTReason : Int, CustomStringConvertible {
-    case Other               = 1
-    case BadRequest          = 400
-    case AuthorizationNeeded = 401
-    case Forbidden           = 403
-    case NotFound            = 404
-    case NotAcceptable       = 406
-    case AlreadyExists       = 409
-    case ServerError         = 500
-    
-    public var description : String {
-        switch self {
-            case .BadRequest:          return "Bad request."
-            case .AuthorizationNeeded: return "You need to be logged in to make this request."
-            case .Forbidden:           return "The request is forbidden."
-            case .NotFound:            return "This item was not found."
-            case .NotAcceptable:       return "This action is not allowed."
-            case .AlreadyExists:       return "This item already exists."
-            case .ServerError:         return "Oups, seems like something went wrong on our server. Please contact support to report this issue."
-            case .Other:               return "We could not process your request right now. Please check your connection and try again or contact Support to report this issue."
-        }
-    }
+public class GTError {
+    public var reason: GTReason!
+    public var statusCode: Int!
+    public var message: String!
 }
 
 public class GTResponseObject {
-
-    public var result: GTResult!
-    public var reason: GTReason!
-    public var message: String!
+    public var error: GTError!
     public var object: AnyObject!
     public var url: String!
 }

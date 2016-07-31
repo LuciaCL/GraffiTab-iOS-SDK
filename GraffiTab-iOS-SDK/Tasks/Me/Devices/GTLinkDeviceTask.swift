@@ -25,10 +25,10 @@ class GTLinkDeviceTask: GTNetworkTask {
         return request(.POST, URLString: url, parameters: params, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
             if (response.result.isFailure) {
                 if (response.response == nil) {
-                    self.parseJSONError(1)
+                    self.parseJSONError(nil)
                 }
                 else {
-                    self.parseJSONError((response.response?.statusCode)!)
+                    self.parseJSONError(response)
                 }
             }
             else {
