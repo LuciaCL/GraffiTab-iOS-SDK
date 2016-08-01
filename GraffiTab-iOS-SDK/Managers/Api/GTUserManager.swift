@@ -62,6 +62,13 @@ public class GTUserManager: NSObject {
         return task.getStreamables(userId, offset: offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func getUserStreamablesForLocation(userId: Int, neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTGetUserStreamablesForLocationTask()
+        task.cacheResponse = cacheResponse!
+        task.cBlock = cacheBlock
+        return task.getUserStreamablesForLocation(userId, neLatitude: neLatitude, neLongitude: neLongitude, swLatitude: swLatitude, swLongitude: swLongitude, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func getLikedStreamables(userId: Int, offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTGetUserLikedStreamablesTask()
         task.cacheResponse = cacheResponse!

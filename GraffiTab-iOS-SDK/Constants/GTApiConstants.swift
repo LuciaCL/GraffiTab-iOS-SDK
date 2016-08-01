@@ -39,6 +39,7 @@ struct GTApiUserConstants {
     
     // Streamables.
     static let Streamables = Users + "/%d/streamables"
+    static let StreamablesForLocation = Streamables + "/location?neLatitude=%f&neLongitude=%f&swLatitude=%f&swLongitude=%f"
     
     // Most active.
     static let MostActive = Users + "/mostactive"

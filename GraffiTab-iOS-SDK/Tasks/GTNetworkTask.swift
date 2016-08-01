@@ -140,13 +140,24 @@ class GTNetworkTask: NSObject {
                 // Encode the data.
                 let json = try NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary
                 if json != nil {
-                    if let reason = GTReason(rawValue: json!["resultCode"] as! String) {
-                        error.reason = reason
+                    let resultCodeString = json!["resultCode"]
+                    let resultMessageString = json!["resultMessage"]
+                    
+                    // Set result code.
+                    if resultCodeString != nil {
+                        error.reason = GTReason(rawValue: resultCodeString as! String)
                     }
                     else {
                         error.reason = .OTHER
                     }
-                    error.message = json!["resultMessage"] as! String
+                    
+                    // Set result message.
+                    if resultMessageString != nil {
+                        error.message = resultMessageString as! String
+                    }
+                    else {
+                        error.message = ""
+                    }
                 }
                 else {
                     error.reason = .OTHER

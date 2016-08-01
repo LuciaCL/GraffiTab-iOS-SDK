@@ -103,6 +103,7 @@
 		E5DFDBBC1CB2A91C00BB3D27 /* GTApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */; };
 		E5DFDBBE1CB2B65C00BB3D27 /* GTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */; };
 		E5DFDBC01CB2BAA200BB3D27 /* GTAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */; };
+		E5F40CFD1D4FB54800832D92 /* GTGetUserStreamablesForLocationTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F40CFC1D4FB54800832D92 /* GTGetUserStreamablesForLocationTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -206,6 +207,7 @@
 		E5DFDBBB1CB2A91C00BB3D27 /* GTApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTApiConstants.swift; sourceTree = "<group>"; };
 		E5DFDBBD1CB2B65C00BB3D27 /* GTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTUser.swift; sourceTree = "<group>"; };
 		E5DFDBBF1CB2BAA200BB3D27 /* GTAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAsset.swift; sourceTree = "<group>"; };
+		E5F40CFC1D4FB54800832D92 /* GTGetUserStreamablesForLocationTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTGetUserStreamablesForLocationTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -538,6 +540,7 @@
 			isa = PBXGroup;
 			children = (
 				E558A89D1CBFB92400C2F9B1 /* GTGetUserStreamablesTask.swift */,
+				E5F40CFC1D4FB54800832D92 /* GTGetUserStreamablesForLocationTask.swift */,
 			);
 			path = Streamables;
 			sourceTree = "<group>";
@@ -836,6 +839,7 @@
 				E5DAA8BD1CE4A858000CB2F4 /* GTGetUserFullProfileTask.swift in Sources */,
 				E57822D41D2D1E2A00AB383A /* GTLog.swift in Sources */,
 				E51006271CB7116A00AC66A5 /* GTGetFeedTask.swift in Sources */,
+				E5F40CFD1D4FB54800832D92 /* GTGetUserStreamablesForLocationTask.swift in Sources */,
 				E51006221CB710B700AC66A5 /* GTResetPasswordTask.swift in Sources */,
 				E55452DE1CF324990076CEC9 /* GTDeleteLocationTask.swift in Sources */,
 				E57822CD1D2D163800AB383A /* GTConfig.swift in Sources */,

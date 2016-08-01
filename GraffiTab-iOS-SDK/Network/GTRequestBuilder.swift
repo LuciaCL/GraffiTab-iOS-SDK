@@ -48,6 +48,10 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", String(format: GTApiUserConstants.Streamables, userId), offset, limit)
     }
     
+    class func buildGetUserStreamablesForLocationUrl(userId: Int, neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double) -> String {
+        return String(format: GTApiUserConstants.StreamablesForLocation, userId, neLatitude, neLongitude, swLatitude, swLongitude)
+    }
+    
     class func buildFollowersUrl(userId: Int) -> String {
         return String(format: GTApiUserConstants.Followers, userId)
     }
