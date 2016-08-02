@@ -134,38 +134,45 @@ class GTNetworkTask: NSObject {
         response.url = loadedUrl
         
         let error = GTError()
-        error.statusCode = networkResponse?.response?.statusCode
-        if let data = networkResponse!.data { // Check if there's data for the response.
-            do {
-                // Encode the data.
-                let json = try NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary
-                if json != nil {
-                    let resultCodeString = json!["resultCode"]
-                    let resultMessageString = json!["resultMessage"]
-                    
-                    // Set result code.
-                    if resultCodeString != nil {
-                        error.reason = GTReason(rawValue: resultCodeString as! String)
+        if networkResponse == nil {
+            error.statusCode = 500
+            error.message = ""
+            error.reason = .OTHER
+        }
+        else {
+            error.statusCode = networkResponse?.response?.statusCode
+            if let data = networkResponse!.data { // Check if there's data for the response.
+                do {
+                    // Encode the data.
+                    let json = try NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary
+                    if json != nil {
+                        let resultCodeString = json!["resultCode"]
+                        let resultMessageString = json!["resultMessage"]
+                        
+                        // Set result code.
+                        if resultCodeString != nil {
+                            error.reason = GTReason(rawValue: resultCodeString as! String)
+                        }
+                        else {
+                            error.reason = .OTHER
+                        }
+                        
+                        // Set result message.
+                        if resultMessageString != nil {
+                            error.message = resultMessageString as! String
+                        }
+                        else {
+                            error.message = ""
+                        }
                     }
                     else {
                         error.reason = .OTHER
-                    }
-                    
-                    // Set result message.
-                    if resultMessageString != nil {
-                        error.message = resultMessageString as! String
-                    }
-                    else {
                         error.message = ""
                     }
                 }
-                else {
-                    error.reason = .OTHER
-                    error.message = ""
+                catch {
+                    print("Error: \(error)")
                 }
-            }
-            catch {
-                print("Error: \(error)")
             }
         }
         response.error = error
