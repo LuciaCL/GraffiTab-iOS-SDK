@@ -134,12 +134,11 @@ class GTNetworkTask: NSObject {
         response.url = loadedUrl
         
         let error = GTError()
-        if networkResponse == nil {
-            error.statusCode = 500
-            error.message = ""
-            error.reason = .OTHER
-        }
-        else {
+        error.statusCode = 500
+        error.message = ""
+        error.reason = .OTHER
+        
+        if networkResponse != nil {
             error.statusCode = networkResponse?.response?.statusCode
             if let data = networkResponse!.data { // Check if there's data for the response.
                 do {
