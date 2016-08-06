@@ -59,7 +59,7 @@ class GTNetworkTask: NSObject {
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\n\n", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nUpload size: \(Double(data.length) / 1024.0) KB\n\n", forceLog: false)
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.upload(method, URLString, headers: headers, data: data)
@@ -73,7 +73,7 @@ class GTNetworkTask: NSObject {
     func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\n\n", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nUpload size: \(Double(fileData.length) / 1024.0) KB\n\n", forceLog: false)
 
         do {
             var jsonData: NSData?

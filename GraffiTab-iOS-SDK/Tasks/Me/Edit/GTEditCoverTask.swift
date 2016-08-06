@@ -23,7 +23,8 @@ class GTEditCoverTask: GTAssetNetworkTask {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             
             // Compress image.
-            let fileData = UIImageJPEGRepresentation(image, 0.5)
+//            let fileData = image.hasApha() ? UIImagePNGRepresentation(image) : UIImageJPEGRepresentation(image, CGFloat(GTImageConstants.CompressionQuality))
+            let fileData = UIImageJPEGRepresentation(image, CGFloat(GTImageConstants.CompressionQuality))
             
             dispatch_async( dispatch_get_main_queue(), {
                 self.multipartFileUploadRequest(.POST, URLString: url, fileData: fileData!, properties: nil, completionHandler: { (response: Response<AnyObject, NSError>) in

@@ -51,3 +51,7 @@ struct GTCookieConstants {
 struct GTLogConstants {
     static let Tag = "GraffiTab SDK"
 }
+
+struct GTImageConstants {
+    static let CompressionQuality = 0.7
+}

@@ -23,7 +23,8 @@ class GTCreateStreamableGraffitiTask: GTNetworkTask {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             
             // Compress image.
-            let fileData = UIImagePNGRepresentation(image)
+//            let fileData = image.hasApha() ? UIImagePNGRepresentation(image) : UIImageJPEGRepresentation(image, CGFloat(GTImageConstants.CompressionQuality))
+            let fileData = UIImageJPEGRepresentation(image, CGFloat(GTImageConstants.CompressionQuality))
             
             let graffitiParams = ["latitude":latitude, "longitude":longitude, "roll":roll, "pitch":pitch, "yaw":yaw]
             
