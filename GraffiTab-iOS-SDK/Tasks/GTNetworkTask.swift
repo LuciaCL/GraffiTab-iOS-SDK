@@ -22,38 +22,60 @@ class GTNetworkTask: NSObject {
     func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
         loadedUrl = URLString.URLString
         
-        if method == .GET && cacheResponse { // Check cache only on GET method.
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        // Prepare web request.
+        let request = Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
+        
+        let requestBlock = {
+            GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nParameters: \(parameters)\n\n", forceLog: false)
+            
+            request.validate()
+                .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
+                    if !response.result.isFailure && method == .GET && self.cacheResponse { // Check cache only on GET method.
+                        do {
+                            let json = response.result.value
+                            let jsonData = try NSJSONSerialization.dataWithJSONObject(json!, options: NSJSONWritingOptions.PrettyPrinted)
+                            GTCache.sharedInstance.cacheJSONResponse(URLString.URLString, data: jsonData)
+                        } catch let error as NSError {
+                            GTLog.logError(GTLogConstants.Tag, message: "Error caching response for request:\nUrl: \(URLString)\nError: \(error)\n\n", forceLog: true)
+                        }
+                    }
+                    
+                    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                    completionHandler(response)
+                })
+        }
+        
+        // Check cache only on GET method.
+        if method == .GET && cacheResponse {
             GTCache.sharedInstance.fetchCachedDataResponse(URLString.URLString, onSuccess: { (data) in
                 do {
                     let decoded = try NSJSONSerialization.JSONObjectWithData(data, options: [])
                     
                     // At this point we have a cached response.
                     self.parseJSONCacheSuccess(decoded)
+                    
+                    GTUtils.runWithDelay(0.5, block: { // Delay request so that client has time to process cache.
+                        requestBlock()
+                    })
                 } catch let error as NSError {
                     GTLog.logError(GTLogConstants.Tag, message: "Error fetching cached response for request:\nUrl: \(URLString)\nError: \(error)\n\n", forceLog: true)
                 }
+            }, onError: {(error) in
+                GTLog.logError(GTLogConstants.Tag, message: "Error fetching cached response for request:\nUrl: \(URLString)\nError: \(error)\n\n", forceLog: true)
+                
+                GTUtils.runWithDelay(0.5, block: { // Delay request so that client has time to process cache.
+                    requestBlock()
+                })
             })
         }
+        else {
+            // Send web request.
+            requestBlock()
+        }
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nParameters: \(parameters)\n\n", forceLog: false)
-        
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        return Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
-            .validate()
-            .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
-                if !response.result.isFailure && method == .GET && self.cacheResponse { // Check cache only on GET method.
-                    do {
-                        let json = response.result.value
-                        let jsonData = try NSJSONSerialization.dataWithJSONObject(json!, options: NSJSONWritingOptions.PrettyPrinted)
-                        GTCache.sharedInstance.cacheJSONResponse(URLString.URLString, data: jsonData)
-                    } catch let error as NSError {
-                        GTLog.logError(GTLogConstants.Tag, message: "Error caching response for request:\nUrl: \(URLString)\nError: \(error)\n\n", forceLog: true)
-                    }
-                }
-                
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                completionHandler(response)
-        })
+        return request
     }
     
     func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {

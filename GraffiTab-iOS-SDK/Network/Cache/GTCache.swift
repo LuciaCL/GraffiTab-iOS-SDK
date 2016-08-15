@@ -13,9 +13,9 @@ class GTCache: NSObject {
 
     static let sharedInstance = GTCache()
     
-    func fetchCachedDataResponse(url: String, onSuccess: NSData -> ()) {
+    func fetchCachedDataResponse(url: String, onSuccess: NSData -> (), onError: (NSError)? -> ()) {
         let cache = Shared.dataCache
-        cache.fetch(key: url).onSuccess(onSuccess)
+        cache.fetch(key: url).onFailure(onError).onSuccess(onSuccess)
     }
     
     func cacheJSONResponse(url: String, data: NSData) {
