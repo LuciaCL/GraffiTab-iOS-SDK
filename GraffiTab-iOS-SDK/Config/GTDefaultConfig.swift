@@ -11,7 +11,19 @@ import CocoaLumberjack
 
 public class GTDefaultConfig: GTConfig {
 
+    public var defaultLogEnabled   = false
+    public var defaultLogLevel     = DDLogLevel.Off
+    
+    public var defaultDomain       = GTApiDomainConstants.DefaultAppDomain
+    public var defaultHttpsEnabled = true
+    
+    public var defaultLanguage     = "en"
+    
     init() {
-        super.init(domain: GTApiDomainConstants.DefaultAppDomain, logEnabled: false, logLevel: .Off, httpsEnabled: false)
+        super.init(domain: defaultDomain,
+                   logEnabled: defaultLogEnabled,
+                   logLevel: defaultLogLevel,
+                   httpsEnabled: defaultHttpsEnabled,
+                   language: defaultLanguage)
     }
 }

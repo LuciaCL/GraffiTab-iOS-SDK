@@ -12,7 +12,7 @@ public class GTSDKConfig: NSObject {
 
     public static let sharedInstance = GTSDKConfig()
     
-    var config: GTConfig?
+    private var config: GTConfig?
     
     public func getConfiguration() -> GTConfig {
         if self.config == nil {
@@ -35,6 +35,7 @@ public class GTSDKConfig: NSObject {
         
         GTLog.logInfo(GTLogConstants.Tag, message: "Set SDK configuration", forceLog: true)
         GTLog.logDebug(GTLogConstants.Tag, message: "Domain: \(config.domain!)", forceLog: false)
+        GTLog.logDebug(GTLogConstants.Tag, message: "Language: \(config.language!)", forceLog: false)
         GTLog.logDebug(GTLogConstants.Tag, message: "Log: \(config.logEnabled!)", forceLog: false)
         GTLog.logDebug(GTLogConstants.Tag, message: "Log level: \(config.logLevel!)", forceLog: false)
         GTLog.logDebug(GTLogConstants.Tag, message: "HTTPS: \(config.httpsEnabled!)", forceLog: false)

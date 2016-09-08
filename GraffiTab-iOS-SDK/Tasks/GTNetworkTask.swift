@@ -19,16 +19,23 @@ class GTNetworkTask: NSObject {
     
     // MARK: - Requests
     
-    func request(method: Alamofire.Method, URLString: URLStringConvertible, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
+    func request(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]? = nil, parameters: [String : AnyObject]?, encoding: ParameterEncoding = .URL, completionHandler: (Response<AnyObject, NSError>) -> Void) -> Request {
         loadedUrl = URLString.URLString
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
+        // Setup custom headers.
+        var modifiedHeaders = headers
+        if modifiedHeaders == nil {
+            modifiedHeaders = [String:String]()
+        }
+        modifiedHeaders!["Accept-Language"] = GTSDKConfig.sharedInstance.getConfiguration().language
+        
         // Prepare web request.
-        let request = Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: nil)
+        let request = Alamofire.request(method, URLString, parameters: parameters, encoding: encoding, headers: modifiedHeaders)
         
         let requestBlock = {
-            GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nParameters: \(parameters)\n\n", forceLog: false)
+            GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nHeaders: \(modifiedHeaders!)\nParameters: \(parameters)\n\n", forceLog: false)
             
             request.validate()
                 .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
@@ -78,13 +85,21 @@ class GTNetworkTask: NSObject {
         return request
     }
     
-    func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]?, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
+    func uploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]? = nil, data: NSData, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nUpload size: \(Double(data.length) / 1024.0) KB\n\n", forceLog: false)
+        // Setup custom headers.
+        var modifiedHeaders = headers
+        if modifiedHeaders == nil {
+            modifiedHeaders = [String:String]()
+        }
+        modifiedHeaders!["Accept-Language"] = GTSDKConfig.sharedInstance.getConfiguration().language
         
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nHeaders: \(modifiedHeaders!)\nUpload size: \(Double(data.length) / 1024.0) KB\n\n", forceLog: false)
+        
+        // Prepare web request.
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        Alamofire.upload(method, URLString, headers: headers, data: data)
+        Alamofire.upload(method, URLString, headers: modifiedHeaders, data: data)
             .validate()
             .responseJSON(completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -92,10 +107,17 @@ class GTNetworkTask: NSObject {
             })
     }
     
-    func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
+    func multipartFileUploadRequest(method: Alamofire.Method, URLString: URLStringConvertible, headers: [String:String]? = nil, fileData: NSData, properties: [String : AnyObject]?, completionHandler: (Response<AnyObject, NSError>) -> Void) {
         loadedUrl = URLString.URLString
         
-        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nUpload size: \(Double(fileData.length) / 1024.0) KB\n\n", forceLog: false)
+        // Setup custom headers.
+        var modifiedHeaders = headers
+        if modifiedHeaders == nil {
+            modifiedHeaders = [String:String]()
+        }
+        modifiedHeaders!["Accept-Language"] = GTSDKConfig.sharedInstance.getConfiguration().language
+        
+        GTLog.logDebug(GTLogConstants.Tag, message: "Sending request:\nMethod: \(method)\nUrl: \(URLString)\nHeaders: \(modifiedHeaders!)\nUpload size: \(Double(fileData.length) / 1024.0) KB\n\n", forceLog: false)
 
         do {
             var jsonData: NSData?
@@ -103,8 +125,9 @@ class GTNetworkTask: NSObject {
                 jsonData = try NSJSONSerialization.dataWithJSONObject(properties!, options: NSJSONWritingOptions.PrettyPrinted)
             }
             
+            // Prepare web request.
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-            Alamofire.upload(method, URLString, multipartFormData: { (multipartFormData) in
+            Alamofire.upload(method, URLString, headers: modifiedHeaders, multipartFormData: { (multipartFormData) in
                 multipartFormData.appendBodyPart(data: fileData, name: "file", fileName: "file", mimeType: "image/png")
                 
                 if jsonData != nil {
