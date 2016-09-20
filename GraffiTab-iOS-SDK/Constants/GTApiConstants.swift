@@ -39,7 +39,6 @@ struct GTApiUserConstants {
     
     // Streamables.
     static let Streamables = Users + "/%d/streamables"
-    static let StreamablesForLocation = Streamables + "/location?neLatitude=%f&neLongitude=%f&swLatitude=%f&swLongitude=%f"
     
     // Mentions.
     static let Mentions = Users + "/%d/mentions"
@@ -137,7 +136,7 @@ struct GTApiStreamableConstants {
     
     // Search.
     static let Search = Streamables + "/search"
-    static let SearchLocation = Search + "/location?neLatitude=%f&neLongitude=%f&swLatitude=%f&swLongitude=%f"
+    static let SearchLocation = Search + "/location?latitude=%f&longitude=%f&radius=%li"
     static let SearchHashtag = Search + "/hashtag?query=%@"
     static let SearchHashtags = Search + "/hashtags?query=%@"
 }

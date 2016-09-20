@@ -52,10 +52,6 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", String(format: GTApiUserConstants.Mentions, userId), offset, limit)
     }
     
-    class func buildGetUserStreamablesForLocationUrl(userId: Int, neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double) -> String {
-        return String(format: GTApiUserConstants.StreamablesForLocation, userId, neLatitude, neLongitude, swLatitude, swLongitude)
-    }
-    
     class func buildFollowersUrl(userId: Int) -> String {
         return String(format: GTApiUserConstants.Followers, userId)
     }
@@ -184,8 +180,8 @@ class GTRequestBuilder: NSObject {
         return String(format: "%@?offset=%li&limit=%li", GTApiStreamableConstants.Newest, offset, limit)
     }
     
-    class func buildSearchStreamablesForLocationUrl(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double) -> String {
-        return String(format: GTApiStreamableConstants.SearchLocation, neLatitude, neLongitude, swLatitude, swLongitude)
+    class func buildSearchStreamablesForLocationUrl(latitude: Double, longitude: Double, radius: Int) -> String {
+        return String(format: GTApiStreamableConstants.SearchLocation, latitude, longitude, radius)
     }
     
     class func buildSearchStreamablesForHashtagUrl(query: String, offset: Int, limit: Int) -> String {

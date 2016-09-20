@@ -25,11 +25,11 @@ public class GTStreamableManager: NSObject {
         return task.getNewest(offset, limit: limit, successBlock: successBlock, failureBlock: failureBlock)
     }
     
-    public class func searchForLocation(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    public class func searchForLocation(latitude: Double, longitude: Double, radius: Int, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTSearchStreamablesForLocationTask()
         task.cacheResponse = cacheResponse!
         task.cBlock = cacheBlock
-        return task.searchForLocation(neLatitude, neLongitude: neLongitude, swLatitude: swLatitude, swLongitude: swLongitude, successBlock: successBlock, failureBlock: failureBlock)
+        return task.searchForLocation(latitude, longitude: longitude, radius: radius, successBlock: successBlock, failureBlock: failureBlock)
     }
     
     public class func searchForHashtag(query: String = "", offset: Int = 0, limit: Int = GTConstants.MaxItems, cacheResponse: Bool? = false, cacheBlock: ((response: GTResponseObject) -> Void)? = nil, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {

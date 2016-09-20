@@ -13,11 +13,11 @@ import ObjectMapper
 
 class GTSearchStreamablesForLocationTask: GTNetworkTask {
     
-    func searchForLocation(neLatitude: Double, neLongitude: Double, swLatitude: Double, swLongitude: Double, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+    func searchForLocation(latitude: Double, longitude: Double, radius: Int, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         self.sBlock = successBlock
         self.fBlock = failureBlock
         
-        let url = GTRequestBuilder.buildSearchStreamablesForLocationUrl(neLatitude, neLongitude: neLongitude, swLatitude: swLatitude, swLongitude: swLongitude)
+        let url = GTRequestBuilder.buildSearchStreamablesForLocationUrl(latitude, longitude: longitude, radius: radius)
         
         return request(.GET, URLString: url, parameters: nil, encoding: .JSON, completionHandler: { (response: Response<AnyObject, NSError>) -> Void in
             if (response.result.isFailure) {
