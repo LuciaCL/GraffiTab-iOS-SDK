@@ -36,6 +36,11 @@ public class GTMeManager: NSObject {
         return task.linkDevice(token, successBlock: successBlock, failureBlock: failureBlock)
     }
     
+    public class func unlinkDevice(token: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
+        let task = GTUnlinkDeviceTask()
+        return task.unlinkDevice(token, successBlock: successBlock, failureBlock: failureBlock)
+    }
+    
     public class func linkExternalProvider(externalProviderType: GTExternalProviderType, externalId: String, accessToken: String, successBlock: (response: GTResponseObject) -> Void, failureBlock: (response: GTResponseObject) -> Void) -> Request {
         let task = GTLinkExternalProviderTask()
         return task.link(externalProviderType, externalId: externalId, accessToken: accessToken, successBlock: successBlock, failureBlock: failureBlock)

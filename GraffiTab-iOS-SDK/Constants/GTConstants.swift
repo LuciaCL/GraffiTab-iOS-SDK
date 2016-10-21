@@ -15,6 +15,7 @@ public struct GTEvents {
     public static let FeedbackSent = "FeedbackSent"
     
     public static let DeviceLinked = "DeviceLinked"
+    public static let DeviceUnlinked = "DeviceUnlinked"
     
     public static let ExternalProviderLinked = "ExternalProviderLinked"
     public static let ExternalProviderUnlinked = "ExternalProviderUnlinked"
