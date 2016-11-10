@@ -4,7 +4,7 @@ use_frameworks!
 def common_pods
   pod 'AlamofireObjectMapper'
   pod 'AlamofireImage'
-  pod 'CocoaLumberjack/Swift'
+  pod 'CocoaLumberjack/Swift', '~> 2.4.0'
   pod 'HanekeSwift'
 end
 

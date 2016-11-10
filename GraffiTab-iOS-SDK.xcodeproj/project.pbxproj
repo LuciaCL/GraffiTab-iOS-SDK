@@ -773,6 +773,7 @@
 				TargetAttributes = {
 					E5DFDB8F1CB2A28C00BB3D27 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 38YB3T9LUN;
 					};
 				};
 			};
@@ -1037,6 +1038,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75B4B9EB572F11F188A32B91 /* Pods-GraffiTab_iOS_SDK.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1056,6 +1058,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CFF93A12448AB18B3A9BBE8D /* Pods-GraffiTab_iOS_SDK.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
